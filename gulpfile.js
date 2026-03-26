@@ -23,7 +23,7 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('layout', function() {
-    return gulp.src('src/*.html')
+    return gulp.src('dev/*.html')
 		.pipe(fileinclude({
 			prefix: '@@',
 			basepath: '@file'
@@ -34,8 +34,8 @@ gulp.task('layout', function() {
 });
 
 gulp.task('styles', function() {
-	return gulp.src('src/scss/**/*.scss')
-	// return gulp.src('src/scss/*.scss')
+	return gulp.src('dev/scss/**/*.scss')
+	// return gulp.src('dev/scss/*.scss')
 	.pipe(sourcemaps.init({loadMaps: true}))
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	// .pipe(rename({ suffix: '.min', prefix : '' }))
@@ -46,7 +46,7 @@ gulp.task('styles', function() {
 	.pipe(browserSync.reload({ stream: true }));
 });
 // gulp.task('styles-separated', function() {
-// 	return gulp.src('src/scss/pages/*.scss')   	//pages
+// 	return gulp.src('dev/scss/pages/*.scss')   	//pages
 // 	.pipe(sourcemaps.init({loadMaps: true}))
 // 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 // 	.pipe(rename({ suffix: '.min', prefix : '' }))
@@ -59,7 +59,7 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'src/js/*.js', // Always (scripts) at the end
+		'dev/js/*.js', // Always (scripts) at the end
 		])
 	// .pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Minify js - opt.
@@ -74,9 +74,9 @@ gulp.task('code', function() {
 
 
 gulp.task('watch', function() {
-	gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));  // 2nd argument if drive is not SSD - { delay: 350 }
-	// gulp.watch('src/scss/**/*.scss', gulp.parallel('styles-separated'));
-	gulp.watch(['src/**/*.js', 'src/js/main.js'], gulp.parallel('scripts'));
-	gulp.watch('src/**/*.html', gulp.parallel('layout'))
+	gulp.watch('dev/scss/**/*.scss', gulp.parallel('styles'));  // 2nd argument if drive is not SSD - { delay: 350 }
+	// gulp.watch('dev/scss/**/*.scss', gulp.parallel('styles-separated'));
+	gulp.watch(['dev/**/*.js', 'dev/js/main.js'], gulp.parallel('scripts'));
+	gulp.watch('dev/**/*.html', gulp.parallel('layout'))
 });
 gulp.task('default', gulp.parallel('layout','styles', 'scripts', 'browser-sync', 'watch'));
