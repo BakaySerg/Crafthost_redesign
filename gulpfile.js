@@ -8,6 +8,10 @@ const gulp = require("gulp"),
 	cleancss = require("gulp-clean-css"),
 	rename = require("gulp-rename"),
 	fileinclude = require("gulp-file-include"),
+	svgSprite = require("gulp-svg-sprite"),
+	path = require("path"),
+	glob = require("glob"),
+	replace = require("gulp-replace"),
 	// groupMedia        = require('gulp-group-css-media-queries'), //"gulp-group-css-media-queries": "^1.2.2",
 	notify = require("gulp-notify");
 
@@ -20,6 +24,44 @@ gulp.task("browser-sync", function (done) {
 		// tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
 	});
 	done();
+});
+
+gulp.task("svg-sprite", function () {
+	const folders = glob.sync("dev/img/*/");
+
+	const tasks = folders.map((folder) => {
+		const folderName = path.basename(folder);
+
+		const config = {
+			mode: {
+				symbol: {
+					sprite: "sprite.svg",
+					example: false,
+					dest: ".", // 👈 убирает папку symbol
+				},
+			},
+			shape: {
+				transform: [], // 👈 отключили минификацию
+				id: {
+					generator: function (name) {
+						return path.basename(name, ".svg");
+					},
+				},
+			},
+			svg: {
+				pretty: true, // 👈 делает код читабельным (переносы, отступы)
+			},
+		};
+
+		return gulp
+			.src(path.join(folder, "*.svg"))
+			.pipe(replace(/fill\s*=\s*"(?!none)(.*?)"/gi, 'fill="currentColor"'))
+			.pipe(replace(/stroke\s*=\s*"(?!none)(.*?)"/gi, 'stroke="currentColor"'))
+			.pipe(svgSprite(config))
+			.pipe(gulp.dest(path.join("app/img", folderName)));
+	});
+
+	return Promise.all(tasks);
 });
 
 
