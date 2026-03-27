@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..600&display=swap');
+
+@font-face {
+	font-family: 'Raptor';
+	src: local('raptor light'),
+	local('raptor-light'),
+	url('../fonts/RaptorMonoPremium-Light.woff2') format('woff2');
+	font-weight: 300;
+}
+@font-face {
+	font-family: 'Raptor';
+	src: local('raptor semibold'),
+	local('raptor-semibold'),
+	url('../fonts/RaptorMonoPremium-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+}

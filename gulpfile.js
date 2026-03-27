@@ -11,14 +11,15 @@ const gulp = require("gulp"),
 	// groupMedia        = require('gulp-group-css-media-queries'), //"gulp-group-css-media-queries": "^1.2.2",
 	notify = require("gulp-notify");
 
-gulp.task('browser-sync', function() {
+gulp.task("browser-sync", function (done) {
 	browserSync({
-		server: {baseDir: 'app'},
+		server: { baseDir: "app" },
 		notify: false,
 		// open: false,
 		// online: false, // Work Offline Without Internet Connection
 		// tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
-	})
+	});
+	done();
 });
 
 
@@ -73,10 +74,10 @@ gulp.task('code', function() {
 });
 
 
-gulp.task('watch', function() {
-	gulp.watch('dev/scss/**/*.scss', gulp.parallel('styles'));  // 2nd argument if drive is not SSD - { delay: 350 }
-	// gulp.watch('dev/scss/**/*.scss', gulp.parallel('styles-separated'));
-	gulp.watch(['dev/**/*.js', 'dev/js/main.js'], gulp.parallel('scripts'));
-	gulp.watch('dev/**/*.html', gulp.parallel('layout'))
+gulp.task("watch", function (done) {
+	gulp.watch(["dev/**/*.js", "dev/js/main.js"], gulp.parallel("scripts"));
+	gulp.watch("dev/**/*.html", gulp.parallel("layout"));
+	gulp.watch("dev/scss/**/*.scss", gulp.parallel("styles"));
+	done();
 });
 gulp.task('default', gulp.parallel('layout','styles', 'scripts', 'browser-sync', 'watch'));

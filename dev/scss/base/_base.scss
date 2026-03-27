@@ -1,3 +1,5 @@
+@use "utils" as *;
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -7,9 +9,14 @@ html, body {
 	overflow: hidden;
 }
 body {
-	color: #D9D9D9;
-	font-family: "Cardo", serif;
+	color: #fff;
+	font-family: "Inter", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 18px;
+	font-size: em(18);
+}
+.container {
+	max-width: 1342px;
+	margin: 0 auto;
+	padding: 0 15px;
 }

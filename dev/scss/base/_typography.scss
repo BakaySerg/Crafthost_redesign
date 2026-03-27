@@ -1,11 +1,18 @@
-h1 {
-	position: relative;
-	z-index: 1;
-	font-family: "Playfair", serif;
-	font-size: 5.333em;
-	font-weight: 400;
-	letter-spacing: .008em;
-	text-align: center;
-	max-width: 1000px;
-	text-shadow: 1px 1px 2px rgba(9,9,9,0.8), 0 0 20px rgba(9,9,9,0.6);
+@use "utils" as *;
+
+.h1, .h2, .h3 {
+	font-family: "Raptor", monospace;
+	font-weight: 300;
+}
+.h1 {
+	font-size: em(54);
+	line-height: 1.2;
+}
+.h2 {
+	font-size: em(52);
+	line-height: 1.2;
+}
+.h3 {
+	font-size: em(48);
+	line-height: 1.2;
 }
