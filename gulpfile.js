@@ -37,11 +37,11 @@ gulp.task("svg-sprite", function () {
 				symbol: {
 					sprite: "sprite.svg",
 					example: false,
-					dest: ".", // 👈 убирает папку symbol
+					dest: ".", // убирает папку symbol
 				},
 			},
 			shape: {
-				transform: [], // 👈 отключили минификацию
+				transform: [], // откл минификацию
 				id: {
 					generator: function (name) {
 						return path.basename(name, ".svg");
@@ -49,7 +49,7 @@ gulp.task("svg-sprite", function () {
 				},
 			},
 			svg: {
-				pretty: true, // 👈 делает код читабельным (переносы, отступы)
+				pretty: true, // делает код читабельн
 			},
 		};
 
