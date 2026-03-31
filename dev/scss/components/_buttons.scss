@@ -34,3 +34,28 @@
 		font-size: em(17);
 	}
 }
+
+.link {
+	color: var(--blue);
+	text-decoration: none;
+	transition: color .3s;
+	display: flex;
+	align-items: center;
+	gap: .9em;
+	width: fit-content;
+	color: inherit;
+	font-size: em(16);
+	position: relative;
+	padding: .32em 0;
+	margin-bottom: .5em;
+	line-height: 1.2;
+	transition: .3s;
+	.icon {transition: .4s;}
+	&:hover {
+		text-shadow: 0 0;
+	}
+	span {transition: none;}
+	&:hover {
+		color: var(--light-blue);
+	}
+}
