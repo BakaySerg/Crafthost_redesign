@@ -1,0 +1,30 @@
+@use "utils" as *;
+
+.h1, .h2, .h3 {
+	font-family: "Raptor", monospace;
+	font-weight: 300;
+}
+.h1 {
+	font-size: em(54);
+	line-height: 1.2;
+}
+.h2 {
+	font-size: em(52);
+	line-height: 1.2;
+}
+.h3 {
+	font-size: em(48);
+	line-height: 1.2;
+}
+.h4 {
+	font-size: em(28);
+	line-height: 1.4;
+}
+.h5 {
+	font-size: em(22);
+	line-height: 1.4;
+}
+.h6 {
+	font-size: em(18);
+	line-height: 1.4;
+}
