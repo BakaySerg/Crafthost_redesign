@@ -39,8 +39,13 @@
 		if (subMenus){
 			[...subMenus].forEach(function(el){
 				el.addEventListener("click",function(){
-					this.classList.toggle("open");
+					this.classList.add("open");
 				})
+				const closerSubMenu = el.querySelector(".sub-menu__trigger");
+				closerSubMenu.addEventListener("click",function(e){
+					e.stopPropagation();
+					this.closest(".sub-menu").classList.remove("open");
+				});
 			})
 		};
 
