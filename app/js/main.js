@@ -28,29 +28,29 @@
 		setActiveMenuItem();
 		//user menu
 
-		menuTrigger?.addEventListener("click", function() {
+		menuTrigger?.addEventListener("click", function () {
 			header.classList.toggle("header--open");
 			header.querySelector(".menu").classList.toggle("menu--open");
-			[...subMenus].forEach(function(el){
+			[...subMenus].forEach(function (el) {
 				el.classList.remove("open");
 			});
 		});
 
-		if (subMenus){
-			[...subMenus].forEach(function(el){
-				el.addEventListener("click",function(){
+		if (subMenus) {
+			[...subMenus].forEach(function (el) {
+				el.addEventListener("click", function () {
 					this.classList.add("open");
-				})
+				});
 				const closerSubMenu = el.querySelector(".sub-menu__trigger");
-				closerSubMenu.addEventListener("click",function(e){
+				closerSubMenu.addEventListener("click", function (e) {
 					e.stopPropagation();
 					this.closest(".sub-menu").classList.remove("open");
 				});
-			})
-		};
+			});
+		}
 
 		//close dialogs
-		window.addEventListener('click', function(e) {
+		window.addEventListener("click", function (e) {
 			if (!e.target.closest(".header")) {
 				header.classList.remove("header--open");
 				header.querySelector(".menu").classList.remove("menu--open");
@@ -66,4 +66,9 @@
 			});
 		});
 
+		// copyright - year
+		const year = document.getElementById("year");
+		if (year) {
+			year.innerHTML = new Date().getFullYear();
+		}
 	});

@@ -1,1 +1,75 @@
 @use "../base/utils" as *;
+
+.footer {
+	background-color: var(--dark-4);
+	color: var(--white);
+	padding: 50px 0 10px;
+	margin-top: auto;
+
+	&__top {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 50px;
+		justify-content: space-between;
+	}
+	&__logo {
+		flex-shrink: 0;
+		max-width: 32px;
+	}
+	&__remark {
+		max-width: 636px;
+		font-size: em(15px);
+		text-wrap: balance;
+		flex-grow: 1;
+	}
+
+	&__middle {
+		padding: 50px 0 40px 15px;
+	}
+	&__grid {
+		// display: grid;
+		// grid-auto-flow: column;
+		// grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+		// grid-template-rows: repeat(2, auto);
+		// align-items: start;
+		// gap: 26px 18px;
+		column-count: 5;
+		column-gap: 36px;
+	}
+	&__nav {
+		break-inside: avoid;
+		margin-bottom: 40px;
+		width: 100%;
+		&:nth-child(1) {
+			// grid-row: span 2;
+			break-after: column;
+		}
+		&-title {
+			font-weight: 600;
+			font-size: em(16px);
+			margin-bottom: 22px;
+		}
+		&-list {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			a {
+				color: var(--light-4);
+				text-decoration: none;
+				font-size: em(15px);
+				transition: .3s;
+				&:hover {
+					color: var(--light-1);
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		border-top: 1px solid var(--dark-2);
+		display: flex;
+		justify-content: space-between;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
