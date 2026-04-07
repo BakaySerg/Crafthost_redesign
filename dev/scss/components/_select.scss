@@ -1,3 +1,5 @@
+@use "../base/utils" as *;
+
 .select {
 	position: relative;
 	user-select: none;
@@ -8,27 +10,27 @@
 		width: 100%;
 	}
 }
-.select.is-active .select__body {
-	display: block;
-	z-index: 1;
-}
 .select__header {
 	cursor: pointer;
 	display: flex;
-
+	align-items: center;
+	gap: 0.32em;
 	position: relative;
-	&:after {
-		content: '';
-		position: absolute;
-		width: 24px;
-		height: 24px;
-		top: calc(50% - 12px);
-		right: 8%;
-		transition: .2s;
+	svg {
+		width: 15px;
+		height: 15px;
+		color: var(--dark-1);
+		transition: .3s;
 	}
 }
+.select.is-active .select__header svg {
+	transform: scaleY(-1);
+}
+.select__current {
+	font-size: 15px;
+}
 .select__body {
-	border-radius: 3px 3px 0 0;
+	border-radius: 6px 6px 0 0;
 	border-top: 0;
 	position: absolute;
 	left: 0;
@@ -36,8 +38,21 @@
 	bottom: 100%;
 	display: none;
 	overflow: hidden;
+	min-width: 5ch;
 }
-
+.select.is-active .select__body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6em;
+	padding: 11px;
+	border: 1px solid var(--dark-1);
+	background-color: var(--dark-4);
+	z-index: 1;
+}
+ .select__item {
+	cursor: pointer;
+	font-size: 15px;
+}
 .select--down  {
 	.select__body {
 		bottom: auto;
@@ -47,11 +62,5 @@
 	}
 	.select__current {
 		padding: .64em 1em;
-	}
-}
-.select--muted .select__header {
-	border-radius: 6px;
-	&::after {
-		right: 1em;
 	}
 }
