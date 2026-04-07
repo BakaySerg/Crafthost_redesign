@@ -1,0 +1,57 @@
+.select {
+	position: relative;
+	user-select: none;
+	&--sm {
+		width: 40px;
+	}
+	&--full {
+		width: 100%;
+	}
+}
+.select.is-active .select__body {
+	display: block;
+	z-index: 1;
+}
+.select__header {
+	cursor: pointer;
+	display: flex;
+
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		top: calc(50% - 12px);
+		right: 8%;
+		transition: .2s;
+	}
+}
+.select__body {
+	border-radius: 3px 3px 0 0;
+	border-top: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 100%;
+	display: none;
+	overflow: hidden;
+}
+
+.select--down  {
+	.select__body {
+		bottom: auto;
+		border-radius: 0 0 3px 3px;
+		top: 100%;
+		box-shadow: none;
+	}
+	.select__current {
+		padding: .64em 1em;
+	}
+}
+.select--muted .select__header {
+	border-radius: 6px;
+	&::after {
+		right: 1em;
+	}
+}

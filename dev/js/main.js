@@ -73,7 +73,7 @@
 			[].forEach.call(document.querySelectorAll("[data-collapse-trigger]"), function (el) {
 				el.addEventListener("click", function (e) {
 					e.preventDefault();
-					let currentItem = this.closest(".collapser");
+					let currentItem = this.closest("[data-collapser]");
 					let siblings = currentItem.parentElement.children;
 					[...siblings].forEach((sibling) => {
 						if (sibling !== currentItem) {
@@ -85,6 +85,45 @@
 			});
 		};
 		accordionOpen();
+
+
+		// custom select
+		let select = function () {
+			let selectHeader = document.querySelectorAll(".select__header");
+			let selectItem = document.querySelectorAll(".select__item");
+
+			selectHeader.forEach((item) => {
+				item.addEventListener("click", selectToggle);
+			});
+			selectItem.forEach((item) => {
+				item.addEventListener("click", selectChoose);
+			});
+			function selectToggle() {
+				this.parentElement.classList.toggle("is-active");
+			}
+			function selectChoose() {
+				let text = this.innerHTML,
+					value = this.getAttribute("data-value"),
+					select = this.closest(".select"),
+					input = select.querySelector("input[type=hidden]"),
+					currentText = select.querySelector(".select__current");
+				currentText.innerHTML = text;
+				input.value = value;
+				select.classList.remove("is-active");
+			}
+		};
+		select();
+
+		//leave mouse
+		const allSelects = document.querySelectorAll(".select");
+		if (allSelects) {
+			[].forEach.call(allSelects, function (el) {
+				el.addEventListener("mouseleave", function (s) {
+					setTimeout(() => s.target.classList.remove("is-active"), 300);
+				});
+			});
+		}
+
 
 		// copyright - year
 		const year = document.getElementById("year");
