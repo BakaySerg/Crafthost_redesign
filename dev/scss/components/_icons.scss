@@ -3,5 +3,13 @@
 	&--lg {
 		width: 80px;
 		height: 80px;
+		@media (max-width: 1500px){
+			width: 64px;
+			height: 64px;
+		}
+		@media (max-width: 991px){
+			width: 52px;
+			height: 52px;
+		}
 	}
 }
