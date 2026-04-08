@@ -1,0 +1,30 @@
+@use "../base/utils" as *;
+
+.four-zero-four {
+	background-image: var(--gradient-blue-light);
+	.container {
+		padding: 12em 15px 13em;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.4em;
+		&::before {
+			content: "404";
+			position: absolute;
+			display: block;
+			bottom: 0;
+			right: -12px;
+			font-weight: 700;
+			font-size: em(350);
+			line-height: .74;
+			color: var(--dark-4);
+			opacity: 0.05;
+		}
+		.btn {
+			position: relative;
+			z-index: 1;
+		}
+	}
+}
