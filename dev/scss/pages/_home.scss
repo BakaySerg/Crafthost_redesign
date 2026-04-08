@@ -1,0 +1,11 @@
+.intro {
+	padding: 50px 0;
+	&__container {
+		display: flex;
+		gap: 3em;
+		@media (max-width: 1023px) {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+}

@@ -37,11 +37,11 @@ gulp.task("svg-sprite", function () {
 				symbol: {
 					sprite: "sprite.svg",
 					example: false,
-					dest: ".", // убирает папку symbol
+					dest: ".", // убрать папку symbol
 				},
 			},
 			shape: {
-				transform: [], // откл минификацию
+				transform: [], // откл. minify
 				id: {
 					generator: function (name) {
 						return path.basename(name, ".svg");
@@ -49,14 +49,14 @@ gulp.task("svg-sprite", function () {
 				},
 			},
 			svg: {
-				pretty: true, // делает код читабельн
+				pretty: true, // код читабельн
 			},
 		};
 
 		return gulp
 			.src(path.join(folder, "*.svg"))
-			.pipe(replace(/fill\s*=\s*"(?!none)(.*?)"/gi, 'fill="currentColor"'))
-			.pipe(replace(/stroke\s*=\s*"(?!none)(.*?)"/gi, 'stroke="currentColor"'))
+			.pipe(replace(/fill\s*=\s*"(?!\s*(?:none|url\())[^"]*"/gi, 'fill="currentColor"'))
+			.pipe(replace(/stroke\s*=\s*"(?!\s*(?:none|url\())[^"]*"/gi, 'stroke="currentColor"'))
 			.pipe(svgSprite(config))
 			.pipe(gulp.dest(path.join("app/img", folderName)));
 	});
@@ -66,27 +66,33 @@ gulp.task("svg-sprite", function () {
 
 
 gulp.task('layout', function() {
-    return gulp.src('dev/*.html')
-		.pipe(fileinclude({
-			prefix: '@@',
-			basepath: '@file'
-		}))
-		.pipe(changed('app'),{hasChanged: changed.compareContents})    // Ignore unchanged files (after all @@including)
-		.pipe(gulp.dest('app/'))
-		.pipe(browserSync.reload({ stream: true }))
+   return gulp
+		.src("dev/*.html")
+		.pipe(
+			fileinclude({
+				prefix: "@@",
+				basepath: "@file",
+			}),
+		)
+		.pipe(changed("app", { hasChanged: changed.compareContents })) // Ignore unchanged files (after all @@including)
+		.pipe(gulp.dest("app/"))
+		.pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('styles', function() {
-	return gulp.src('dev/scss/**/*.scss')
-	// return gulp.src('dev/scss/*.scss')
-	.pipe(sourcemaps.init({loadMaps: true}))
-	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
-	// .pipe(rename({ suffix: '.min', prefix : '' }))
-	// .pipe(groupMedia())             // before build project for production
-	.pipe(cleancss( {level: { 1: { specialComments: 0 }}}))
-	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest('./app/css/'))
-	.pipe(browserSync.reload({ stream: true }));
+	return (
+		gulp
+			.src("dev/scss/**/*.scss")
+			// return gulp.src('dev/scss/*.scss')
+			.pipe(sourcemaps.init({ loadMaps: true }))
+			.pipe(sass({ outputStyle: "expanded", silenceDeprecations: ["legacy-js-api"] }).on("error", sass.logError))
+			// .pipe(rename({ suffix: '.min', prefix : '' }))
+			// .pipe(groupMedia())             // before build project for production
+			.pipe(cleancss({ level: { 1: { specialComments: 0 } } }))
+			.pipe(sourcemaps.write("./"))
+			.pipe(gulp.dest("./app/css/"))
+			.pipe(browserSync.reload({ stream: true }))
+	);
 });
 // gulp.task('styles-separated', function() {
 // 	return gulp.src('dev/scss/pages/*.scss')   	//pages

@@ -2,11 +2,13 @@
 
 .h1, .h2, .h3 {
 	font-family: "Raptor", monospace;
-	font-weight: 300;
+	font-weight: 400;
 }
 .h1 {
 	font-size: em(54);
 	line-height: 1.2;
+	letter-spacing: -.02em;
+	text-wrap: balance;
 }
 .h2 {
 	font-size: em(52);
@@ -27,4 +29,9 @@
 .h6 {
 	font-size: em(18);
 	line-height: 1.4;
+}
+.text-gradient {
+	background-image: var(--gradient-blue);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
