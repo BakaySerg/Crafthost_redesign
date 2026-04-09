@@ -10,27 +10,59 @@
 			<!-- intro -->
 			<section class="intro">
 				<div class="container intro__container">
-					<div class="intro__text">
+					<div class="intro__content">
 						<h1 class="h1 text-gradient">Crafthost Enterprise Managed Hosting & Intelligent IaaS.</h1>
 						<p class="intro__subtitle">Engineered Infrastructure for Organizations That Demand Accountability.</p>
 						<p class="intro__remark">Crafthost delivers engineer-managed cloud, dedicated, and AI infrastructure for organizations operating mission-critical workloads.</p>
 						<div class="intro__action">
-							<a href="#" class="btn btn--primary">
+							<a href="#" class="btn btn--lg btn--filled">
 								<span>View Managed Pricing</span>
-								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#arrow-right"/></svg>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 							</a>
-							<a href="#" class="btn btn--secondary">
+							<a href="#" class="btn btn--lg btn--outline">
 								<span>Request Architecture Call</span>
-								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#arrow-right"/></svg>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 							</a>
 						</div>
 					</div>
 					<div class="intro__image">
-						<img srcset="img/home/intro.png, img/home/intro-2x.png 2x" src="img/home/builder.png" alt="3d crafthost">
+						<img srcset="img/home/intro.png, img/home/intro-2x.png 2x" src="img/home/intro.png" alt="3d crafthost">
 					</div>
-
 				</div>
 			</section>
+
+			<div class="container">
+				@@include('./includes/modules/cta-sm.html')
+			</div>
+
+			<!-- trust -->
+			<section class="trust">
+				<div class="container">
+					<h2 class="h1">Trusted Infrastructure for High&#8209Responsibility Environments.</h2>
+					<div class="trust__tiles">
+						<div class="trust__tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#cloud"/></svg>
+							<div class="trust__tile-name">
+								Tier-4/5
+								<span class="trust__tile-descr">Data Centers</span>
+							</div>
+						</div>
+						<div class="trust__tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#security"/></svg>
+							<div class="trust__tile-name">ISO 27001</div>
+						</div>
+						<div class="trust__tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#unlock"/></svg>
+							<div class="trust__tile-name">SOC 2</div>
+						</div>
+						<div class="trust__tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#config"/></svg>
+							<div class="trust__tile-name">GDPR</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			@@include('./includes/footer.html')
 		</div>
 		<script src="js/main.js"></script>
