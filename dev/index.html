@@ -81,61 +81,133 @@
 			</section>
 
 			<!-- managed -->
-			<section class="managed">
-				<div class="container managed__text">
+			<section class="managed with-divider">
+				<div class="container text-columns">
 					<h2 class="h2">Managed Infrastructure Services.</h2>
 					<p class="subtitle"><span class="text-accent">All Crafthost services</span> are delivered through engineer-led lifecycle management, ensuring controlled execution and clear accountability.</p>
 				</div>
-				<div class="container managed__slider">
-					<div class="managed__slide">
-						<i class="icon icon--sm icon--accent">
-							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-plans-1"/></svg>
-						</i>
-						<h3 class="h4 text-gradient">Managed Cloud & VPS</h3>
-						<p>High-availability cloud environments operated and maintained by Crafthost engineers for sustained production use.</p>
-						<a href="#" class="link">
-							<span>Explore Managed Cloud & VPS</span>
-							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#arrow-right"/></svg>
-						</a>
+				<div class="container managed__slider" data-slider>
+					<div class="swiper-wrapper">
+						<div class="managed__slide swiper-slide">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-plans-1"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Managed Cloud & VPS</h3>
+							<p>High-availability cloud environments operated and maintained by Crafthost engineers for sustained production use.</p>
+							<a href="#" class="link link--icon">
+								<span>Explore Managed Cloud & VPS</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+						<div class="managed__slide swiper-slide managed__slide--accent">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-plans-2"/></svg>
+							</i>
+							<h3 class="h4">Managed Dedicated Servers</h3>
+							<p>Single-tenant infrastructure with full lifecycle management, performance optimization, and operational ownership.</p>
+							<a href="#" class="link link--icon">
+								<span>Explore Managed Dedicated Servers</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+						<div class="managed__slide swiper-slide">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-plans-3"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">GPU & AI Infrastructure</h3>
+							<p>Purpose-built GPU environments for AI, machine learning, and advanced analytics, delivered through validated architecture and controlled operations.</p>
+							<a href="#" class="link link--icon">
+								<span>Explore GPU & AI Infrastructure</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+						<div class="managed__slide swiper-slide">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-storage"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Private & Hybrid Cloud</h3>
+							<p>Isolated architectures designed for sovereignty, compliance, and controlled integration across environments.</p>
+							<a href="#" class="link link--icon">
+								<span>Explore Private Cloud</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
 					</div>
-					<div class="managed__slide">
-						<i class="icon icon--sm icon--accent">
-							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-plans-2"/></svg>
-						</i>
-						<h3 class="h4 text-gradient"></h3>
-						<p></p>
-						<a href="#" class="link">
-							<span>Explore Managed Dedicated Servers</span>
-							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#arrow-right"/></svg>
-						</a>
+					<div class="swiper-scrollbar"></div>
+				</div>
+			</section>
+
+			<!-- engineer -->
+			<section class="engineer with-divider">
+				<div class="container">
+					<h2 class="h2">Engineers at the Core.</h2>
+				</div>
+				<!-- contextual 2-->
+				<div class="container contextual">
+					<div class="contextual__image">
+						<img loading="lazy" srcset="img/home/engineer.jpg, img/home/engineer-2x.jpg 2x" src="img/home/engineer.jpg" alt="engineer">
 					</div>
-					<div class="managed__slide">
-						<i class="icon icon--sm icon--accent">
-							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-plans-3"/></svg>
-						</i>
-						<h3 class="h4 text-gradient"></h3>
-						<p></p>
-						<a href="#" class="link">
-							<span>Explore GPU & AI Infrastructure</span>
-							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#arrow-right"/></svg>
-						</a>
-					</div>
-					<div class="managed__slide">
-						<i class="icon icon--sm icon--accent">
-							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-storage"/></svg>
-						</i>
-						<h3 class="h4 text-gradient"></h3>
-						<p></p>
-						<a href="#" class="link">
-							<span>Explore Private Cloud</span>
-							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#arrow-right"/></svg>
-						</a>
+					<div class="contextual__content">
+						<p class="subtitle"><span class="text-accent">Crafthost operates as an engineering partner,</span> not a hosting reseller.Infrastructure is treated as an operational system with clear ownership and accountability.</p>
+						<ul class="contextual__list">
+							<li>Designed by senior engineers</li>
+							<li>Operated through defined procedures</li>
+							<li>Monitored continuously</li>
+							<li>Optimized for stability and efficiency</li>
+							<li>Managed as a single accountable system</li>
+						</ul>
 					</div>
 				</div>
 			</section>
 
+			<!-- bricks -->
+			<section class="bricks">
+				<div class="container text-columns">
+					<h2 class="h2">Human-Grade Operations & Support.</h2>
+				</div>
+				<div class="container bricks__grid">
+					<div class="bricks__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-chart"/></svg>
+						</i>
+						<div class="h5">Continuous</div>
+						<p>monitoring and response</p>
+					</div>
+					<div class="bricks__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-gear"/></svg>
+						</i>
+						<div class="h5">Direct</div>
+						<p>engineer involvement</p>
+					</div>
+					<div class="bricks__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-software"/></svg>
+						</i>
+						<div class="h5">Structured</div>
+						<p>escalation paths</p>
+					</div>
+					<div class="bricks__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-question"/></svg>
+						</i>
+						<div class="h5">Clear</div>
+						<p>incident communication</p>
+					</div>
+					<div class="bricks__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-security"/></svg>
+						</i>
+						<div class="h5">SLA-driven</div>
+						<p>operational accountability</p>
+					</div>
+				</div>
+			</section>
+
+
 			@@include('./includes/footer.html')
 		</div>
+		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

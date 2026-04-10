@@ -2,6 +2,7 @@
 .icon {
 	flex-shrink: none;
 	display: inline-block;
+	user-select: none;
 	&--accent {
 		color: var(--blue);
 	}

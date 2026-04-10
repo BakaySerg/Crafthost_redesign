@@ -86,7 +86,6 @@
 		};
 		accordionOpen();
 
-
 		// custom select
 		let select = function () {
 			let selectHeader = document.querySelectorAll(".select__header");
@@ -124,6 +123,38 @@
 			});
 		}
 
+		// sliders
+		const mobileSlider = document.querySelector("[data-slider]");
+		if (mobileSlider) {
+			new Swiper(mobileSlider, {
+				draggable: true,
+				grabCursor: true,
+				centeredSlides: false,
+				loop: false,
+				autoHeight: false,
+				scrollbar: {
+					el: ".swiper-scrollbar",
+					draggable: true,
+					hide: false,
+					snapOnRelease: true,
+				},
+				// navigation: {
+				// 	nextEl: ".swiper-button-next",
+				// 	prevEl: ".swiper-button-prev",
+				// },
+				breakpoints: {
+					320: {
+						slidesPerView: 1.1,
+					},
+					720: {
+						slidesPerView: 3.1,
+					},
+					1300: {
+						slidesPerView: 4,
+					},
+				},
+			});
+		}
 
 		// copyright - year
 		const year = document.getElementById("year");
