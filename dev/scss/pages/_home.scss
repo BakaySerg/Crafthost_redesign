@@ -1,7 +1,7 @@
 @use "../base/utils" as *;
 
 .intro {
-	padding: 46px 0;
+	padding: 46px 0 70px;
 	@media (max-width: 600px){
 		padding: 34px 0;
 	}
@@ -49,7 +49,6 @@
 		}
 	}
 	&__image {
-		margin-left: -20px;
 		@media (max-width: 1023px) {
 			width: 100%;
 			max-width: 500px;
@@ -98,12 +97,25 @@
 
 .trust {
 	padding: 80px 0;
+	@media (max-width: 1100px){
+		padding: 60px 0;
+	}
+	@media (max-width: 600px){
+		padding: 45px 0;
+	}
 	&__tiles {
-		padding-top: 30px;
+		padding-top: 55px;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-		@media (max-width: 1023px){
-			gap: 20px;
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		@media (max-width: 1300px){
+			grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+		}
+		@media (max-width: 1200px){
+			grid-template-columns: 1fr 1fr;
+			padding-top: 30px;
+		}
+		@media (max-width: 600px){
+			grid-template-columns: 1fr;
 		}
 	}
 	&__tile {
@@ -128,6 +140,60 @@
 			font-family: "Inter", sans-serif;
 			font-size: 1rem;
 			margin-bottom: -0.3em;
+		}
+	}
+}
+
+.contextual {
+	padding-top: 34px;
+	padding-bottom: 25px;
+	@media (min-width: 1024px){
+		padding-top: 60px;
+		padding-bottom: 40px;
+		display: grid;
+		grid-template-columns: .98fr 1.02fr;
+		gap: calc(30px + 1.2vw);
+		&--reversed {
+			>:nth-child(2) {
+				order: -1;
+			}
+		}
+	}
+	&__image {
+		@media (max-width: 1023px){
+			margin-bottom: 1.7em;
+		}
+	}
+	&__subtitle {
+		font-size: em(22);
+		margin-bottom: 1em;
+		@media (min-width: 1024px){
+			text-wrap: balance;
+		}
+		@media (max-width: 1390px){
+			font-size: em(20);
+		}
+	}
+	&__list {
+		li {
+			padding: 0.86em 0;
+			display: flex;
+			gap: 1.3em;
+			&:not(:last-child) {
+				border-bottom: 1px solid var(--light-2);
+			}
+			&::before {
+				content: '';
+				flex-shrink: 0;
+				background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='5' stroke='%230869EC' stroke-width='2'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: inline-block;
+				width: .72em !important;
+				max-width: .72em !important;
+				height: .72em;
+				margin-top: .33em;
+			}
 		}
 	}
 }
