@@ -1,5 +1,14 @@
+@use "../base/utils" as *;
 .icon {
 	flex-shrink: none;
+	display: inline-block;
+	&--accent {
+		color: var(--blue);
+	}
+	&--sm {
+		width: 24px;
+		height: 24px;
+	}
 	&--lg {
 		width: 80px;
 		height: 80px;

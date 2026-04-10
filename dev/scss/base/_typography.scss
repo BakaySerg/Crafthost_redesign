@@ -1,9 +1,10 @@
 @use "utils" as *;
 
-.h1, .h2, .h3 {
+.h1, .h2, .h3, .h4 {
 	font-family: "Raptor", monospace;
 	font-weight: 400;
 	letter-spacing: -.04em;
+	word-spacing: -.03em;
 }
 .h1 {
 	font-size: em(54);
@@ -20,6 +21,13 @@
 .h2 {
 	font-size: em(52);
 	line-height: 1.2;
+	text-wrap: balance;
+	@media (max-width: 1390px){
+		font-size: em(46);
+	}
+	@media (max-width: 600px){
+		font-size: em(36);
+	}
 }
 .h3 {
 	font-size: em(48);
@@ -37,9 +45,23 @@
 	font-size: em(18);
 	line-height: 1.4;
 }
+.subtitle {
+	font-size: em(22);
+	margin-bottom: 1em;
+	@media (max-width: 1390px){
+		font-size: em(20);
+	}
+	@media (max-width: 1023px){
+		font-size: em(18);
+	}
+}
 .text-gradient {
 	background-image: var(--gradient-blue);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.text-accent {
+	color: var(--blue);
 }
