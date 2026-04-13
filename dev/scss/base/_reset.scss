@@ -12,13 +12,10 @@ img {
 	user-select: none;
 }
 svg {
+	flex-shrink: 0;
 	display: block;
 	min-width: 12px;
 	max-width: 100%;
-	&:hover {
-		stroke: currentColor;
-		fill: currentColor;
-	}
 }
 a, a:focus {
 	text-decoration: none;

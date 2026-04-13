@@ -282,36 +282,62 @@
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 36 36" fill="none" id="security" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#aqclip0_622_5580)">
-<path d="M17.9987 35.2807C9.091 35.2807 1.84375 28.0335 1.84375 19.1257V1.1257C1.84375 0.901828 2.02488 0.720703 2.24875 0.720703H33.7488C33.9726 0.720703 34.1538 0.901828 34.1538 1.1257V19.1257C34.1538 28.0335 26.9065 35.2807 17.9987 35.2807ZM18.4037 29.6557V34.4651C22.6304 34.3537 26.4374 32.5267 29.1509 29.6557H18.4037ZM2.65375 1.5307V19.1257C2.65375 27.4507 9.31938 34.2502 17.5938 34.4662V25.1017C16.9458 24.924 16.4688 24.3288 16.4688 23.6257C16.4688 22.9226 16.9458 22.3286 17.5938 22.1497V8.2267C16.9458 8.04895 16.4688 7.45495 16.4688 6.7507C16.4688 6.04645 16.9458 5.45358 17.5938 5.2747V1.5307H2.65375ZM18.4037 28.8457H29.8641C31.0263 27.4293 31.942 25.8026 32.5405 24.0318H19.4748C19.3319 24.5505 18.9224 24.9588 18.4037 25.1017V28.8457ZM17.9987 22.9057C17.6016 22.9057 17.2787 23.2286 17.2787 23.6257C17.2787 24.0228 17.6016 24.3457 17.9987 24.3457C18.3959 24.3457 18.7187 24.0228 18.7187 23.6257C18.7187 23.2286 18.3959 22.9057 17.9987 22.9057ZM19.4748 23.2207H32.7891C33.1502 21.9168 33.3438 20.5432 33.3438 19.1257V18.4057H18.4037V22.1508C18.9224 22.2926 19.3319 22.7021 19.4748 23.2207ZM18.4037 17.5957H33.3438V12.7807H30.7248C30.547 13.4287 29.9519 13.9057 29.2488 13.9057C28.5456 13.9057 27.9516 13.4287 27.7728 12.7807H18.4037V17.5957ZM29.2488 11.6557C28.8516 11.6557 28.5288 11.9786 28.5288 12.3757C28.5288 12.7728 28.8516 13.0957 29.2488 13.0957C29.6459 13.0957 29.9688 12.7728 29.9688 12.3757C29.9688 11.9786 29.6459 11.6557 29.2488 11.6557ZM30.7248 11.9707H33.3438V7.1557H19.4748C19.3319 7.67433 18.9224 8.08383 18.4037 8.2267V11.9718H27.7739C27.9516 11.3238 28.5467 10.8468 29.2499 10.8468C29.953 10.8468 30.5459 11.3227 30.7248 11.9707ZM17.9987 6.0307C17.6016 6.0307 17.2787 6.35358 17.2787 6.7507C17.2787 7.14783 17.6016 7.4707 17.9987 7.4707C18.3959 7.4707 18.7187 7.14783 18.7187 6.7507C18.7187 6.35358 18.3959 6.0307 17.9987 6.0307ZM19.4748 6.3457H33.3438V1.5307H18.4037V5.27583C18.9224 5.41758 19.3319 5.82708 19.4748 6.3457Z" fill="url(#aqpaint0_linear_622_5580)" stroke="url(#aqpaint1_linear_622_5580)" stroke-width="0.5"/>
+<g clip-path="url(#arclip0_622_5580)">
+<path d="M17.9987 35.2807C9.091 35.2807 1.84375 28.0335 1.84375 19.1257V1.1257C1.84375 0.901828 2.02488 0.720703 2.24875 0.720703H33.7488C33.9726 0.720703 34.1538 0.901828 34.1538 1.1257V19.1257C34.1538 28.0335 26.9065 35.2807 17.9987 35.2807ZM18.4037 29.6557V34.4651C22.6304 34.3537 26.4374 32.5267 29.1509 29.6557H18.4037ZM2.65375 1.5307V19.1257C2.65375 27.4507 9.31938 34.2502 17.5938 34.4662V25.1017C16.9458 24.924 16.4688 24.3288 16.4688 23.6257C16.4688 22.9226 16.9458 22.3286 17.5938 22.1497V8.2267C16.9458 8.04895 16.4688 7.45495 16.4688 6.7507C16.4688 6.04645 16.9458 5.45358 17.5938 5.2747V1.5307H2.65375ZM18.4037 28.8457H29.8641C31.0263 27.4293 31.942 25.8026 32.5405 24.0318H19.4748C19.3319 24.5505 18.9224 24.9588 18.4037 25.1017V28.8457ZM17.9987 22.9057C17.6016 22.9057 17.2787 23.2286 17.2787 23.6257C17.2787 24.0228 17.6016 24.3457 17.9987 24.3457C18.3959 24.3457 18.7187 24.0228 18.7187 23.6257C18.7187 23.2286 18.3959 22.9057 17.9987 22.9057ZM19.4748 23.2207H32.7891C33.1502 21.9168 33.3438 20.5432 33.3438 19.1257V18.4057H18.4037V22.1508C18.9224 22.2926 19.3319 22.7021 19.4748 23.2207ZM18.4037 17.5957H33.3438V12.7807H30.7248C30.547 13.4287 29.9519 13.9057 29.2488 13.9057C28.5456 13.9057 27.9516 13.4287 27.7728 12.7807H18.4037V17.5957ZM29.2488 11.6557C28.8516 11.6557 28.5288 11.9786 28.5288 12.3757C28.5288 12.7728 28.8516 13.0957 29.2488 13.0957C29.6459 13.0957 29.9688 12.7728 29.9688 12.3757C29.9688 11.9786 29.6459 11.6557 29.2488 11.6557ZM30.7248 11.9707H33.3438V7.1557H19.4748C19.3319 7.67433 18.9224 8.08383 18.4037 8.2267V11.9718H27.7739C27.9516 11.3238 28.5467 10.8468 29.2499 10.8468C29.953 10.8468 30.5459 11.3227 30.7248 11.9707ZM17.9987 6.0307C17.6016 6.0307 17.2787 6.35358 17.2787 6.7507C17.2787 7.14783 17.6016 7.4707 17.9987 7.4707C18.3959 7.4707 18.7187 7.14783 18.7187 6.7507C18.7187 6.35358 18.3959 6.0307 17.9987 6.0307ZM19.4748 6.3457H33.3438V1.5307H18.4037V5.27583C18.9224 5.41758 19.3319 5.82708 19.4748 6.3457Z" fill="url(#arpaint0_linear_622_5580)" stroke="url(#arpaint1_linear_622_5580)" stroke-width="0.5"/>
 </g>
 <defs>
-<linearGradient id="aqpaint0_linear_622_5580" x1="1.84375" y1="18.0007" x2="34.1538" y2="18.0007" gradientUnits="userSpaceOnUse">
+<linearGradient id="arpaint0_linear_622_5580" x1="1.84375" y1="18.0007" x2="34.1538" y2="18.0007" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0156D5"/>
 <stop offset="1" stop-color="#41BAFF"/>
 </linearGradient>
-<linearGradient id="aqpaint1_linear_622_5580" x1="1.84375" y1="18.0007" x2="34.1538" y2="18.0007" gradientUnits="userSpaceOnUse">
+<linearGradient id="arpaint1_linear_622_5580" x1="1.84375" y1="18.0007" x2="34.1538" y2="18.0007" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0156D5"/>
 <stop offset="1" stop-color="#41BAFF"/>
 </linearGradient>
-<clipPath id="aqclip0_622_5580">
+<clipPath id="arclip0_622_5580">
+<rect width="36" height="36" fill="white"/>
+</clipPath>
+</defs>
+</symbol><symbol viewBox="0 0 36 36" fill="none" id="security-shield" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#aqclip0_599_6349)">
+<path d="M17.9997 35.2798C11.072 35.2798 5.21973 29.4276 5.21973 22.4998V7.63407L17.9997 0.663574L30.7797 7.63407V22.4998C30.7797 29.4276 24.9275 35.2798 17.9997 35.2798ZM6.02973 8.11557V22.4998C6.02973 28.9888 11.5119 34.4698 17.9997 34.4698C24.4876 34.4698 29.9697 28.9888 29.9697 22.4998V8.11557L17.9997 1.58607L6.02973 8.11557Z" fill="url(#aqpaint0_linear_599_6349)" stroke="url(#aqpaint1_linear_599_6349)"/>
+<path d="M12.0898 17.162L15.7506 20.8227L23.9125 12.662L23.3387 12.0894L15.7506 19.6775L12.6625 16.5894L12.0898 17.162Z" fill="url(#aqpaint2_linear_599_6349)" stroke="url(#aqpaint3_linear_599_6349)"/>
+</g>
+<defs>
+<linearGradient id="aqpaint0_linear_599_6349" x1="5.21973" y1="17.9717" x2="30.7797" y2="17.9717" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0156D5"/>
+<stop offset="1" stop-color="#41BAFF"/>
+</linearGradient>
+<linearGradient id="aqpaint1_linear_599_6349" x1="5.21973" y1="17.9717" x2="30.7797" y2="17.9717" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0156D5"/>
+<stop offset="1" stop-color="#41BAFF"/>
+</linearGradient>
+<linearGradient id="aqpaint2_linear_599_6349" x1="12.0898" y1="16.456" x2="23.9125" y2="16.456" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0156D5"/>
+<stop offset="1" stop-color="#41BAFF"/>
+</linearGradient>
+<linearGradient id="aqpaint3_linear_599_6349" x1="12.0898" y1="16.456" x2="23.9125" y2="16.456" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0156D5"/>
+<stop offset="1" stop-color="#41BAFF"/>
+</linearGradient>
+<clipPath id="aqclip0_599_6349">
 <rect width="36" height="36" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-cloud" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#arclip0_584_6927)">
+<g clip-path="url(#asclip0_584_6927)">
 <path d="M15.5 16C15.5 17.105 13.933 18 12 18C10.067 18 8.5 17.104 8.5 16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8.5 13C8.5 14.105 10.067 15 12 15C13.933 15 15.5 14.105 15.5 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8.5 13V19C8.5 20.104 10.066 21 11.999 21C13.932 21 15.499 20.105 15.499 19V13C15.5 11.895 13.932 11 12 11C10.068 11 8.501 11.896 8.5 13Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19 16.859C20.722 16.413 22 14.862 22 13C22 10.791 20.209 9 18 9C18 5.686 15.314 3 12 3C9.363 3 7.129 4.703 6.324 7.068C3.885 7.401 2 9.47 2 12C2 14.047 3.238 15.796 5 16.569" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="arclip0_584_6927">
+<clipPath id="asclip0_584_6927">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-growth" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#asclip0_584_6928)">
+<g clip-path="url(#atclip0_584_6928)">
 <path d="M16.0007 12.157V9H12.8438" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19 5L20 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M20 8H21" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -320,12 +346,12 @@
 <path d="M3 12.0002C6.48 14.3202 11.13 13.8602 14.09 10.9002L15.99 8.99023" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="asclip0_584_6928">
+<clipPath id="atclip0_584_6928">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-internet" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#atclip0_584_6926)">
+<g clip-path="url(#auclip0_584_6926)">
 <path d="M12 16V18.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M13.5 20H20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M4 20H10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -336,12 +362,12 @@
 <path d="M5.5 9.5H18.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="atclip0_584_6926">
+<clipPath id="auclip0_584_6926">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-plans-1" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#auclip0_513_7197)">
+<g clip-path="url(#avclip0_513_7197)">
 <path d="M13.75 20H20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M4 20H10.25" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 18.25C12.966 18.25 13.75 19.033 13.75 20C13.75 20.966 12.967 21.75 12 21.75C11.034 21.75 10.25 20.967 10.25 20C10.25 19.034 11.034 18.25 12 18.25Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -349,12 +375,12 @@
 <path d="M12 14.9004V18.2494" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="auclip0_513_7197">
+<clipPath id="avclip0_513_7197">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-plans-2" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#avclip0_513_7198)">
+<g clip-path="url(#awclip0_513_7198)">
 <path d="M19.5 14H4.5C3.67157 14 3 14.6716 3 15.5V19.5C3 20.3284 3.67157 21 4.5 21H19.5C20.3284 21 21 20.3284 21 19.5V15.5C21 14.6716 20.3284 14 19.5 14Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M11.0022 10.0003H4.50219L4.49219 9.99928C3.66219 9.98928 2.99219 9.31928 2.99219 8.49928V8.49828V4.49828V4.48828C2.99219 3.65828 3.66219 2.98828 4.49219 2.98828H10.9922" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M6.53125 6V7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -366,12 +392,12 @@
 <path d="M19.0309 5.53906L17.1109 7.44906L15.9609 6.29906" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="avclip0_513_7198">
+<clipPath id="awclip0_513_7198">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-plans-3" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#awclip0_513_7199)">
+<g clip-path="url(#axclip0_513_7199)">
 <path d="M19 21C17.895 21 17 20.105 17 19C17 17.895 17.895 17 19 17C20.105 17 21 17.895 21 19C21 20.105 20.105 21 19 21Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 11V17" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 21C10.895 21 10 20.105 10 19C10 17.895 10.895 17 12 17C13.105 17 14 17.895 14 19C14 20.105 13.105 21 12 21Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -381,12 +407,12 @@
 <path d="M19 4.5C19 5.881 15.866 7 12 7C8.134 7 5 5.881 5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="awclip0_513_7199">
+<clipPath id="axclip0_513_7199">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-servers" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#axclip0_584_6925)">
+<g clip-path="url(#ayclip0_584_6925)">
 <path d="M4 14.1172C4 15.5792 7.374 16.7642 11.536 16.7642" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19 5.64648C19 7.10848 15.642 8.29348 11.5 8.29348C7.358 8.29348 4 7.10848 4 5.64648" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19 9.88281C19 11.3448 15.642 12.5298 11.5 12.5298C7.358 12.5298 4 11.3458 4 9.88281" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -395,12 +421,12 @@
 <path d="M17 20L15 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="axclip0_584_6925">
+<clipPath id="ayclip0_584_6925">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-storage" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#ayclip0_582_4512)">
+<g clip-path="url(#azclip0_582_4512)">
 <path d="M4 14.1172C4 15.5792 7.374 16.7642 11.536 16.7642" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19 5.64648C19 7.10848 15.642 8.29348 11.5 8.29348C7.358 8.29348 4 7.10848 4 5.64648" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19 9.88281C19 11.3448 15.642 12.5298 11.5 12.5298C7.358 12.5298 4 11.3458 4 9.88281" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -409,41 +435,41 @@
 <path d="M11.536 21C7.374 21 4 19.815 4 18.353V5.647C4 4.185 7.358 3 11.5 3C15.642 3 19 4.185 19 5.647V12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="ayclip0_582_4512">
+<clipPath id="azclip0_582_4512">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 36 36" fill="none" id="time" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#azclip0_513_20613)">
-<path d="M17.9987 35.2807C8.47 35.2807 0.71875 27.5295 0.71875 18.0007C0.71875 8.47195 8.47 0.720703 17.9987 0.720703C27.5275 0.720703 35.2788 8.47195 35.2788 18.0007C35.2788 27.5295 27.5275 35.2807 17.9987 35.2807ZM17.5938 31.5007H18.4037V34.4662C27.1653 34.2547 34.2516 27.1672 34.4642 18.4057H31.4988V17.5957H34.4642C34.2516 8.83533 27.1641 1.74783 18.4037 1.5352V4.5007H17.5938V1.5352C8.83337 1.74783 1.74588 8.83533 1.53325 17.5957H4.49875V18.4057H1.53325C1.74588 27.1672 8.83225 34.2536 17.5938 34.4662V31.5007ZM25.5903 22.8517L17.5938 18.2347V6.7507H18.4037V17.7667L25.9953 22.1497L25.5903 22.8517Z" fill="url(#azpaint0_linear_513_20613)" stroke="url(#azpaint1_linear_513_20613)" stroke-width="0.5"/>
+<g clip-path="url(#baclip0_513_20613)">
+<path d="M17.9987 35.2807C8.47 35.2807 0.71875 27.5295 0.71875 18.0007C0.71875 8.47195 8.47 0.720703 17.9987 0.720703C27.5275 0.720703 35.2788 8.47195 35.2788 18.0007C35.2788 27.5295 27.5275 35.2807 17.9987 35.2807ZM17.5938 31.5007H18.4037V34.4662C27.1653 34.2547 34.2516 27.1672 34.4642 18.4057H31.4988V17.5957H34.4642C34.2516 8.83533 27.1641 1.74783 18.4037 1.5352V4.5007H17.5938V1.5352C8.83337 1.74783 1.74588 8.83533 1.53325 17.5957H4.49875V18.4057H1.53325C1.74588 27.1672 8.83225 34.2536 17.5938 34.4662V31.5007ZM25.5903 22.8517L17.5938 18.2347V6.7507H18.4037V17.7667L25.9953 22.1497L25.5903 22.8517Z" fill="url(#bapaint0_linear_513_20613)" stroke="url(#bapaint1_linear_513_20613)" stroke-width="0.5"/>
 </g>
 <defs>
-<linearGradient id="azpaint0_linear_513_20613" x1="0.71875" y1="18.0007" x2="35.2788" y2="18.0007" gradientUnits="userSpaceOnUse">
+<linearGradient id="bapaint0_linear_513_20613" x1="0.71875" y1="18.0007" x2="35.2788" y2="18.0007" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0156D5"/>
 <stop offset="1" stop-color="#41BAFF"/>
 </linearGradient>
-<linearGradient id="azpaint1_linear_513_20613" x1="0.71875" y1="18.0007" x2="35.2788" y2="18.0007" gradientUnits="userSpaceOnUse">
+<linearGradient id="bapaint1_linear_513_20613" x1="0.71875" y1="18.0007" x2="35.2788" y2="18.0007" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0156D5"/>
 <stop offset="1" stop-color="#41BAFF"/>
 </linearGradient>
-<clipPath id="azclip0_513_20613">
+<clipPath id="baclip0_513_20613">
 <rect width="36" height="36" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 36 36" fill="none" id="unlock" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#baclip0_622_5581)">
-<path d="M16.3134 24.1882C16.3134 23.2567 17.0694 22.5007 18.0009 22.5007C18.9324 22.5007 19.6884 23.2567 19.6884 24.1882C19.6884 24.9802 19.1406 25.6395 18.4059 25.8217V28.1257C18.4059 28.3496 18.2248 28.5307 18.0009 28.5307C17.7771 28.5307 17.5959 28.3496 17.5959 28.1257V25.8217C16.8602 25.6395 16.3134 24.9802 16.3134 24.1882ZM29.6503 14.6257V34.8757C29.6503 35.0962 29.4714 35.2751 29.2509 35.2751H6.75094C6.53044 35.2751 6.35156 35.0962 6.35156 34.8757V14.6257C6.35156 14.4052 6.53044 14.2263 6.75094 14.2263H11.9709V6.7507C11.9709 3.4252 14.6754 0.720703 18.0009 0.720703C21.3264 0.720703 24.0309 3.4252 24.0309 6.7507H23.2209C23.2209 3.87183 20.8798 1.5307 18.0009 1.5307C15.1221 1.5307 12.7809 3.87295 12.7809 6.7507V14.2263H29.2509C29.4714 14.2263 29.6503 14.4052 29.6503 14.6257ZM28.8516 15.0251H7.15031V34.4752H28.8504V15.0251H28.8516Z" fill="url(#bapaint0_linear_622_5581)" stroke="url(#bapaint1_linear_622_5581)" stroke-width="0.5"/>
+<g clip-path="url(#bbclip0_622_5581)">
+<path d="M16.3134 24.1882C16.3134 23.2567 17.0694 22.5007 18.0009 22.5007C18.9324 22.5007 19.6884 23.2567 19.6884 24.1882C19.6884 24.9802 19.1406 25.6395 18.4059 25.8217V28.1257C18.4059 28.3496 18.2248 28.5307 18.0009 28.5307C17.7771 28.5307 17.5959 28.3496 17.5959 28.1257V25.8217C16.8602 25.6395 16.3134 24.9802 16.3134 24.1882ZM29.6503 14.6257V34.8757C29.6503 35.0962 29.4714 35.2751 29.2509 35.2751H6.75094C6.53044 35.2751 6.35156 35.0962 6.35156 34.8757V14.6257C6.35156 14.4052 6.53044 14.2263 6.75094 14.2263H11.9709V6.7507C11.9709 3.4252 14.6754 0.720703 18.0009 0.720703C21.3264 0.720703 24.0309 3.4252 24.0309 6.7507H23.2209C23.2209 3.87183 20.8798 1.5307 18.0009 1.5307C15.1221 1.5307 12.7809 3.87295 12.7809 6.7507V14.2263H29.2509C29.4714 14.2263 29.6503 14.4052 29.6503 14.6257ZM28.8516 15.0251H7.15031V34.4752H28.8504V15.0251H28.8516Z" fill="url(#bbpaint0_linear_622_5581)" stroke="url(#bbpaint1_linear_622_5581)" stroke-width="0.5"/>
 </g>
 <defs>
-<linearGradient id="bapaint0_linear_622_5581" x1="6.35156" y1="17.9979" x2="29.6503" y2="17.9979" gradientUnits="userSpaceOnUse">
+<linearGradient id="bbpaint0_linear_622_5581" x1="6.35156" y1="17.9979" x2="29.6503" y2="17.9979" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0156D5"/>
 <stop offset="1" stop-color="#41BAFF"/>
 </linearGradient>
-<linearGradient id="bapaint1_linear_622_5581" x1="6.35156" y1="17.9979" x2="29.6503" y2="17.9979" gradientUnits="userSpaceOnUse">
+<linearGradient id="bbpaint1_linear_622_5581" x1="6.35156" y1="17.9979" x2="29.6503" y2="17.9979" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0156D5"/>
 <stop offset="1" stop-color="#41BAFF"/>
 </linearGradient>
-<clipPath id="baclip0_622_5581">
+<clipPath id="bbclip0_622_5581">
 <rect width="36" height="36" fill="white"/>
 </clipPath>
 </defs>

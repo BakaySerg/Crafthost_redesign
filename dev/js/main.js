@@ -146,7 +146,10 @@
 					320: {
 						slidesPerView: 1.1,
 					},
-					720: {
+					700: {
+						slidesPerView: 2.1,
+					},
+					1100: {
 						slidesPerView: 3.1,
 					},
 					1300: {

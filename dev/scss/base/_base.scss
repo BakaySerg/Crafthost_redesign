@@ -4,7 +4,6 @@ html {
 	scroll-behavior: smooth;
 	scrollbar-gutter: stable;
 }
-
 html, body {
 	margin: 0;
 	padding: 0;
@@ -31,10 +30,26 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100svh;
+	&:has(.header--open) {
+		max-height: 100dvh;
+		overflow: hidden;
+	}
 }
 .container {
 	width: 100%;
 	max-width: 1342px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+.section {
+	padding: 72px 0;
+	@media (max-width: 1100px){
+		padding: 40px 0 30px;
+	}
+	@media (max-width: 600px){
+		padding: 30px 0;
+	}
+	&--gradient {
+		background-image: var(--gradient-gray);
+	}
 }
