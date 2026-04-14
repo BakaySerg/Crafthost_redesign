@@ -138,16 +138,12 @@
 					hide: false,
 					snapOnRelease: true,
 				},
-				// navigation: {
-				// 	nextEl: ".swiper-button-next",
-				// 	prevEl: ".swiper-button-prev",
-				// },
 				breakpoints: {
 					320: {
 						slidesPerView: 1.1,
 					},
 					700: {
-						slidesPerView: 2.1,
+						slidesPerView: 2.2,
 					},
 					1100: {
 						slidesPerView: 3.1,
@@ -157,7 +153,51 @@
 					},
 				},
 			});
+		};
+
+		let swiperOrGridInstance = null;
+
+		function initSwiper() {
+			const screenWidth = window.innerWidth;
+
+			if (screenWidth < 1024 && !swiperOrGridInstance) {
+				swiperOrGridInstance = new Swiper(".slider-or-grid__box", {
+					observer: true,
+					observeParents: true,
+					spaceBetween: 16,
+					draggable: true,
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					pagination: {
+						el: ".swiper-pagination-fraction",
+						type: "fraction",
+						renderFraction: function (currentClass, totalClass) {
+							return '<span class="' + currentClass + '"></span>' + " / " + '<span class="' + totalClass + '"></span>';
+						},
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 1.1,
+							spaceBetween: 16,
+						},
+						700: {
+							slidesPerView: 2,
+							spaceBetween: 16,
+						},
+					},
+				});
+			}
+			// destroy 1023+
+			else if (screenWidth >= 1024 && swiperOrGridInstance) {
+				swiperOrGridInstance.destroy(true, true);
+				swiperOrGridInstance = null;
+			}
 		}
+		initSwiper();
+		window.addEventListener("resize", initSwiper);
+
 
 		// copyright - year
 		const year = document.getElementById("year");

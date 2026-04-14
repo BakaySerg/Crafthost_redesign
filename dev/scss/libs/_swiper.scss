@@ -10,7 +10,6 @@
   list-style: none;
   padding: 0;
   width: 100%;
-  /* Fix of Webkit flickering */
   z-index: 1;
 }
 .swiper-vertical > .swiper-wrapper {
@@ -108,7 +107,11 @@ button.swiper-pagination-bullet {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 2em;
+	padding-top: 20px;
+  gap: 1em;
+  &--right {
+    justify-content: flex-end;
+  }
 }
 // .swiper-pagination-current {
 //   font-size: 1.22em;
@@ -120,6 +123,7 @@ button.swiper-pagination-bullet {
   justify-content: center;
   transition: .3s;
   background-color: #fff;
+  border: 1px solid var(--light-4);
   cursor: pointer;
   width: 65px;
   height: 64px;
@@ -129,27 +133,19 @@ button.swiper-pagination-bullet {
   }
   &:hover {
     .icon {
-      color: #fff;
+      color: var(--light-4);
     }
   }
   @media (max-width: 991px){
-    width: 50px;
-    height: 50px;
-    padding: .6em;
+    width: 48px;
+    height: 48px;
   }
-  @media (max-width: 500px){
-    width: 40px;
-    height: 40px;
-  }
+
 }
 .swiper-button-prev {
-  border-radius: 2em 0 2em 2em;
   .icon {
     transform: rotate(180deg);
   }
-}
-.swiper-button-next {
-  border-radius: 0 2em 2em 2em;
 }
 .swiper-button-disabled,.swiper-pagination-lock {
 	visibility: hidden;
