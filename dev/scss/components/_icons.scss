@@ -1,6 +1,6 @@
 @use "../base/utils" as *;
 .icon {
-	flex-shrink: none;
+	flex-shrink: 0;
 	display: inline-block;
 	user-select: none;
 	&--accent {

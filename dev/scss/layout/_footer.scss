@@ -18,6 +18,9 @@
 	&__logo {
 		flex-shrink: 0;
 		max-width: 32px;
+		@media (max-width: 600px){
+			max-width: 30px;
+		}
 	}
 	&__remark {
 		max-width: 636px;

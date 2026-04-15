@@ -10,5 +10,6 @@
 @use "layout/header";
 @use "layout/footer";
 @use "libs/swiper";
-@use "pages/not-found";
+@use "components/banners";
 @use "pages/home";
+@use "pages/not-found";

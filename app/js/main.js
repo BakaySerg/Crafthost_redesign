@@ -179,17 +179,17 @@
 					},
 					breakpoints: {
 						320: {
-							slidesPerView: 1.1,
+							slidesPerView: 1.2,
 							spaceBetween: 16,
 						},
 						700: {
-							slidesPerView: 2,
+							slidesPerView: 2.2,
 							spaceBetween: 16,
 						},
 					},
 				});
 			}
-			// destroy 1023+
+			// destroy =1024
 			else if (screenWidth >= 1024 && swiperOrGridInstance) {
 				swiperOrGridInstance.destroy(true, true);
 				swiperOrGridInstance = null;

@@ -20,7 +20,7 @@
 }
 .h2 {
 	font-size: em(52);
-	line-height: 1.2;
+	line-height: 1.21;
 	text-wrap: balance;
 	margin-bottom: 0.44em;
 	@media (max-width: 1390px){
@@ -59,6 +59,9 @@
 	}
 	@media (max-width: 1023px){
 		font-size: em(18);
+	}
+	@media (max-width: 600px){
+		margin-bottom: 0.7em;
 	}
 }
 .text-gradient {
