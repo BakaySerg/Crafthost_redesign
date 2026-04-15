@@ -31,6 +31,8 @@
 	}
 	@media (max-width: 600px){
 		font-size: em(36);
+		letter-spacing: -.06em;
+		word-spacing: -.2em;
 	}
 }
 .h3 {
@@ -56,9 +58,6 @@
 	margin-bottom: 1em;
 	@media (max-width: 1390px){
 		font-size: em(20);
-	}
-	@media (max-width: 1023px){
-		font-size: em(18);
 	}
 	@media (max-width: 600px){
 		margin-bottom: 0.7em;

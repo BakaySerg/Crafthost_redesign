@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 	<title>Crafthost</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4">
+	<meta name="description" content="site descr">
+	<meta name="keywords" content="site,keywords,separated,by,commas">
+	<meta name="MS.LOCALE" content="EN-US">
+	<meta name="rating" content="General">
+	<meta name="robots" content="index,follow">
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Playfair:opsz,wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-	<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-<meta name="description" content="site descr" />
-<meta name="keywords" content="site,keywords,separated,by,commas" />
-<meta name="MS.LOCALE" content="EN-US" />
-<meta name="rating" content="General" />
-<meta name="robots" content="index,follow" />
-<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon"/>
-<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Playfair:opsz,wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-
-<!--[if lt IE 11]>
-	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-
+	<!--[if lt IE 11]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
 	<body class="light">
 		<div class="wrapper">
 			<header class="header" id="header">
@@ -145,7 +143,7 @@
 			</div>
 		</nav>
 		<a href="order-service.html" class="btn btn--md btn--outline">Client Portal</a>
-		<button type="button" class="btn btn--menu">
+		<button type="button" class="btn btn--menu" aria-label="burger menu">
 			<svg class="icon icon--menu" viewBox="0 0 32 32">
 				<use xlink:href="img/general/sprite.svg#menu-burger" />
 			</svg>
@@ -156,7 +154,7 @@
 	</div>
 </header>
 			<!-- intro -->
-			<section class="intro">
+			<main class="intro">
 				<div class="container intro__container">
 					<div class="intro__content">
 						<h1 class="h1 text-gradient">Crafthost Enterprise Managed Hosting & Intelligent IaaS.</h1>
@@ -174,15 +172,15 @@
 						</div>
 					</div>
 					<div class="intro__image">
-						<img srcset="img/home/intro.png, img/home/intro-2x.png 2x" src="img/home/intro.png" alt="3d crafthost">
+						<img srcset="img/home/intro.png, img/home/intro-2x.png 2x" src="img/home/intro.png" width="688" height="499" alt="3d crafthost">
 					</div>
 				</div>
-			</section>
+			</main>
 
 			<div class="container">
 				<div class="cta">
 	<div class="cta__pict">
-		<img srcset="img/home/small-cloud.png, img/home/small-cloud-2x.png 2x" src="img/home/small-cloud.png" alt="cloud">
+		<img srcset="img/home/small-cloud.png, img/home/small-cloud-2x.png 2x" src="img/home/small-cloud.png" width="77" height="64" alt="cloud">
 	</div>
 	<p class="cta__text">
 		<b>Infrastructure at Crafthost is not sold as a commodity.</b><br>
@@ -198,7 +196,7 @@
 			<!-- trust -->
 			<section class="trust">
 				<div class="container">
-					<h2 class="h2">Trusted Infrastructure for High&#8209Responsi&shy;bility Environments.</h2>
+					<h2 class="h2">Trusted Infrastructure for High&#8209;Responsi&shy;bility Environments.</h2>
 					<div class="tiles">
 						<div class="tile">
 							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#cloud"/></svg>
@@ -225,7 +223,7 @@
 				<!-- contextual -->
 				<div class="container contextual contextual--reversed">
 					<div class="contextual__image">
-						<img loading="lazy" srcset="img/home/team.jpg, img/home/team-2x.jpg 2x" src="img/home/team.jpg" alt="team">
+						<img loading="lazy" srcset="img/home/team.jpg, img/home/team-2x.jpg 2x" src="img/home/team.jpg" width="640" height="370" alt="team">
 					</div>
 					<div class="contextual__content">
 						<p class="subtitle">Organizations rely on Crafthost where infrastructure failure is not an option. Crafthost infrastructure is engineered for <b>predictability and accountability.</b></p>
@@ -305,7 +303,7 @@
 				<!-- contextual 2-->
 				<div class="container contextual">
 					<div class="contextual__image">
-						<img loading="lazy" srcset="img/home/engineer.jpg, img/home/engineer-2x.jpg 2x" src="img/home/engineer.jpg" alt="engineer">
+						<img loading="lazy" srcset="img/home/engineer.jpg, img/home/engineer-2x.jpg 2x" src="img/home/engineer.jpg" width="640" height="370" alt="engineer">
 					</div>
 					<div class="contextual__content">
 						<p class="subtitle"><span class="text-accent">Crafthost operates as an engineering partner,</span> not a hosting reseller.Infrastructure is treated as an operational system with clear ownership and accountability.</p>
@@ -419,8 +417,8 @@
 				</div>
 
 				<div class="container grid-md-2">
-					<img loading="lazy" srcset="img/home/infrastructure.jpg, img/home/infrastructure-2x.jpg 2x" src="img/home/infrastructure.jpg" alt="engineer">
-					<div class="slider-or-grid__box">
+					<img loading="lazy" srcset="img/home/infrastructure.jpg, img/home/infrastructure-2x.jpg 2x" src="img/home/infrastructure.jpg" width="640" height="366" alt="engineer">
+					<div class="slider-or-grid__box swiper">
 						<div class="slider-or-grid swiper-wrapper">
 							<div class="slider-or-grid__item swiper-slide">
 								<p>Enterprise-grade data-center environments</p>
@@ -514,16 +512,31 @@
 			</section>
 
 			<!-- banner light -->
-			<section class="banner banner--light">
-				<div class="container">
+			<section class="banner banner--light" role="banner">
+				<div class="container banner__box">
 					<div class="banner__content">
 						<h2 class="h2 text-gradient">Engage with Crafthost.</h2>
-						<p class="subtitle"></p>
-						<a href="#" class="btn btn--filled btn--lg">
-							<span>Learn More</span>
-							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-						</a>
+						<p class="subtitle"><span class="text-accent">Select the engagement path</span> aligned with your organization’s requirements.</p>
+						<div class="banner__action">
+							<div>
+								<div>Standard Managed Services</div>
+								<a href="#" class="btn btn--filled btn--lg">
+									<span>View Managed Pricing</span>
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+								</a>
+							</div>
+							<div>
+								<div>Enterprise & Regulated Environments</div>
+								<a href="#" class="btn btn--outline btn--lg">
+									<span>Request Architecture Call</span>
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+								</a>
+							</div>
+						</div>
 					</div>
+					<figure class="banner__image">
+						<img loading="lazy" srcset="img/home/modular_server.png, img/home/modular_server-2x.png 2x" src="img/home/modular_server.png" width="360" height="360" alt="modular server">
+					</figure>
 				</div>
 			</section>
 
@@ -671,7 +684,7 @@
 			</div>
 		</div>
 		<p class="footer__copy">&copy; <span id="year">2025</span> Crafthost SRL | ISO 27001 • SOC 2 • GDPR&nbsp;Compliant</p>
-		<a href="#header" class="footer__to-top">
+		<a href="#header" class="footer__to-top" aria-label="back to top">
 			<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#up"/></svg>
 		</a>
 	</div>
