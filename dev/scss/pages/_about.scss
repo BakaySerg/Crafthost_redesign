@@ -30,18 +30,67 @@
 			display: none;
 		}
 	}
+	@media (max-width: 1400px){
+		background-position: 300% center;
+	}
+	@media (max-width: 1100px){
+		background-position: 24% center;
+		padding: 85px 0;
+		.h1 {
+			max-width: 686px;
+		}
+	}
 	@media (max-width: 1023px){
 		padding: 74px 0;
-		background-position: 120% center;
 	}
 	@media (max-width: 991px){
+		padding: 45px 0 30px;
 		&__image {
 			display: block;
 			width: 100%;
-			padding-top: 3em;
+			padding-top: 2.2em;
 		}
 	}
 	@media (max-width: 600px){
 		padding: 34px 0;
+		.btn--lg {
+			width: 100%;
+		}
+	}
+}
+
+.who-we-are {
+	padding: 72px 0 30px;
+	@media (max-width: 1100px){
+		padding: 40px 0 20px;
+	}
+	@media (max-width: 600px){
+		padding: 30px 0 20px;
+	}
+	@media (max-width: 500px){
+		padding: 20px 0 10px;
+	}
+	.container{
+		display: grid;
+		gap: calc(1.8em + 1vw);
+		grid-template-columns: 460px 1fr;
+		@media (max-width: 1400px){
+			grid-template-columns: 380px 1fr;
+		}
+		@media (max-width: 1100px){
+			grid-template-columns: 320px 1fr;
+		}
+		@media (max-width: 1023px){
+			grid-template-columns: 1fr;
+			gap: 1em;
+		}
+	}
+	&__text {
+		.link {
+			padding-top: 1.5em;
+			@media (max-width: 991px){
+				padding-top: 0.6em;
+			}
+		}
 	}
 }

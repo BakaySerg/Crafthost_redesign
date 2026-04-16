@@ -46,18 +46,12 @@
 	}
 
 	&__middle {
-		padding: 42px 0 25px 15px;
+		padding: 42px 0 25px 17px;
 		@media (max-width: 900px){
 			padding: 20px 15px 20px;
 		}
 	}
 	&__grid {
-		// display: grid;
-		// grid-auto-flow: column;
-		// grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
-		// grid-template-rows: repeat(2, auto);
-		// align-items: start;
-		// gap: 26px 18px;
 		column-count: 5;
 		column-gap: 36px;
 		@media (min-width: 1300px){
@@ -84,7 +78,6 @@
 			margin-bottom: 0;
 		}
 		&:nth-child(1) {
-			// grid-row: span 2;
 			break-after: column;
 		}
 		&-title {

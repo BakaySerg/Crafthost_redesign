@@ -1,5 +1,11 @@
 @use "../base/utils" as *;
 
+.pt-05 {
+	padding-top: 0.5em;
+	@media (max-width: 600px){
+		padding-top: 0.1em;
+	}
+}
 .pt-1	{
 	padding-top: 1em;
 	@media (max-width: 600px){
@@ -24,6 +30,12 @@
 		padding-top: 1.9em;
 	}
 }
+.pb-05 {
+	padding-bottom: 0.6em;
+	@media (max-width: 600px){
+		padding-bottom: 0.2em;
+	}
+}
 .pb-1 {
 	padding-bottom: 1em;
 	@media (max-width: 600px){
@@ -37,6 +49,12 @@
 	}
 }
 
+.mb-05 {
+	margin-bottom: 0.6em;
+	@media (max-width: 600px){
+		margin-bottom: 0.2em;
+	}
+}
 .mb-1 {
 	margin-bottom: 1em;
 	@media (max-width: 600px){

@@ -16,7 +16,7 @@ body {
 	background: var(--white);
 	color: var(--dark-4);
 	font-size: 18px;
-	line-height: 1.4;
+	line-height: 1.41;
 	&.dark {
 		background: var(--dark-4);
 		color: var(--white);
@@ -39,7 +39,13 @@ body {
 	width: 100%;
 	max-width: 1342px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	@media (min-width: 1024px){
+		padding-left: 17px;
+		padding-right: 17px;
+		max-width: 1346px;
+	}
 }
 .section {
 	padding: 72px 0;

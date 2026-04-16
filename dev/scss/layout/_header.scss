@@ -10,15 +10,14 @@
 		background-color: var(--light-3);
 	}
 
-
-
 	& > .container {
 		position: static;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 3.2em;
-		padding: 9px 15px;
+		padding-top: 9px;
+		padding-bottom: 9px;
 
 		@media (max-width: 1023px) {
 			gap: 2em;
@@ -481,67 +480,67 @@
 	}
 }
 
-.subheader {
-	position: sticky;
-	top: 0;
-	z-index: 4;
-	background-color: transparent;
-	transition: .35s;
+// .subheader {
+// 	position: sticky;
+// 	top: 0;
+// 	z-index: 4;
+// 	background-color: transparent;
+// 	transition: .35s;
 
-	.container {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		padding: .9em 0;
-		transition: padding .2s;
+// 	.container {
+// 		position: relative;
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: flex-end;
+// 		padding: .9em 0;
+// 		transition: padding .2s;
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: -2px;
-			left: 15px;
-			right: 15px;
-		}
+// 		&::before {
+// 			content: '';
+// 			position: absolute;
+// 			top: -2px;
+// 			left: 15px;
+// 			right: 15px;
+// 		}
 
-		@media (max-width: 1367px) {
-			padding: 1em 0;
-		}
-	}
+// 		@media (max-width: 1367px) {
+// 			padding: 1em 0;
+// 		}
+// 	}
 
-	&__title {
-		font-weight: bold;
-		font-size: em(24);
-	}
+// 	&__title {
+// 		font-weight: bold;
+// 		font-size: em(24);
+// 	}
 
-	&__menu {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 10px;
-		margin-left: auto;
-		flex-grow: .05;
+// 	&__menu {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 		gap: 10px;
+// 		margin-left: auto;
+// 		flex-grow: .05;
 
-		a {
-			padding: 6px 14px;
-			font-size: em(17);
+// 		a {
+// 			padding: 6px 14px;
+// 			font-size: em(17);
 
-			&.current {
-				font-weight: bold;
-			}
+// 			&.current {
+// 				font-weight: bold;
+// 			}
 
-			@media (min-width: 1200px) {
-				&:last-child {
-					padding-right: 0;
-				}
-			}
+// 			@media (min-width: 1200px) {
+// 				&:last-child {
+// 					padding-right: 0;
+// 				}
+// 			}
 
-			@media (max-width: 1100px) {
-				padding: 6px 9px;
-			}
-		}
-	}
-}
+// 			@media (max-width: 1100px) {
+// 				padding: 6px 9px;
+// 			}
+// 		}
+// 	}
+// }
 
 .dark {
 	.header {
@@ -623,7 +622,8 @@
 		&:not(:first-child) {
 			&::before {
 				content: '/';
-				margin-right: .8em;
+				margin-right: .85em;
+				font-size: 1em;
 				color: var(--dark-4);
 			}
 		}

@@ -23,6 +23,9 @@
 	line-height: 1.21;
 	text-wrap: balance;
 	margin-bottom: 0.44em;
+	&--sm {
+		max-width: 650px;
+	}
 	@media (max-width: 1390px){
 		font-size: em(46);
 	}
@@ -74,9 +77,6 @@
 	color: var(--blue);
 }
 .text-columns {
-	@media (min-width: 1300px){
-		gap: 32px;
-	}
 	@media (min-width: 1024px){
 		display: grid;
 		grid-template-columns: 1.05fr 1fr;
@@ -85,5 +85,8 @@
 			padding-top: 0.4em;
 			max-width: 620px;
 		}
+	}
+	@media (min-width: 1300px){
+		gap: 32px;
 	}
 }
