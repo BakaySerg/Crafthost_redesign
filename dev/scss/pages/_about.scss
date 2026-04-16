@@ -1,0 +1,47 @@
+.about-intro {
+	padding: 111px 0;
+	.h1 {
+		margin-bottom: 0.7em;
+	}
+	@media (min-width: 992px){
+		background-image: url("../img/about/main/about-intro.jpg");
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: auto 100%;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 16%;
+			bottom: 0;
+			background-image: var(--gradient-banner-dark);
+		}
+		.container {
+			position: relative;
+			z-index: 1;
+		}
+		.h1 {
+			max-width: 860px;
+			text-shadow: 0 0 34px var(--dark-4);
+		}
+		&__image {
+			display: none;
+		}
+	}
+	@media (max-width: 1023px){
+		padding: 74px 0;
+		background-position: 120% center;
+	}
+	@media (max-width: 991px){
+		&__image {
+			display: block;
+			width: 100%;
+			padding-top: 3em;
+		}
+	}
+	@media (max-width: 600px){
+		padding: 34px 0;
+	}
+}
