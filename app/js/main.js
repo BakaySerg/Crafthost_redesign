@@ -155,6 +155,42 @@
 			});
 		};
 
+		const sheetSlider = document.querySelector(".sheet__slider");
+		if (sheetSlider) {
+			new Swiper(sheetSlider, {
+				draggable: true,
+				grabCursor: true,
+				centeredSlides: false,
+				loop: false,
+				autoHeight: false,
+				scrollbar: {
+					el: ".swiper-scrollbar",
+					draggable: true,
+					hide: false,
+					snapOnRelease: true,
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1.16,
+					},
+					660: {
+						slidesPerView: 2.3,
+					},
+					760: {
+						slidesPerView: 2.7,
+					},
+					1200: {
+						slidesPerView: 3,
+						grid: {
+							rows: 2,
+							fill: "row",
+						},
+						spaceBetween: 16,
+					},
+				},
+			});
+		};
+
 		let sliderInstance = document.querySelector(".slider-or-grid__box");
 		let swiperOrGridInstance = null;
 

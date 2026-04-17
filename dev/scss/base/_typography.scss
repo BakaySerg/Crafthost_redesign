@@ -68,6 +68,9 @@
 .subtitle {
 	font-size: em(22);
 	margin-bottom: 1em;
+	&--sm {
+		max-width: 800px;
+	}
 	@media (max-width: 1390px){
 		font-size: em(20);
 	}

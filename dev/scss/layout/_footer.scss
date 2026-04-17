@@ -5,8 +5,27 @@
 	color: var(--white);
 	padding: 50px 0 10px;
 	margin-top: auto;
-	@media (max-width: 700px){
+	&[data-decorated] {
+		background-image: url(../img/about/main/divider-footer.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 40px;
+		background-position: center top;
+		padding: 90px 0 10px;
+	}
+	@media (max-width: 1200px){
+		padding: 40px 0 10px;
+		&[data-decorated] {
+			padding: 80px 0 10px;
+			background-position: center -6px;
+		}
+	}
+	@media (max-width: 991px){
 		padding: 36px 0 10px;
+		&[data-decorated] {
+			padding: 63px 0 10px;
+			background-position: center 3px;
+			background-size: auto 22px;
+		}
 	}
 
 	&__top {
