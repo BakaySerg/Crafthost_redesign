@@ -139,6 +139,9 @@
 	&--col {
 		flex-direction: column;
 		gap: em(56);
+		@media (max-width: 767px){
+			gap: em(40);
+		}
 	}
 	svg {
 		width: 36px;
@@ -289,6 +292,13 @@
 		background-color: var(--light-4);
 		width: calc(100% - 60px);
 		max-width: 1312px;
+	}
+}
+.dark {
+	.with-divider {
+		&::after {
+			background-color: var(--dark-2);
+		}
 	}
 }
 

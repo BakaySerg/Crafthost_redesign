@@ -83,3 +83,18 @@
 		grid-template-columns: 1fr;
 	}
 }
+.action {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding-top: 3em;
+	@media (max-width: 991px){
+		padding-top: 2.8em;
+	}
+	@media (max-width: 767px){
+		gap: 16px;
+		.btn, .link {
+			flex: 1 1 100%;
+		}
+	}
+}

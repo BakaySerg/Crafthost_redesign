@@ -140,13 +140,13 @@
 				},
 				breakpoints: {
 					320: {
-						slidesPerView: 1.1,
+						slidesPerView: 1.16,
 					},
 					700: {
-						slidesPerView: 2.2,
+						slidesPerView: 2.3,
 					},
 					1100: {
-						slidesPerView: 3.1,
+						slidesPerView: 3.5,
 					},
 					1300: {
 						slidesPerView: 4,
@@ -155,13 +155,14 @@
 			});
 		};
 
+		let sliderInstance = document.querySelector(".slider-or-grid__box");
 		let swiperOrGridInstance = null;
 
 		function initSwiper() {
 			const screenWidth = window.innerWidth;
 
 			if (screenWidth < 1024 && !swiperOrGridInstance) {
-				swiperOrGridInstance = new Swiper(".slider-or-grid__box", {
+				swiperOrGridInstance = new Swiper(sliderInstance, {
 					observer: true,
 					observeParents: true,
 					spaceBetween: 16,
@@ -195,8 +196,40 @@
 				swiperOrGridInstance = null;
 			}
 		}
-		initSwiper();
-		window.addEventListener("resize", initSwiper);
+		if (sliderInstance) {
+			initSwiper();
+			window.addEventListener("resize", initSwiper);
+		}
+
+		/**
+			tabs
+		**/
+		const tabSwitcher = function () {
+			[].forEach.call(
+				document.querySelectorAll("[data-trigger-tab]"),
+				function (el) {
+					el.addEventListener("click", function (e) {
+						let id = this.getAttribute("data-trigger-tab"),
+							comingTab = document.getElementById(id),
+							parent = comingTab.closest('.tabs-content'),
+							currentTab = parent.querySelector('[data-tab="active"]');
+
+						currentTab?.setAttribute("data-tab", "hidden");
+						comingTab.setAttribute("data-tab", "active");
+
+						let tabsBlock = this.closest('.tabs');
+						if (tabsBlock) {
+							let allTabs = tabsBlock.querySelectorAll('[data-trigger-tab]');
+							[...allTabs].forEach(item => {
+								item.closest('.tab').classList.remove('active');
+							});
+							this.closest(".tab").classList.add("active");
+						};
+					});
+				}
+			);
+		};
+		tabSwitcher();
 
 
 		// copyright - year

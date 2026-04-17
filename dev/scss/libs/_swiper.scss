@@ -173,3 +173,11 @@ button.swiper-pagination-bullet {
   position: relative;
   top: -1px;
 }
+.dark {
+  .swiper-scrollbar {
+    background: var(--dark-2);
+  }
+  .swiper-scrollbar-drag {
+    background: var(--dark-1);
+  }
+}

@@ -1,0 +1,14 @@
+@use "../base/utils" as *;
+
+[data-tab]:not([data-tab=active]) {
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0);
+	position: absolute;
+	user-select: none;
+	pointer-events: none;
+}
+
+.tab {
+	user-select: none;
+}
