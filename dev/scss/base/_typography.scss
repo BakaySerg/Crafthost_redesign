@@ -92,6 +92,9 @@
 		display: grid;
 		grid-template-columns: 1.05fr 1fr;
 		gap: 20px;
+		.h2 {
+			text-wrap: balance;
+		}
 		.subtitle {
 			padding-top: 0.4em;
 			max-width: 620px;
