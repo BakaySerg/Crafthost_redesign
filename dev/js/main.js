@@ -86,7 +86,6 @@
 		};
 		accordionOpen();
 
-
 		// custom select
 		let select = function () {
 			let selectHeader = document.querySelectorAll(".select__header");
@@ -123,6 +122,177 @@
 				});
 			});
 		}
+
+		// sliders
+		const mobileSlider = document.querySelector("[data-slider]");
+		if (mobileSlider) {
+			new Swiper(mobileSlider, {
+				draggable: true,
+				grabCursor: true,
+				centeredSlides: false,
+				loop: false,
+				autoHeight: false,
+				scrollbar: {
+					el: ".swiper-scrollbar",
+					draggable: true,
+					hide: false,
+					snapOnRelease: true,
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1.16,
+					},
+					700: {
+						slidesPerView: 2.3,
+					},
+					1100: {
+						slidesPerView: 3.5,
+					},
+					1300: {
+						slidesPerView: 4,
+					},
+				},
+			});
+		};
+
+		const sheetSlider = document.querySelector(".sheet__slider");
+		if (sheetSlider) {
+			new Swiper(sheetSlider, {
+				draggable: true,
+				grabCursor: true,
+				centeredSlides: false,
+				loop: false,
+				autoHeight: false,
+				scrollbar: {
+					el: ".swiper-scrollbar",
+					draggable: true,
+					hide: false,
+					snapOnRelease: true,
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1.16,
+					},
+					660: {
+						slidesPerView: 2.3,
+					},
+					760: {
+						slidesPerView: 2.7,
+					},
+					1200: {
+						slidesPerView: 3,
+						grid: {
+							rows: 2,
+							fill: "row",
+						},
+						spaceBetween: 16,
+					},
+				},
+			});
+		};
+
+		let sliderInstance = document.querySelector(".slider-or-grid__box");
+		let swiperOrGridInstance = null;
+
+		function initSwiper() {
+			const screenWidth = window.innerWidth;
+
+			if (screenWidth < 1024 && !swiperOrGridInstance) {
+				swiperOrGridInstance = new Swiper(sliderInstance, {
+					observer: true,
+					observeParents: true,
+					spaceBetween: 16,
+					draggable: true,
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					pagination: {
+						el: ".swiper-pagination-fraction",
+						type: "fraction",
+						renderFraction: function (currentClass, totalClass) {
+							return '<span class="' + currentClass + '"></span>' + " / " + '<span class="' + totalClass + '"></span>';
+						},
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 1.2,
+							spaceBetween: 16,
+						},
+						700: {
+							slidesPerView: 2.2,
+							spaceBetween: 16,
+						},
+					},
+				});
+			}
+			// destroy =1024
+			else if (screenWidth >= 1024 && swiperOrGridInstance) {
+				swiperOrGridInstance.destroy(true, true);
+				swiperOrGridInstance = null;
+			}
+		}
+		if (sliderInstance) {
+			initSwiper();
+			window.addEventListener("resize", initSwiper);
+		}
+
+		/**
+			tabs
+		**/
+		const tabSwitcher = function () {
+			[].forEach.call(
+				document.querySelectorAll("[data-trigger-tab]"),
+				function (el) {
+					el.addEventListener("click", function (e) {
+						let id = this.getAttribute("data-trigger-tab"),
+							comingTab = document.getElementById(id),
+							parent = comingTab.closest('.tabs-content'),
+							currentTab = parent.querySelector('[data-tab="active"]');
+
+						currentTab?.setAttribute("data-tab", "hidden");
+						comingTab.setAttribute("data-tab", "active");
+
+						let tabsBlock = this.closest('.tabs');
+						if (tabsBlock) {
+							let allTabs = tabsBlock.querySelectorAll('[data-trigger-tab]');
+							[...allTabs].forEach(item => {
+								item.closest('.tab').classList.remove('active');
+							});
+							this.closest(".tab").classList.add("active");
+						};
+					});
+				}
+			);
+		};
+		tabSwitcher();
+
+		// modals
+		const openButtons = document.querySelectorAll("[data-modal-open]");
+		const closeButtons = document.querySelectorAll("[data-modal-close]");
+
+		openButtons.forEach((button) => {
+			button.addEventListener("click", () => {
+				const modal = document.getElementById(button.getAttribute("data-modal-open"));
+				modal?.showModal();
+			});
+		});
+
+		closeButtons.forEach((button) => {
+			button.addEventListener("click", () => {
+				const modal = button.closest("dialog");
+				modal?.close();
+			});
+		});
+
+		document.querySelectorAll("dialog").forEach((modal) => {
+			modal.addEventListener("click", (event) => {
+				// click backdrop close-modal
+				if (event.target === modal) {
+					modal.close();
+				}
+			});
+		});
 
 
 		// copyright - year

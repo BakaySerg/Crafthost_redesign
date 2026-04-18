@@ -5,8 +5,27 @@
 	color: var(--white);
 	padding: 50px 0 10px;
 	margin-top: auto;
-	@media (max-width: 700px){
+	&[data-decorated] {
+		background-image: url(../img/about/main/divider-footer.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 40px;
+		background-position: center top;
+		padding: 90px 0 10px;
+	}
+	@media (max-width: 1200px){
+		padding: 40px 0 10px;
+		&[data-decorated] {
+			padding: 80px 0 10px;
+			background-position: center -6px;
+		}
+	}
+	@media (max-width: 991px){
 		padding: 36px 0 10px;
+		&[data-decorated] {
+			padding: 63px 0 10px;
+			background-position: center 3px;
+			background-size: auto 22px;
+		}
 	}
 
 	&__top {
@@ -18,6 +37,9 @@
 	&__logo {
 		flex-shrink: 0;
 		max-width: 32px;
+		@media (max-width: 600px){
+			max-width: 30px;
+		}
 	}
 	&__remark {
 		max-width: 636px;
@@ -43,18 +65,12 @@
 	}
 
 	&__middle {
-		padding: 42px 0 25px 15px;
+		padding: 42px 0 25px 17px;
 		@media (max-width: 900px){
 			padding: 20px 15px 20px;
 		}
 	}
 	&__grid {
-		// display: grid;
-		// grid-auto-flow: column;
-		// grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
-		// grid-template-rows: repeat(2, auto);
-		// align-items: start;
-		// gap: 26px 18px;
 		column-count: 5;
 		column-gap: 36px;
 		@media (min-width: 1300px){
@@ -81,7 +97,6 @@
 			margin-bottom: 0;
 		}
 		&:nth-child(1) {
-			// grid-row: span 2;
 			break-after: column;
 		}
 		&-title {
@@ -99,8 +114,8 @@
 				text-decoration: none;
 				font-size: em(15px);
 				transition: .3s;
-				padding-top: 0.2em;
-				padding-bottom: 0.2em;
+				padding-top: 0.18em;
+				padding-bottom: 0.18em;
 				svg {
 					width: 22px;
 					height: 22px;

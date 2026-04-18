@@ -55,8 +55,8 @@ gulp.task("svg-sprite", function () {
 
 		return gulp
 			.src(path.join(folder, "*.svg"))
-			.pipe(replace(/fill\s*=\s*"(?!\s*(?:none|url\())[^"]*"/gi, 'fill="currentColor"'))
-			.pipe(replace(/stroke\s*=\s*"(?!\s*(?:none|url\())[^"]*"/gi, 'stroke="currentColor"'))
+			.pipe(replace(/fill\s*=\s*"(?!\s*(?:none|url\(|[a-zA-Z]+))[^"]*"/gi, 'fill="currentColor"'))
+			.pipe(replace(/stroke\s*=\s*"(?!\s*(?:none|url\(|[a-zA-Z]+))[^"]*"/gi, 'stroke="currentColor"'))
 			.pipe(svgSprite(config))
 			.pipe(gulp.dest(path.join("app/img", folderName)));
 	});

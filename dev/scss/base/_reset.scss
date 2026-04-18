@@ -5,10 +5,6 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-[class|="i"] {
-	display: inline-block;
-	user-select: none;
-}
 img {
 	display: block;
 	max-width: 100%;
@@ -16,13 +12,11 @@ img {
 	user-select: none;
 }
 svg {
+	flex-shrink: 0;
 	display: block;
 	min-width: 12px;
 	max-width: 100%;
-	&:hover {
-		stroke: currentColor;
-		fill: currentColor;
-	}
+	max-height: 100%;
 }
 a, a:focus {
 	text-decoration: none;
@@ -38,4 +32,11 @@ a, a:focus {
 
 li {
 	list-style: none;
+}
+
+p:not([class]) {
+	margin-bottom: 1.3em;
+}
+p > b {
+	font-weight: 600;
 }

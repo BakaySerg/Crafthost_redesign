@@ -3,10 +3,16 @@
 @use "base/reset";
 @use "base/base";
 @use "base/typography";
+@use "base/helper";
 @use "components/buttons";
 @use "components/icons";
 @use "components/select";
+@use "components/tabs";
+@use "components/modals";
 @use "layout/header";
 @use "layout/footer";
-@use "pages/not-found";
+@use "libs/swiper";
+@use "components/banners";
 @use "pages/home";
+@use "pages/about";
+@use "pages/not-found";

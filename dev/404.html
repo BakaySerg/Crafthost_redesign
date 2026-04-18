@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 	<title>Crafthost</title>
-
 	@@include('./includes/head.html')
-
 	<body class="light">
 		<div class="wrapper">
 			@@include('./includes/header.html')
@@ -21,7 +19,7 @@
 					</a>
 				</div>
 			</section>
-			@@include('./includes/footer.html')
+			@@include('./includes/footer.html', { "decor": false })
 		</div>
 		<script src="js/main.js"></script>
 	</body>

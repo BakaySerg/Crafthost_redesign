@@ -1,38 +1,389 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 	<title>Crafthost</title>
-
 	@@include('./includes/head.html')
-
-	<body class="light">
+	<body>
 		<div class="wrapper">
 			@@include('./includes/header.html')
+
 			<!-- intro -->
-			<section class="intro">
+			<main class="intro">
 				<div class="container intro__container">
-					<div class="intro__text">
+					<div class="intro__content">
 						<h1 class="h1 text-gradient">Crafthost Enterprise Managed Hosting & Intelligent IaaS.</h1>
 						<p class="intro__subtitle">Engineered Infrastructure for Organizations That Demand Accountability.</p>
 						<p class="intro__remark">Crafthost delivers engineer-managed cloud, dedicated, and AI infrastructure for organizations operating mission-critical workloads.</p>
 						<div class="intro__action">
-							<a href="#" class="btn btn--primary">
+							<a href="404.html" class="btn btn--lg btn--filled">
 								<span>View Managed Pricing</span>
-								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#arrow-right"/></svg>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 							</a>
-							<a href="#" class="btn btn--secondary">
+							<a href="404.html" class="btn btn--lg btn--outline">
 								<span>Request Architecture Call</span>
-								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#arrow-right"/></svg>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 							</a>
 						</div>
 					</div>
 					<div class="intro__image">
-						<img srcset="img/home/intro.png, img/home/intro-2x.png 2x" src="img/home/builder.png" alt="3d crafthost">
+						<img srcset="img/home/intro.png, img/home/intro-2x.png 2x" src="img/home/intro.png" width="688" height="499" alt="3d crafthost">
 					</div>
+				</div>
+			</main>
 
+			<div class="container">
+				@@include('./includes/modules/cta-sm.html')
+			</div>
+
+			<!-- trust -->
+			<section class="trust">
+				<div class="container">
+					<h2 class="h2">Trusted Infrastructure for High&#8209;Responsi&shy;bility Environments.</h2>
+					<div class="tiles">
+						<div class="tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#cloud"/></svg>
+							<div class="tile__name">
+								Tier-4/5
+								<span class="tile__descr">Data Centers</span>
+							</div>
+						</div>
+						<div class="tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#security"/></svg>
+							<div class="tile__name">ISO 27001</div>
+						</div>
+						<div class="tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#unlock"/></svg>
+							<div class="tile__name">SOC 2</div>
+						</div>
+						<div class="tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#config"/></svg>
+							<div class="tile__name">GDPR</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- contextual -->
+				<div class="container contextual contextual--reversed">
+					<div class="contextual__image">
+						<img loading="lazy" srcset="img/home/team.jpg, img/home/team-2x.jpg 2x" src="img/home/team.jpg" width="640" height="370" alt="team">
+					</div>
+					<div class="contextual__content">
+						<p class="subtitle">Organizations rely on Crafthost where infrastructure failure is not an option. Crafthost infrastructure is engineered for <b>predictability and accountability.</b></p>
+						<ul class="contextual__list">
+							<li>Enterprise-grade multi-region data-center environments</li>
+							<li>Continuous monitoring and proactive operational response</li>
+							<li>Compliance-aligned security practices</li>
+							<li>Engineer-led operations with defined ownership</li>
+							<li>Performance consistency under sustained production load</li>
+						</ul>
+					</div>
 				</div>
 			</section>
-			@@include('./includes/footer.html')
+
+			<!-- managed -->
+			<section class="managed with-divider">
+				<div class="container text-columns">
+					<h2 class="h2">Managed Infrastructure Services.</h2>
+					<p class="subtitle"><span class="text-accent">All Crafthost services</span> are delivered through engineer-led lifecycle management, ensuring controlled execution and clear accountability.</p>
+				</div>
+				<div class="container managed__slider" data-slider>
+					<div class="swiper-wrapper">
+						<div class="managed__slide swiper-slide">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-plans-1"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Managed Cloud & VPS</h3>
+							<p>High-availability cloud environments operated and maintained by Crafthost engineers for sustained production use.</p>
+							<a href="#" class="link link--icon">
+								<span>Explore Managed Cloud & VPS</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+						<div class="managed__slide swiper-slide managed__slide--accent">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-plans-2"/></svg>
+							</i>
+							<h3 class="h4">Managed Dedicated Servers</h3>
+							<p>Single-tenant infrastructure with full lifecycle management, performance optimization, and operational ownership.</p>
+							<a href="#" class="link link--icon">
+								<span>Explore Managed Dedicated Servers</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+						<div class="managed__slide swiper-slide">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-plans-3"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">GPU & AI Infrastructure</h3>
+							<p>Purpose-built GPU environments for AI, machine learning, and advanced analytics, delivered through validated architecture and controlled operations.</p>
+							<a href="#" class="link link--icon">
+								<span>Explore GPU & AI Infrastructure</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+						<div class="managed__slide swiper-slide">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-storage"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Private & Hybrid Cloud</h3>
+							<p>Isolated architectures designed for sovereignty, compliance, and controlled integration across environments.</p>
+							<a href="#" class="link link--icon">
+								<span>Explore Private Cloud</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-scrollbar"></div>
+				</div>
+			</section>
+
+			<!-- engineer -->
+			<section class="engineer with-divider">
+				<div class="container">
+					<h2 class="h2">Engineers at the Core.</h2>
+				</div>
+				<!-- contextual 2-->
+				<div class="container contextual">
+					<div class="contextual__image">
+						<img loading="lazy" srcset="img/home/engineer.jpg, img/home/engineer-2x.jpg 2x" src="img/home/engineer.jpg" width="640" height="370" alt="engineer">
+					</div>
+					<div class="contextual__content">
+						<p class="subtitle"><span class="text-accent">Crafthost operates as an engineering partner,</span> not a hosting reseller.Infrastructure is treated as an operational system with clear ownership and accountability.</p>
+						<ul class="contextual__list">
+							<li>Designed by senior engineers</li>
+							<li>Operated through defined procedures</li>
+							<li>Monitored continuously</li>
+							<li>Optimized for stability and efficiency</li>
+							<li>Managed as a single accountable system</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- bricks -->
+			<section class="bricks">
+				<div class="container text-columns">
+					<h2 class="h2">Human-Grade Operations & Support.</h2>
+				</div>
+				<div class="container bricks__grid">
+					<div class="bricks__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-chart"/></svg>
+						</i>
+						<div class="h5">Continuous</div>
+						<p>monitoring and response</p>
+					</div>
+					<div class="bricks__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-gear"/></svg>
+						</i>
+						<div class="h5">Direct</div>
+						<p>engineer involvement</p>
+					</div>
+					<div class="bricks__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-software"/></svg>
+						</i>
+						<div class="h5">Structured</div>
+						<p>escalation paths</p>
+					</div>
+					<div class="bricks__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-question"/></svg>
+						</i>
+						<div class="h5">Clear</div>
+						<p>incident communication</p>
+					</div>
+					<div class="bricks__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-security"/></svg>
+						</i>
+						<div class="h5">SLA-driven</div>
+						<p>operational accountability</p>
+					</div>
+					<div class="bricks__cta">
+						<p><b>Mission-critical environments</b> require human judgment and operational discipline.</p>
+						<a href="#" class="btn btn--filled btn--lg">
+							<span>View Support & SLA Models</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--gradient">
+				<div class="container text-columns pb-15">
+					<h2 class="h2">Security & Compliance by Design.</h2>
+					<p class="subtitle">Security at Crafthost is operational, enforceable, and auditable.</p>
+				</div>
+
+				<div class="container">
+					<div class="tiles">
+						<div class="tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#security-shield"/></svg>
+							<div class="tile__name">Security & Compliance</div>
+						</div>
+						<div class="tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#security"/></svg>
+							<div class="tile__name">ISO 27001</div>
+						</div>
+						<div class="tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#unlock"/></svg>
+							<div class="tile__name">SOS 2</div>
+						</div>
+						<div class="tile">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#config"/></svg>
+							<div class="tile__name">GDPR</div>
+						</div>
+					</div>
+					<ul class="list list--grid list--checked pt-2">
+						<li>Hardened infrastructure baselines</li>
+						<li>Controlled access and audit visibility</li>
+						<li>Continuous threat monitoring</li>
+						<li>Incident response aligned with enterprise requirements</li>
+						<li>Support for regulated and compliance-driven environments</li>
+						<li class="list-cta">
+							<a href="#" class="btn btn--filled btn--lg">
+								<span>Security & Compliance Overview</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container text-columns pb-15">
+					<h2 class="h2">Infrastructure Without Borders.</h2>
+					<p class="subtitle">Crafthost operates across multiple global regions, enabling resilient and location-aware architectures.</p>
+				</div>
+
+				<div class="container grid-md-2">
+					<img loading="lazy" srcset="img/home/infrastructure.jpg, img/home/infrastructure-2x.jpg 2x" src="img/home/infrastructure.jpg" width="640" height="366" alt="engineer">
+					<div class="slider-or-grid__box swiper">
+						<div class="slider-or-grid swiper-wrapper">
+							<div class="slider-or-grid__item swiper-slide">
+								<p>Enterprise-grade data-center environments</p>
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-servers"/></svg>
+								</i>
+							</div>
+							<div class="slider-or-grid__item swiper-slide">
+								<p>Multi-region and multi-platform designs</p>
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-internet"/></svg>
+								</i>
+							</div>
+							<div class="slider-or-grid__item swiper-slide">
+								<p>Private, hybrid, and controlled multi-cloud deployments</p>
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-cloud"/></svg>
+								</i>
+							</div>
+							<div class="slider-or-grid__item swiper-slide">
+								<p>--Lorem ipsum dolor sit amet consectetur.</p>
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#sm-growth"/></svg>
+								</i>
+							</div>
+						</div>
+						<div class="swiper-controls swiper-controls--right">
+							<div class="swiper-button-prev"><i class="icon"></i></div>
+							<div class="swiper-pagination-fraction"></div>
+							<div class="swiper-button-next"><i class="icon"></i></div>
+						</div>
+					</div>
+				</div>
+				<div class="container pt-25">
+					<a href="#" class="btn btn--filled btn--lg">
+						<span>Data Centers & Global Locations</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+					</a>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container text-columns pb-15">
+					<h2 class="h2">Industries We Serve.</h2>
+					<p class="subtitle"><span class="text-accent">Crafthost supports sectors where infrastructure reliability,</span> security, and accountability directly impact operations.</p>
+				</div>
+				<div class="container grid-icons pt-1">
+					<div class="grid-icons__item grid-icons__item--active">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-banking"/></svg>
+						</i>
+						<span>Finance</span>
+					</div>
+					<div class="grid-icons__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-fairness"/></svg>
+						</i>
+						<span>Government</span>
+					</div>
+					<div class="grid-icons__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-health"/></svg>
+						</i>
+						<span>Healthcare</span>
+					</div>
+					<div class="grid-icons__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-nuclear"/></svg>
+						</i>
+						<span>Energy</span>
+					</div>
+					<div class="grid-icons__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-factory"/></svg>
+						</i>
+						<span>Manufacturing</span>
+					</div>
+					<div class="grid-icons__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-telecom"/></svg>
+						</i>
+						<span>Tele&shy;communications</span>
+					</div>
+					<div class="grid-icons__item">
+						<i class="icon icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-ai"/></svg>
+						</i>
+						<span>AI-Driven Startups</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- banner light -->
+			<section class="banner banner--light" role="banner">
+				<div class="container banner__box">
+					<div class="banner__content">
+						<h2 class="h2 text-gradient">Engage with Crafthost.</h2>
+						<p class="subtitle"><span class="text-accent">Select the engagement path</span> aligned with your organization’s requirements.</p>
+						<div class="banner__action">
+							<div>
+								<div>Standard Managed Services</div>
+								<a href="#" class="btn btn--filled btn--lg">
+									<span>View Managed Pricing</span>
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+								</a>
+							</div>
+							<div>
+								<div>Enterprise & Regulated Environments</div>
+								<a href="#" class="btn btn--outline btn--lg">
+									<span>Request Architecture Call</span>
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<figure class="banner__image">
+						<img loading="lazy" srcset="img/home/modular_server.png, img/home/modular_server-2x.png 2x" src="img/home/modular_server.png" width="360" height="360" alt="modular server">
+					</figure>
+				</div>
+			</section>
+
+			@@include('./includes/footer.html', { "decor": false })
 		</div>
+		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

@@ -1,15 +1,33 @@
 .icon {
-	flex-shrink: none;
+	flex-shrink: 0;
+	display: inline-block;
+	user-select: none;
+	&--accent {
+		color: var(--blue);
+	}
+	&--sm {
+		width: 24px;
+		height: 24px;
+	}
+	&--md {
+		width: 36px;
+		height: 36px;
+		@media (max-width: 600px){
+			width: 34px;
+			height: 34px;
+		}
+	}
 	&--lg {
 		width: 80px;
 		height: 80px;
+
 		@media (max-width: 1500px){
-			width: 64px;
-			height: 64px;
+			width: 68px;
+			height: 68px;
 		}
-		@media (max-width: 991px){
-			width: 52px;
-			height: 52px;
+		@media (max-width: 700px){
+			width: 60px;
+			height: 60px;
 		}
 	}
 }
