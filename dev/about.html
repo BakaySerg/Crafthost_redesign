@@ -478,10 +478,10 @@
 							<li>Reporting transparency to support enterprise ESG compliance.</li>
 						</ul>
 					</div>
-					<a href="#" class="btn btn--lg btn--filled">
+					<button id="openModal" class="btn btn--lg btn--filled">
 						<span>Proven Performance Metrics</span>
 						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
-					</a>
+					</button>
 				</div>
 			</section>
 
@@ -508,8 +508,28 @@
 			</section>
 
 			@@include('./includes/footer.html', { "decor": true })
+
+			<dialog id="myModal" class="modal modal--md">
+				<h2 class="h2 h2--center">Proven Performance Metrics.</h2>
+				<p>Это содержимое нативного модального окна.</p>
+				<button id="closeModal">
+					<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#close"/></svg>
+				</button>
+			</dialog>
+
 		</div>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/main.js"></script>
+		<script>
+			const openModal = document.getElementById('openModal');
+			const closeModal = document.getElementById('closeModal');
+			const modal = document.getElementById('myModal');
+			openModal.addEventListener('click', () => {
+				modal.showModal();
+			});
+			closeModal.addEventListener('click', () => {
+				modal.close();
+			});
+		</script>
 	</body>
 </html>

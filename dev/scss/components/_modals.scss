@@ -1,0 +1,24 @@
+@use "../base/utils" as *;
+
+dialog::backdrop {
+	background-color: rgba(29, 29, 29, 0.6);
+	backdrop-filter: blur(12px);
+}
+dialog {
+	color: var(--dark-4);
+	margin: auto;
+	border: none;
+}
+
+.modal {
+	&--md {
+		width: min(100% - 32px, 1280px);
+	}
+	&__close {
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		cursor: pointer;
+	}
+
+}
