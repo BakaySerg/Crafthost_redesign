@@ -267,6 +267,33 @@
 		};
 		tabSwitcher();
 
+		// modals
+		const openButtons = document.querySelectorAll("[data-modal-open]");
+		const closeButtons = document.querySelectorAll("[data-modal-close]");
+
+		openButtons.forEach((button) => {
+			button.addEventListener("click", () => {
+				const modal = document.getElementById(button.getAttribute("data-modal-open"));
+				modal?.showModal();
+			});
+		});
+
+		closeButtons.forEach((button) => {
+			button.addEventListener("click", () => {
+				const modal = button.closest("dialog");
+				modal?.close();
+			});
+		});
+
+		document.querySelectorAll("dialog").forEach((modal) => {
+			modal.addEventListener("click", (event) => {
+				// click backdrop close-modal
+				if (event.target === modal) {
+					modal.close();
+				}
+			});
+		});
+
 
 		// copyright - year
 		const year = document.getElementById("year");

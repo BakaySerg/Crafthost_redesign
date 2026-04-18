@@ -339,3 +339,29 @@
 		}
 	}
 }
+.metrics {
+	display: grid;
+	gap: 16px;
+	padding-top: 0.2em;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	@media (min-width: 1400px){
+		padding-top: 0.5em;
+	}
+	@media (max-width: 767px){
+		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	}
+	&__item {
+		padding: 16px;
+		border: 1px solid var(--light-3);
+		display: flex;
+		gap: 1.2em;
+	}
+	.action {
+		padding-top: 0;
+		align-items: flex-start;
+		align-content: flex-start;
+		.btn {
+			width: 100%;
+		}
+	}
+}
