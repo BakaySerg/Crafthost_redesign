@@ -11,6 +11,9 @@ dialog {
 	max-height: 99dvh;
 	overflow-y: auto;
 	animation: fadeOutDown 0.2s ease-out forwards;
+	@media (max-width: 767px){
+		width: 100dvw;
+	}
 }
 dialog[open] {
 	animation: fadeInUp 0.2s ease-out forwards;
