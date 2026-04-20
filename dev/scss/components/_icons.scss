@@ -2,6 +2,11 @@
 	flex-shrink: 0;
 	display: inline-block;
 	user-select: none;
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
 	&--accent {
 		color: var(--blue);
 	}
@@ -30,4 +35,8 @@
 			height: 60px;
 		}
 	}
+}
+.is-ios .icon--gradient svg {
+  fill: var(--blue) !important;
+  stroke: var(--blue) !important;
 }

@@ -26,22 +26,25 @@ gulp.task("browser-sync", function (done) {
 	done();
 });
 
-gulp.task("svg-sprite", function () {
-	const folders = glob.sync("dev/img/*/");
-
+gulp.task("svg-sprite", function (done) {
+	const folders = glob.sync("dev/img/**/");
 	const tasks = folders.map((folder) => {
-		const folderName = path.basename(folder);
+		const hasSvg = glob.sync(path.join(folder, "*.svg")).length > 0;
+		if (!hasSvg) return Promise.resolve();
+
+		// Вычисляем относительный путь от корня картинок
+		const relativePath = path.relative("dev/img", folder);
 
 		const config = {
 			mode: {
 				symbol: {
 					sprite: "sprite.svg",
 					example: false,
-					dest: ".", // убрать папку symbol
+					dest: ".",
 				},
 			},
 			shape: {
-				transform: [], // откл. minify
+				transform: [],
 				id: {
 					generator: function (name) {
 						return path.basename(name, ".svg");
@@ -49,19 +52,21 @@ gulp.task("svg-sprite", function () {
 				},
 			},
 			svg: {
-				pretty: true, // код читабельн
+				pretty: true,
 			},
 		};
 
-		return gulp
-			.src(path.join(folder, "*.svg"))
-			.pipe(replace(/fill\s*=\s*"(?!\s*(?:none|url\(|[a-zA-Z]+))[^"]*"/gi, 'fill="currentColor"'))
-			.pipe(replace(/stroke\s*=\s*"(?!\s*(?:none|url\(|[a-zA-Z]+))[^"]*"/gi, 'stroke="currentColor"'))
-			.pipe(svgSprite(config))
-			.pipe(gulp.dest(path.join("app/img", folderName)));
+		return (
+			gulp
+				.src(path.join(folder, "*.svg"))
+				.pipe(replace(/fill\s*=\s*"(?!\s*(?:none|url\(|[a-zA-Z]+))[^"]*"/gi, 'fill="currentColor"'))
+				.pipe(replace(/stroke\s*=\s*"(?!\s*(?:none|url\(|[a-zA-Z]+))[^"]*"/gi, 'stroke="currentColor"'))
+				.pipe(svgSprite(config))
+				.pipe(gulp.dest(path.join("app/img", relativePath)))
+		);
 	});
 
-	return Promise.all(tasks);
+	return Promise.all(tasks).then(() => done());
 });
 
 

@@ -1,4 +1,8 @@
 "use strict";
+
+	if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+		document.documentElement.classList.add("is-ios");
+	}
 	/**
 		 active menu point
 	**/

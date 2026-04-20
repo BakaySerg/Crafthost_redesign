@@ -18,41 +18,31 @@
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="check" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.5" y="0.5" width="23" height="23" rx="11.5" stroke="currentColor"/>
-<g clip-path="url(#eclip0_3006_8867)">
+<g clip-path="url(#dclip0_3006_8867)">
 <path d="M16.0984 9.40039L10.9984 14.6004L7.89844 11.5004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="eclip0_3006_8867">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</symbol><symbol viewBox="0 0 24 24" fill="none" id="check-fill" xmlns="http://www.w3.org/2000/svg">
-<rect width="24" height="24" rx="12" fill="currentColor"/>
-<g clip-path="url(#cclip0_624_6846)">
-<path d="M16.0984 9.40039L10.9984 14.6004L7.89844 11.5004" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="cclip0_624_6846">
+<clipPath id="dclip0_3006_8867">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="check-filled" xmlns="http://www.w3.org/2000/svg">
 <rect width="24" height="24" rx="12" fill="currentColor"/>
-<g clip-path="url(#dclip0_1417_17064)">
+<g clip-path="url(#cclip0_1417_17064)">
 <path d="M16.0984 9.40039L10.9984 14.6004L7.89844 11.5004" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="dclip0_1417_17064">
+<clipPath id="cclip0_1417_17064">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="close" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#fclip0_1180_66864)">
+<g clip-path="url(#eclip0_1180_66864)">
 <path d="M7 7L17 17" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M17 7L7 17" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="fclip0_1180_66864">
+<clipPath id="eclip0_1180_66864">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
@@ -61,14 +51,23 @@
 </symbol><symbol viewBox="0 0 20 20" fill="none" id="linkedin" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10ZM5.125 8.3125V15H7.25V8.3125H5.125ZM5 6.1875C5 6.875 5.5 7.375 6.1875 7.375C6.875 7.375 7.375 6.875 7.375 6.1875C7.375 5.5 6.875 5 6.1875 5C5.5625 5 5 5.5 5 6.1875ZM12.875 15H14.875V10.875C14.875 8.8125 13.625 8.125 12.4375 8.125C11.375 8.125 10.625 8.8125 10.4375 9.25V8.3125H8.4375V15H10.5625V11.4375C10.5625 10.5 11.1875 10 11.8125 10C12.4375 10 12.875 10.3125 12.875 11.375V15Z" fill="currentColor"/>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="menu-burger" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#iclip0_1180_66863)">
+<g clip-path="url(#hclip0_1180_66863)">
 <path d="M4 12H16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M4 19H20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M4 5H20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="iclip0_1180_66863">
+<clipPath id="hclip0_1180_66863">
 <rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</symbol><symbol viewBox="0 0 20 20" fill="none" id="minus" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#iclip0_1492_17166)">
+<path d="M18.1172 9.97852L1.66329 9.97852" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="iclip0_1492_17166">
+<rect width="20" height="20" fill="white"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 18 18" fill="none" id="no" xmlns="http://www.w3.org/2000/svg">
