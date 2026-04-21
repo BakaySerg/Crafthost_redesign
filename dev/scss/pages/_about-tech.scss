@@ -62,3 +62,51 @@
 		}
 	}
 }
+.bonus {
+	background-image: linear-gradient(to top, rgba(8, 107, 236, 0.2) 0%,rgba(8, 105, 236, 0) 92%);
+	border: 1px solid rgba(8, 107, 236, 0.8);
+	display: flex;
+	align-items: center;
+	gap: 16px 28px;
+	padding-right: 15px;
+	@media (min-width: 1100px){
+		gap: 16px 36px;
+		padding-right: 45px;
+	}
+	@media (max-width: 1023px){
+		flex-wrap: wrap;
+		padding: 16px;
+		gap: 16px 20px;
+	}
+	@media (max-width: 600px){
+		.btn {
+			flex: 1 1 100%;
+		}
+	}
+	&__steps{
+		margin-right: auto;
+		display: flex;
+		flex-wrap: wrap;
+		gap: .2em 1.9em;
+		font-weight: 600;
+		@media (max-width: 1100px){
+			gap: .2em 1.3em;
+		}
+		@media (max-width: 1023px){
+			max-width: calc(100% - 130px);
+			margin-right: 0;
+			font-size: em(17);
+		}
+	}
+	&__pict {
+		background-color: rgba(8,105,236,.2);
+		padding: 10px 48px;
+		flex-shrink: 0;
+		@media (max-width: 1100px){
+			padding: 10px 36px;
+		}
+		@media (max-width: 1023px){
+			padding: 19px 16px;
+		}
+	}
+}
