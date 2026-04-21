@@ -88,6 +88,13 @@
 		gap: 20px;
 		grid-template-columns: 1fr;
 	}
+	&--no-gap {
+		gap: 0;
+		& > div {
+			margin-right: -1px;
+			margin-top: -1px;
+		}
+	}
 }
 .action {
 	display: flex;
@@ -102,5 +109,13 @@
 		.btn, .link {
 			flex: 1 1 100%;
 		}
+	}
+}
+.md-half {
+	@media (min-width: 768px){
+		width: min(71%, 66ch);
+	}
+	@media (min-width: 992px){
+		width: min(50%, 62ch);
 	}
 }

@@ -216,10 +216,11 @@
 				background-size: cover;
 				background-position: center;
 				display: inline-block;
-				width: .72em !important;
-				max-width: .72em !important;
-				height: .72em;
+				width: .7em !important;
+				max-width: .7em !important;
+				height: .7em;
 				margin-top: .33em;
+				flex-shrink: 0;
 			}
 			@media (max-width: 600px){
 				gap: 1em;

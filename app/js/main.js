@@ -130,6 +130,7 @@
 		// sliders
 		const mobileSlider = document.querySelector("[data-slider]");
 		if (mobileSlider) {
+			const customSpaceBetween = Number(mobileSlider.dataset.spaceBetween) || 0;
 			new Swiper(mobileSlider, {
 				draggable: true,
 				grabCursor: true,
@@ -145,12 +146,15 @@
 				breakpoints: {
 					320: {
 						slidesPerView: 1.16,
+						spaceBetween: customSpaceBetween
 					},
 					700: {
 						slidesPerView: 2.3,
+						spaceBetween: customSpaceBetween
 					},
 					1100: {
 						slidesPerView: 3.5,
+						spaceBetween: customSpaceBetween
 					},
 					1300: {
 						slidesPerView: 4,
