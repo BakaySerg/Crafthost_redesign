@@ -74,21 +74,31 @@
 			accordions - collapse
 		**/
 		const accordionOpen = function () {
-			[].forEach.call(document.querySelectorAll("[data-collapse-trigger]"), function (el) {
+			const triggers = document.querySelectorAll("[data-collapse-trigger]");
+
+			triggers.forEach(function (el) {
 				el.addEventListener("click", function (e) {
 					e.preventDefault();
-					let currentItem = this.closest("[data-collapser]");
-					let siblings = currentItem.parentElement.children;
-					[...siblings].forEach((sibling) => {
-						if (sibling !== currentItem) {
-							sibling.classList.remove("uncollapsed");
-						}
-					});
+
+					const currentItem = this.closest("[data-collapser]");
+					if (!currentItem) return;
+
+					if (currentItem.getAttribute("data-collapser") !== "all") {
+						const siblings = currentItem.parentElement.children;
+						[...siblings].forEach((sibling) => {
+							if (sibling !== currentItem) {
+								sibling.classList.remove("uncollapsed");
+							}
+						});
+					}
+
 					currentItem.classList.toggle("uncollapsed");
 				});
 			});
 		};
+
 		accordionOpen();
+
 
 		// custom select
 		let select = function () {

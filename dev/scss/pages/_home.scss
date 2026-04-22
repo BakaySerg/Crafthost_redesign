@@ -247,6 +247,7 @@
 }
 .dark {
 	.contextual__list {
+		font-weight: 300;
 		li {
 			border-bottom-color: var(--dark-2);
 			color: var(--light-3);
@@ -305,6 +306,7 @@
 .dark {
 	.list {
 		&--checked {
+			font-weight: 300;
 			li {
 				color: var(--light-3);
 				&:not(:last-child) {
