@@ -4,7 +4,7 @@
 	width: 100%;
 	border-collapse: collapse;
 	&__box {
-		border: 1px solid rgba(8, 107, 236, .8);
+		border: 1px solid var(--blue-muted);
 		padding: 1.7em 0;
 		@media (max-width: 600px){
 			padding: 1.2em 0;

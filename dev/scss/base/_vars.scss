@@ -15,15 +15,16 @@
 --green: #00AC70;
 --red: #F43362;
 --blue: #0869EC;
+--blue-muted: rgba(8, 107, 236, 0.8);
 
 --gradient-gray: linear-gradient(180deg, #F4F4F4, #fff);
 --gradient-light: linear-gradient(to right, #DCEAFF, #D4FFF0);
 --gradient-blue: linear-gradient(to right, #0156D5, #41BAFF);
 --gradient-blue-light: linear-gradient(to bottom, #E2EFFF, #fff);
---gradient-blue-dark: linear-gradient(180deg, #0869EC, rgba(8, 107, 236, 0.02));
+--gradient-blue-dark: linear-gradient(to top, rgba(8, 107, 236, 0.2) 0%,rgba(8, 105, 236, 0) 92%);
 --gradient-dark: linear-gradient(to right, #343434, rgba(52, 52, 52, 0.02));
 --gradient-banner-light: linear-gradient(to right, #f4f4f4, transparent);
---gradient-banner-dark: linear-gradient(to right, #161616, #161616, rgba(22, 22, 22, 0.62), rgba(22, 22, 22, 0.007));
+--gradient-intro-dark: linear-gradient(to right, #161616, #161616, rgba(22, 22, 22, 0.62), rgba(22, 22, 22, 0.007));
 
 --transition: .35s cubic-bezier(.2,.6,0,1);
 }

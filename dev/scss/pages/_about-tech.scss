@@ -63,7 +63,7 @@
 	}
 }
 .bonus {
-	background-image: linear-gradient(to top, rgba(8, 107, 236, 0.2) 0%,rgba(8, 105, 236, 0) 92%);
+	background-image: var(--gradient-blue-dark);
 	border: 1px solid rgba(8, 107, 236, 0.8);
 	display: flex;
 	align-items: center;
