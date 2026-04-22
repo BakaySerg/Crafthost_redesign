@@ -78,24 +78,6 @@
 	display: grid;
 }
 
-.grid-md-2 {
-	grid-template-columns: repeat(2, 1fr);
-	gap: 32px;
-	@media (max-width: 1400px){
-		gap: 24px;
-	}
-	@media (max-width: 1023px){
-		gap: 20px;
-		grid-template-columns: 1fr;
-	}
-	&--no-gap {
-		gap: 0;
-		& > div {
-			margin-right: -1px;
-			margin-top: -1px;
-		}
-	}
-}
 .action {
 	display: flex;
 	flex-wrap: wrap;
@@ -117,5 +99,14 @@
 	}
 	@media (min-width: 992px){
 		width: min(50%, 62ch);
+	}
+}
+.md-line {
+	@media (min-width: 768px){
+		display: grid;
+		gap: 32px;
+		&--1_2 {
+			grid-template-columns: auto min(67%, 66ch);
+		}
 	}
 }
