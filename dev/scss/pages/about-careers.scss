@@ -1,0 +1,25 @@
+@use "../base/utils" as *;
+
+.careers {
+	padding: 34px 0 60px;
+	@media (max-width: 1400px){
+		padding: 30px 0 50px;
+	}
+	@media (max-width: 1100px){
+		padding: 15px 0 40px;
+	}
+	@media (max-width: 991px){
+		padding: 0 0 22px;
+	}
+	.container {
+		background-color: var(--light-1);
+		max-width: 1392px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		@media (min-width: 1400px){
+			padding: 50px 40px;
+			gap: 60px;
+			grid-template-columns: 1fr 640px;
+		}
+	}
+}

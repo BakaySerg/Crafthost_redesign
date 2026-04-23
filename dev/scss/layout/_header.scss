@@ -557,11 +557,18 @@
 	gap: .8em;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	@media (max-width: 991px){
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+	@media (max-width: 600px){
+		padding-top: 9px;
+		padding-bottom: 9px;
+	}
 
 	&__item {
 		font-size: 15px;
 		padding: 4px 1px;
-		font-weight: 300;
 		user-select: none;
 		&:not(:first-child) {
 			&::before {

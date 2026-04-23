@@ -5,7 +5,7 @@
 	color: var(--white);
 	padding: 50px 0 10px;
 	margin-top: auto;
-	&[data-decorated] {
+	&[data-decorated="true"] {
 		background-image: url(../img/about/main/divider-footer.svg);
 		background-repeat: no-repeat;
 		background-size: 100% 40px;
@@ -14,14 +14,14 @@
 	}
 	@media (max-width: 1200px){
 		padding: 40px 0 10px;
-		&[data-decorated] {
+		&[data-decorated="true"] {
 			padding: 80px 0 10px;
 			background-position: center -6px;
 		}
 	}
 	@media (max-width: 991px){
 		padding: 36px 0 10px;
-		&[data-decorated] {
+		&[data-decorated="true"] {
 			padding: 63px 0 10px;
 			background-position: center 3px;
 			background-size: auto 22px;

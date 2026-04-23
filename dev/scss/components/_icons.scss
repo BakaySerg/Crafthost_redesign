@@ -20,8 +20,8 @@
 		width: 36px;
 		height: 36px;
 		@media (max-width: 600px){
-			width: 34px;
-			height: 34px;
+			width: 32px;
+			height: 32px;
 		}
 	}
 	&--lg {
@@ -32,9 +32,13 @@
 			width: 68px;
 			height: 68px;
 		}
-		@media (max-width: 700px){
+		@media (max-width: 1100px){
 			width: 60px;
 			height: 60px;
+		}
+		@media (max-width: 600px){
+			width: 50px;
+			height: 50px;
 		}
 	}
 	&--info {
