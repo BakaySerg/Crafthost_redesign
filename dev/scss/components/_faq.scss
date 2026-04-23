@@ -21,6 +21,9 @@
 		font-size: em(22);
 		font-weight: 500;
 		transition: .3s;
+		@media (max-width: 767px){
+			font-size: em(19);
+		}
 	}
 	&__icon {
 		position: relative;
@@ -53,6 +56,15 @@
 			&-minus {
 				width: 18px;
 				height: 18px;
+			}
+		}
+		@media (max-width: 600px){
+			width: 32px;
+			height: 32px;
+			&-plus,
+			&-minus {
+				width: 16px;
+				height: 16px;
 			}
 		}
 	}

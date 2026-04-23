@@ -6,8 +6,12 @@
 	&__box {
 		border: 1px solid var(--blue-muted);
 		padding: 1.7em 0;
-		@media (max-width: 600px){
+		@media (max-width: 700px){
 			padding: 1.2em 0;
+		}
+		@media (max-width: 550px){
+			padding: 0.9em 0;
+			font-size: em(16);
 		}
 	}
 	&__key, &__value {
@@ -16,7 +20,7 @@
 			padding: .7em 2.2em;
 		}
 		@media (max-width: 600px){
-			padding: .3em .7em .3em 1.4em;
+			padding: .2em .5em .2em 1.2em;
 		}
 	}
 	&__key{

@@ -13,6 +13,7 @@ dialog {
 	animation: fadeOutDown 0.2s ease-out forwards;
 	@media (max-width: 767px){
 		width: 100dvw;
+		max-width: 99dvw !important;
 	}
 }
 dialog[open] {
@@ -81,6 +82,11 @@ dialog[open] {
 		@media (max-width: 991px){
 			top: 0.3em;
 			right: 0.5em;
+		}
+	}
+	.btn--lg {
+		@media (max-width: 550px){
+			width: 100%;
 		}
 	}
 }
