@@ -40,3 +40,8 @@ p:not([class]) {
 p > b {
 	font-weight: 600;
 }
+
+::selection {
+	background-color: var(--blue-muted);
+	color: var(--white);
+}

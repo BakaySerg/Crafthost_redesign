@@ -139,11 +139,9 @@
 }
 
 .cards {
-	padding-top: 1.5em;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
 	@media (max-width: 600px){
-		padding-top: 0.6em;
 		grid-template-columns: 1fr;
 	}
 }
@@ -152,15 +150,22 @@
 	padding: 16px 16px 20px;
 	display: grid;
 	gap: 1.1em;
-	grid-template-columns: .9fr 1.1fr;
+	grid-template-columns: 180px 1.1fr;
 	margin-right: -1px;
 	margin-bottom: -1px;
+	&--long {
+		@media (min-width: 700px){
+			grid-column: span 2;
+		}
+		@media (max-width: 699px){
+			grid-template-columns: 1fr !important;
+		}
+	}
 	.h4 {
 		margin-bottom: 0.6em;
 	}
 	P {
 		margin-bottom: 0;
-		color: var(--light-3);
 	}
 	@media (min-width: 1100px){
 		padding-bottom: 38px;
@@ -178,6 +183,9 @@
 .dark {
 	.card {
 		border-color: var(--dark-2);
+		p {
+			color: var(--light-3);
+		}
 	}
 }
 

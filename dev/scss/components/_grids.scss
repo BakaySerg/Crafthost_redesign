@@ -8,6 +8,12 @@
 		gap: 20px;
 		grid-template-columns: 1fr;
 	}
+	&--sm-gap {
+		gap: 16px;
+		@media (min-width: 768px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 	&--no-gap {
 		@media (max-width: 1023px){
 			grid-template-columns: repeat(2, 1fr);

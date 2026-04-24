@@ -23,3 +23,44 @@
 		}
 	}
 }
+
+
+.cell {
+	padding: 24px 17px;
+	border: 1px solid var(--dark-4);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: .4em;
+	user-select: none;
+	.icon {
+		margin-bottom: 2.2em;
+	}
+	@media (max-width: 1400px){
+		padding: 20px 16px;
+		.icon {
+			margin-bottom: 1.6em;
+		}
+	}
+	@media (max-width: 600px){
+		padding: 16px;
+		.icon {
+			margin-bottom: 1.2em;
+		}
+	}
+
+	&--accent {
+		background-color: var(--blue);
+		color: var(--white);
+		.link {
+			color: var(--white);
+		}
+	}
+}
+
+.dark {
+	.cell {
+		border-color: var(--dark-2);
+	}
+
+}
