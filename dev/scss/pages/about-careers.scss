@@ -64,3 +64,18 @@
 	}
 
 }
+.testimonials {
+	&__item {
+		.h4 {
+			margin-bottom: 1em;
+			@media (min-width: 1400px){
+				margin-bottom: 2.3em;
+			}
+		}
+		@media (max-width: 1100px){
+			p:last-child {
+				margin-top: auto;
+			}
+		}
+	}
+}

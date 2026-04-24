@@ -173,6 +173,42 @@
 			});
 		};
 
+		const testimonialsSlider = document.querySelector(".testimonials__slider");
+		if (testimonialsSlider) {
+			const customSpaceBetween = Number(testimonialsSlider.dataset.spaceBetween) || 0;
+			new Swiper(testimonialsSlider, {
+				draggable: true,
+				grabCursor: true,
+				centeredSlides: false,
+				loop: false,
+				scrollbar: {
+					el: ".swiper-scrollbar",
+					draggable: true,
+					hide: false,
+					snapOnRelease: true,
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1.16,
+						spaceBetween: 16
+					},
+					768: {
+						slidesPerView: 2.1,
+						spaceBetween: 20
+					},
+					900: {
+						slidesPerView: 3,
+						spaceBetween: 22
+					},
+					1100: {
+						slidesPerView: 3,
+						autoHeight: true,
+						spaceBetween: customSpaceBetween
+					}
+				}
+			});
+		};
+
 		const sheetSlider = document.querySelector(".sheet__slider");
 		if (sheetSlider) {
 			new Swiper(sheetSlider, {

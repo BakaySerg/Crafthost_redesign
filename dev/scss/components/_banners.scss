@@ -52,6 +52,18 @@
 		grid-template-columns: minmax(660px, 1fr) auto;
 		gap: calc(5em + 3vw);
 		align-items: center;
+		&--narrow {
+			@media (min-width: 1301px){
+				grid-template-columns: 645px auto;
+				justify-content: space-between;
+			}
+			.banner__action {
+				gap: 20px;
+				@media (max-width: 600px){
+					gap: 16px;
+				}
+			}
+		}
 		@media (max-width: 1300px){
 			grid-template-columns: minmax(590px, 1fr) auto;
 			gap: calc(3em + 2vw);
@@ -64,7 +76,7 @@
 	&__content {
 		@media (min-width: 1600px){
 			.h2 {
-				margin-bottom: .7em;
+				margin-bottom: .6em;
 			}
 		}
 	}
