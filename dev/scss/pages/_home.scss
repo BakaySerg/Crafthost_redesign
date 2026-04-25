@@ -350,7 +350,7 @@
 				max-width: 1.35em !important;
 				height: 1.35em;
 			}
-			&:last-child {
+			&:last-child:has([class]) {
 				padding-bottom: 0;
 			}
 			@media (max-width: 600px){
@@ -403,9 +403,7 @@
 			font-weight: 300;
 			li {
 				color: var(--light-3);
-				&:not(:last-child) {
-					border-bottom-color: var(--dark-2);
-				}
+				border-bottom-color: var(--dark-2);
 			}
 		}
 	}
