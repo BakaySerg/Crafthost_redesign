@@ -25,6 +25,9 @@
 	&--sm {
 		max-width: 650px;
 	}
+	&--md {
+		max-width: 800px;
+	}
 	&--center {
 		text-align: center;
 	}
@@ -130,6 +133,9 @@
 	@media (min-width: 1300px){
 		gap: 34px;
 	}
+}
+.text-secondary p , p.text-secondary {
+	font-weight: 300;
 }
 .text-remark {
 	font-style: italic;

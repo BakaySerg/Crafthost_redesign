@@ -65,9 +65,13 @@ gulp.task("svg-sprite", function (done) {
 // Images (jpg, png, etc. without SVG)
 gulp.task("images", function () {
 	return gulp
-		.src(["dev/img/**/*", "!dev/img/**/*.svg"])
+		.src(["dev/img/**/*", "!dev/img/**/*.svg"], { encoding: false })
 		.pipe(newer("app/img"))
-		.pipe(imagemin([imagemin.mozjpeg({ quality: 75, progressive: true }), imagemin.optipng({ optimizationLevel: 5 })]))
+		.pipe(
+			imagemin([imagemin.mozjpeg({ quality: 75, progressive: true }), imagemin.optipng({ optimizationLevel: 5 })], {
+				verbose: true,
+			}),
+		)
 		.pipe(gulp.dest("app/img"))
 		.pipe(browserSync.stream());
 });
