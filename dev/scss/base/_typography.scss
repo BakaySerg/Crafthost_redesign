@@ -26,7 +26,10 @@
 		max-width: 650px;
 	}
 	&--md {
-		max-width: 800px;
+		@media (min-width: 1024px){
+			max-width: 33ch;
+			text-wrap: balance;
+		}
 	}
 	&--center {
 		text-align: center;

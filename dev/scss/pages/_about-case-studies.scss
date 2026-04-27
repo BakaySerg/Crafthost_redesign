@@ -12,17 +12,35 @@
 	}
 }
 .article {
-	padding-top: 10px;
-	padding-bottom: 70px;
+	padding-top: 20px;
+	padding-bottom: 60px;
+	@media (max-width: 1300px){
+		padding-bottom: 40px;
+	}
+	@media (max-width: 991px){
+		padding-bottom: 15px;
+	}
 	p:not([class]) {
 		font-weight: 300;
 	}
 	&__title {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 2.1em;
+		gap: .9em 2.1em;
 		.icon {
 			margin-top: 1.1em;
+		}
+		@media (max-width: 1300px){
+			.icon {
+				margin-top: .8em;
+			}
+		}
+		@media (max-width: 767px){
+			flex-wrap: wrap;
+		}
+	}
+	&__text {
+		@media (min-width: 1500px){
+			gap: 52px;
 		}
 	}
 	&__subtitle {

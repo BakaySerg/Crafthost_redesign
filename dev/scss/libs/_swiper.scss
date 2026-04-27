@@ -128,10 +128,12 @@ button.swiper-pagination-bullet {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 10px;
 	gap: 0.5em;
 	&--right {
 		justify-content: flex-end;
+	}
+	@media (min-width: 700px){
+		padding-top: 10px;
 	}
 }
 .swiper-button-next,
@@ -185,7 +187,7 @@ button.swiper-pagination-bullet {
 	height: 2px;
 	background: var(--light-3);
 	position: relative;
-	top: 24px !important;
+	top: 22px !important;
 }
 
 .swiper-scrollbar-drag {

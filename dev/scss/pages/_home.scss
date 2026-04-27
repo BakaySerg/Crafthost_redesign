@@ -478,15 +478,18 @@
 		}
 	}
 	&__slide {
-		padding: 24px 16px;
+		padding: 24px 17px;
 		border: 1px solid var(--dark-4);
 		margin-right: -1px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 1.3em;
+		gap: 1.1em;
 		user-select: none;
-		min-height: 420px;
+		min-height: 410px;
+		p {
+			font-weight: 300;
+		}
 		.link {
 			width: 100%;
 			max-width: 230px;
@@ -497,7 +500,10 @@
 		}
 		@media (min-width: 1200px){
 			min-height: 490px;
-			gap: 0.9em;
+		}
+		@media (max-width: 991px){
+			padding: 22px 16px;
+			min-height: 380px;
 		}
 		&--accent {
 			background-color: var(--blue);
@@ -512,6 +518,9 @@
 	.managed {
 		&__slide {
 			border-color: var(--dark-2);
+			p {
+				color: var(--light-3);
+			}
 		}
 	}
 }
