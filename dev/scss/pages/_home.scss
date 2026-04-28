@@ -260,6 +260,9 @@
 				order: -1;
 			}
 		}
+		&--vcenter {
+			align-items: center;
+		}
 	}
 	@media (max-width: 600px){
 		&>.btn, &>.link {
@@ -271,6 +274,14 @@
 		@media (max-width: 1023px){
 			margin-bottom: 1.7em;
 		}
+	}
+	&__content {
+		&--narrow {
+			@media (min-width: 1024px){
+				max-width: 500px;
+			}
+		}
+
 	}
 	&__list {
 		li {

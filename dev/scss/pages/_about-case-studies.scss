@@ -86,3 +86,27 @@
 		}
 	}
 }
+
+.dark-box {
+	background-color: var(--dark-3);
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: .9em;
+	h2 + div {
+		margin-top: auto;
+	}
+	P {font-weight: 300;}
+	p:last-child {
+		margin-bottom: 0;
+	}
+	@media (max-width: 1024px){
+		padding: 20px;
+		.h2 {
+			margin-bottom: 0.6em !important;
+		}
+	}
+	@media (max-width: 991px){
+		padding: 16px;
+	}
+}
