@@ -684,3 +684,15 @@
 		}
 	}
 }
+
+.dark {
+	.grid-icons {
+		&__item {
+			border-color: var(--dark-2);
+			&--active {
+				background-color: var(--blue);
+				border-color: var(--blue);
+			}
+		}
+	}
+}
