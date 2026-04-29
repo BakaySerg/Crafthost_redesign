@@ -1,7 +1,7 @@
 @use "../base/utils" as *;
 
 .banner {
-	padding: 72px 0;
+	padding: 70px 0;
 	@media (max-width: 1300px){
 		padding: 38px 0;
 	}
@@ -55,7 +55,7 @@
 		align-items: center;
 		&--narrow {
 			@media (min-width: 1301px){
-				grid-template-columns: 645px auto;
+				grid-template-columns: 652px auto;
 				justify-content: space-between;
 			}
 			.banner__action {

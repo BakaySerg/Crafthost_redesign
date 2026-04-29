@@ -88,15 +88,19 @@
 }
 
 .dark-box {
-	background-color: var(--dark-3);
+	background-color: var(--light-1);
 	padding: 24px;
 	display: flex;
 	flex-direction: column;
 	gap: .9em;
+	&--tall {
+		@media (min-width: 1600px){
+			min-height: 620px;
+		}
+	}
 	h2 + div {
 		margin-top: auto;
 	}
-	P {font-weight: 300;}
 	p:last-child {
 		margin-bottom: 0;
 	}
@@ -108,5 +112,11 @@
 	}
 	@media (max-width: 991px){
 		padding: 16px;
+	}
+}
+.dark {
+	.dark-box {
+		background-color: var(--dark-3);
+		P {font-weight: 300;}
 	}
 }
