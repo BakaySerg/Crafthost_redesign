@@ -105,6 +105,12 @@
 		max-width: 78ch;
 	}
 }
+.extra-limited {
+	margin-bottom: 1.35em;
+	@media (min-width: 1024px){
+		max-width: 40ch;
+	}
+}
 .text-center {
 	text-align: center;
 }
@@ -140,7 +146,7 @@
 		}
 	}
 	@media (min-width: 1300px){
-		gap: 34px;
+		gap: 50px;
 	}
 }
 .text-secondary p , p.text-secondary {
@@ -151,4 +157,9 @@
 	font-weight: 300;
 	font-size: em(14);
 	opacity: 0.75;
+}
+.text-light {
+	p {
+		font-weight: 300;
+	}
 }

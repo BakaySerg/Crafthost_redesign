@@ -1,5 +1,7 @@
 @use "../base/utils" as *;
-
+.pt-0 {
+	padding-top: 0 !important;
+}
 .pt-05 {
 	padding-top: 0.5em;
 	@media (max-width: 600px){
@@ -31,6 +33,9 @@
 	}
 }
 
+.pb-0 {
+	padding-bottom: 0 !important;
+}
 .pb-05 {
 	padding-bottom: 0.6em;
 	@media (max-width: 600px){
@@ -91,6 +96,9 @@
 	@media (max-width: 600px){
 		margin-top: 0.2em;
 	}
+}
+.mt-a {
+	margin-top: auto;
 }
 .mt-1 {
 	margin-top: 1em;
