@@ -578,6 +578,9 @@
 				color: var(--dark-4);
 			}
 		}
+		@media (max-width: 600px){
+			font-size: 14px;
+		}
 	}
 	a {
 		color: var(--blue);

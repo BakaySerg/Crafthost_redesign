@@ -1,7 +1,11 @@
 @use "../base/utils" as *;
 
 .mini-intro {
+	padding: 20px 0;
 	background-image: var(--gradient-blue-dark-reverse);
+	&--reverse {
+		background-image: var(--gradient-blue-dark);
+	}
 	@media (min-width: 1400px){
 		padding: 78px 0 110px;
 	}
@@ -9,6 +13,25 @@
 	.icon {
 		display: block;
 		margin: 0 auto 1.3em;
+	}
+	.h1 {
+		max-width: 34ch;
+		margin-inline: auto;
+		@media (max-width: 600px){
+			font-size: em(38);
+		}
+	}
+}
+.badge {
+	padding: 8px 12px;
+	border: 1px solid var(--blue-muted);
+	border-radius: 2em;
+	margin: 0 auto 1.3em;
+	width: fit-content;
+	@media (max-width: 991px){
+		font-size: em(16);
+		padding: 7px 10px;
+		margin-bottom: 0.9em;
 	}
 }
 .article {
