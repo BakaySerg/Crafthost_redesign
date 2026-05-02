@@ -1,1 +1,45 @@
 @use "../base/utils" as *;
+
+.form {
+	&__grid {
+		display: grid;
+		gap: 28px 32px;
+		align-items: end;
+		@media (min-width: 700px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	&__group {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+	&__label {
+		font-size: em(16);
+		font-weight: 300;
+	}
+	&__input {
+		padding: 12px 18px;
+		border: none;
+		border-bottom: 1px solid var(--blue-muted);
+		font-family: inherit;
+		font-size: em(16);
+		letter-spacing: .02em;
+		height: 54px;
+		&:focus {
+			outline: none;
+			border-color: var(--blue);
+		}
+	}
+}
+
+.dark {
+	.form {
+		&__input {
+			background: var(--dark-2);
+			&::placeholder {
+				color: var(--light-4);
+			}
+		}
+	}
+}

@@ -126,8 +126,44 @@
 
 			<section class="section">
 				<div class="container text-columns text-columns--uneven">
-					<h2 class="h2"></h2>
-					<form action="#"></form>
+					<h2 class="h2">How to Apply.</h2>
+					<form class="form" action="#">
+						<p><span class="text-accent">Use the partner application form below to initiate your request.</span><br>Your submission will be reviewed by our partnership team, who will assess alignment and contact you with next steps.</p>
+						<div class="form__grid">
+							<div class="form__group">
+								<label class="form__label" for="name">Organisation Name</label>
+								<input class="form__input" type="text" id="name" name="name" placeholder="Name" required>
+							</div>
+							<div class="form__group">
+								<label class="form__label" for="email">Contact Information</label>
+								<input class="form__input" type="email" id="email" name="email" placeholder="Email" required>
+							</div>
+							<div class="form__group">
+								<label class="form__label" for="company">Company</label>
+								<input class="form__input" type="text" id="company" name="company" placeholder="Company" required>
+							</div>
+							<div class="form__group">
+								<div class="form__label">Technical Area of Focus</div>
+								<div class="cstm-select">
+									<button class="cstm-select__trigger" style="--anchor: --anchor-stack" popovertarget="popover-stack" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-stack" type="button">
+										<span class="cstm-select__trigger-text placeholder">Choose…</span>
+										<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+									</button>
+									<input type="hidden" id="hidden-stack" name="stack">
+
+									<div id="popover-stack" class="cstm-select__popover" style="--anchor: --anchor-stack" popover role="listbox" aria-label="Tech stack">
+										<div class="cstm-select__option" role="option" data-value="vanilla">Vanilla JS</div>
+										<div class="cstm-select__option" role="option" data-value="react">React</div>
+										<div class="cstm-select__option" role="option" data-value="vue">Vue</div>
+									</div>
+								</div>
+							</div>
+							<button class="btn btn--lg btn--filled" type="submit">
+								<span>Submit Application Now</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</button>
+						</div>
+					</form>
 				</div>
 			</section>
 

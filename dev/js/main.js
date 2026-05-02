@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	initAccordions();
 
-	// ── Custom select ────────────────────────────────────────────────────────
+	// ── Custom mini-select ────────────────────────────────────────────────────────
 
 	const initSelects = () => {
 		document.querySelectorAll(".select__header").forEach((header) => {
@@ -146,7 +146,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	initSelects();
 
-	// ── Sliders ──────────────────────────────────────────────────────────────
+	// ── custom Form-select ──────────────────────────────────────────────────────────────
+  document.querySelectorAll(".cstm-select__popover").forEach((popover) => {
+		const triggerId = popover.id;
+		const trigger = document.querySelector(`[popovertarget="${triggerId}"]`);
+		const hidden = trigger?.nextElementSibling;
+		const textEl = trigger?.querySelector(".cstm-select__trigger-text");
+
+		if (!trigger || !hidden || !textEl) return;
+
+		popover.addEventListener("toggle", (e) => {
+			trigger.setAttribute("aria-expanded", e.newState === "open");
+		});
+
+		popover.querySelectorAll(".cstm-select__option").forEach((option) => {
+			option.addEventListener("click", () => {
+				const value = option.dataset.value;
+				const label = option.textContent.trim();
+
+				hidden.value = value;
+				textEl.textContent = label;
+				textEl.classList.remove("placeholder");
+
+				popover.querySelectorAll(".cstm-select__option").forEach((o) => o.setAttribute("aria-selected", o === option ? "true" : "false"));
+
+				popover.hidePopover();
+				hidden.dispatchEvent(new Event("change", { bubbles: true }));
+			});
+		});
+  });
+
+	// ── Sliders ────────────────────────────────────────────────────────────
 
 	// Shared base config reused across all Swiper instances
 	const baseSwiperConfig = {

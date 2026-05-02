@@ -50,7 +50,7 @@
 		z-index: 3;
 		max-width: 31px;
 		@media (max-width: 600px){
-			max-width: 29px;
+			max-width: 26px;
 		}
 
 		.logo-light {
@@ -481,7 +481,7 @@
 
 		.icon--close {
 			opacity: 1;
-			transform: translate(-50%, -50%) scale(1);
+			transform: translate(-50%, -50%) scale(.94);
 		}
 	}
 }
