@@ -20,7 +20,7 @@
 			align-items: center;
 			gap: 48px;
 			padding: 17px 17px 22px;
-			&:has(:only-child) {
+			&:not(:has(.banner__image)) {
 				grid-template-columns: auto;
 				.h2 {
 					max-width: 100%;
