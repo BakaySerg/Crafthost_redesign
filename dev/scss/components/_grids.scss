@@ -1,3 +1,7 @@
+[class^="grid-"], [class*=" grid-"]{
+	display: grid;
+}
+
 .grid-md-2 {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 32px;
@@ -48,6 +52,34 @@
 			.grid__item {
 				border-color: var(--dark-2);
 			}
+		}
+	}
+}
+
+.md-line {
+	@media (min-width: 992px){
+		display: grid;
+		&--1_21 {
+			grid-template-columns: auto min(65%, 67ch);
+			gap: 1.8em;
+		}
+		&--1_2 {
+			grid-template-columns: auto min(65%, 65ch);
+		}
+	}
+	@media (min-width: 1100px){
+		gap: 32px;
+		&--1_2 {
+			grid-template-columns: auto min(67%, 70ch);
+		}
+		&--1_21 {
+			grid-template-columns: min(40%, 41ch) auto;
+			gap: 48px;
+		}
+	}
+	@media (max-width: 991px){
+		&--1_21 {
+			gap: 0.9em;
 		}
 	}
 }

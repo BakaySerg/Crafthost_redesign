@@ -20,6 +20,15 @@
 			align-items: center;
 			gap: 48px;
 			padding: 17px 17px 22px;
+			&:has(:only-child) {
+				grid-template-columns: auto;
+				.h2 {
+					max-width: 100%;
+				}
+			}
+			 @media (min-width: 1100px){
+				padding: 36px;
+			}
 			@media (min-width: 1100px){
 				padding: 36px;
 				.h2 {

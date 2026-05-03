@@ -65,10 +65,13 @@
 				height: 23px;
 			}
 		}
+		@media (max-width: 991px){
+			padding: 13px 16px;
+		}
 		@media (max-width: 600px){
 			min-width: 200px;
+			width: 100%;
 			gap: 1em;
-			padding: 14px 16px;
 			&:only-child {
 				width: 100%;
 			}
