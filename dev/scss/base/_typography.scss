@@ -144,6 +144,9 @@
 				max-width: none;
 			}
 		}
+		&--uneven-2 {
+			grid-template-columns: .89fr 1.11fr;
+		}
 	}
 	@media (min-width: 1300px){
 		gap: 50px;

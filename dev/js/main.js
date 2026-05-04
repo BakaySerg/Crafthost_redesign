@@ -1,12 +1,5 @@
 "use strict";
 
-// ─── Utilities ───────────────────────────────────────────────────────────────
-
-/**
- * Debounce: delays function execution until after a burst of events has ended.
- * @param {Function} fn
- * @param {number} ms
- */
 const debounce = (fn, ms) => {
 	let timer;
 	return (...args) => {
@@ -15,28 +8,25 @@ const debounce = (fn, ms) => {
 	};
 };
 
-// ─── iOS class ───────────────────────────────────────────────────────────────
-
 if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 	document.documentElement.classList.add("is-ios");
 }
-
-// ─── Init after DOM is ready ──────────────────────────────────────────────────
 
 document.addEventListener("DOMContentLoaded", () => {
 	// ── Active menu item ─────────────────────────────────────────────────────
 
 	const setActiveMenuItem = () => {
 		const parts = location.pathname.split("/").filter(Boolean);
-		let current = parts[parts.length - 1] || "index.html";
-		current = current.split("-")[0];
-
-		// Skip matching for very short path segments (e.g. index, /)
-		if (current.length <= 3) return;
+		const raw = (parts.at(-1) || "index.html").replace(/\.html$/, "");
+		const current = !raw || raw === "index" ? "index" : raw;
 
 		document.querySelectorAll(".menu__link").forEach((link) => {
-			const hrefBase = link.getAttribute("href")?.split("-")[0] ?? "";
-			if (hrefBase.includes(current)) {
+			const href = (link.getAttribute("href") ?? link.getAttribute("data-href") ?? "")
+				.split("/")
+				.pop()
+				.replace(/\.html$/, "");
+
+			if (href && (current === href || current.startsWith(href + "-"))) {
 				link.classList.add("active");
 			}
 		});
@@ -47,34 +37,26 @@ document.addEventListener("DOMContentLoaded", () => {
 	// ── Mobile menu ──────────────────────────────────────────────────────────
 
 	const menuTrigger = document.querySelector(".btn--menu");
-
-	// If the menu button is absent on this page, bail out early
 	if (!menuTrigger) return;
 
 	const header = menuTrigger.closest(".header");
 	const menu = header?.querySelector(".menu");
-	const subMenus = header?.querySelectorAll(".sub-menu") ?? [];
-
-	const closeAllSubMenus = () => {
-		subMenus.forEach((el) => el.classList.remove("open"));
-	};
+	const subMenus = [...(header?.querySelectorAll(".sub-menu") ?? [])];
 
 	menuTrigger.addEventListener("click", () => {
 		header.classList.toggle("header--open");
 		menu?.classList.toggle("menu--open");
-		closeAllSubMenus();
+		subMenus.forEach((el) => el.classList.remove("open"));
 	});
 
 	subMenus.forEach((el) => {
 		el.addEventListener("click", () => el.classList.add("open"));
-
 		el.querySelector(".sub-menu__trigger")?.addEventListener("click", (e) => {
 			e.stopPropagation();
 			el.classList.remove("open");
 		});
 	});
 
-	// Close menu when clicking outside the header
 	window.addEventListener("click", (e) => {
 		if (!e.target.closest(".header")) {
 			header.classList.remove("header--open");
@@ -82,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
-	// Add hover class to header when a sub-menu is hovered
 	document.querySelectorAll(".sub-menu").forEach((el) => {
 		el.addEventListener("mouseenter", () => el.closest(".header")?.classList.add("header--hovered"));
 		el.addEventListener("mouseleave", () => el.closest(".header")?.classList.remove("header--hovered"));
@@ -90,66 +71,90 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// ── Accordions ───────────────────────────────────────────────────────────
 
-	const initAccordions = () => {
-		document.querySelectorAll("[data-collapse-trigger]").forEach((trigger) => {
-			trigger.addEventListener("click", (e) => {
-				e.preventDefault();
+	document.querySelectorAll("[data-collapse-trigger]").forEach((trigger) => {
+		trigger.addEventListener("click", (e) => {
+			e.preventDefault();
 
-				const currentItem = trigger.closest("[data-collapser]");
-				if (!currentItem) return;
+			const item = trigger.closest("[data-collapser]");
+			if (!item) return;
 
-				// If not "all" mode — collapse sibling items
-				if (currentItem.getAttribute("data-collapser") !== "all") {
-					[...currentItem.parentElement.children].forEach((sibling) => {
-						if (sibling !== currentItem) {
-							sibling.classList.remove("uncollapsed");
-						}
-					});
-				}
+			if (item.getAttribute("data-collapser") !== "all") {
+				[...item.parentElement.children].forEach((sibling) => {
+					if (sibling !== item) sibling.classList.remove("uncollapsed");
+				});
+			}
 
-				currentItem.classList.toggle("uncollapsed");
-			});
+			item.classList.toggle("uncollapsed");
 		});
-	};
+	});
 
-	initAccordions();
+	// ── Read more ────────────────────────────────────────────────────────────
 
-	// ── Custom mini-select ────────────────────────────────────────────────────────
+	document.querySelectorAll("[data-more-text]").forEach((block) => {
+		const content = block.querySelector("[data-content]");
+		const btn = block.querySelector("[data-toggle]");
+		if (!content || !btn) return;
 
-	const initSelects = () => {
-		document.querySelectorAll(".select__header").forEach((header) => {
-			header.addEventListener("click", function () {
-				this.parentElement.classList.toggle("is-active");
-			});
+		const items = [...content.children];
+		const visibleCount = parseInt(block.dataset.visible) || 2;
+
+		if (items.length <= visibleCount) {
+			btn.hidden = true;
+			return;
+		}
+
+		const setHeights = () => {
+			const collapsed = items.slice(0, visibleCount).reduce((h, el) => h + el.offsetHeight, 0);
+			block.style.setProperty("--collapsed-height", collapsed + "px");
+			block.style.setProperty("--full-height", content.scrollHeight + "px");
+		};
+
+		setHeights();
+		block.setAttribute("data-ready", "");
+
+		let isOpen = block.dataset.moreText === "show";
+		btn.querySelector("span").textContent = isOpen ? "Read Less" : "Read More";
+
+		btn.addEventListener("click", () => {
+			isOpen = !isOpen;
+			block.setAttribute("data-more-text", isOpen ? "show" : "hide");
+			btn.querySelector("span").textContent = isOpen ? "Read Less" : "Read More";
 		});
 
-		document.querySelectorAll(".select__item").forEach((item) => {
-			item.addEventListener("click", function () {
-				const select = this.closest(".select");
-				const input = select?.querySelector("input[type=hidden]");
-				const currentText = select?.querySelector(".select__current");
+		window.addEventListener("resize", debounce(setHeights, 150));
+	});
 
-				if (currentText) currentText.innerHTML = this.innerHTML;
-				if (input) input.value = this.getAttribute("data-value") ?? "";
+	// ── Mini select ──────────────────────────────────────────────────────────
 
-				select?.classList.remove("is-active");
-			});
+	document.querySelectorAll(".select__header").forEach((el) => {
+		el.addEventListener("click", function () {
+			this.parentElement.classList.toggle("is-active");
 		});
+	});
 
-		// Close on mouse leave
-		document.querySelectorAll(".select").forEach((el) => {
-			el.addEventListener("mouseleave", () => {
-				setTimeout(() => el.classList.remove("is-active"), 300);
-			});
+	document.querySelectorAll(".select__item").forEach((item) => {
+		item.addEventListener("click", function () {
+			const select = this.closest(".select");
+			const input = select?.querySelector("input[type=hidden]");
+			const currentText = select?.querySelector(".select__current");
+
+			if (currentText) currentText.innerHTML = this.innerHTML;
+			if (input) input.value = this.getAttribute("data-value") ?? "";
+
+			select?.classList.remove("is-active");
 		});
-	};
+	});
 
-	initSelects();
+	document.querySelectorAll(".select").forEach((el) => {
+		el.addEventListener("mouseleave", () => {
+			setTimeout(() => el.classList.remove("is-active"), 300);
+		});
+	});
 
-	// ── custom Form-select ──────────────────────────────────────────────────────────────
-  document.querySelectorAll(".cstm-select__popover").forEach((popover) => {
-		const triggerId = popover.id;
-		const trigger = document.querySelector(`[popovertarget="${triggerId}"]`);
+	// ── Custom form select (popover) ─────────────────────────────────────────
+
+	document.querySelectorAll(".cstm-select__popover").forEach((popover) => {
+		const trigger = document.querySelector(`[popovertarget="${popover.id}"]`);
 		const hidden = trigger?.nextElementSibling;
 		const textEl = trigger?.querySelector(".cstm-select__trigger-text");
 
@@ -161,24 +166,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		popover.querySelectorAll(".cstm-select__option").forEach((option) => {
 			option.addEventListener("click", () => {
-				const value = option.dataset.value;
-				const label = option.textContent.trim();
-
-				hidden.value = value;
-				textEl.textContent = label;
+				hidden.value = option.dataset.value;
+				textEl.textContent = option.textContent.trim();
 				textEl.classList.remove("placeholder");
 
-				popover.querySelectorAll(".cstm-select__option").forEach((o) => o.setAttribute("aria-selected", o === option ? "true" : "false"));
+				popover.querySelectorAll(".cstm-select__option").forEach((o) => {
+					o.setAttribute("aria-selected", String(o === option));
+				});
 
 				popover.hidePopover();
 				hidden.dispatchEvent(new Event("change", { bubbles: true }));
 			});
 		});
-  });
+	});
 
-	// ── Sliders ────────────────────────────────────────────────────────────
+	// ── Sliders ──────────────────────────────────────────────────────────────
 
-	// Shared base config reused across all Swiper instances
 	const baseSwiperConfig = {
 		draggable: true,
 		grabCursor: true,
@@ -193,24 +196,22 @@ document.addEventListener("DOMContentLoaded", () => {
 		},
 	};
 
-	// Main mobile slider
 	const mobileSliderEl = document.querySelector("[data-slider]");
 	if (mobileSliderEl) {
-		const spaceBetween = Number(mobileSliderEl.dataset.spaceBetween) || 0;
+		const sp = Number(mobileSliderEl.dataset.spaceBetween) || 0;
 		new Swiper(mobileSliderEl, {
 			...baseSwiperConfig,
 			breakpoints: {
-				320: { slidesPerView: 1.16, spaceBetween },
-				700: { slidesPerView: 2.3, spaceBetween },
-				1100: { slidesPerView: 3.5, spaceBetween },
+				320: { slidesPerView: 1.16, spaceBetween: sp },
+				700: { slidesPerView: 2.3, spaceBetween: sp },
+				1100: { slidesPerView: 3.5, spaceBetween: sp },
 				1300: { slidesPerView: 4 },
 			},
 		});
 	}
 
-	// Testimonials sliders (supports multiple instances on the same page)
 	document.querySelectorAll(".testimonials__slider").forEach((el) => {
-		const spaceBetween = Number(el.dataset.spaceBetween) || 0;
+		const sp = Number(el.dataset.spaceBetween) || 0;
 		const rowsMd = Number(el.dataset.rowMd) || 1;
 
 		new Swiper(el, {
@@ -221,19 +222,13 @@ document.addEventListener("DOMContentLoaded", () => {
 				900: { slidesPerView: 3, spaceBetween: 22 },
 				1100: {
 					slidesPerView: 3,
-					spaceBetween,
-					// Enable  data-row-md="2"
-					...(rowsMd > 1 && {
-						autoHeight: false,
-						grid: { rows: rowsMd, fill: "row" },
-					}),
-					...(rowsMd === 1 && { autoHeight: true }),
+					spaceBetween: sp,
+					...(rowsMd > 1 ? { autoHeight: false, grid: { rows: rowsMd, fill: "row" } } : { autoHeight: true }),
 				},
 			},
 		});
 	});
 
-	// Sheet slider
 	const sheetSliderEl = document.querySelector(".sheet__slider");
 	if (sheetSliderEl) {
 		new Swiper(sheetSliderEl, {
@@ -242,46 +237,38 @@ document.addEventListener("DOMContentLoaded", () => {
 				320: { slidesPerView: 1.16 },
 				660: { slidesPerView: 2.3 },
 				760: { slidesPerView: 2.7 },
-				1200: {
-					slidesPerView: 3,
-					spaceBetween: 16,
-					grid: { rows: 2, fill: "row" },
-				},
+				1200: { slidesPerView: 3, spaceBetween: 16, grid: { rows: 2, fill: "row" } },
 			},
 		});
 	}
 
-	// Adaptive slider / grid (Swiper below 1024px, plain grid above)
 	const sliderOrGridEl = document.querySelector(".slider-or-grid__box");
 	if (sliderOrGridEl) {
-		let swiperOrGridInstance = null;
+		let instance = null;
 
 		const initSwiper = () => {
-			const isNarrow = window.innerWidth < 1024;
+			const narrow = window.innerWidth < 1024;
 
-			if (isNarrow && !swiperOrGridInstance) {
-				swiperOrGridInstance = new Swiper(sliderOrGridEl, {
+			if (narrow && !instance) {
+				instance = new Swiper(sliderOrGridEl, {
 					observer: true,
 					observeParents: true,
 					spaceBetween: 16,
 					draggable: true,
-					navigation: {
-						nextEl: ".swiper-button-next",
-						prevEl: ".swiper-button-prev",
-					},
+					navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
 					pagination: {
 						el: ".swiper-pagination-fraction",
 						type: "fraction",
-						renderFraction: (currentClass, totalClass) => `<span class="${currentClass}"></span> / <span class="${totalClass}"></span>`,
+						renderFraction: (cur, tot) => `<span class="${cur}"></span> / <span class="${tot}"></span>`,
 					},
 					breakpoints: {
 						320: { slidesPerView: 1.2, spaceBetween: 16 },
 						700: { slidesPerView: 2.2, spaceBetween: 16 },
 					},
 				});
-			} else if (!isNarrow && swiperOrGridInstance) {
-				swiperOrGridInstance.destroy(true, true);
-				swiperOrGridInstance = null;
+			} else if (!narrow && instance) {
+				instance.destroy(true, true);
+				instance = null;
 			}
 		};
 
@@ -291,48 +278,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// ── Tabs ─────────────────────────────────────────────────────────────────
 
-	const initTabs = () => {
-		document.querySelectorAll("[data-trigger-tab]").forEach((trigger) => {
-			trigger.addEventListener("click", function () {
-				const id = this.getAttribute("data-trigger-tab");
-				const comingTab = document.getElementById(id);
-				if (!comingTab) return;
+	document.querySelectorAll("[data-trigger-tab]").forEach((trigger) => {
+		trigger.addEventListener("click", function () {
+			const comingTab = document.getElementById(this.getAttribute("data-trigger-tab"));
+			if (!comingTab) return;
 
-				const parent = comingTab.closest(".tabs-content");
-				const currentTab = parent?.querySelector('[data-tab="active"]');
+			comingTab.closest(".tabs-content")?.querySelector('[data-tab="active"]')?.setAttribute("data-tab", "hidden");
 
-				currentTab?.setAttribute("data-tab", "hidden");
-				comingTab.setAttribute("data-tab", "active");
+			comingTab.setAttribute("data-tab", "active");
 
-				const tabsBlock = this.closest(".tabs");
-				if (tabsBlock) {
-					tabsBlock.querySelectorAll("[data-trigger-tab]").forEach((t) => {
-						t.closest(".tab")?.classList.remove("active");
-					});
-					this.closest(".tab")?.classList.add("active");
-				}
-			});
+			const tabsBlock = this.closest(".tabs");
+			if (tabsBlock) {
+				tabsBlock.querySelectorAll("[data-trigger-tab]").forEach((t) => {
+					t.closest(".tab")?.classList.remove("active");
+				});
+				this.closest(".tab")?.classList.add("active");
+			}
 		});
-	};
-
-	initTabs();
+	});
 
 	// ── Modals ───────────────────────────────────────────────────────────────
 
 	document.querySelectorAll("[data-modal-open]").forEach((btn) => {
 		btn.addEventListener("click", () => {
-			const modal = document.getElementById(btn.getAttribute("data-modal-open"));
-			modal?.showModal();
+			document.getElementById(btn.getAttribute("data-modal-open"))?.showModal();
 		});
 	});
 
 	document.querySelectorAll("[data-modal-close]").forEach((btn) => {
-		btn.addEventListener("click", () => {
-			btn.closest("dialog")?.close();
-		});
+		btn.addEventListener("click", () => btn.closest("dialog")?.close());
 	});
 
-	// Close on backdrop click
 	document.querySelectorAll("dialog").forEach((modal) => {
 		modal.addEventListener("click", (e) => {
 			if (e.target === modal) modal.close();
@@ -342,7 +318,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	// ── Copyright year ───────────────────────────────────────────────────────
 
 	const yearEl = document.getElementById("year");
-	if (yearEl) {
-		yearEl.textContent = new Date().getFullYear();
-	}
+	if (yearEl) yearEl.textContent = new Date().getFullYear();
 });

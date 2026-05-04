@@ -16,7 +16,7 @@
 	<!--[if lt IE 11]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
-	<body class="light">
+	<body>
 		<div class="wrapper">
 			<header class="header" id="header">
 				<div class="container">
@@ -32,7 +32,7 @@
 							<li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
 							<li class="menu__item">
 								<div class="sub-menu">
-									<span>Solutions</span>
+									<span class="menu__link" data-href="solutions.html">Solutions</span>
 									<svg class="arrow" viewBox="0 0 32 32">
 										<use xlink:href="img/general/sprite.svg#arrow" />
 									</svg>
@@ -43,7 +43,7 @@
 													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 													Solutions
 												</span>
-												<a href="#" class="link link--icon">
+												<a href="solutions.html" class="link link--icon">
 													Solutions
 													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 												</a>
@@ -68,7 +68,7 @@
 							</li>
 							<li class="menu__item">
 								<div class="sub-menu">
-									<span>Industries</span>
+									<span class="menu__link" data-href="industries.html">Industries</span>
 									<svg class="arrow" viewBox="0 0 32 32">
 										<use xlink:href="img/general/sprite.svg#arrow" />
 									</svg>
@@ -79,6 +79,10 @@
 													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 													Industries
 												</span>
+												<a href="industries.html" class="link link--icon">
+													Industries
+													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+												</a>
 											</div>
 											<div class="sub-menu__list">
 												<a href="oooooo.html">Finance</a>
@@ -95,7 +99,7 @@
 							</li>
 							<li class="menu__item">
 								<div class="sub-menu">
-									<span>Pricing</span>
+									<span class="menu__link" data-href="pricing.html">Pricing</span>
 									<svg class="arrow" viewBox="0 0 32 32">
 										<use xlink:href="img/general/sprite.svg#arrow" />
 									</svg>
@@ -117,7 +121,7 @@
 							</li>
 							<li class="menu__item">
 								<div class="sub-menu">
-									<span>Resources</span>
+									<span class="menu__link" data-href="resources.html">Resources</span>
 									<svg class="arrow" viewBox="0 0 32 32">
 										<use xlink:href="img/general/sprite.svg#arrow" />
 									</svg>
@@ -153,7 +157,258 @@
 					</button>
 				</div>
 			</header>
+
 			<!-- main -->
+			<main class="intro-with-img">
+				<div class="container">
+					<div class="intro-with-img__content">
+						<h1 class="h1"><span class="text-accent">Industries - </span>Crafthost.</h1>
+						<p>This is infrastructure engineered not for convenience, <br class="md-visible"> but for significance.</p>
+					</div>
+					<div class="intro-with-img__pict">
+						<img srcset="img/industries/general/server.png, img/industries/general/server-2x.png 2x" src="img/industries/general/server.png" width="850" height="476" alt="servers">
+					</div>
+				</div>
+			</main>
+
+			<!-- read more -->
+			<section class="section">
+				<div class="container text-columns text-columns--uneven-2">
+					<h2 class="h2">Infrastructure Engineered for the World’s Most Demanding Sectors.</h2>
+					<div data-more-text="hide" data-visible="2">
+						<div data-content>
+							<p><span class="text-accent">Modern industries operate in environments where service interruption is not an option, where decisions made in milliseconds carry financial, operational, or national impact.</span> Their digital foundations must be resilient, predictable, and supported by engineering that understands precision, responsibility, and scale.</p>
+							<p>Crafthost exists to serve these industries with an infrastructure platform built differently from traditional providers. Instead of relying on a single monolithic system, the platform is supported by multiple synchronized layers — distributed compute, multi-network routing paths, intelligent load segmentation, and real-time AI-augmented monitoring — all working together to eliminate single-point risks and ensure continuous performance even during extreme demand, traffic surges, or hostile conditions.</p>
+							<p>Every environment is shaped around real operational pressures. Whether processing financial transactions, supporting public systems, transferring medical data, modeling energy operations, powering global telecommunications, running manufacturing lines, or enabling next-generation AI startups, the architecture adapts without hesitation.</p>
+							<p>This is infrastructure engineered not for convenience, but for significance.</p>
+						</div>
+						<button data-toggle class="link link--icon link--sm">
+							<span>Read More</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- mini-section -->
+			<section class="mini-section">
+				<div class="container article__bordered">
+					<div class="article__title article__title--align pb-25">
+						<i class="icon icon--gradient icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-banking"/></svg>
+						</i>
+						<h2 class="h2 h2--md">Finance.</h2>
+					</div>
+					<div class="article__image">
+						<img loading="lazy" srcset="img/about/case-studies/finance.jpg, img/about/case-studies/finance-2x.jpg 2x" src="img/about/case-studies/finance.jpg" width="1312" height="300" alt="case">
+					</div>
+				</div>
+			</section>
+
+			<!-- read more -->
+			<section class="section">
+				<div class="container text-columns text-columns--uneven-2">
+					<div>
+						<div class="badge badge--left">FINANCE</div>
+						<h2 class="h2">Where Every Millisecond Matters.</h2>
+					</div>
+					<div data-more-text="hide" data-visible="2">
+						<div data-content>
+							<p>Financial systems are relentless. Markets move instantly. Risk models must update continuously. Transactions must execute with precision every single time. A brief slowdown affects revenue, compliance, and client trust. Crafthost supports this reality with infrastructures built to operate under pressure without degradation.</p>
+							<p>Financial platforms deployed on Crafthost are supported by multi-platform redundancy, dedicated compute tiers for low-latency execution, and routing paths engineered to reduce packet travel distance. The system dynamically adapts during high-volume bursts, ensuring consistent throughput even when markets spike or global events generate unpredictable load patterns.</p>
+							<p>AI-augmented monitoring continuously evaluates anomalies across performance, network behavior, and transactional flow. When irregularities appear, the system reacts immediately—rerouting traffic, isolating problematic nodes, or scaling compute pools before operations are affected. This protects operational continuity, reduces risk, and allows finance teams to operate with confidence.</p>
+							<p>Crafthost is designed for institutions that cannot tolerate disruption—banks, fintech providers, trading platforms, lending systems, and payment networks that depend on reliability as a core business value.</p>
+						</div>
+						<button data-toggle class="link link--icon link--sm">
+							<span>Read More</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!--  -->
+			<section class="section">
+				<div class="container">
+					<h2 class="h2 pb-05">Core Advantages.</h2>
+					<div class="bricks__grid">
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5">Ultra-stable compute designed</div>
+							<p>for consistent low-latency execution.</p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-25"/></svg>
+							</i>
+							<div class="h5">AI-assisted anomaly</div>
+							<p>detection and pre-emptive scaling.</p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-2"/></svg>
+							</i>
+							<div class="h5">Global routing optimization</div>
+							<p>for faster transaction paths.</p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-3"/></svg>
+							</i>
+							<div class="h5">Multi-layer redundancy</div>
+							<p>eliminating single-platform dependency.</p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-4"/></svg>
+							</i>
+							<div class="h5">Strong encryption</div>
+							<p>and compliance-aligned data processing.</p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-5"/></svg>
+							</i>
+							<div class="h5">Scalable frameworks</div>
+							<p>supporting rapid market shifts.</p>
+						</div>
+					</div>
+					<div class="action">
+					<a href="#" class="btn btn--lg btn--filled">
+						<span>Explore Solutions for Finance</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+					</a>
+					<a href="#" class="btn btn--lg btn--outline">
+						<span>Request a Finance-Focused Consultation</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+					</a>
+				</div>
+				</div>
+			</section>
+
+			<!--  -->
+			<section class="section">
+				<div class="container">
+					<h2 class="h2 pb-05">Core Advantages.</h2>
+					<div class="bricks__grid">
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+					</div>
+					<div class="action">
+					<a href="#" class="btn btn--lg btn--filled">
+						<span>Explore Solutions for Finance</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+					</a>
+					<a href="#" class="btn btn--lg btn--outline">
+						<span>Request a Finance-Focused Consultation</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+					</a>
+				</div>
+				</div>
+			</section>
+
+			<!--  -->
+			<section class="section">
+				<div class="container">
+					<h2 class="h2 pb-05">Core Advantages.</h2>
+					<div class="bricks__grid">
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+						<div class="bricks__item bricks__item--tall">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/industries/general/sprite.svg#lg-1"/></svg>
+							</i>
+							<div class="h5"></div>
+							<p></p>
+						</div>
+					</div>
+					<div class="action">
+					<a href="#" class="btn btn--lg btn--filled">
+						<span>Explore Solutions for Finance</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+					</a>
+					<a href="#" class="btn btn--lg btn--outline">
+						<span>Request a Finance-Focused Consultation</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+					</a>
+				</div>
+				</div>
+			</section>
 
 			<footer class="footer" data-decorated="false">
 				<div class="container footer__top">

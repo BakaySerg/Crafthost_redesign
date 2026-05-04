@@ -28,6 +28,9 @@
 	border-radius: 2em;
 	margin: 0 auto 1.3em;
 	width: fit-content;
+	&--left {
+		margin: 0 0 .5em;
+	}
 	@media (max-width: 991px){
 		font-size: em(16);
 		padding: 7px 10px 6px;
@@ -43,6 +46,20 @@
 	@media (max-width: 991px){
 		padding-bottom: 15px;
 	}
+	&__bordered {
+		max-width: 1312px;
+		border: 1px solid;
+		border-image-source: var(--gradient-blue);
+		border-image-slice: 1;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@media (min-width: 991px){
+			padding: 30px;
+		}
+		@media (min-width: 1400px){
+			padding: 48px;
+		}
+	}
 	p:not([class]) {
 		font-weight: 300;
 	}
@@ -52,9 +69,23 @@
 		.icon {
 			margin-top: 1.1em;
 		}
+		&--align {
+			align-items: center;
+			.h2 {
+				margin-bottom: 0;
+			}
+			.icon {
+				margin-top: .1em;
+			}
+		}
 		@media (max-width: 1300px){
 			.icon {
 				margin-top: .8em;
+			}
+			&--align {
+				.icon {
+					margin-top: 0;
+				}
 			}
 		}
 		@media (max-width: 767px){

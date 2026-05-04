@@ -581,6 +581,11 @@
 		@media (max-width: 600px){
 			grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 		}
+		&:has(.bricks__item--tall) {
+			@media (max-width: 600px){
+				grid-template-columns: repeat(auto-fill, minmax(170px, auto));
+			}
+		}
 		&--long {
 			@media (min-width: 1200px){
 				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -621,6 +626,14 @@
 		}
 		.icon {
 			margin-bottom: 1.4em;
+		}
+		&--tall {
+			.icon {
+				margin-bottom: 2.4em;
+				@media (max-width: 600px){
+					margin-bottom: 1.4em;
+				}
+			}
 		}
 		p {
 			margin-bottom: 0;

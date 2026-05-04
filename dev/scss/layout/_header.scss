@@ -221,6 +221,17 @@
 	gap: 6px;
 	user-select: none;
 
+	.menu__link {
+		padding: 0;
+		&.active {
+			&::after {
+				left: 0;
+				right: -14px;
+				bottom: -19px;
+			}
+		}
+	}
+
 	> span {
 		position: relative;
 		z-index: 3;

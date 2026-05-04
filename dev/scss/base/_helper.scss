@@ -57,6 +57,12 @@
 .pb-2 {
 	padding-bottom: 1.9em;
 	@media (max-width: 600px){
+		padding-bottom: 1.3em;
+	}
+}
+.pb-25 {
+	padding-bottom: 2.4em;
+	@media (max-width: 600px){
 		padding-bottom: 1.4em;
 	}
 }
@@ -120,6 +126,9 @@
 		.btn, .link {
 			flex: 1 1 100%;
 		}
+	}
+	@media (max-width: 600px){
+		padding-top: 1.7em;
 	}
 }
 .md-half {
