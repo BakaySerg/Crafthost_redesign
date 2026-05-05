@@ -45,3 +45,6 @@ p > b {
 	background-color: var(--blue-muted);
 	color: var(--white);
 }
+[hidden] {
+	display: none !important;
+}

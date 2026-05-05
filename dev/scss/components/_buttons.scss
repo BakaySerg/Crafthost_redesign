@@ -22,6 +22,10 @@
 	&>* {
 		pointer-events: none;
 	}
+	&> span {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
 	&--outline {
 		background-color: transparent;
 		color: var(--blue);

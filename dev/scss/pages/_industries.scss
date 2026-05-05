@@ -1,0 +1,15 @@
+@use "../base/utils" as *;
+
+.similar {
+	background-color: var(--light-1);
+	@media (max-width: 1023px){
+		max-width: 600px;
+		margin-inline: auto;
+	}
+	&__text {
+		padding: 20px 18px 36px;
+		@media (max-width: 600px){
+			padding: 13px 16px 20px;
+		}
+	}
+}

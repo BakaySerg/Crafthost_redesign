@@ -63,11 +63,11 @@
 </defs>
 </symbol><symbol viewBox="0 0 20 20" fill="none" id="minus" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#aiclip0_1492_17166)">
-<path d="M18.1172 9.97852L1.66329 9.97852" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.1172 9.97852L1.66329 9.97852" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
 <clipPath id="aiclip0_1492_17166">
-<rect width="20" height="20" fill="white"/>
+<rect width="20" height="20" fill="currentColor"/>
 </clipPath>
 </defs>
 </symbol><symbol viewBox="0 0 18 18" fill="none" id="no" xmlns="http://www.w3.org/2000/svg">

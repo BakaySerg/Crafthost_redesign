@@ -225,8 +225,8 @@
 		padding: 0;
 		&.active {
 			&::after {
-				left: 0;
-				right: -14px;
+				left: -2px;
+				right: -13px;
 				bottom: -19px;
 			}
 		}

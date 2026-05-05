@@ -16,7 +16,7 @@
 	<!--[if lt IE 11]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
-	<body class="light">
+	<body>
 		<div class="wrapper">
 			<header class="header" id="header">
 				<div class="container">
@@ -157,20 +157,14 @@
 					</button>
 				</div>
 			</header>
-			<!-- four-zero-four -->
-			<section class="four-zero-four">
-				<div class="container">
-					<i class="icon icon--lg">
-						<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-alien"/></svg>
-					</i>
-					<h1 class="h1">Oops - Page Not Found.</h1>
-					<p>Sorry, we couldn't find this page.</p>
-					<a href="index.html" class="btn btn--filled btn--lg">
-						<span>Back to Home</span>
-						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-					</a>
-				</div>
-			</section>
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="about.html">Industries</a>
+				<span class="breadcrumbs__item">Finance</span>
+			</div>
+			<!-- main -->
+
 			<footer class="footer" data-decorated="false">
 				<div class="container footer__top">
 					<div class="footer__logo">
@@ -320,6 +314,7 @@
 				</div>
 			</footer>
 		</div>
+		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
