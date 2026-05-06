@@ -14,7 +14,7 @@
 		font-size: em(50);
 	}
 	@media (max-width: 600px){
-		font-size: em(45);
+		font-size: em(43);
 		line-height: 1.23;
 	}
 }
@@ -97,6 +97,12 @@
 	}
 	&--limited {
 		max-width: 1030px;
+	}
+}
+.bit-limited {
+	max-width: 83ch;
+	@media (max-width: 1100px){
+		max-width: 90ch;
 	}
 }
 .limited {
