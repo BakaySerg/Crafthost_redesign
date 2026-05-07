@@ -42,8 +42,8 @@
 		font-size: em(42);
 	}
 	@media (max-width: 600px){
-		font-size: em(36);
-		letter-spacing: -.06em;
+		font-size: em(35);
+		letter-spacing: -.04em;
 		word-spacing: -.2em;
 	}
 }
@@ -152,6 +152,9 @@
 		}
 		&--uneven-2 {
 			grid-template-columns: .89fr 1.11fr;
+		}
+		&--reverse-uneven {
+			grid-template-columns: 1.31fr .69fr;
 		}
 	}
 	@media (min-width: 1300px){

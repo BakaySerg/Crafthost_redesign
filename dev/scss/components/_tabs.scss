@@ -1,5 +1,9 @@
 @use "../base/utils" as *;
 
+[data-tab]{
+	opacity: 0;
+	transition: opacity 0.1s ease;
+}
 [data-tab]:not([data-tab=active]) {
 	opacity: 0;
 	visibility: hidden;
@@ -9,6 +13,53 @@
 	pointer-events: none;
 }
 
+[data-tab=active] {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+	pointer-events: auto;
+}
+
 .tab {
 	user-select: none;
+	cursor: pointer;
+}
+
+.tabs {
+	&--simple {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.5em;
+		@media (max-width: 600px){
+			gap: 0.1em;
+			font-size: 0.85em;
+		}
+		.tab {
+			padding: 0.1em 0.5em .5em;
+			position: relative;
+			p,h3 {
+				text-wrap: balance;
+				text-align: center;
+				margin-bottom: 0;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				border: 1px solid var(--blue);
+				opacity: 0;
+				transition: opacity 0.1s ease;
+			}
+			&.active {
+				&::after {
+					opacity: 1;
+				}
+			}
+			@media (max-width: 600px){
+				padding: 0 0.1em 0.5em;
+			}
+		}
+	}
 }

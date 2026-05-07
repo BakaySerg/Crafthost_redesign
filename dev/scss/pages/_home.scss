@@ -151,6 +151,12 @@
 		}
 
 	}
+	&--sm-gutters {
+		gap: 16px;
+		@media (max-width: 600px){
+			gap: 12px;
+		}
+	}
 	&--gutters {
 		gap: 16px;
 		@media (min-width: 991px){
@@ -390,6 +396,11 @@
 			}
 		}
 	}
+	&--all-border {
+		li:first-child {
+			border-top: 1px solid var(--light-2);
+		}
+	}
 	&-cta {
 		@media (max-width: 600px){
 			.btn, .link {
@@ -435,7 +446,7 @@
 			font-weight: 300;
 			li {
 				color: var(--light-3);
-				border-bottom-color: var(--dark-2);
+				border-color: var(--dark-2);
 			}
 		}
 	}
