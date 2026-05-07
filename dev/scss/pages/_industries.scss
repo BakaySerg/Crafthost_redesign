@@ -13,3 +13,50 @@
 		}
 	}
 }
+.section:has(.swiper--lg) {
+	overflow: hidden;
+}
+
+.institution {
+	&__slide {
+		user-select: none;
+		display: flex;
+		flex-direction: column;
+	}
+	&__text {
+		padding: 20px 18px 36px;
+		position: relative;
+		background-color: var(--light-1);
+		flex-grow: 1;
+		p {
+			margin-bottom: 0.55em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		@media (max-width: 600px){
+			padding: 13px 16px 20px;
+		}
+		.icon--sm {
+			margin-bottom: 0.7em;
+			@media (max-width: 1400px){
+				display: none;
+			}
+		}
+		@media (max-width: 1400px){
+			.h4 {
+				margin-bottom: 0.7em !important;
+			}
+		}
+	}
+	&__num {
+		font-weight: 300;
+		color: var(--light-4);
+		position: absolute;
+		top: .9em;
+		right: 1.3em;
+		@media (max-width: 1400px){
+			display: none;
+		}
+	}
+}

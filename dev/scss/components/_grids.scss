@@ -77,6 +77,12 @@
 			gap: 48px;
 		}
 	}
+	@media (min-width: 1670px){
+		&--1_2 {
+			gap: 36px;
+			grid-template-columns: auto min(66%, 69ch);
+		}
+	}
 	@media (max-width: 991px){
 		&--1_21 {
 			gap: 0.9em;

@@ -242,6 +242,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	const institutionSliderEl = document.querySelector(".institution__slider");
+	if (institutionSliderEl) {
+		new Swiper(institutionSliderEl, {
+			...baseSwiperConfig,
+			spaceBetween: 16,
+			navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+			pagination: {
+				el: ".swiper-pagination-fraction",
+				type: "fraction",
+				renderFraction: (cur, tot) => `<span class="${cur}"></span> / <span class="${tot}"></span>`,
+			},
+			breakpoints: {
+				320: { slidesPerView: 1.06, spaceBetween: 13 },
+				700: { slidesPerView: 1.3 },
+				900: { slidesPerView: 2 },
+			},
+		});
+	}
+
 	const sliderOrGridEl = document.querySelector(".slider-or-grid__box");
 	if (sliderOrGridEl) {
 		let instance = null;

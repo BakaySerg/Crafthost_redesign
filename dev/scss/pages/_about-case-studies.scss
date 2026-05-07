@@ -151,6 +151,9 @@
 		@media (min-width: 1600px){
 			min-height: 620px;
 		}
+		.h2 + div {
+			margin-top: auto;
+		}
 	}
 	h2 + div {
 		margin-top: auto;
