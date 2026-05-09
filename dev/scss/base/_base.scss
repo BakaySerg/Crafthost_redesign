@@ -62,6 +62,9 @@ body {
 		& + & {
 			padding-top: 57px;
 		}
+		&.with-divider + & {
+			padding-top: 68px;
+		}
 	}
 	@media (max-width: 1400px){
 		padding: 50px 0;

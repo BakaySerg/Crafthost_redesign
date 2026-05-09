@@ -14,7 +14,7 @@
 		font-size: em(50);
 	}
 	@media (max-width: 600px){
-		font-size: em(43);
+		font-size: em(41);
 		line-height: 1.23;
 	}
 }
@@ -130,6 +130,12 @@
 .text-semibold {
 	font-weight: 600;
 }
+.text-bold {
+	font-weight: 700;
+}
+.text-big {
+	font-size: 1.15em;
+}
 .text-accent {
 	color: var(--blue);
 }
@@ -150,6 +156,9 @@
 			.subtitle {
 				max-width: none;
 			}
+		}
+		&--uneven-1 {
+			grid-template-columns: .7fr 1.3fr;
 		}
 		&--uneven-2 {
 			grid-template-columns: .89fr 1.11fr;

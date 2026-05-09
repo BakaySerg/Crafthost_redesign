@@ -565,6 +565,7 @@
 .breadcrumbs {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: .8em;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -575,6 +576,7 @@
 	@media (max-width: 600px){
 		padding-top: 9px;
 		padding-bottom: 9px;
+		gap: 0.4em;
 	}
 
 	&__item {

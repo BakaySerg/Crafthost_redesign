@@ -90,6 +90,9 @@
 			margin-right: 0;
 			font-size: em(17);
 		}
+		@media (max-width: 550px){
+			font-size: em(16);
+		}
 	}
 	&:not(:has(.cta__pict)) {
 		.cta__text {
@@ -139,18 +142,6 @@
 	@media (max-width: 600px){
 		grid-template-columns: 1fr;
 	}
-	&--small {
-		@media (min-width: 1024px){
-			grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-			.tile {
-				padding: 16px;
-			}
-		}
-		@media (max-width: 600px){
-			grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-		}
-
-	}
 	&--sm-gutters {
 		gap: 16px;
 		@media (max-width: 600px){
@@ -167,6 +158,29 @@
 			grid-template-columns: 1fr 1fr;
 		}
 	}
+	&--large {
+		@media (min-width: 1024px){
+			grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+		}
+		@media (max-width: 1200px){
+			grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+		}
+		@media (max-width: 600px){
+			grid-template-columns: 1fr;
+		}
+	}
+	&--small {
+		@media (min-width: 1024px){
+			grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+			.tile {
+				padding: 16px;
+			}
+		}
+		@media (max-width: 600px){
+			grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+		}
+
+	}
 	&--uneven {
 		grid-template-columns: repeat(auto-fill, minmax(220px, auto));
 		@media (max-width: 1200px){
@@ -180,7 +194,7 @@
 		@media (min-width: 1200px){
 			grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
 			.tile {
-				min-height: 120px;
+				min-height: 108px;
 			}
 		}
 	}
@@ -188,7 +202,7 @@
 .tile {
 	display: flex;
 	gap: 16px;
-	padding: 22px 20px;
+	padding: 21px 20px;
 	border: 1px solid var(--light-3);
 	margin-left: -1px;
 	margin-top: -1px;
@@ -197,6 +211,14 @@
 	}
 	@media (max-width: 550px){
 		padding: 16px;
+	}
+	&--double {
+		@media (min-width: 768px){
+			grid-column: span 2;
+		}
+		@media (max-width: 991px){
+			order: 8;
+		}
 	}
 	&--col {
 		flex-direction: column;
@@ -217,8 +239,8 @@
 		@media (min-width: 1100px){
 			min-height: 206px;
 		}
-		p {
-			margin-top: auto;
+		.icon {
+			margin-bottom: auto;
 		}
 	}
 	svg {
@@ -257,7 +279,10 @@
 		font-weight: normal;
 		font-family: "Inter", sans-serif;
 		font-size: 1rem;
+		margin-top: 0.2em;
+		line-height: 1.3;
 		margin-bottom: -0.3em;
+		text-wrap: balance;
 	}
 	span + span {
 		margin-top: 0.3em;
@@ -367,126 +392,6 @@
 		}
 	}
 }
-.list {
-	&--checked {
-		li {
-			padding: 0.86em 0;
-			display: flex;
-			gap: 1.2em;
-			&:not(.list-cta) {
-				border-bottom: 1px solid var(--light-2);
-			}
-			&:not(.list-cta)::before {
-				content: '';
-				flex-shrink: 0;
-				background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='23' height='23' rx='11.5' stroke='%230869EC'/%3E%3Cg clip-path='url(%23clip0_3213_8867)'%3E%3Cpath d='M16.0984 9.40039L10.9984 14.6004L7.89844 11.5004' stroke='%230869EC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3213_8867'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-				background-repeat: no-repeat;
-				background-size: 93%;
-				background-position: center;
-				display: inline-block;
-				width: 1.35em !important;
-				max-width: 1.35em !important;
-				height: 1.35em;
-			}
-			&:last-child:has([class]) {
-				padding-bottom: 0;
-			}
-			@media (max-width: 600px){
-				gap: 1em;
-			}
-		}
-	}
-	&--all-border {
-		li:first-child {
-			border-top: 1px solid var(--light-2);
-		}
-	}
-	&--no-border {
-		li {
-			border: none !important;
-			padding: 0.45em 0;
-		}
-	}
-	&-cta {
-		@media (max-width: 600px){
-			.btn, .link {
-				flex-grow: 1;
-			}
-		}
-	}
-	&--grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-		column-gap: 60px;
-		@media (max-width: 991px){
-			column-gap: 40px;
-			grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-		}
-		@media (max-width: 330px){
-			grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-		}
-	}
-	&--plused {
-			li {
-			padding: 0.6em 0;
-			display: flex;
-			gap: 1em;
-			&::before {
-				content: '';
-				flex-shrink: 0;
-				background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1590_15191)'%3E%3Cpath d='M18.1172 9.97656L1.66329 9.97656' stroke='%230869EC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.80469 18.2895L9.80469 1.66602' stroke='%230869EC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1590_15191'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-				background-repeat: no-repeat;
-				background-size: 95%;
-				background-position: center;
-				display: inline-block;
-				width: 1.2em !important;
-				max-width: 1.2em !important;
-				height: 1.2em;
-			}
-		}
-	}
-}
-.dark {
-	.list {
-		&--checked {
-			font-weight: 300;
-			li {
-				color: var(--light-3);
-				border-color: var(--dark-2);
-			}
-		}
-	}
-}
-
-.simple__list {
-	li {
-		padding: 0.2em 0;
-		display: flex;
-		gap: 1.3em;
-		&::before {
-			content: '';
-			flex-shrink: 0;
-			background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='5' stroke='%230869EC' stroke-width='2'/%3E%3C/svg%3E%0A");
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			display: inline-block;
-			width: .7em !important;
-			max-width: .7em !important;
-			height: .7em;
-			margin-top: .33em;
-			flex-shrink: 0;
-		}
-		@media (max-width: 600px){
-			gap: 1em;
-			&::before {
-				width: .56em !important;
-				max-width: .56em !important;
-				height: .56em;
-			}
-		}
-	}
-}
 
 .with-divider {
 	position: relative;
@@ -521,12 +426,12 @@
 		}
 	}
 	@media (max-width: 600px){
-		padding: 0 0 30px;
+		padding: 0 0 20px;
 	}
 	&__slider {
 		overflow: hidden;
 		margin-top: 35px;
-		padding-bottom: 30px;
+		padding-bottom: 25px;
 		@media (max-width: 600px){
 			margin-top: 25px;
 		}
