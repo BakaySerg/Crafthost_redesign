@@ -353,9 +353,9 @@
 				background-size: cover;
 				background-position: center;
 				display: inline-block;
-				width: .7em !important;
-				max-width: .7em !important;
-				height: .7em;
+				width: .668em !important;
+				max-width: .668em !important;
+				height: .668em;
 				margin-top: .33em;
 				flex-shrink: 0;
 			}
@@ -379,6 +379,11 @@
 						margin-right: auto;
 					}
 				}
+			}
+		}
+		&--all-border {
+			li:last-child {
+				border-bottom: 1px solid var(--light-2);
 			}
 		}
 	}
@@ -627,6 +632,14 @@
 .grid-icons {
 	gap: 16px;
 	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+	@media (min-width: 1300px){
+		&--lg {
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			.grid-icons__item {
+				min-height: 220px;
+			}
+		}
+	}
 	@media (max-width: 600px){
 		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 	}

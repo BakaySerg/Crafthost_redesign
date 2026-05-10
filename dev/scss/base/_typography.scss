@@ -25,6 +25,12 @@
 	&--sm {
 		max-width: 650px;
 	}
+	&--sd {
+		@media (min-width: 1024px){
+			max-width: 27ch;
+			text-wrap: balance;
+		}
+	}
 	&--md {
 		@media (min-width: 1024px){
 			max-width: 33ch;

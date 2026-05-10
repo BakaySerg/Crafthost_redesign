@@ -36,6 +36,9 @@ li {
 
 p:not([class]) {
 	margin-bottom: 1.3em;
+	@media (max-width: 700px){
+		margin-bottom: .8em;
+	}
 }
 p > b {
 	font-weight: 600;

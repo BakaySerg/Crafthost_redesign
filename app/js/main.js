@@ -254,9 +254,9 @@ document.addEventListener("DOMContentLoaded", () => {
 				renderFraction: (cur, tot) => `<span class="${cur}"></span> / <span class="${tot}"></span>`,
 			},
 			breakpoints: {
-				320: { slidesPerView: 1.06, spaceBetween: 13 },
-				700: { slidesPerView: 1.3 },
-				900: { slidesPerView: 2 },
+				320: { slidesPerView: 1.06, spaceBetween: 13},
+				700: { slidesPerView: 1.3},
+				900: { slidesPerView: 2},
 			},
 		});
 	}

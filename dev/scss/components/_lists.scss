@@ -45,10 +45,26 @@
 			}
 		}
 	}
+	&--columns {
+		@media (min-width: 768px){
+			columns: 2;
+			column-gap: 20px;
+			li {
+				break-inside: avoid;
+				padding: 0.7em 0 !important;
+			}
+		}
+	}
 	&--grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
 		column-gap: 60px;
+		&-sm {
+			@media (min-width: 991px){
+				column-gap: 30px;
+				grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+			}
+		}
 		@media (max-width: 991px){
 			column-gap: 40px;
 			grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
