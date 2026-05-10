@@ -28,9 +28,9 @@
 }
 .select__current {
 	font-size: 15px;
+  min-width: 3ch;
 }
 .select__body {
-	border-radius: 6px 6px 0 0;
 	border-top: 0;
 	position: absolute;
 	left: 0;
@@ -56,11 +56,177 @@
 .select--down  {
 	.select__body {
 		bottom: auto;
-		border-radius: 0 0 3px 3px;
 		top: 100%;
 		box-shadow: none;
 	}
 	.select__current {
 		padding: .64em 1em;
+	}
+}
+
+
+  // ── Custom select ───────────────────────────────────────────
+.cstm-select {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+
+  label {
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+
+  // ── Trigger button ───────────────────────────────────────────
+
+  &__trigger {
+    // anchor name — must be unique per select
+    anchor-name: var(--anchor);
+    color: inherit;
+    letter-spacing: .02em;
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 18px;
+    font-size: em(16);
+    height: 54px;
+    background: var(--dark-2);
+    border: none;
+    border-bottom: 1px solid var(--blue-muted);
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    text-align: left;
+
+    @media (max-width: 991px){
+			height: 50px;
+		}
+
+
+    &[aria-expanded="true"] {
+      border-color: var(--blue);
+
+      .arrow {
+        transform: scaleY(-1);
+      }
+    }
+  }
+
+  &__trigger-text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.placeholder {
+      color: var(--light-4);
+		letter-spacing: .02em;
+    }
+  }
+
+  // ── Popover ──────────────────────────────────────────────────
+
+  &__popover {
+    // reset browser UA popover styles
+    margin: 0;
+    background: var(--dark-2);
+
+    // anchor positioning
+    position: absolute;
+    position-anchor: var(--anchor);
+    position-area: bottom span-right;
+    position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
+    min-width: anchor-size(width);
+
+    // sizing
+    width: max-content;
+    max-width: 320px;
+    max-height: 280px;
+    overflow-y: auto;
+	 border: none;
+
+    // animation
+    opacity: 0;
+    translate: 0 -6px;
+    transition:
+      opacity 0.18s ease,
+      translate 0.18s ease,
+      display 0.18s ease allow-discrete,
+      overlay 0.18s ease allow-discrete;
+
+    &:popover-open {
+      opacity: 1;
+      translate: 0 0;
+
+      @starting-style {
+        opacity: 0;
+        translate: 0 -6px;
+      }
+    }
+
+    // scrollbar
+    &::-webkit-scrollbar       { width: 4px; }
+    &::-webkit-scrollbar-track { background: transparent; }
+  }
+
+  // ── Options ──────────────────────────────────────────────────
+
+  &__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 9px 12px;
+    cursor: pointer;
+	 font-size: em(16);
+	 color: inherit;
+    transition: background 0.1s;
+    user-select: none;
+
+    &:hover {
+      background: var(--dark-1);
+    }
+
+    &[aria-selected="true"] {
+      color: var(--blue);
+
+      &::after {
+        content: "✓";
+        font-size: 14px;
+        color: var(--blue);
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+// ── Arrow icon (global, not scoped to block) ─────────────────
+
+.arrow {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+  color: inherit;
+  opacity: 0.5;
+  fill: var(--white);
+  stroke: var(--white);
+}
+
+.dark {
+	.form {
+		.cstm-select {
+			&__popover {
+				background: var(--dark-2);
+			}
+			&__trigger {
+				color: var(--light-4);
+			}
+			&__option:not([aria-selected="true"]) {
+				color: var(--light-4);
+			}
+		}
 	}
 }

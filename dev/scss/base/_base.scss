@@ -52,19 +52,41 @@ body {
 }
 .section {
 	padding: 72px 0;
-	@media (min-width: 1101px){
+	&.pt-0 {
+		padding-top: 0 !important;
+	}
+	&.pt-05 {
+		padding-top: .4em !important;
+	}
+	@media (min-width: 1400px){
 		& + & {
-			padding-top: 60px;
+			padding-top: 57px;
+		}
+		&.with-divider + & {
+			padding-top: 68px;
+		}
+	}
+	@media (max-width: 1400px){
+		padding: 50px 0;
+		overflow: hidden;
+		& + & {
+			padding-top: 30px;
 		}
 	}
 	@media (max-width: 1100px){
-		padding: 40px 0 30px;
+		padding: 42px 0;
+	}
+	@media (max-width: 991px){
+		padding: 35px 0;
 	}
 	@media (max-width: 600px){
 		padding: 30px 0;
 	}
 	@media (max-width: 500px){
 		padding: 28px 0;
+		& + & {
+			padding-top: 22px;
+		}
 		&:has(+ .banner){
 			padding: 20px 0 36px;
 		}
@@ -73,7 +95,23 @@ body {
 		background-image: var(--gradient-gray);
 	}
 	&--dark {
-		background-color: var(--dark-3);
+		background-color: var(--light-1);
 	}
-
+}
+.dark .section--dark {
+	background-color: var(--dark-3);
+}
+.mini-section {
+	padding: 30px 0;
+	@media (min-width: 1400px){
+		& + .section {
+			padding-top: 57px;
+		}
+	}
+	@media (max-width: 1400px){
+		padding: 23px 0 6px;
+	}
+	@media (max-width: 600px){
+		padding: 18px 0 0;
+	}
 }

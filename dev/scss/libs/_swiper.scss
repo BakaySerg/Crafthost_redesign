@@ -6,10 +6,19 @@
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	overflow: hidden;
 	list-style: none;
 	width: 100%;
 	z-index: 1;
+	@media (min-width: 1300px){
+		&:not(.swiper--lg) {
+			overflow: hidden;
+		}
+	}
+	@media (max-width: 1100px){
+		&:has(.swiper-scrollbar){
+			padding-bottom: 28px;
+		}
+	}
 }
 .swiper-vertical > .swiper-wrapper {
 	flex-direction: column;
@@ -86,6 +95,8 @@
 	justify-content: center;
 	min-width: 5ch;
 	letter-spacing: 0.2em;
+	font-size: 16px;
+	user-select: none;
 }
 
 .swiper-pagination-bullet {
@@ -121,10 +132,12 @@ button.swiper-pagination-bullet {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 10px;
 	gap: 0.5em;
 	&--right {
 		justify-content: flex-end;
+	}
+	@media (min-width: 700px){
+		padding-top: 10px;
 	}
 }
 .swiper-button-next,
@@ -136,8 +149,8 @@ button.swiper-pagination-bullet {
 	background-color: var(--white);
 	border: 1px solid var(--blue);
 	cursor: pointer;
-	width: 65px;
-	height: 64px;
+	width: 48px;
+	height: 48px;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.02);
 	.icon {
 		width: 20px;
@@ -178,7 +191,7 @@ button.swiper-pagination-bullet {
 	height: 2px;
 	background: var(--light-3);
 	position: relative;
-	top: 24px !important;
+	top: 22px !important;
 }
 
 .swiper-scrollbar-drag {

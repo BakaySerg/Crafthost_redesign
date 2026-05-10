@@ -1,5 +1,7 @@
 @use "../base/utils" as *;
-
+.pt-0 {
+	padding-top: 0 !important;
+}
 .pt-05 {
 	padding-top: 0.5em;
 	@media (max-width: 600px){
@@ -30,6 +32,10 @@
 		padding-top: 1.9em;
 	}
 }
+
+.pb-0 {
+	padding-bottom: 0 !important;
+}
 .pb-05 {
 	padding-bottom: 0.6em;
 	@media (max-width: 600px){
@@ -42,21 +48,29 @@
 		padding-bottom: 0.7em;
 	}
 }
-.pb-2 {
-	padding-bottom: 1.9em;
-	@media (max-width: 600px){
-		padding-bottom: 1.4em;
-	}
-}
 .pb-15 {
 	padding-bottom: 1.6em;
 	@media (max-width: 600px){
 		padding-bottom: 1em;
 	}
 }
-
+.pb-2 {
+	padding-bottom: 1.9em;
+	@media (max-width: 600px){
+		padding-bottom: 1.3em;
+	}
+}
+.pb-25 {
+	padding-bottom: 2.4em;
+	@media (max-width: 600px){
+		padding-bottom: 1.4em;
+	}
+}
+.mb-02 {
+	margin-bottom: 0.2em;
+}
 .mb-05 {
-	margin-bottom: 0.6em;
+	margin-bottom: 0.65em;
 	@media (max-width: 600px){
 		margin-bottom: 0.2em;
 	}
@@ -73,22 +87,34 @@
 		margin-bottom: 1.1em;
 	}
 }
-
-[class^="grid-"], [class*=" grid-"]{
-	display: grid;
-}
-
-.grid-md-2 {
-	grid-template-columns: repeat(2, 1fr);
-	gap: 32px;
-	@media (max-width: 1400px){
-		gap: 24px;
-	}
-	@media (max-width: 1023px){
-		gap: 20px;
-		grid-template-columns: 1fr;
+.mb-2 {
+	margin-bottom: 1.9em;
+	@media (max-width: 600px){
+		margin-bottom: 1.4em;
 	}
 }
+.mb-25 {
+	margin-bottom: 2.4em;
+	@media (max-width: 600px){
+		margin-bottom: 1.8em;
+	}
+}
+.mt-05 {
+	margin-top: 0.4em;
+	@media (max-width: 600px){
+		margin-top: 0.2em;
+	}
+}
+.mt-a {
+	margin-top: auto;
+}
+.mt-1 {
+	margin-top: 1em;
+	@media (max-width: 600px){
+		margin-top: 0.7em;
+	}
+}
+
 .action {
 	display: flex;
 	flex-wrap: wrap;
@@ -102,5 +128,32 @@
 		.btn, .link {
 			flex: 1 1 100%;
 		}
+	}
+	@media (max-width: 600px){
+		padding-top: 1.7em;
+	}
+}
+.md-half {
+	@media (min-width: 768px){
+		width: min(71%, 66ch);
+	}
+	@media (min-width: 992px){
+		width: min(50%, 62ch);
+	}
+}
+.is-flex {
+	display: flex;
+	gap: 1.77em;
+	@media (max-width: 600px){
+		gap: 1.2em;
+	}
+	&--wrap {
+		flex-wrap: wrap;
+	}
+}
+.md-visible {
+	display: none;
+	@media (min-width: 1024px){
+		display: block;
 	}
 }

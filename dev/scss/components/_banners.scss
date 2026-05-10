@@ -1,21 +1,82 @@
 @use "../base/utils" as *;
 
 .banner {
-	padding: 72px 0;
+	padding: 70px 0;
 	@media (max-width: 1300px){
 		padding: 38px 0;
 	}
+	@media (max-width: 1100px){
+		padding: 28px 0;
+	}
 	@media (max-width: 600px){
-		padding: 28px 0 20px;
+		padding: 20px 0;
 	}
 	&--light {
 		background: var(--gradient-light);
+	}
+	&--dark {
+		.banner__container {
+			background-image: var(--gradient-blue-dark);
+			border: 1px solid var(--blue-muted);
+			display: grid;
+			grid-template-columns: auto 1fr;
+			align-items: center;
+			gap: 48px;
+			padding: 17px 17px 22px;
+			&:not(:has(.banner__image)) {
+				grid-template-columns: auto;
+				.h2 {
+					max-width: 100%;
+				}
+			}
+			 @media (min-width: 1100px){
+				padding: 36px;
+			}
+			@media (min-width: 1100px){
+				padding: 36px;
+				.h2 {
+					max-width: 700px;
+				}
+			}
+			p:not([class]) {
+				font-weight: 300;
+				color: var(--light-3);
+			}
+			@media (max-width: 1300px){
+				max-width: calc(100% - 30px);
+				.banner__image {
+					max-width: 300px;
+				}
+			}
+			@media (max-width: 991px){
+				.banner__image {
+					max-width: 270px;
+					margin: 0 auto -20px;
+				}
+			}
+			@media (max-width: 760px){
+				grid-template-columns: 1fr;
+				gap: 20px;
+			}
+		}
 	}
 	&__box {
 		display: grid;
 		grid-template-columns: minmax(660px, 1fr) auto;
 		gap: calc(5em + 3vw);
 		align-items: center;
+		&--narrow {
+			@media (min-width: 1301px){
+				grid-template-columns: 652px auto;
+				justify-content: space-between;
+			}
+			.banner__action {
+				gap: 20px;
+				@media (max-width: 600px){
+					gap: 16px;
+				}
+			}
+		}
 		@media (max-width: 1300px){
 			grid-template-columns: minmax(590px, 1fr) auto;
 			gap: calc(3em + 2vw);
@@ -28,12 +89,12 @@
 	&__content {
 		@media (min-width: 1600px){
 			.h2 {
-				margin-bottom: .7em;
+				margin-bottom: .6em;
 			}
 		}
 	}
 	&__action {
-		padding-top: 0.7em;
+		padding-top: 0.75em;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 3.3em;
@@ -58,6 +119,14 @@
 			display: flex;
 			justify-content: center;
 			padding: 20px;
+		}
+		@media (max-width: 991px){
+			margin-inline: auto;
+			max-width: 340px;
+		}
+		@media (max-width: 600px){
+			max-width: 280px;
+			padding: 5px;
 		}
 	}
 }

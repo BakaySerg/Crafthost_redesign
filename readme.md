@@ -5,10 +5,15 @@
 npm i
 ```
 
+## Make Svg-sprite
+```
+gulp svg-sprite
+```
+
 ## Run project
 ```
 gulp
 ```
 
 ### See demo
-[xpme.com](http://xpme.com/app/index.html).
+[xpme.com](http://xpme.com/new/).
