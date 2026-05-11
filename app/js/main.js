@@ -229,9 +229,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	const sheetSliderEl = document.querySelector(".sheet__slider");
-	if (sheetSliderEl) {
-		new Swiper(sheetSliderEl, {
+	document.querySelectorAll(".sheet__slider").forEach((el) => {
+		new Swiper(el, {
 			...baseSwiperConfig,
 			breakpoints: {
 				320: { slidesPerView: 1.16 },
@@ -240,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				1200: { slidesPerView: 3, spaceBetween: 16, grid: { rows: 2, fill: "row" } },
 			},
 		});
-	}
+	});
 
 	const institutionSliderEl = document.querySelector(".institution__slider");
 	if (institutionSliderEl) {

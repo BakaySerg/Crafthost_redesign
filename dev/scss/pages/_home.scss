@@ -255,6 +255,9 @@
 	.icon {
 		color: var(--blue);
 	}
+	p:last-child {
+		margin-bottom: 0;
+	}
 	&__name {
 		font-family: 'Raptor', monospace;
 		font-size: em(32);

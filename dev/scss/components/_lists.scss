@@ -52,6 +52,9 @@
 			li {
 				break-inside: avoid;
 				padding: 0.7em 0 !important;
+				&:last-child {
+					padding-bottom: .8em !important;
+				}
 			}
 		}
 	}

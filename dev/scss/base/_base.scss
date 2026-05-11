@@ -59,7 +59,7 @@ body {
 		padding-top: .4em !important;
 	}
 	@media (min-width: 1400px){
-		& + & {
+		& + &:not(.section--gradient) {
 			padding-top: 57px;
 		}
 		&.with-divider + & {

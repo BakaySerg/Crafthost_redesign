@@ -3,7 +3,7 @@
 .h1, .h2, .h3, .h4 {
 	font-family: "Raptor", monospace;
 	font-weight: 400;
-	letter-spacing: -.04em;
+	letter-spacing: -.045em;
 	word-spacing: -.04em;
 }
 .h1 {
@@ -103,7 +103,7 @@
 		margin-bottom: 0.7em;
 	}
 	&--limited {
-		max-width: 1030px;
+		max-width: 1022px;
 	}
 }
 .bit-limited {
