@@ -25,6 +25,9 @@
 	&> span {
 		overflow: hidden;
 		text-overflow: ellipsis;
+		@media (max-width: 440px){
+			max-width: 266px;
+		}
 	}
 	&--outline {
 		background-color: transparent;
