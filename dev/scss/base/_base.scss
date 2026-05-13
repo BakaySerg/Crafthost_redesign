@@ -107,6 +107,12 @@ body {
 		& + .section {
 			padding-top: 57px;
 		}
+		& + .section:not(.section--gradient) {
+			padding-top: 57px;
+		}
+		&.with-divider + .section {
+			padding-top: 68px;
+		}
 	}
 	@media (max-width: 1400px){
 		padding: 23px 0 6px;
