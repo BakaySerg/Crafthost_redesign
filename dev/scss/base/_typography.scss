@@ -184,7 +184,10 @@
 		}
 		.subtitle {
 			padding-top: 0.4em;
-			max-width: 611px;
+			// max-width: 611px;
+		}
+		&--even {
+			grid-template-columns: 1fr 1.025fr;
 		}
 		&--uneven {
 			grid-template-columns: .8fr 1.2fr;

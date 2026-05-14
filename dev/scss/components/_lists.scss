@@ -18,12 +18,18 @@
 				width: 1.35em !important;
 				max-width: 1.35em !important;
 				height: 1.35em;
+				@media (max-width: 600px){
+					width: 1.24em !important;
+					max-width: 1.24em !important;
+					height: 1.24em;
+					margin-top: 3px;
+				}
 			}
 			&:last-child:has([class]) {
 				padding-bottom: 0;
 			}
 			@media (max-width: 600px){
-				gap: 1em;
+				gap: .9em;
 			}
 		}
 	}
