@@ -600,8 +600,11 @@
 	@media (min-width: 1024px) {
 		display: grid !important;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 20px;
+		gap: 16px;
 		transform: none !important;
+	}
+	@media (min-width: 1300px){
+		gap: 20px;
 	}
 	&__box {
 		@media (min-width: 1024px){

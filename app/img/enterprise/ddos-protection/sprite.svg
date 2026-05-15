@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 24 24" fill="none" id="sm-1" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#aaclip0_2082_49914)">
+<path d="M20 21C18.895 21 18 20.105 18 19V5C18 3.895 18.895 3 20 3C21.105 3 22 3.895 22 5V19C22 20.105 21.105 21 20 21Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 20.9996C2.895 20.9996 2 20.1046 2 18.9996V10.6836C2 9.57859 2.895 8.68359 4 8.68359C5.105 8.68359 6 9.57859 6 10.6836V18.9996C6 20.1046 5.105 20.9996 4 20.9996Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 20.9992C10.895 20.9992 10 20.1042 10 18.9992V16.3672C10 15.2622 10.895 14.3672 12 14.3672C13.105 14.3672 14 15.2622 14 16.3672V18.9992C14 20.1042 13.105 20.9992 12 20.9992Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="aaclip0_2082_49914">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-2" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#abclip0_2082_49935)">
+<path d="M21 21H5C3.895 21 3 20.105 3 19V3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 6L16.402 11.518C16.156 11.813 15.764 11.941 15.391 11.848L12.609 11.152C12.237 11.059 11.844 11.187 11.598 11.482L7 17" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="abclip0_2082_49935">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-3" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#acclip0_2082_49950)">
+<path d="M20 3H8.828C8.298 3 7.789 3.211 7.414 3.586L3.586 7.414C3.211 7.789 3 8.298 3 8.828V20C3 20.552 3.448 21 4 21H15.172C15.702 21 16.211 20.789 16.586 20.414L20.414 16.586C20.789 16.211 21 15.702 21 15.172V4C21 3.448 20.552 3 20 3V3Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 3.18555V8.99955H3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 15H16V20.814" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 8.99953L20.67 3.26953" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.32812 20.73L7.99813 15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 9H16V15H8V9Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="acclip0_2082_49950">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-4" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#adclip0_2082_10945)">
+<path d="M21 15.6699V18.8899" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.0014 7.27738V10.4974C20.5349 10.4032 20.0528 10.4346 19.6024 10.5884C18.7653 10.8745 18.1303 11.5653 17.9154 12.4234C17.5537 13.8382 18.4075 15.2784 19.8223 15.64C20.0354 15.6945 20.2544 15.7221 20.4744 15.7224C20.6517 15.7221 20.8285 15.7043 21.0024 15.6694V18.8894C21.0024 20.0552 20.0573 21.0004 18.8915 21.0004M18.8915 21.0004C18.8914 21.0004 18.8916 21.0004 18.8915 21.0004ZM18.8915 21.0004H15.6712C15.7654 20.5339 15.734 20.0518 15.5802 19.6014C15.294 18.7644 14.6033 18.1293 13.7452 17.9144C12.3304 17.5527 10.8902 18.4065 10.5286 19.8213C10.4741 20.0344 10.4464 20.2535 10.4462 20.4734C10.4465 20.6507 10.4643 20.8275 10.4992 21.0014L7.28037 21.0004C6.1148 21.0006 5.16971 20.0559 5.16937 18.8904V15.6704C4.99554 15.7053 4.81868 15.7231 4.64137 15.7234C3.18104 15.7218 1.99846 14.5367 2 13.0764C2.00023 12.8565 2.0279 12.6374 2.08237 12.4244C2.29731 11.5663 2.93234 10.8755 3.76937 10.5894C4.21975 10.4356 4.70287 10.4042 5.16937 10.4984L5.16837 7.27837C5.16837 6.11259 6.11342 5.16737 7.27921 5.16737M7.27921 5.16737C7.27932 5.16737 7.2791 5.16737 7.27921 5.16737ZM7.27921 5.16737H10.4995C10.4646 4.99354 10.4468 4.81669 10.4465 4.63937C10.448 3.17904 11.6331 1.99654 13.0934 1.99805C13.3133 1.99828 13.5323 2.02592 13.7453 2.08035C14.603 2.2959 15.2935 2.93071 15.5803 3.76735C15.734 4.21773 15.7654 4.70086 15.6713 5.16735H18.8913C20.057 5.1672 21.0022 6.11214 21.0024 7.27793M21.0024 7.27793C21.0024 7.27808 21.0024 7.27778 21.0024 7.27793Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="adclip0_2082_10945">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</symbol></svg>

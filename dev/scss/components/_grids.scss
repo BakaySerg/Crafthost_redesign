@@ -12,6 +12,13 @@
 		gap: 20px;
 		grid-template-columns: 1fr;
 	}
+	&--reverse {
+		@media (min-width: 1024px){
+			div:nth-child(2) {
+				order: -1;
+			}
+		}
+	}
 	&--sm-gap {
 		gap: 16px;
 		@media (min-width: 768px){
