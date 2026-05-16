@@ -27,6 +27,10 @@
 			position: relative;
 			left: 40px;
 		}
+		@media (max-width: 991px){
+			max-width: 580px;
+			margin: 15px auto 0;
+		}
 	}
 }
 .feat {
