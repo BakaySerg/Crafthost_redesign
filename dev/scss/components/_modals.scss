@@ -56,11 +56,12 @@ dialog[open] {
 			@media (max-width: 991px){
 				padding-top: 40px;
 				padding-bottom: 40px;
+				max-width: 700px;
 			}
 		}
 		.h3 {
 			@media (min-width: 1400px){
-				margin-bottom: 0.7em;
+				margin-bottom: 0.8em;
 			}
 		}
 	}
