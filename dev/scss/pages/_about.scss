@@ -1,6 +1,9 @@
 @use "../base/utils" as *;
 .about-intro {
 	padding: 111px 0;
+	width: 100vw;
+	max-width: 1930px;
+	margin-inline: auto;
 	.h1 {
 		margin-bottom: 0.7em;
 	}
