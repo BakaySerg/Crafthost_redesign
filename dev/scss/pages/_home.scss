@@ -219,6 +219,11 @@
 	border: 1px solid var(--light-3);
 	margin-left: -1px;
 	margin-top: -1px;
+	@media (min-width: 1400px){
+		.h6 {
+			margin-bottom: 0.9em;
+		}
+	}
 	@media (max-width: 991px){
 		padding: 18px;
 	}

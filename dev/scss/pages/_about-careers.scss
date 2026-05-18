@@ -46,6 +46,20 @@
 			font-weight: 500;
 		}
 	}
+	@media (min-width: 1600px){
+		&--high {
+			min-height: 330px;
+			.icon {
+				margin-bottom: 2.6em;
+			}
+		}
+		&--middle {
+			min-height: 200px;
+			.icon {
+				margin-bottom: 1em;
+			}
+		}
+	}
 	@media (max-width: 1400px){
 		padding: 20px 16px;
 		.icon {

@@ -129,6 +129,9 @@
 				}
 			}
 		}
+		&--three {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 	}
 	@media (min-width: 1100px){
 		border: 1px solid var(--blue);
@@ -199,11 +202,12 @@
 		}
 	}
 	&__list {
-		font-weight: 300;
 		display: flex;
 		flex-direction: column;
 		gap: 1.8em;
-		color: var(--light-3);
+		@media (max-width: 600px){
+			gap: 1.1em;
+		}
 	}
 }
 .dark {
@@ -214,6 +218,10 @@
 					border-bottom-color: var(--dark-2);
 				}
 			}
+		}
+		&__list {
+			color: var(--light-3);
+			font-weight: 300;
 		}
 	}
 }
