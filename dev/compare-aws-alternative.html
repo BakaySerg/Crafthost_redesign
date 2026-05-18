@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost</title>
+	@@include('./includes/head.html')
+	<body>
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="about.html">About</a>
+				<span class="breadcrumbs__item"></span>
+			</div>
+
+			<!-- intro -->
+			<section class="section with-divider mini-intro">
+				<div class="container">
+					<i class="icon icon--gradient icon--lg">
+						<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-briefcase"/></svg>
+					</i>
+					<h1 class="h1 text-center mb-05">Client <span class="text-accent">Testimonials.</span></h1>
+					<p class="subtitle text-center">Proof of Reliability From the Organisations We Serve.</p>
+				</div>
+			</section>
+
+			@@include('./includes/footer.html', { "decor": false })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

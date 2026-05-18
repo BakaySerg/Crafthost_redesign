@@ -186,6 +186,15 @@
 			grid-template-columns: repeat(auto-fill, minmax(180px, auto));
 		}
 	}
+	&--uneven-grow {
+		grid-template-columns: repeat(auto-fit, minmax(310px, auto));
+		@media (max-width: 1200px){
+			grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+		}
+		@media (max-width: 900px){
+			grid-template-columns: repeat(auto-fit, minmax(248px, auto));
+		}
+	}
 	&--long {
 		@media (min-width: 1000px){
 			grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));

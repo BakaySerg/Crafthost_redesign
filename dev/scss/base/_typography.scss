@@ -168,10 +168,18 @@
 	&--darken {
 		background-color: var(--light-blue-2);
 	}
+	&--huge {
+		font-size: 1em;
+		padding: 0.92em 2.66em;
+	}
 	@media (max-width: 1100px){
 		font-size: 14px;
 		&--lg {
 			font-size: 16px;
+		}
+		&--huge {
+			font-size: 1em;
+			padding: 0.9em 1.5em;
 		}
 	}
 	@media (max-width: 600px){
@@ -180,6 +188,10 @@
 		&--lg {
 			font-size: 15px;
 			padding: 2px 7px;
+		}
+		&--huge {
+			font-size: .9em;
+			padding: .7em 1em;
 		}
 	}
 }

@@ -30,6 +30,7 @@
 			}
 			@media (max-width: 600px){
 				gap: .9em;
+				padding: 0.7em 0;
 			}
 		}
 	}
@@ -98,6 +99,9 @@
 				width: 1.2em !important;
 				max-width: 1.2em !important;
 				height: 1.2em;
+			}
+			@media (max-width: 600px){
+				gap: .9em;
 			}
 		}
 	}
