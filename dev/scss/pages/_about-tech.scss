@@ -200,6 +200,21 @@
 				}
 			}
 		}
+		&--big-head {
+			@media (min-width: 768px){
+				.h4 {
+					min-height: 7.3ch !important;
+					text-wrap: balance;
+					padding-bottom: 0.5em !important;
+				}
+			}
+			@media (min-width: 1000px){
+				.h4 {
+					min-height: 5.4ch !important;
+					padding-bottom: 0.6em !important;
+				}
+			}
+		}
 	}
 	&__list {
 		display: flex;
