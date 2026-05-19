@@ -211,6 +211,11 @@
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
+	&--three {
+		@media (min-width: 1000px){
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
 }
 .tile {
 	display: flex;
