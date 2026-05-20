@@ -138,6 +138,19 @@
 			position: absolute;
 			right: 10px;
 			bottom: -5.8em;
+			&--down {
+				@media (min-width: 1024px){
+					bottom: -8em;
+				}
+			}
+		}
+	}
+	@media (max-width: 1023px){
+		.text-badge {
+			&--down {
+				margin-top: 1.6em;
+				margin-bottom: 0;
+			}
 		}
 	}
 }

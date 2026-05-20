@@ -114,6 +114,12 @@
 		margin-top: 0.7em;
 	}
 }
+.mt-2 {
+	margin-top: 1.9em;
+	@media (max-width: 600px){
+		margin-top: 1.4em;
+	}
+}
 
 .action {
 	display: flex;
