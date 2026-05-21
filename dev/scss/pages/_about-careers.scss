@@ -49,7 +49,7 @@
 	@media (min-width: 1600px){
 		&--high {
 			min-height: 330px;
-			.icon {
+			.icon:not([class*='mb-']) {
 				margin-bottom: 2.6em;
 			}
 		}
@@ -70,6 +70,9 @@
 		padding: 16px;
 		.icon {
 			margin-bottom: 1.2em;
+		}
+		.btn--lg>span {
+			max-width: 243px;
 		}
 	}
 

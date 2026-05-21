@@ -296,7 +296,7 @@
 		height: 0;
 		opacity: 0;
 		transition: padding .3s;
-		p {
+		p:has(+ .link) {
 			margin-bottom: 1.5em;
 		}
 		.link {

@@ -79,7 +79,9 @@
 			min-width: 200px;
 			width: 100%;
 			font-size: 15px;
-			gap: .9em;
+			gap: .6em;
+			max-width: 100%;
+			padding: 13px;
 			&:only-child {
 				width: 100%;
 			}
@@ -87,7 +89,7 @@
 		@media (max-width: 330px){
 			font-size: 14px;
 			padding: 14px;
-			gap: 0.8em;
+			gap: 0.5em;
 		}
 	}
 	&--grow {
