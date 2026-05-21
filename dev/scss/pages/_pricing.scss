@@ -1,0 +1,58 @@
+@use "../base/utils" as *;
+
+.price-card {
+	padding: 17px 17px 20px;
+	margin-right: -1px;
+	margin-bottom: -1px;
+	display: flex;
+	flex-direction: column;
+
+	&__header {
+		display: grid;
+		gap: 1.1em;
+		grid-template-columns: 180px 1.1fr;
+		margin-bottom: 1.9em;
+		@media (min-width: 1200px){
+			margin-bottom: 3.3em;
+		}
+		@media (max-width: 1200px){
+			grid-template-columns: 110px 1.1fr;
+			.h4 {
+				font-size: 1.4em;
+			}
+		}
+		@media (max-width: 600px){
+			margin-bottom: .6em;
+		}
+	}
+	&__number {
+		display: block;
+		font-weight: 300;
+		color: var(--blue);
+		margin-bottom: 1.2em;
+		@media (max-width: 1200px){
+			margin-bottom: 0.2em;
+		}
+		@media (max-width: 600px){
+			font-size: 0.85em;
+		}
+	}
+	&__descr {
+		font-size: 14px;
+		margin-bottom: 1.9em;
+		line-height: 1.55;
+	}
+	&__info {
+		margin-top: auto;
+	}
+	.price {
+		color: var(--blue);
+		font-weight: 600;
+		font-size: 32px;
+		font-family: "Raptor", monospace;
+		letter-spacing: -.04em;
+		@media (max-width: 1200px){
+			font-size: 26px;
+		}
+	}
+}

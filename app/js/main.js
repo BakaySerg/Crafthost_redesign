@@ -210,9 +210,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	document.querySelectorAll(".testimonials__slider").forEach((el) => {
+	const createSlider = (el) => {
 		const sp = Number(el.dataset.spaceBetween) || 0;
 		const rowsMd = Number(el.dataset.rowMd) || 1;
+		const autoCustomHeight = el.hasAttribute("data-auto-height");
 
 		new Swiper(el, {
 			...baseSwiperConfig,
@@ -223,11 +224,13 @@ document.addEventListener("DOMContentLoaded", () => {
 				1100: {
 					slidesPerView: 3,
 					spaceBetween: sp,
-					...(rowsMd > 1 ? { autoHeight: false, grid: { rows: rowsMd, fill: "row" } } : { autoHeight: true }),
+					...(rowsMd > 1 ? { autoHeight: false, grid: { rows: rowsMd, fill: "row" } } : { autoHeight: autoCustomHeight }),
 				},
 			},
 		});
-	});
+	};
+
+	document.querySelectorAll(".testimonials__slider, .price-card__slider").forEach(createSlider);
 
 	document.querySelectorAll(".sheet__slider").forEach((el) => {
 		new Swiper(el, {
