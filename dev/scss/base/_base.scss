@@ -77,7 +77,7 @@ body {
 	}
 	@media (max-width: 1400px){
 		padding: 50px 0;
-		overflow: hidden;
+		overflow-x: clip;
 		& + & {
 			padding-top: 30px;
 		}

@@ -151,32 +151,63 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	// ── Custom form select (popover) ─────────────────────────────────────────
+	// ── Custom form select ─────────────────────────────────────────
 
-	document.querySelectorAll(".cstm-select__popover").forEach((popover) => {
-		const trigger = document.querySelector(`[popovertarget="${popover.id}"]`);
-		const hidden = trigger?.nextElementSibling;
-		const textEl = trigger?.querySelector(".cstm-select__trigger-text");
+	document.querySelectorAll(".cstm-select").forEach((select) => {
+		const trigger = select.querySelector(".cstm-select__trigger");
+		const dropdown = select.querySelector(".cstm-select__dropdown");
+		const hidden = select.querySelector('input[type="hidden"]');
+		const text = select.querySelector(".cstm-select__trigger-text");
+		const options = select.querySelectorAll(".cstm-select__option");
 
-		if (!trigger || !hidden || !textEl) return;
+		if (!trigger || !dropdown || !hidden || !text) return;
 
-		popover.addEventListener("toggle", (e) => {
-			trigger.setAttribute("aria-expanded", e.newState === "open");
+		// open / close
+
+		trigger.addEventListener("click", (e) => {
+			e.stopPropagation();
+
+			const isOpen = select.classList.contains("is-open");
+
+			document.querySelectorAll(".cstm-select.is-open").forEach((s) => {
+				s.classList.remove("is-open");
+			});
+
+			if (!isOpen) { select.classList.add("is-open"); }
+
+			trigger.setAttribute("aria-expanded", !isOpen);
 		});
 
-		popover.querySelectorAll(".cstm-select__option").forEach((option) => {
+		// Select option
+		options.forEach((option) => {
 			option.addEventListener("click", () => {
-				hidden.value = option.dataset.value;
-				textEl.textContent = option.textContent.trim();
-				textEl.classList.remove("placeholder");
-
-				popover.querySelectorAll(".cstm-select__option").forEach((o) => {
+				const value = option.dataset.value;
+				const label = option.textContent.trim();
+				hidden.value = value;
+				text.textContent = label;
+				text.classList.remove("placeholder");
+				options.forEach((o) => {
 					o.setAttribute("aria-selected", String(o === option));
 				});
 
-				popover.hidePopover();
-				hidden.dispatchEvent(new Event("change", { bubbles: true }));
+				select.classList.remove("is-open");
+
+				trigger.setAttribute("aria-expanded", "false");
+
+				hidden.dispatchEvent(
+					new Event("change", {
+						bubbles: true,
+					}),
+				);
 			});
+		});
+	});
+	// outside click
+	document.addEventListener("click", () => {
+		document.querySelectorAll(".cstm-select.is-open").forEach((select) => {
+			select.classList.remove("is-open");
+			const trigger = select.querySelector(".cstm-select__trigger");
+			trigger?.setAttribute("aria-expanded", "false");
 		});
 	});
 
@@ -299,24 +330,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// ── Tabs ─────────────────────────────────────────────────────────────────
 
-	document.querySelectorAll("[data-trigger-tab]").forEach((trigger) => {
-		trigger.addEventListener("click", function () {
-			const comingTab = document.getElementById(this.getAttribute("data-trigger-tab"));
-			if (!comingTab) return;
+document.addEventListener("click", (e) => {
+	const trigger = e.target.closest("[data-trigger-tab]");
+	if (!trigger) return;
 
-			comingTab.closest(".tabs-content")?.querySelector('[data-tab="active"]')?.setAttribute("data-tab", "hidden");
+	const tabId = trigger.dataset.triggerTab;
+	const comingTab = document.getElementById(tabId);
 
-			comingTab.setAttribute("data-tab", "active");
+	if (!comingTab) return;
 
-			const tabsBlock = this.closest(".tabs");
-			if (tabsBlock) {
-				tabsBlock.querySelectorAll("[data-trigger-tab]").forEach((t) => {
-					t.closest(".tab")?.classList.remove("active");
-				});
-				this.closest(".tab")?.classList.add("active");
-			}
-		});
+	const tabsContent = comingTab.closest(".tabs-content");
+	tabsContent?.querySelector('[data-tab="active"]')?.setAttribute("data-tab", "hidden");
+	comingTab.setAttribute("data-tab", "active");
+	const tabsBlock = document.querySelector(`.tabs [data-trigger-tab="${tabId}"]`)?.closest(".tabs");
+
+	if (!tabsBlock) return;
+
+	tabsBlock.querySelectorAll(".tab").forEach((tab) => {
+		tab.classList.remove("active");
 	});
+
+	tabsBlock.querySelector(`[data-trigger-tab="${tabId}"]`)?.closest(".tab")?.classList.add("active");
+});
 
 	// ── Modals ───────────────────────────────────────────────────────────────
 

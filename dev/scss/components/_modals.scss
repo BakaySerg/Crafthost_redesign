@@ -15,6 +15,15 @@ dialog {
 		width: 100dvw;
 		max-width: 99dvw !important;
 	}
+	&::-webkit-scrollbar {
+		width: 7px;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: var(--light-3);
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--light-4);
+	}
 }
 dialog[open] {
 	animation: fadeInUp 0.2s ease-out forwards;

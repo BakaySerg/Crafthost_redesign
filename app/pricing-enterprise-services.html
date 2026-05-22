@@ -607,9 +607,161 @@
 								<use xlink:href="img/general/sprite.svg#close" />
 							</svg>
 						</button>
-						<h3 class="h3 text-center">Enterprise Infrastructure Assessment.</h3>
-						<p class="subtitle text-center">A structured intake reviewed by senior engineers. You receive a written response within our assessment workflow.</p>
-						<p class="text-badge text-center">Enterprise-only · Quote-based · SLA-driven · No phone required</p>
+						<h3 class="h3 text-center mb-05">Enterprise Infrastructure Assessment.</h3>
+						<p class="subtitle text-center">A structured intake reviewed by senior engineers. <br>You receive a written response within our assessment workflow.</p>
+						<p class="text-badge text-center m-a">Enterprise-only · Quote-based · SLA-driven · No phone required</p>
+						<form action="form">
+							<div class="tabs form__tabs pt-25 mb-25">
+								<div class="form__tab tab active" aria-label="switch tab" data-trigger-tab="step-1">
+									Step 01 - Environment
+								</div>
+								<div class="form__tab tab" aria-label="switch tab" data-trigger-tab="step-2">
+									Step 2 — Requirements
+								</div>
+								<div class="form__tab tab" aria-label="switch tab" data-trigger-tab="step-3">
+									Step 3 — Contact & Notes
+								</div>
+							</div>
+
+							<div class="tabs-content form__steps">
+								<div class="tab__pane" id="step-1" data-tab="active">
+									<div class="grid-md-2 mb-2">
+										<div class="form__group">
+											<div class="form__label">Type of Partnership Requested</div>
+											<div class="cstm-select">
+												<button class="cstm-select__trigger" type="button" aria-expanded="false">
+													<span class="cstm-select__trigger-text placeholder">Dedicated Servers</span>
+													<svg class="arrow" viewBox="0 0 32 32">
+														<use xlink:href="img/general/sprite.svg#arrow" />
+													</svg>
+												</button>
+												<input type="hidden" name="type">
+
+												<div class="cstm-select__dropdown">
+													<div class="cstm-select__option" data-value="first">Cloud VPS</div>
+													<div class="cstm-select__option" data-value="second">Dedicated Servers</div>
+													<div class="cstm-select__option" data-value="third">GPU & AI Servers</div>
+													<div class="cstm-select__option" data-value="fourth">Hybrid (Cloud + Dedicated)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form__group">
+											<div class="form__label">Primary Deployment Region *</div>
+											<div class="cstm-select">
+												<button class="cstm-select__trigger" type="button" aria-expanded="false">
+													<span class="cstm-select__trigger-text placeholder">Italy</span>
+													<svg class="arrow" viewBox="0 0 32 32">
+														<use xlink:href="img/general/sprite.svg#arrow" />
+													</svg>
+												</button>
+												<input type="hidden" name="Region">
+
+												<div class="cstm-select__dropdown">
+													<div class="cstm-select__option" data-value="first">Italy</div>
+													<div class="cstm-select__option" data-value="second">Germany</div>
+													<div class="cstm-select__option" data-value="third">Netherlands</div>
+													<div class="cstm-select__option" data-value="third">France</div>
+													<div class="cstm-select__option" data-value="third">Other EU</div>
+													<div class="cstm-select__option" data-value="third">North America</div>
+													<div class="cstm-select__option" data-value="third">Middle East</div>
+													<div class="cstm-select__option" data-value="third">Other (specify)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form__group">
+											<div class="form__label">Current Footprint *</div>
+											<div class="cstm-select">
+												<button class="cstm-select__trigger" type="button" aria-expanded="false">
+													<span class="cstm-select__trigger-text placeholder">4–10 environments</span>
+													<svg class="arrow" viewBox="0 0 32 32">
+														<use xlink:href="img/general/sprite.svg#arrow" />
+													</svg>
+												</button>
+												<input type="hidden" name="stack">
+
+												<div class="cstm-select__dropdown">
+													<div class="cstm-select__option" data-value="first">Within 1 month</div>
+													<div class="cstm-select__option" data-value="second">1–3 environments</div>
+													<div class="cstm-select__option" data-value="third">4–10 environments</div>
+													<div class="cstm-select__option" data-value="third">11–25 environments</div>
+													<div class="cstm-select__option" data-value="third">26+ environments</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="form__group">
+											<label class="form__label" for="email">Contact Information</label>
+											<input class="form__input" type="email" id="email" name="email" placeholder="Email" required>
+										</div> -->
+									</div>
+
+									<p>Workload Type:</p>
+
+									<div class="grid-md-2 mb-2">
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-1" class="checkbox" type="checkbox" name="opt-1" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-1">Production web / API</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2" class="checkbox" type="checkbox" name="opt-2" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2">SaaS platform</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-3" class="checkbox" type="checkbox" name="opt-3" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-3">Databases / stateful services</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-4" class="checkbox" type="checkbox" name="opt-4" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-4">Compliance-bound systems</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-5" class="checkbox" type="checkbox" name="opt-5" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-5">AI training / inference</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-6" class="checkbox" type="checkbox" name="opt-6" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-6">HPC / batch compute</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-7" class="checkbox" type="checkbox" name="opt-7" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-7">Other</label>
+										</div>
+									</div>
+									<div class="form__group mb-2">
+										<div class="form__label">Other</div>
+										<textarea class="form__textarea" name="text" placeholder="You text"></textarea>
+									</div>
+									<div class="btn btn--lg btn--filled mt-1" data-trigger-tab="step-2">
+										<span>Continue</span>
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+									</div>
+								</div>
+								<div class="tab__pane" id="step-2" data-tab="hidden">2</div>
+								<div class="tab__pane" id="step-3" data-tab="hidden">3</div>
+							</div>
+						</form>
 
 					</div>
 				</div>
