@@ -330,28 +330,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// ── Tabs ─────────────────────────────────────────────────────────────────
 
-document.addEventListener("click", (e) => {
-	const trigger = e.target.closest("[data-trigger-tab]");
-	if (!trigger) return;
+	document.addEventListener("click", (e) => {
+		const trigger = e.target.closest("[data-trigger-tab]");
+		if (!trigger) return;
 
-	const tabId = trigger.dataset.triggerTab;
-	const comingTab = document.getElementById(tabId);
+		const tabId = trigger.dataset.triggerTab;
+		const comingTab = document.getElementById(tabId);
 
-	if (!comingTab) return;
+		if (!comingTab) return;
 
-	const tabsContent = comingTab.closest(".tabs-content");
-	tabsContent?.querySelector('[data-tab="active"]')?.setAttribute("data-tab", "hidden");
-	comingTab.setAttribute("data-tab", "active");
-	const tabsBlock = document.querySelector(`.tabs [data-trigger-tab="${tabId}"]`)?.closest(".tabs");
+		const tabsContent = comingTab.closest(".tabs-content");
+		tabsContent?.querySelector('[data-tab="active"]')?.setAttribute("data-tab", "hidden");
+		comingTab.setAttribute("data-tab", "active");
+		const tabsBlock = document.querySelector(`.tabs [data-trigger-tab="${tabId}"]`)?.closest(".tabs");
 
-	if (!tabsBlock) return;
+		if (!tabsBlock) return;
 
-	tabsBlock.querySelectorAll(".tab").forEach((tab) => {
-		tab.classList.remove("active");
+		tabsBlock.querySelectorAll(".tab").forEach((tab) => {
+			tab.classList.remove("active");
+		});
+
+		tabsBlock.querySelector(`[data-trigger-tab="${tabId}"]`)?.closest(".tab")?.classList.add("active");
 	});
-
-	tabsBlock.querySelector(`[data-trigger-tab="${tabId}"]`)?.closest(".tab")?.classList.add("active");
-});
 
 	// ── Modals ───────────────────────────────────────────────────────────────
 

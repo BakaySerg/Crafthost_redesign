@@ -17,6 +17,9 @@ dialog {
 	}
 	&::-webkit-scrollbar {
 		width: 7px;
+		@media (max-width: 991px){
+			width: 4px;
+		}
 	}
 	&::-webkit-scrollbar-track {
 		background-color: var(--light-3);
@@ -55,12 +58,15 @@ dialog[open] {
 	background-color: var(--white);
 	&--md {
 		width: min(100% - 32px, 1280px);
+		@media (max-width: 991px){
+			width: min(100% - 4px, 900px);
+		}
 		.modal__container {
 			padding-top: 70px;
 			padding-bottom: 70px;
 			max-width: 860px;
 			&--lg {
-				max-width: 960px;
+				max-width: 994px;
 			}
 			@media (max-width: 991px){
 				padding-top: 40px;
@@ -89,6 +95,9 @@ dialog[open] {
 		padding: 5px;
 		border: none;
 		outline: none;
+		&:hover {
+			color: var(--blue);
+		}
 		svg {
 			width: 32px;
 			height: 32px;

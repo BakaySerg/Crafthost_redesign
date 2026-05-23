@@ -210,7 +210,7 @@
 				</div>
 			</section>
 
-			<section class="section section--gradient">
+			<section class="section section--gradient pb-sm-0">
 				<div class="container mb-15">
 					<h2 class="h2 h2--md mb-1">What Enterprise Services Mean at Crafthost.</h2>
 					<p class="subtitle subtitle--limited text-accent">Enterprise Services shift operational responsibility from fragmented internal teams and multiple vendors to one accountable operator.</p>
@@ -609,7 +609,7 @@
 						</button>
 						<h3 class="h3 text-center mb-05">Enterprise Infrastructure Assessment.</h3>
 						<p class="subtitle text-center">A structured intake reviewed by senior engineers. <br>You receive a written response within our assessment workflow.</p>
-						<p class="text-badge text-center m-a">Enterprise-only · Quote-based · SLA-driven · No phone required</p>
+						<p class="text-badge text-center m-a">Enterprise-only · Quote-based · SLA-driven · No&nbsp;phone required</p>
 						<form action="form">
 							<div class="tabs form__tabs pt-25 mb-25">
 								<div class="form__tab tab active" aria-label="switch tab" data-trigger-tab="step-1">
@@ -624,6 +624,7 @@
 							</div>
 
 							<div class="tabs-content form__steps">
+								<!-- 1 -->
 								<div class="tab__pane" id="step-1" data-tab="active">
 									<div class="grid-md-2 mb-2">
 										<div class="form__group">
@@ -690,10 +691,6 @@
 												</div>
 											</div>
 										</div>
-										<!-- <div class="form__group">
-											<label class="form__label" for="email">Contact Information</label>
-											<input class="form__input" type="email" id="email" name="email" placeholder="Email" required>
-										</div> -->
 									</div>
 
 									<p>Workload Type:</p>
@@ -758,8 +755,237 @@
 										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 									</div>
 								</div>
-								<div class="tab__pane" id="step-2" data-tab="hidden">2</div>
-								<div class="tab__pane" id="step-3" data-tab="hidden">3</div>
+
+								<!-- 2 -->
+								<div class="tab__pane" id="step-2" data-tab="hidden">
+									<p>Operational Priority:</p>
+									<div class="grid-md-2 mb-25">
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-1" class="checkbox" type="checkbox" name="opt-2-1" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-1">Uptime & continuity</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-2" class="checkbox" type="checkbox" name="opt-2-2" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-2">Security posture</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-3" class="checkbox" type="checkbox" name="opt-2-3" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-3">Response speed & incident ownership</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-4" class="checkbox" type="checkbox" name="opt-2-4" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-4">Compliance / audit readiness</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-5" class="checkbox" type="checkbox" name="opt-2-5" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-5">Performance consistency</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-6" class="checkbox" type="checkbox" name="opt-2-6" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-6">Cost predictability (ops clarity)</label>
+										</div>
+									</div>
+
+									<div class="grid-md-2 mb-25">
+										<div class="form__group">
+											<div class="form__label">Responsibility Scope Requested *</div>
+											<div class="cstm-select">
+												<button class="cstm-select__trigger" type="button" aria-expanded="false">
+													<span class="cstm-select__trigger-text placeholder">Managed operations (Crafthost owns day-to-day operations)</span>
+													<svg class="arrow" viewBox="0 0 32 32">
+														<use xlink:href="img/general/sprite.svg#arrow" />
+													</svg>
+												</button>
+												<input type="hidden" name="scccope">
+
+												<div class="cstm-select__dropdown">
+													<div class="cstm-select__option" data-value="first">Shared operations (client retains active ops)</div>
+													<div class="cstm-select__option" data-value="second">Managed operations (Crafthost owns day-to-day operations)</div>
+													<div class="cstm-select__option" data-value="third">Full operational ownership (single accountable operator)</div>
+												</div>
+											</div>
+										</div>
+										<div class="form__group">
+											<div class="form__label">Timeline *</div>
+											<div class="cstm-select">
+												<button class="cstm-select__trigger" type="button" aria-expanded="false">
+													<span class="cstm-select__trigger-text placeholder">Immediate (0–2 weeks)</span>
+													<svg class="arrow" viewBox="0 0 32 32">
+														<use xlink:href="img/general/sprite.svg#arrow" />
+													</svg>
+												</button>
+												<input type="hidden" name="timeline">
+
+												<div class="cstm-select__dropdown">
+													<div class="cstm-select__option" data-value="first">Immediate (0–2 weeks)</div>
+													<div class="cstm-select__option" data-value="second">Short-term (2–6 weeks)</div>
+													<div class="cstm-select__option" data-value="third">Planned (6–12 weeks)</div>
+													<div class="cstm-select__option" data-value="fourth">Exploring / budgeting</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p>Compliance Context (Optional):</p>
+									<div class="grid-md-2 mb-25">
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-7" class="checkbox" type="checkbox" name="opt-2-7" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-7">GDPR</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-8" class="checkbox" type="checkbox" name="opt-2-8" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-8">ISO 27001-aligned controls</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-9" class="checkbox" type="checkbox" name="opt-2-9" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-9">SOC 2-aligned controls</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-10" class="checkbox" type="checkbox" name="opt-2-10" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-10">Sector/regulatory requirements</label>
+										</div>
+										<div class="opt__row">
+											<label class="checkbox__trigger">
+												<input id="opt-2-11" class="checkbox" type="checkbox" name="opt-2-11" value="---">
+												<i class="checkbox__switch"></i>
+											</label>
+											<label class="checkbox__descr" for="opt-2-11">None / not sure</label>
+										</div>
+									</div>
+									<p>Budget Range for Managed Services (Optional):</p>
+									<div class="grid-md-2 mb-15">
+										<div class="opt__row">
+											<label class="radio__trigger">
+												<input id="radio-2-1" class="radio" type="radio" checked name="budjet-range" value="---">
+												<i class="radio__switch"></i>
+											</label>
+											<label class="radio__descr" for="radio-2-1">Up to €2,000 / month</label>
+										</div>
+										<div class="opt__row">
+											<label class="radio__trigger">
+												<input id="radio-2-2" class="radio" type="radio" name="budjet-range" value="---">
+												<i class="radio__switch"></i>
+											</label>
+											<label class="radio__descr" for="radio-2-2">€2,000–€5,000 / month</label>
+										</div>
+										<div class="opt__row">
+											<label class="radio__trigger">
+												<input id="radio-2-3" class="radio" type="radio" name="budjet-range" value="---">
+												<i class="radio__switch"></i>
+											</label>
+											<label class="radio__descr" for="radio-2-3">€5,000–€10,000 / month</label>
+										</div>
+										<div class="opt__row">
+											<label class="radio__trigger">
+												<input id="radio-2-4" class="radio" type="radio" name="budjet-range" value="---">
+												<i class="radio__switch"></i>
+											</label>
+											<label class="radio__descr" for="radio-2-4">€10,000–€20,000 / month</label>
+										</div>
+										<div class="opt__row">
+											<label class="radio__trigger">
+												<input id="radio-2-5" class="radio" type="radio" name="budjet-range" value="---">
+												<i class="radio__switch"></i>
+											</label>
+											<label class="radio__descr" for="radio-2-5">€20,000+ / month</label>
+										</div>
+										<div class="opt__row">
+											<label class="radio__trigger">
+												<input id="radio-2-6" class="radio" type="radio" name="budjet-range" value="---">
+												<i class="radio__switch"></i>
+											</label>
+											<label class="radio__descr" for="radio-2-6">Prefer not to say</label>
+										</div>
+									</div>
+									<p class="text-remark text-remark--important mb-25">* This is used only to align scope and avoid misfit proposals. Infrastructure costs are scoped separately.</p>
+									<div class="btn btn--lg btn--filled mt-1" data-trigger-tab="step-3">
+										<span>Continue</span>
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+									</div>
+								</div>
+
+								<!-- 3 -->
+								<div class="tab__pane" id="step-3" data-tab="hidden">
+									<div class="grid-md-2 mb-25">
+										<div class="form__group">
+											<label class="form__label" for="email">Business Email Address *</label>
+											<input class="form__input" type="email" id="email" name="email" placeholder="john.dou@mail.com" required>
+										</div>
+										<div class="form__group">
+											<label class="form__label" for="f_name">Full Name *</label>
+											<input class="form__input" type="text" id="f_name" name="f_name" placeholder="Full Name" required>
+										</div>
+										<div class="form__group">
+											<label class="form__label" for="role">Role / Title (Optional)</label>
+											<input class="form__input" type="text" id="role" name="role" placeholder="Role">
+										</div>
+										<div class="form__group">
+											<div class="form__label">Department / Function (Optional)</div>
+											<div class="cstm-select">
+												<button class="cstm-select__trigger" type="button" aria-expanded="false">
+													<span class="cstm-select__trigger-text placeholder">Head of IT</span>
+													<svg class="arrow" viewBox="0 0 32 32">
+														<use xlink:href="img/general/sprite.svg#arrow" />
+													</svg>
+												</button>
+												<input type="hidden" name="timeline">
+
+												<div class="cstm-select__dropdown">
+													<div class="cstm-select__option" data-value="first">CIO / CTO / CISO</div>
+													<div class="cstm-select__option" data-value="second">Head of IT</div>
+													<div class="cstm-select__option" data-value="third">DevOps / SRE Lead)</div>
+													<div class="cstm-select__option" data-value="fourth">Procurement</div>
+													<div class="cstm-select__option" data-value="fifth">Other</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__group mb-25">
+										<div class="form__label">Short Description *</div>
+										<textarea class="form__textarea" name="short_description" placeholder="Briefly describe the environment, major risks, and what “success” looks like."></textarea>
+									</div>
+									<p class="text-big mb-1">Optional Attachments / Links (Optional):</p>
+									<div class="form__group mb-2">
+										<label class="form__label" for="link">Paste Link (Architecture diagram / status page / doc link)</label>
+										<input class="form__input" type="url" id="link" name="role" placeholder="Link" required>
+									</div>
+									<div>
+										<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+										<label class="file__area" for="file">
+											<span data-text="Attach">Attach Files</span>
+											<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#link"/></svg></i>
+										</label>
+									</div>
+								</div>
 							</div>
 						</form>
 
@@ -915,6 +1141,27 @@
 				</div>
 			</footer>
 		</div>
+
+		<script>
+			(function () {
+				const inputs = document.querySelectorAll('[type=file]');
+				[...inputs].forEach(function (input) {
+					input.addEventListener('change', function (e) {
+						let label = e.target.nextElementSibling,
+							labelVal = label.innerHTML,
+							fileName = '';
+						if (this.files && this.files.length > 1)
+							fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
+						else
+							fileName = e.target.value.split('\\').pop();
+						if (fileName)
+							label.querySelector('span').innerHTML = fileName;
+						else
+							label.innerHTML = labelVal;
+					});
+				});
+			}());
+		</script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>

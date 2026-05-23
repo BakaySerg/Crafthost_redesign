@@ -72,13 +72,14 @@
 	}
 }
 .form__tab {
-	border: 1px solid var(--light-1);
+	border: 1px solid var(--light-3);
 	padding: 12px 17px;
 	text-align: center;
 	cursor: pointer;
 	transition: background-color .2s;
 	margin-right: -1px;
 	margin-bottom: -1px;
+	font-size: em(17);
 	&.active {
 		color: var(--white);
 		background-color: var(--blue);

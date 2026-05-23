@@ -153,6 +153,9 @@
 	font-weight: 300;
 	font-size: em(14);
 	opacity: 0.75;
+	&--important {
+		opacity: 1;
+	}
 }
 .text-badge {
 	display: inline-block;

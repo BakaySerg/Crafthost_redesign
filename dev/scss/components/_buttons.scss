@@ -85,6 +85,10 @@
 			&:only-child {
 				width: 100%;
 			}
+			svg {
+				width: 20px;
+				height: 20px;
+			}
 		}
 		@media (max-width: 330px){
 			font-size: 14px;
