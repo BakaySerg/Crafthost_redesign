@@ -121,6 +121,9 @@
 		white-space: nowrap;
 		flex-shrink: 1;
 		max-width: 45ch;
+		@media (max-width: 600px){
+			max-width: calc(100dvw - 107px);
+		}
 	}
 
 	&__dropdown {

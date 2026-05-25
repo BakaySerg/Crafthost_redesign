@@ -2,6 +2,8 @@
 <html lang="en">
 	<title>Crafthost | Enterprise Services</title>
 	@@include('./includes/head.html')
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.0.1/dist/css/intlTelInput.css">
+
 	<body>
 		<div class="wrapper">
 			@@include('./includes/header.html')
@@ -818,14 +820,48 @@
 										<label class="form__label" for="link">Paste Link (Architecture diagram / status page / doc link)</label>
 										<input class="form__input" type="url" id="link" name="role" placeholder="Link" required>
 									</div>
-									<div>
+									<div class="mb-25">
 										<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
 										<label class="file__area" for="file">
 											<span data-text="Attach">Attach Files</span>
 											<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#link"/></svg></i>
 										</label>
 									</div>
+									<div class="opt__row mb-15">
+										<label class="checkbox__trigger">
+											<input id="opt-3-1" class="checkbox" type="checkbox" name="opt-3-1" value="---" checked>
+											<i class="checkbox__switch"></i>
+										</label>
+										<label class="checkbox__descr" for="opt-3-1">Prefer initial response by phone</label>
+									</div>
+
+									<p class="text-remark text-remark--important mb-2">* Initial response is typically provided in writing. Phone calls are scheduled when appropriate.</p>
+									<!-- phone-input -->
+									<div class="form__group md-half mb-25">
+										<label class="form__label" for="phone">Phone Number *</label>
+										<input class="form__input" type="tel" id="phone" name="phone" required>
+									</div>
+
+									<div class="opt__row pt-1">
+										<label class="checkbox__trigger">
+											<input id="opt-3-2" class="checkbox" type="checkbox" name="opt-3-2" value="---">
+											<i class="checkbox__switch"></i>
+										</label>
+										<label class="checkbox__descr" for="opt-3-2">I confirm I’m authorized to request an assessment for this organization.</label>
+									</div>
+
+									<div class="action">
+										<button type="submit" class="btn btn--lg btn--filled">
+											<span>Submit Assessment Request</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</button>
+										<a href="#" class="btn btn--lg btn--outline">
+											<span>Not ready — Email me the assessment checklist</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</a>
+									</div>
 								</div>
+
 							</div>
 						</form>
 
@@ -858,5 +894,33 @@
 		</script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.0.1/dist/js/intlTelInput.min.js"></script>
+		<script src="https://cloudflare.com"></script>
+		<script>
+			const input = document.querySelector("#phone");
+
+			window.intlTelInput(input, {
+				//  loadUtils: () => import("intl-tel-input/utils"),
+				// loadUtils: () => import("https://cloudflare.com"),
+
+				  countrySelectorMode: "DROPDOWN",
+
+				dropdownContainer: () => {
+					const parentDialog = input.closest("dialog");
+					return parentDialog ? parentDialog : document.body;
+				},
+
+				initialCountryLookup: async () => {
+					try {
+						const response = await fetch("https://ipapi.co/json");
+						const data = await response.json();
+						return data.country_code.toLowerCase();
+					} catch (error) {
+						return "";
+					}
+				}
+			});
+		</script>
+
 	</body>
 </html>
