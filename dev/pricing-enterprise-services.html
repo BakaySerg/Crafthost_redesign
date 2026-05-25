@@ -452,7 +452,7 @@
 						<h3 class="h3 text-center mb-05">Enterprise Infrastructure Assessment.</h3>
 						<p class="subtitle text-center">A structured intake reviewed by senior engineers. <br>You receive a written response within our assessment workflow.</p>
 						<p class="text-badge text-center m-a">Enterprise-only · Quote-based · SLA-driven · No&nbsp;phone required</p>
-						<form action="form">
+						<form action="form" class="dialog-form">
 							<div class="tabs form__tabs pt-25 mb-25">
 								<div class="form__tab tab active" aria-label="switch tab" data-trigger-tab="step-1">
 									Step 01 - Environment
@@ -780,11 +780,11 @@
 									<div class="grid-md-2 mb-25">
 										<div class="form__group">
 											<label class="form__label" for="email">Business Email Address *</label>
-											<input class="form__input" type="email" id="email" name="email" placeholder="john.dou@mail.com" required>
+											<input class="form__input" type="email" id="email" name="email" placeholder="john.dou@mail.com">
 										</div>
 										<div class="form__group">
 											<label class="form__label" for="f_name">Full Name *</label>
-											<input class="form__input" type="text" id="f_name" name="f_name" placeholder="Full Name" required>
+											<input class="form__input" type="text" id="f_name" name="f_name" placeholder="Full Name">
 										</div>
 										<div class="form__group">
 											<label class="form__label" for="role">Role / Title (Optional)</label>
@@ -818,7 +818,7 @@
 									<p class="text-big mb-1">Optional Attachments / Links (Optional):</p>
 									<div class="form__group mb-2">
 										<label class="form__label" for="link">Paste Link (Architecture diagram / status page / doc link)</label>
-										<input class="form__input" type="url" id="link" name="role" placeholder="Link" required>
+										<input class="form__input" type="url" id="link" name="role" placeholder="Link">
 									</div>
 									<div class="mb-25">
 										<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
@@ -839,7 +839,7 @@
 									<!-- phone-input -->
 									<div class="form__group md-half mb-25">
 										<label class="form__label" for="phone">Phone Number *</label>
-										<input class="form__input" type="tel" id="phone" name="phone" required>
+										<input class="form__input" type="tel" id="phone" name="phone">
 									</div>
 
 									<div class="opt__row pt-1">
@@ -874,6 +874,16 @@
 
 		<script>
 			(function () {
+				const dialogForms = document.querySelector('.dialog-form');
+					dialogForms.addEventListener('submit', function (e) {
+						e.preventDefault();
+						const formData = new FormData(this);
+						console.log('Form submitted:', Object.fromEntries(formData.entries()));
+						this.reset();
+						this.closest('dialog').close();
+						window.location.href = 'pricing-request-received.html';
+					});
+
 				const inputs = document.querySelectorAll('[type=file]');
 				[...inputs].forEach(function (input) {
 					input.addEventListener('change', function (e) {

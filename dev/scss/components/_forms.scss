@@ -281,23 +281,12 @@
 		max-width: calc(100dvw - 38px) !important;
 	}
 }
-// .iti {
-//     width: 100% !important;
-//     display: inline-block !important;
-// }
+
 .iti__country-list{
 	font-size: em(16);
 	.iti__flag {
 		margin-right: 0.9em !important;
 	}
-	// @media (max-width: 600px){
-	// 	z-index: 999999 !important;
-	// 	position: absolute !important;
-	// 	background-color: #fff !important;
-	// 	max-height: 200px !important;
-	// 	overflow-y: scroll !important;
-	// 	display: block;
-	// }
 	&::-webkit-scrollbar {
 		width: 7px;
 		@media (max-width: 991px){

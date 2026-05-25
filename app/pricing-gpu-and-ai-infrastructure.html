@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<title>Crafthost | Page Not Found</title>
+	<title>Crafthost</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4">
@@ -16,7 +16,7 @@
 	<!--[if lt IE 11]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
-	<body class="light">
+	<body class="dark">
 		<div class="wrapper">
 			<header class="header" id="header">
 				<div class="container">
@@ -165,20 +165,24 @@
 					</button>
 				</div>
 			</header>
-			<!-- four-zero-four -->
-			<section class="four-zero-four">
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="pricing.html">Pricing</a>
+				<span class="breadcrumbs__item">GPU & AI Infrastructure</span>
+			</div>
+
+			<main class="intro-with-img intro-with-img--center">
 				<div class="container">
-					<i class="icon icon--lg">
-						<svg viewBox="0 0 32 32"><use xlink:href="img/home/sprite.svg#lg-alien"/></svg>
-					</i>
-					<h1 class="h1">Oops - Page Not Found.</h1>
-					<p>Sorry, we couldn't find this page.</p>
-					<a href="index.html" class="btn btn--filled btn--lg">
-						<span>Back to Home</span>
-						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-					</a>
+					<div class="intro-with-img__content">
+						<h1 class="h1"><span class="text-accent">Enterprise</span> <br class="md-visible">Services.</h1>
+					</div>
+					<div class="intro-with-img__pict">
+						<img srcset="img/pricing/enterprise-services/intro.png, img/pricing/enterprise-services/intro-2x.png 2x" src="img/pricing/enterprise-services/intro.png" width="850" height="476" alt="servers">
+					</div>
 				</div>
-			</section>
+			</main>
+
 			<footer class="footer" data-decorated="false">
 				<div class="container footer__top">
 					<div class="footer__logo">
@@ -327,6 +331,7 @@
 				</div>
 			</footer>
 		</div>
+		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
