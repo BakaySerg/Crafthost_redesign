@@ -63,3 +63,27 @@
 		}
 	}
 }
+
+.form__tabs {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	@media (max-width: 600px){
+		grid-template-columns: 1fr;
+	}
+}
+.form__tab {
+	border: 1px solid var(--light-3);
+	padding: 12px 17px;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color .2s;
+	margin-right: -1px;
+	margin-bottom: -1px;
+	font-size: em(17);
+	&.active {
+		color: var(--white);
+		background-color: var(--blue);
+		background-image: var(--gradient-blue);
+		border-color: var(--light-blue-2);
+	}
+}

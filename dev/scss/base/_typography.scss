@@ -3,7 +3,7 @@
 .h1, .h2, .h3, .h4 {
 	font-family: "Raptor", monospace;
 	font-weight: 400;
-	letter-spacing: -.04em;
+	letter-spacing: -.045em;
 	word-spacing: -.04em;
 }
 .h1 {
@@ -96,14 +96,14 @@
 	&--sm {
 		max-width: 800px;
 	}
+	&--limited {
+		max-width: 1022px;
+	}
 	@media (max-width: 1390px){
 		font-size: em(20);
 	}
 	@media (max-width: 600px){
 		margin-bottom: 0.7em;
-	}
-	&--limited {
-		max-width: 1030px;
 	}
 }
 .bit-limited {
@@ -145,17 +145,88 @@
 .text-accent {
 	color: var(--blue);
 }
+.text-light p , p.text-light {
+	font-weight: 300;
+}
+.text-remark {
+	font-style: italic;
+	font-weight: 300;
+	font-size: em(14);
+	opacity: 0.75;
+	&--important {
+		opacity: 1;
+	}
+}
+.text-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 2px;
+	background-color: var(--light-blue);
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+	letter-spacing: normal;
+	&--lg {
+		font-size: 1em;
+	}
+	&--darken {
+		background-color: var(--light-blue-2);
+	}
+	&--huge {
+		font-size: 1em;
+		padding: 0.92em 2.66em;
+	}
+	&.m-a {
+		margin-inline: auto;
+		width: fit-content;
+		display: block;
+	}
+	@media (max-width: 1100px){
+		font-size: 14px;
+		&--lg {
+			font-size: 16px;
+		}
+		&--huge {
+			font-size: 1em;
+			padding: 0.9em 1.5em;
+		}
+	}
+	@media (max-width: 600px){
+		font-size: 13px;
+		padding: 1px 4px;
+		&--lg {
+			font-size: 15px;
+			padding: 2px 7px;
+		}
+		&--huge {
+			font-size: .9em;
+			padding: .7em 1em;
+		}
+	}
+}
+.h2 {
+	.text-badge {
+		transform: translateY(-1.6em);
+		margin-left: -6px;
+		@media (max-width: 600px){
+			transform: translateY(-1.2em);
+		}
+	}
+}
 .text-columns {
 	@media (min-width: 1024px){
 		display: grid;
 		grid-template-columns: 1.05fr 1fr;
-		gap: 22px;
+		gap: 18px 22px;
+		align-items: start;
 		.h2 {
 			text-wrap: balance;
 		}
 		.subtitle {
 			padding-top: 0.4em;
-			max-width: 611px;
+			// max-width: 611px;
+		}
+		&--even {
+			grid-template-columns: 1fr 1.015fr;
 		}
 		&--uneven {
 			grid-template-columns: .8fr 1.2fr;
@@ -177,20 +248,6 @@
 		}
 	}
 	@media (min-width: 1300px){
-		gap: 50px;
-	}
-}
-.text-secondary p , p.text-secondary {
-	font-weight: 300;
-}
-.text-remark {
-	font-style: italic;
-	font-weight: 300;
-	font-size: em(14);
-	opacity: 0.75;
-}
-.text-light {
-	p {
-		font-weight: 300;
+		gap: 27px 50px;
 	}
 }

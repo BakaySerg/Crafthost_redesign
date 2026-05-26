@@ -49,8 +49,14 @@ body {
 		padding-right: 17px;
 		max-width: 1346px;
 	}
+	@media (max-width: 1100px){
+		max-width: 1008px;
+	}
 }
 .section {
+	width: 100vw;
+	max-width: 1930px;
+	margin-inline: auto;
 	padding: 72px 0;
 	&.pt-0 {
 		padding-top: 0 !important;
@@ -58,17 +64,20 @@ body {
 	&.pt-05 {
 		padding-top: .4em !important;
 	}
+	&.pt-1 {
+		padding-top: .95em !important;
+	}
 	@media (min-width: 1400px){
-		& + & {
+		& + &:not(.section--gradient) {
 			padding-top: 57px;
 		}
 		&.with-divider + & {
-			padding-top: 68px;
+			padding-top: 70px;
 		}
 	}
 	@media (max-width: 1400px){
 		padding: 50px 0;
-		overflow: hidden;
+		overflow-x: clip;
 		& + & {
 			padding-top: 30px;
 		}
@@ -87,9 +96,6 @@ body {
 		& + & {
 			padding-top: 22px;
 		}
-		&:has(+ .banner){
-			padding: 20px 0 36px;
-		}
 	}
 	&--gradient {
 		background-image: var(--gradient-gray);
@@ -102,16 +108,25 @@ body {
 	background-color: var(--dark-3);
 }
 .mini-section {
+	width: 100vw;
+	max-width: 1930px;
+	margin-inline: auto;
 	padding: 30px 0;
 	@media (min-width: 1400px){
 		& + .section {
 			padding-top: 57px;
 		}
+		& + .section:not(.section--gradient) {
+			padding-top: 57px;
+		}
+		&.with-divider + .section {
+			padding-top: 68px;
+		}
 	}
 	@media (max-width: 1400px){
-		padding: 23px 0 6px;
+		padding: 23px 0 7px;
 	}
 	@media (max-width: 600px){
-		padding: 18px 0 0;
+		padding: 18px 0 5px;
 	}
 }

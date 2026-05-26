@@ -1,7 +1,7 @@
 @use "../base/utils" as *;
 
 .mini-intro {
-	padding: 20px 0;
+	padding: 38px 0 20px;
 	background-image: var(--gradient-blue-dark-reverse);
 	&--reverse {
 		background-image: var(--gradient-blue-dark);

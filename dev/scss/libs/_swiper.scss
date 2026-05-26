@@ -170,6 +170,10 @@ button.swiper-pagination-bullet {
 		width: 48px;
 		height: 48px;
 	}
+	@media (max-width: 600px) {
+		width: 42px;
+		height: 42px;
+	}
 }
 .dark {
   .swiper-button-next,

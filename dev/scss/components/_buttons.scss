@@ -25,6 +25,9 @@
 	&> span {
 		overflow: hidden;
 		text-overflow: ellipsis;
+		@media (max-width: 440px){
+			max-width: 280px;
+		}
 	}
 	&--outline {
 		background-color: transparent;
@@ -75,15 +78,22 @@
 		@media (max-width: 600px){
 			min-width: 200px;
 			width: 100%;
-			gap: 1em;
+			font-size: 15px;
+			gap: .6em;
+			max-width: 100%;
+			padding: 13px;
 			&:only-child {
 				width: 100%;
+			}
+			svg {
+				width: 20px;
+				height: 20px;
 			}
 		}
 		@media (max-width: 330px){
 			font-size: 14px;
 			padding: 14px;
-			gap: 0.8em;
+			gap: 0.5em;
 		}
 	}
 	&--grow {

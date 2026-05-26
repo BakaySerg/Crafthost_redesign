@@ -15,16 +15,31 @@
 				background-size: 93%;
 				background-position: center;
 				display: inline-block;
-				width: 1.35em !important;
-				max-width: 1.35em !important;
+				width: 1.35em;
+				max-width: 1.35em;
 				height: 1.35em;
+				@media (max-width: 600px){
+					width: 1.24em;
+					max-width: 1.24em;
+					height: 1.24em;
+					margin-top: 3px;
+				}
 			}
 			&:last-child:has([class]) {
 				padding-bottom: 0;
 			}
 			@media (max-width: 600px){
-				gap: 1em;
+				gap: .9em;
+				padding: 0.7em 0;
 			}
+		}
+	}
+	&--not {
+		li:before {
+			background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2199_40804)'%3E%3Cpath d='M14.1406 3.7793L3.85222 14.0677' stroke='%23F43362' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.1445 14.1738L3.75 3.7793' stroke='%23F43362' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2199_40804'%3E%3Crect width='18' height='18' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") !important;
+			width: 1.14em !important;
+			max-width: 1.14em !important;
+			height: 1.14em;
 		}
 	}
 	&--all-border {
@@ -52,6 +67,9 @@
 			li {
 				break-inside: avoid;
 				padding: 0.7em 0 !important;
+				&:last-child {
+					padding-bottom: .8em !important;
+				}
 			}
 		}
 	}
@@ -90,6 +108,9 @@
 				max-width: 1.2em !important;
 				height: 1.2em;
 			}
+			@media (max-width: 600px){
+				gap: .9em;
+			}
 		}
 	}
 }
@@ -107,7 +128,7 @@
 
 .list--simple {
 	li {
-		padding: 0.2em 0;
+		padding: 0.22em 0;
 		display: flex;
 		gap: 1.3em;
 		&::before {
@@ -130,6 +151,25 @@
 				width: .56em !important;
 				max-width: .56em !important;
 				height: .56em;
+			}
+		}
+	}
+	&-filled {
+		li {
+			gap: 0.9em;
+		}
+		li:before {
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%230869EC'/%3E%3Cg clip-path='url(%23clip0_1417_17064)'%3E%3Cpath d='M16.0984 9.40039L10.9984 14.6004L7.89844 11.5004' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1417_17064'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+			width: 1.2em !important;
+			max-width: 1.2em !important;
+			height: 1.2em;
+			margin-top: 2px;
+		}
+		@media (max-width: 600px){
+			li:before {
+				width: 1em !important;
+				max-width: 1em !important;
+				height: 1em;
 			}
 		}
 	}

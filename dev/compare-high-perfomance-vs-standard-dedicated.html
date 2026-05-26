@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost | High-Performance vs Standard Dedicated</title>
+	@@include('./includes/head.html')
+	<body>
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="compare.html">Compare</a>
+				<span class="breadcrumbs__item">High-Performance vs Standard Dedicated</span>
+			</div>
+
+			<!-- intro -->
+			<section class="section with-divider mini-intro">
+				<div class="container">
+					<i class="icon icon--gradient icon--lg">
+						<svg viewBox="0 0 32 32"><use xlink:href="img/compare/high-perfom/sprite.svg#logo-const"/></svg>
+					</i>
+					<h1 class="h1 text-center mb-05">High-Performance vs  Standard Dedicated.</h1>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container text-columns text-columns--uneven-2">
+					<h2 class="h2">High-Performance Dedicated vs Standard Dedicated Servers.</h2>
+					<div>
+						<p class="text-accent text-big mb-1">Why “dedicated” does not automatically mean resilient, predictable, or production-ready.</p>
+						<p>Dedicated servers are often presented as a single category.In practice, there is a fundamental architectural divide between standard dedicated servers and high-performance dedicated infrastructure.</p>
+						<p>Both may use physical hardware.Only one is engineered to withstand sustained load, failure scenarios, and operational pressure.</p>
+						<p>This page explains the difference — not in marketing terms, but in architectural consequences.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container">
+					<h2 class="h2 h2--md mb-1">The Core Misconception About “Dedicated”.</h2>
+					<div class="grid-md-2 grid-md-2--sm-gap mb-2">
+						<div class="cell cell--high">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/compare/sprite.svg#sm-13"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">A standard dedicated server is typically:</h3>
+							<ul class="list--simple">
+								<li>A single physical machine</li>
+								<li>Connected to shared upstream resources</li>
+								<li>Provisioned for cost efficiency</li>
+								<li>Operated under best-effort assumptions</li>
+							</ul>
+						</div>
+						<div class="cell cell--high">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/compare/sprite.svg#sm-14"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">A high-performance dedicated server is:</h3>
+							<ul class="list--simple">
+								<li>One component of a fault-isolated system</li>
+								<li>Backed by deterministic power, network, and cooling</li>
+								<li>Capacity-reserved, not oversubscribed</li>
+								<li>Designed for predictable behavior under stress</li>
+							</ul>
+						</div>
+					</div>
+					<p>The difference is not the server. The difference is everything around it.</p>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container">
+					<h2 class="h2 h2--md mb-1">Architectural Comparison.</h2>
+					<div class="hybrid-table hybrid-table--simple hybrid-table--three">
+						<div class="hybrid-table__item hybrid-table__item--big-head">
+							<h3 class="h4 text-gradient">Dimension</h3>
+							<ul class="hybrid-table__list">
+								<li>Provisioning Model</li>
+								<li>Performance Profile</li>
+								<li>Network Capacity</li>
+								<li>Power & Cooling</li>
+								<li>Failure Impact</li>
+								<li>Maintenance Model</li>
+								<li>Scaling Behavior</li>
+								<li>Operational Predictability</li>
+								<li>Target Use Case</li>
+							</ul>
+						</div>
+						<div class="hybrid-table__item hybrid-table__item--big-head">
+							<h3 class="h4 text-gradient">Standard Dedicated</h3>
+							<ul class="hybrid-table__list">
+								<li>Single-node allocation</li>
+								<li>Best-effort</li>
+								<li>Shared, oversubscribed</li>
+								<li>Redundant at facility level</li>
+								<li>Single failure = service outage</li>
+								<li>Planned downtime</li>
+								<li>Vertical, manual</li>
+								<li>Variable</li>
+								<li>Cost-sensitive workloads</li>
+							</ul>
+						</div>
+						<div class="hybrid-table__item hybrid-table__item--big-head">
+							<h3 class="h4 text-gradient">High-Performance Dedicated (Crafthost)</h3>
+							<ul class="hybrid-table__list">
+								<li>Engineered node within controlled fault domains</li>
+								<li>Deterministic and sustained</li>
+								<li>Reserved, non-oversubscribed</li>
+								<li>Fault-isolated, concurrent maintainability</li>
+								<li>Failure isolated, service continuity preserved</li>
+								<li>Zero-impact maintenance</li>
+								<li>Horizontal, engineered</li>
+								<li>Enforced</li>
+								<li>Mission-critical production systems</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section with-divider section--gradient">
+				<div class="container mb-15">
+					<h2 class="h2 h2--sd mb-1">Performance Under Pressure.</h2>
+				</div>
+				<div class="container tiles tiles--three">
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-light-const"/></svg>
+						</i>
+						<div>
+							<div class="h6">Standard dedicated servers perform well until pressure is applied:</div>
+							<ul class="list--simple">
+								<li>Sustained I/O</li>
+								<li>High east-west traffic</li>
+								<li>CPU saturation</li>
+								<li>Concurrent workloads</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-light-const"/></svg>
+						</i>
+						<div>
+							<div class="h6">At that point:</div>
+							<ul class="list--simple">
+								<li>Latency spikes</li>
+								<li>Throughput fluctuates</li>
+								<li>Neighbor contention appears</li>
+								<li>Performance degradation is normalized</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<div>
+							<div class="h6">High-performance dedicated infrastructure is engineered so that:</div>
+							<ul class="list--simple">
+								<li>Load does not introduce variability</li>
+								<li>Capacity remains stable under peak demand</li>
+								<li>Degradation is treated as an architectural failure, not an acceptable trade-off</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="container pt-2">
+					<p>Predictable performance is not achieved by faster CPUs alone.It is achieved by eliminating shared contention paths.</p>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container mb-15">
+					<h2 class="h2 h2--md mb-1">Network Architecture: Shared Uplinks vs Deterministic Paths.</h2>
+				</div>
+				<div class="container tiles tiles--three">
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-light-const"/></svg>
+						</i>
+						<div>
+							<div class="h6">Standard dedicated environments typically rely on:</div>
+							<ul class="list--simple">
+								<li>Shared uplinks</li>
+								<li>Best-effort routing</li>
+								<li>Aggregated switching layers</li>
+								<li>Oversubscription ratios hidden from customers</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-light-const"/></svg>
+						</i>
+						<div>
+							<div class="h6">High-performance dedicated infrastructure uses:</div>
+							<ul class="list--simple">
+								<li>Segregated traffic classes</li>
+								<li>Deterministic routing paths</li>
+								<li>Reserved bandwidth per node</li>
+								<li>Explicit east-west and north-south separation</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<div>
+							<div class="h6">This directly impacts:</div>
+							<ul class="list--simple">
+								<li>Latency consistency</li>
+								<li>Packet loss behavior</li>
+								<li>Failure propagation</li>
+								<li>Multi-node scalability</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="container pt-2">
+					<p>Predictable performance is not achieved by faster CPUs alone.It is achieved by eliminating shared contention paths.</p>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container mb-25">
+					<h2 class="h2 h2--sd">Availability Is Not Redundancy.</h2>
+				</div>
+				<div class="container tiles tiles--two">
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-light-const"/></svg>
+						</i>
+						<div>
+							<div class="h6">Standard dedicated availability depends on:</div>
+							<ul class="list--simple">
+								<li>Hardware reliability</li>
+								<li>Reactive support</li>
+								<li>SLA compensation after failure</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<div>
+							<div class="h6">High-performance dedicated availability is enforced through:</div>
+							<ul class="list--simple">
+								<li>Tier IV infrastructure foundations</li>
+								<li>Tier V engineering discipline</li>
+								<li>Concurrent maintainability</li>
+								<li>Elimination of single points of failure</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="container pt-25">
+					<div class="cta">
+						<div class="cta__pict">
+							<img srcset="img/home/small-cloud.png, img/home/small-cloud-2x.png 2x" src="img/home/small-cloud.png" width="77" height="64" alt="cloud">
+						</div>
+						<p class="cta__text">
+							Uptime is not promised. <b>It is architecturally constrained to occur.</b>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container grid-md-2">
+					<div class="dark-box dark-box--tall">
+						<h3 class="h2">Who Standard Dedicated Servers Are For.</h3>
+						<div>
+							<p class="text-semibold mb-1">Standard dedicated servers are suitable for:</p>
+							<ul class="list list--checked list--no-border mb-1">
+								<li>Development and staging environments</li>
+								<li>Internal tools</li>
+								<li>Non-critical workloads</li>
+								<li>Cost-first deployments</li>
+							</ul>
+							<p>They are not designed for failure-intolerant production systems.</p>
+						</div>
+					</div>
+					<div class="dark-box dark-box--tall">
+						<h3 class="h2">Who High-Performance Dedicated Infrastructure Is For.</h3>
+						<div>
+							<p class="text-semibold mb-1">High-performance dedicated servers are designed for:</p>
+							<ul class="list list--checked list--no-border">
+								<li>Financial platforms</li>
+								<li>Healthcare systems</li>
+								<li>Government workloads</li>
+								<li>AI and data-intensive pipelines</li>
+								<li>Mission-critical SaaS platforms</li>
+								<li>Regulated production environments</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section with-divider pt-1">
+				<div class="container mb-25">
+					<h2 class="h2 h2--sd">Operational Reality.</h2>
+				</div>
+				<div class="container tiles tiles--two">
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32">
+								<use xlink:href="img/general/sprite.svg#check-light-const" />
+							</svg>
+						</i>
+						<div>
+							<div class="h6">With standard dedicated servers:</div>
+							<ul class="list--simple">
+								<li>Maintenance introduces downtime</li>
+								<li>Capacity planning is manual</li>
+								<li>Growth increases fragility</li>
+								<li>Incident resolution is reactive</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32">
+								<use xlink:href="img/general/sprite.svg#check-filled" />
+							</svg>
+						</i>
+						<div>
+							<div class="h6">With high-performance dedicated infrastructure:</div>
+							<ul class="list--simple mb-05">
+								<li>Maintenance is non-disruptive</li>
+								<li>Capacity planning is engineered</li>
+								<li>Growth preserves stability</li>
+								<li>Incidents are contained by design</li>
+							</ul>
+							<p>Operations become predictable instead of heroic.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container mb-25">
+					<h2 class="h2 h2--sd">Cost vs Risk.</h2>
+				</div>
+				<div class="container tiles tiles--two">
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32">
+								<use xlink:href="img/general/sprite.svg#check-light-const" />
+							</svg>
+						</i>
+						<div>
+							<div class="h6">Standard dedicated servers optimize for:</div>
+							<ul class="list--simple">
+								<li>Lower upfront cost</li>
+								<li>Simple provisioning</li>
+								<li>Minimal architectural investment</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32">
+								<use xlink:href="img/general/sprite.svg#check-filled" />
+							</svg>
+						</i>
+						<div>
+							<div class="h6">High-performance dedicated servers optimize for:</div>
+							<ul class="list--simple">
+								<li>Reduced downtime risk</li>
+								<li>Stable performance</li>
+								<li>Lower long-term operational cost</li>
+								<li>Business continuity under pressure</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="container pt-25">
+					<div class="cta">
+						<div class="cta__pict">
+							<img srcset="img/home/small-cloud.png, img/home/small-cloud-2x.png 2x" src="img/home/small-cloud.png" width="77" height="64" alt="cloud">
+						</div>
+						<p class="cta__text">
+							The difference is not monthly pricing. <b>The difference is risk exposure.</b>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container mb-1">
+					<h2 class="h2 h2--md">How Crafthost Implements High-Performance Dedicated.</h2>
+				</div>
+				<div class="container contextual">
+					<div class="contextual__image">
+						<img loading="lazy" srcset="img/compare/high-perfom/context-1.jpg, img/compare/high-perfom/context-1-2x.jpg 2x" src="img/compare/high-perfom/context-1.jpg" width="640" height="370" alt="img">
+					</div>
+					<div class="contextual__content">
+						<p class="subtitle text-semibold">Crafthost high-performance dedicated infrastructure is built on:</p>
+						<ul class="contextual__list">
+							<li>Tier IV physical design</li>
+							<li>Tier V operational discipline</li>
+							<li>Deterministic capacity allocation</li>
+							<li>Explicit fault isolation</li>
+							<li>Non-oversubscribed networking</li>
+							<li>Zero-impact maintenance models</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container pt-25">
+					<div class="cta">
+						<div class="cta__pict">
+							<img srcset="img/home/small-cloud.png, img/home/small-cloud-2x.png 2x" src="img/home/small-cloud.png" width="77" height="64" alt="cloud">
+						</div>
+						<p class="cta__text">
+							This is not “premium hardware.” <b>It is engineered infrastructure.</b>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container mb-2">
+					<h2 class="h2 h2--md">Choosing the Right Model.</h2>
+				</div>
+				<div class="container">
+					<div class="text-semibold subtitle mb-1">If your priority is:</div>
+					<div class="grid-md-2 mb-25">
+						<div class="cell cell--middle">
+							<p class="mb-05">Lowest entry cost</p>
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-down"/></svg>
+							</i>
+							<h3 class="h4">Standard Dedicated</h3>
+						</div>
+						<div class="cell cell--middle cell--accent">
+							<p class="mb-05">Predictable production behavior</p>
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-down"/></svg>
+							</i>
+							<h3 class="h4">High-Performance Dedicated</h3>
+						</div>
+					</div>
+				</div>
+				<div class="container pt-1">
+					<div class="cta">
+						<div class="cta__pict">
+							<img srcset="img/home/small-cloud.png, img/home/small-cloud-2x.png 2x" src="img/home/small-cloud.png" width="77" height="64" alt="cloud">
+						</div>
+						<p class="cta__text">
+							The wrong choice is not expensive. <b>The wrong choice is fragile.</b>
+						</p>
+					</div>
+				</div>
+				<div class="container pt-2">
+					<div class="grid-md-2">
+						<button class="btn btn--lg btn--filled mt-1" data-modal-open="standard-vs-high-performance">
+							<span>Standard vs High-performance</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
+						</button>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="section section--dark">
+				<div class="container">
+					<h2 class="h2 text-gradient mb-05">Continue Exploring.</h2>
+					<ul class="contextual__list contextual__list--sm contextual__list--no-markers">
+						<li><a href="#" class="link link--icon">
+							<span>Managed high-performance dedicated servers</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+						</a></li>
+						<li><a href="#" class="link link--icon">
+							<span>Infrastructure Foundations</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+						</a></li>
+						<li><a href="compare-high-perfomance-vs-standard-dedicated.html" class="link link--icon">
+							<span>Request a Tailored Assessment</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+						</a></li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- banner light -->
+			<section class="banner banner--light" role="banner">
+				<div class="container banner__box banner__box--narrow">
+					<div class="banner__content">
+						<h2 class="h2 h2--sd text-gradient">Request a Tailored Assessment.</h2>
+						<div class="banner__action">
+							<a href="#" class="btn btn--filled btn--lg">
+								<span>Request a Tailored Assessment.</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+					</div>
+					<figure class="banner__image">
+						<img loading="lazy" srcset="img/banners/modular.png, img/banners/modular-2x.png 2x" src="img/banners/modular.png" width="360" height="360" alt="modular server">
+					</figure>
+				</div>
+			</section>
+
+			<dialog id="standard-vs-high-performance" class="modal modal--md">
+				<div class="modal__wrapper">
+					<div class="container modal__container modal__container--lg">
+						<button class="btn modal__close" data-modal-close>
+							<svg viewBox="0 0 32 32">
+								<use xlink:href="img/general/sprite.svg#close" />
+							</svg>
+						</button>
+						<h3 class="h3 text-center">Standard vs High-performance.</h3>
+						<div class="grid-md-2 grid-md-2--sm-gap mb-25">
+							<div class="cell cell--middle">
+								<i class="icon icon--sm">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-down"/></svg>
+								</i>
+								<p>Standard dedicated servers isolate hardware.</p>
+							</div>
+							<div class="cell cell--middle cell--accent">
+								<i class="icon icon--sm">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-down"/></svg>
+								</i>
+								<p>High-performance dedicated infrastructure isolates risk.</p>
+							</div>
+						</div>
+						<p class="subtitle">When uptime, performance, and continuity are non-negotiable, architecture — not hardware — determines outcomes.</p>
+
+						<div class="pt-1">
+							<a href="#" class="btn btn--filled btn--lg">
+								<span>Request an Infrastructure Assessment</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</dialog>
+
+			@@include('./includes/footer.html', { "decor": false })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

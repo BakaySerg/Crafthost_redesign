@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost</title>
+	@@include('./includes/head.html')
+	<body class="dark">
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="pricing.html">Pricing</a>
+				<span class="breadcrumbs__item">GPU & AI Infrastructure</span>
+			</div>
+
+			<main class="intro-with-img intro-with-img--center">
+				<div class="container">
+					<div class="intro-with-img__content">
+						<h1 class="h1"><span class="text-accent">Enterprise</span> <br class="md-visible">Services.</h1>
+					</div>
+					<div class="intro-with-img__pict">
+						<img srcset="img/pricing/enterprise-services/intro.png, img/pricing/enterprise-services/intro-2x.png 2x" src="img/pricing/enterprise-services/intro.png" width="850" height="476" alt="servers">
+					</div>
+				</div>
+			</main>
+
+			@@include('./includes/footer.html', { "decor": false })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

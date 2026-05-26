@@ -110,10 +110,18 @@
 													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 													Pricing
 												</span>
+												<a href="pricing.html" class="link link--icon">
+													Pricing
+													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+												</a>
 											</div>
 											<div class="sub-menu__list">
-												<a href="oooooo.html">Link2 oeertertertertert</a>
-												<a href="oooooo.html">Link3 oeertertertertert</a>
+												<a href="pricing-request-a-quote.html">Request a Quote</a>
+												<a href="pricing-managed-vps.html">Managed VPS Pricing</a>
+												<a href="pricing-managed-dedicated-servers.html">Managed Dedicated Servers Pricing</a>
+												<a href="pricing-gpu-servers.html">GPU Servers Pricing</a>
+												<a href="pricing-calculator.html">Calculator</a>
+												<a href="pricing-add-ons.html">Add-ons</a>
 											</div>
 										</div>
 									</div>
@@ -286,54 +294,63 @@
 								<label class="form__label" for="name">Organisation Name</label>
 								<input class="form__input" type="text" id="name" name="name" placeholder="Name" required>
 							</div>
+
 							<div class="form__group">
 								<div class="form__label">Type of Partnership Requested</div>
 								<div class="cstm-select">
-									<button class="cstm-select__trigger" style="--anchor: --anchor-partner" popovertarget="popover-partner" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-partner" type="button">
+									<button class="cstm-select__trigger" type="button" aria-expanded="false">
 										<span class="cstm-select__trigger-text placeholder">Choose</span>
-										<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+										<svg class="arrow" viewBox="0 0 32 32">
+											<use xlink:href="img/general/sprite.svg#arrow" />
+										</svg>
 									</button>
-									<input type="hidden" id="hidden-partner" name="stack">
+									<input type="hidden" name="stack">
 
-									<div id="popover-partner" class="cstm-select__popover" style="--anchor: --anchor-partner" popover role="listbox" aria-label="Tech stack">
-										<div class="cstm-select__option" role="option" data-value="first">First</div>
-										<div class="cstm-select__option" role="option" data-value="second">Second</div>
-										<div class="cstm-select__option" role="option" data-value="third">Third</div>
+									<div class="cstm-select__dropdown">
+										<div class="cstm-select__option" data-value="first">First </div>
+										<div class="cstm-select__option" data-value="second">Second</div>
+										<div class="cstm-select__option" data-value="third">Third</div>
 									</div>
 								</div>
 							</div>
+
 							<div class="form__group">
 								<div class="form__label">Region of Operation</div>
 								<div class="cstm-select">
-									<button class="cstm-select__trigger" style="--anchor: --anchor-region" popovertarget="popover-region" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-region" type="button">
+									<button class="cstm-select__trigger" type="button" aria-expanded="false">
 										<span class="cstm-select__trigger-text placeholder">Choose</span>
-										<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+										<svg class="arrow" viewBox="0 0 32 32">
+											<use xlink:href="img/general/sprite.svg#arrow" />
+										</svg>
 									</button>
-									<input type="hidden" id="hidden-region" name="stack">
+									<input type="hidden" name="region">
 
-									<div id="popover-region" class="cstm-select__popover" style="--anchor: --anchor-region" popover role="listbox" aria-label="Tech stack">
-										<div class="cstm-select__option" role="option" data-value="first">First</div>
-										<div class="cstm-select__option" role="option" data-value="second">Second</div>
-										<div class="cstm-select__option" role="option" data-value="third">Third</div>
+									<div class="cstm-select__dropdown">
+										<div class="cstm-select__option" data-value="first">First</div>
+										<div class="cstm-select__option" data-value="second">Second</div>
+										<div class="cstm-select__option" data-value="third">Third</div>
 									</div>
 								</div>
 							</div>
 							<div class="form__group">
 								<div class="form__label">Technical Area of Focus</div>
 								<div class="cstm-select">
-									<button class="cstm-select__trigger" style="--anchor: --anchor-stack" popovertarget="popover-stack" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-stack" type="button">
+									<button class="cstm-select__trigger" type="button" aria-expanded="false">
 										<span class="cstm-select__trigger-text placeholder">Choose</span>
-										<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+										<svg class="arrow" viewBox="0 0 32 32">
+											<use xlink:href="img/general/sprite.svg#arrow" />
+										</svg>
 									</button>
-									<input type="hidden" id="hidden-stack" name="stack">
+									<input type="hidden" name="area">
 
-									<div id="popover-stack" class="cstm-select__popover" style="--anchor: --anchor-stack" popover role="listbox" aria-label="Tech stack">
-										<div class="cstm-select__option" role="option" data-value="first">First</div>
-										<div class="cstm-select__option" role="option" data-value="second">Second</div>
-										<div class="cstm-select__option" role="option" data-value="third">Third</div>
+									<div class="cstm-select__dropdown">
+										<div class="cstm-select__option" data-value="first">First</div>
+										<div class="cstm-select__option" data-value="second">Second</div>
+										<div class="cstm-select__option" data-value="third">Third</div>
 									</div>
 								</div>
 							</div>
+
 							<div class="form__group">
 								<label class="form__label" for="collaboration">Collaboration Objectives</label>
 								<input class="form__input" type="text" id="collaboration" name="collaboration" placeholder="Collaboration" required>
@@ -345,19 +362,22 @@
 							<div class="form__group">
 								<div class="form__label">Project or Use Case</div>
 								<div class="cstm-select">
-									<button class="cstm-select__trigger" style="--anchor: --anchor-case" popovertarget="popover-case" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-case" type="button">
-										<span class="cstm-select__trigger-text placeholder">Case</span>
-										<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+									<button class="cstm-select__trigger" type="button" aria-expanded="false">
+										<span class="cstm-select__trigger-text placeholder">Choose</span>
+										<svg class="arrow" viewBox="0 0 32 32">
+											<use xlink:href="img/general/sprite.svg#arrow" />
+										</svg>
 									</button>
-									<input type="hidden" id="hidden-case" name="case">
+									<input type="hidden" name="case">
 
-									<div id="popover-case" class="cstm-select__popover" style="--anchor: --anchor-case" popover role="listbox" aria-label="Tech stack">
-										<div class="cstm-select__option" role="option" data-value="first">First</div>
-										<div class="cstm-select__option" role="option" data-value="second">Second</div>
-										<div class="cstm-select__option" role="option" data-value="third">Third</div>
+									<div class="cstm-select__dropdown">
+										<div class="cstm-select__option" data-value="first">First</div>
+										<div class="cstm-select__option" data-value="second">Second</div>
+										<div class="cstm-select__option" data-value="third">Third</div>
 									</div>
 								</div>
 							</div>
+
 							<button class="btn btn--lg btn--filled mt-05" type="submit">
 								<span>Submit Application Now</span>
 								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
@@ -460,22 +480,21 @@
 						<div class="footer__nav" data-collapser>
 							<div class="footer__nav-title" data-collapse-trigger>Compare</div>
 							<div class="footer__nav-list">
-								<a href="#">Crafthost vs AWS</a>
-								<a href="#">Crafthost vs Azure</a>
-								<a href="#">Crafthost vs Google Cloud</a>
-								<a href="#">Crafthost vs DigitalOcean</a>
+								<a href="compare-aws-alternative.html">Crafthost vs AWS</a>
+								<a href="compare-azure-alternative.html">Crafthost vs Azure</a>
+								<a href="compare-google-cloud-alternative.html">Crafthost vs Google Cloud</a>
 								<a href="#">High Performance vs Standard Dedicated</a>
 							</div>
 						</div>
 						<div class="footer__nav" data-collapser>
 							<div class="footer__nav-title" data-collapse-trigger>Pricing</div>
 							<div class="footer__nav-list">
-								<a href="#">Request a Quote</a>
-								<a href="#">Managed VPS Pricing</a>
-								<a href="#">Managed Dedicated Servers Pricing</a>
-								<a href="#">GPU Servers Pricing</a>
-								<a href="#">Calculator</a>
-								<a href="#">Add-ons</a>
+								<a href="pricing-request-a-quote.html">Request a Quote</a>
+								<a href="pricing-managed-vps.html">Managed VPS Pricing</a>
+								<a href="pricing-managed-dedicated-servers.html">Managed Dedicated Servers Pricing</a>
+								<a href="pricing-gpu-servers.html">GPU Servers Pricing</a>
+								<a href="pricing-calculator.html">Calculator</a>
+								<a href="pricing-add-ons.html">Add-ons</a>
 							</div>
 						</div>
 						<div class="footer__nav" data-collapser>
