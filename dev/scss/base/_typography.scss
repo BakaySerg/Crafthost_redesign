@@ -93,6 +93,11 @@
 	font-size: em(22);
 	font-weight: normal;
 	margin-bottom: 1em;
+	&:has(+ .subtitle):not([class*="mb-"]) {
+		@media(min-width: 1024px){
+			margin-bottom: 1.2em;
+		}
+	}
 	&--sm {
 		max-width: 800px;
 	}

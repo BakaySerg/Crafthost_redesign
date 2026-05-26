@@ -48,6 +48,10 @@
 			grid-row: 1;
 			margin-left: 40px;
 			margin-right: calc(-4em - 3vw);
+			img {
+				display: block;
+				margin-inline: auto;
+			}
 		}
 		@media (max-width: 1300px){
 			grid-column: 7 / 16;

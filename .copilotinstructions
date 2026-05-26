@@ -1,0 +1,3 @@
+When providing inline completions in HTML, JSX, or Vue templates:
+- ONLY autocomplete HTML tags, attributes, classes, and IDs.
+- NEVER autocomplete or generate the text content inside the elements (e.g., between <div> and </div>). Leave text content empty.
