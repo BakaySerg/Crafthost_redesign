@@ -371,6 +371,18 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
+	// ── data-link ────────────────────────────────────────────────────────
+
+	const tempLink = function () {
+		document.querySelectorAll("[data-link]").forEach((el) => {
+			el.addEventListener("click", function (e) {
+				e.preventDefault();
+				window.location.href = this.getAttribute("data-link");
+			});
+		});
+	};
+	tempLink();
+
 	// ── Copyright year ───────────────────────────────────────────────────────
 
 	const yearEl = document.getElementById("year");

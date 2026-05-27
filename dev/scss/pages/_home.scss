@@ -506,6 +506,28 @@
 			padding: 22px 16px;
 			min-height: 380px;
 		}
+		&.managed__link {
+			cursor: pointer;
+			transition: all .25s ease;
+			.icon {
+				color: var(--blue);
+				transition: all .25s ease;
+			}
+			&:hover {
+				background-color: var(--blue);
+				color: var(--white);
+				.link,.icon  {
+					color: var(--white);
+					transition: all .25s ease;
+				}
+				.h4 {
+					color: var(--white);
+					background-image: none;
+					-webkit-text-fill-color: initial;
+					transition: all .25s ease;
+				}
+			}
+		}
 		&--accent {
 			background-color: var(--blue);
 			color: var(--white);
@@ -697,7 +719,12 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2.6em;
-		&--active {
+		transition: 0.3s;
+		&:hover {
+			cursor: pointer;
+			user-select: none;
+		}
+		&--active,&:hover {
 			background-color: var(--light-blue);
 			border-color: var(--light-blue);
 		}
@@ -711,9 +738,9 @@
 	.grid-icons {
 		&__item {
 			border-color: var(--dark-2);
-			&--active {
-				background-color: var(--blue);
-				border-color: var(--blue);
+			&--active,&:hover {
+				background-color: var(--blue-muted-2);
+				border-color: var(--blue-muted-2);
 			}
 		}
 	}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost | Infrastructure</title>
+	@@include('./includes/head.html')
+	<body>
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="pricing.html">Pricing</a>
+				<span class="breadcrumbs__item">Infrastructure</span>
+			</div>
+
+			<main class="intro-with-img intro-with-img--center">
+				<div class="container">
+					<div class="intro-with-img__content">
+						<h1 class="h1"><span class="text-accent">Infrastructure</span> <br class="md-visible">Pricing.</h1>
+						<p>Self-Managed Infrastructure — Order, Deploy, Operate.</p>
+					</div>
+					<div class="intro-with-img__pict">
+						<img srcset="img/pricing/gpu/intro-gpu.png, img/pricing/gpu/intro-gpu-2x.png 2x" src="img/pricing/gpu/intro-gpu.png" width="690" height="500" alt="servers">
+					</div>
+				</div>
+			</main>
+
+
+			<!-- banner light -->
+			<section class="banner banner--light" role="banner">
+				<div class="container banner__box banner__box--narrow">
+					<div class="banner__content">
+						<h2 class="h2 text-gradient">Next Steps.</h2>
+						<p>If GPU infrastructure reliability, performance governance, and accountability are business-critical, the next step is structured assessment.</p>
+
+						<div class="banner__action">
+							<a href="#" class="btn btn--filled btn--lg">
+								<span>Request GPU & AI Infrastructure Assessment</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+							<a href="#" class="btn btn--outline btn--lg">
+								<span>Compare with Enterprise Services</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+					</div>
+					<figure class="banner__image">
+						<img loading="lazy" srcset="img/banners/modular.png, img/banners/modular-2x.png 2x" src="img/banners/modular.png" width="360" height="360" alt="modular server">
+					</figure>
+				</div>
+			</section>
+
+
+			@@include('./includes/footer.html', { "decor": false })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
