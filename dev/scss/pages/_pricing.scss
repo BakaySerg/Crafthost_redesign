@@ -46,14 +46,15 @@
 	&__info {
 		margin-top: auto;
 	}
-	.price {
-		color: var(--blue);
-		font-weight: 600;
-		font-size: 32px;
-		font-family: "Raptor", monospace;
-		letter-spacing: -.04em;
-		@media (max-width: 1200px){
-			font-size: 26px;
-		}
+}
+.price {
+	color: var(--blue);
+	font-weight: 600;
+	font-size: 32px;
+	font-family: "Raptor", monospace;
+	letter-spacing: -.06em;
+	margin-inline: .1em;
+	@media (max-width: 1200px){
+		font-size: 26px;
 	}
 }

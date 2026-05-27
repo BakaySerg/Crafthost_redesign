@@ -67,7 +67,7 @@
 		align-items: center;
 		&--narrow {
 			@media (min-width: 1301px){
-				grid-template-columns: 652px auto;
+				grid-template-columns: 816px auto;
 				justify-content: space-between;
 			}
 			.banner__action {
@@ -90,6 +90,7 @@
 		@media (min-width: 1600px){
 			.h2 {
 				margin-bottom: .6em;
+				max-width: 24ch;
 			}
 		}
 	}
@@ -97,6 +98,7 @@
 		padding-top: 0.75em;
 		display: flex;
 		flex-wrap: wrap;
+		align-items: flex-end;
 		gap: 3.3em;
 		div > div {
 			padding-bottom: 1em;

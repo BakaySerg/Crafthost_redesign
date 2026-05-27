@@ -350,7 +350,7 @@
 			</section>
 
 			<section class="section pt-1">
-				<div class="container text-columns text-columns--uneven mb-1">
+				<div class="container text-columns text-columns--uneven-2 mb-1">
 					<h2 class="h2">Typical Outcomes.</h2>
 					<p class="subtitle">Organizations operating GPU & AI infrastructure under managed operations consistently observe:</p>
 				</div>
@@ -397,7 +397,7 @@
 						<h3 class="h2">Industries commonly served include.</h3>
 						<div>
 							<ul class="list list--checked list--no-border mb-1">
-								<li>I & Data Platforms</li>
+								<li>AI & Data Platforms</li>
 								<li>Healthcare & Life Sciences</li>
 								<li>Financial Services & Risk Modeling</li>
 								<li>Industrial AI & Manufacturing</li>
@@ -407,6 +407,101 @@
 					</div>
 				</div>
 			</section>
+
+			<!-- banner light -->
+			<section class="banner banner--light" role="banner">
+				<div class="container banner__box banner__box--narrow">
+					<div class="banner__content">
+						<h2 class="h2 text-gradient">Next Steps.</h2>
+						<p>If GPU infrastructure reliability, performance governance, and accountability are business-critical, the next step is structured assessment.</p>
+
+						<div class="banner__action">
+							<a href="#" class="btn btn--filled btn--lg">
+								<span>Request GPU & AI Infrastructure Assessment</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+							<a href="#" class="btn btn--outline btn--lg">
+								<span>Compare with Enterprise Services</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+					</div>
+					<figure class="banner__image">
+						<img loading="lazy" srcset="img/banners/modular.png, img/banners/modular-2x.png 2x" src="img/banners/modular.png" width="360" height="360" alt="modular server">
+					</figure>
+				</div>
+			</section>
+
+			<dialog id="cost-clarification" class="modal modal--md">
+				<div class="modal__wrapper">
+					<div class="container modal__container modal__container--lg">
+						<button class="btn modal__close" data-modal-close>
+							<svg viewBox="0 0 32 32">
+								<use xlink:href="img/general/sprite.svg#close" />
+							</svg>
+						</button>
+						<h3 class="h3 text-center">Important Cost Clarification.</h3>
+						<p class="subtitle"><b>Managed Services Only — Infrastructure Billed Separately.</b><br> GPU & AI pricing covers managed operations and accountability.Physical infrastructure, GPUs, power, and data-center resources are billed separately. </p>
+						<p class="subtitle text-semibold mb-15">Illustrative example (non-binding):</p>
+						<div class="grid-md-2 grid-md-2--sm-gap mb-25">
+							<div class="cell cell--middle">
+								<i class="icon icon--sm">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-down"/></svg>
+								</i>
+								<p>Managed GPU operations:</p>
+								<p>from <span class="price">€3,000</span> / month per environment</p>
+							</div>
+							<div class="cell cell--middle cell--accent">
+								<i class="icon icon--sm">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-down"/></svg>
+								</i>
+								<p>GPU hardware & infrastructure: billed based on configuration, power density, and location</p>
+							</div>
+						</div>
+						<p>Power availability, cooling requirements, and data-center class are critical variables in GPU infrastructure cost and are assessed during initial qualification to prevent hidden assumptions.</p>
+					</div>
+				</div>
+			</dialog>
+
+			<dialog id="engagement-lifecycle" class="modal modal--md">
+				<div class="modal__wrapper">
+					<div class="container modal__container modal__container--lg">
+						<button class="btn modal__close" data-modal-close>
+							<svg viewBox="0 0 32 32">
+								<use xlink:href="img/general/sprite.svg#close" />
+							</svg>
+						</button>
+						<h3 class="h3">Engagement Lifecycle.</h3>
+						<div class="tiles tiles--sm-gutters tiles--two mb-25">
+							<div class="tile tile--col">
+								<i class="icon icon--sm">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<p><b>GPU & AI Infrastructure Assessment</b><br>(typically 5–10 business days).</p>
+							</div>
+							<div class="tile tile--col">
+								<i class="icon icon--sm">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<p><b>Scope definition</b> and responsibility mapping.</p>
+							</div>
+							<div class="tile tile--col">
+								<i class="icon icon--sm">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<p><b>Onboarding</b> and operational handover.</p>
+							</div>
+							<div class="tile tile--col">
+								<i class="icon icon--sm">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<p><b>Continuous managed operations</b> and optimization.</p>
+							</div>
+						</div>
+						<p class="subtitle">This process ensures correct fit before commitment.</p>
+					</div>
+				</div>
+			</dialog>
 
 			@@include('./includes/footer.html', { "decor": false })
 		</div>
