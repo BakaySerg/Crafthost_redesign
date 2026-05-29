@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		new Swiper(el, {
 			...baseSwiperConfig,
 			breakpoints: {
-				320: { slidesPerView: 1.16, spaceBetween: 16 },
+				320: { slidesPerView: 1.068, spaceBetween: 16 },
 				768: { slidesPerView: 2.1, spaceBetween: 20 },
 				900: { slidesPerView: 3, spaceBetween: 22 },
 				1100: {
@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		new Swiper(el, {
 			...baseSwiperConfig,
 			breakpoints: {
-				320: { slidesPerView: 1.16 },
+				320: { slidesPerView: 1.08 },
 				660: { slidesPerView: 2.3 },
 				760: { slidesPerView: 2.7 },
 				1200: { slidesPerView: 3, spaceBetween: 16, grid: { rows: 2, fill: "row" } },

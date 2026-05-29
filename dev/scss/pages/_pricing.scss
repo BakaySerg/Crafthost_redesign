@@ -82,4 +82,8 @@
 .price-map {
 	display: flex;
 	justify-content: center;
+	@media (max-width: 600px){
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 }
