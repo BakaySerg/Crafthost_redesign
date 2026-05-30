@@ -177,6 +177,9 @@
 		flex-wrap: wrap;
 	}
 }
+.is-fullwidth {
+	width: 100%;
+}
 .md-visible {
 	display: none;
 	@media (min-width: 1024px){

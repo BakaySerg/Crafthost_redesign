@@ -16,6 +16,7 @@
 	<!--[if lt IE 11]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.0.1/dist/css/intlTelInput.css">
 	<body>
 		<div class="wrapper">
 			<header class="header" id="header">
@@ -263,18 +264,18 @@
 										<li>Suitable for web apps, services, dev/stage, small production</li>
 									</ul>
 									<div class="price-card__action">
-										<a href="#" class="btn btn--lg btn--filled">
+										<button class="btn btn--lg btn--filled" data-modal-open="pricing-order">
 											<span>Order VPS</span>
 											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-										</a>
+										</button>
 										<a href="#" class="btn btn--lg btn--outline">
 											<span>Prefer Engineer-led Operations</span>
 											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 										</a>
-										<button class="link link--icon" data-modal-open="pricing-configurator">
+										<a href="#" class="link link--icon">
 											<span>See exact price in configurator</span>
 											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-										</button>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -301,18 +302,18 @@
 										<li>Suitable for microservices and scaling layers</li>
 									</ul>
 									<div class="price-card__action">
-										<a href="#" class="btn btn--lg btn--filled">
+										<button class="btn btn--lg btn--filled" data-modal-open="pricing-order">
 											<span>Order Cloud Node</span>
 											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-										</a>
+										</button>
 										<a href="#" class="btn btn--lg btn--outline">
 											<span>Compare Managed Cloud</span>
 											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 										</a>
-										<button class="link link--icon" data-modal-open="pricing-configurator">
+										<a href="#" class="link link--icon" data-modal-open="pricing-configurator">
 											<span>See exact price in configurator</span>
 											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-										</button>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -339,18 +340,18 @@
 										<li>Suitable for databases, stateful workloads, and custom stacks</li>
 									</ul>
 									<div class="price-card__action">
-										<a href="#" class="btn btn--lg btn--filled">
+										<button class="btn btn--lg btn--filled" data-modal-open="pricing-order">
 											<span>Order Dedicated Server</span>
 											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-										</a>
+										</button>
 										<a href="#" class="btn btn--lg btn--outline">
 											<span>Managed Dedicated Servers</span>
 											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 										</a>
-										<button class="link link--icon" data-modal-open="pricing-configurator">
+										<a href="#" class="link link--icon">
 											<span>See exact price in configurator</span>
 											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-										</button>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -568,9 +569,7 @@
 				<div class="modal__wrapper">
 					<div class="container modal__container modal__container--lg">
 						<button class="btn modal__close" data-modal-close>
-							<svg viewBox="0 0 32 32">
-								<use xlink:href="img/general/sprite.svg#close" />
-							</svg>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#close"/></svg>
 						</button>
 						<h3 class="h3 text-center">Indicative Examples <br>(Non-Binding).</h3>
 						<p class="subtitle mb-2">These examples illustrate entry configurations. Final pricing is calculated in the configurator by region, resources, and billing cycle.</p>
@@ -600,9 +599,7 @@
 				<div class="modal__wrapper">
 					<div class="container modal__container modal__container--lg">
 						<button class="btn modal__close" data-modal-close>
-							<svg viewBox="0 0 32 32">
-								<use xlink:href="img/general/sprite.svg#close" />
-							</svg>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#close"/></svg>
 						</button>
 						<h3 class="h3 text-center">Ordering Flow.</h3>
 						<div class="pt-1 steps steps--lg">
@@ -624,15 +621,101 @@
 				</div>
 			</dialog>
 
-			<dialog id="sss" class="modal modal--right">
+			<dialog id="pricing-order" class="modal modal--sm modal--right">
 				<div class="modal__wrapper">
 					<div class="container modal__container">
 						<button class="btn modal__close" data-modal-close>
-							<svg viewBox="0 0 32 32">
-								<use xlink:href="img/general/sprite.svg#close" />
-							</svg>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#close"/></svg>
 						</button>
-						<h3 class="h3 text-center">Ordering Flow.</h3>
+						<h4 class="h4 text-center">Summary</h4>
+						<form action="#" class="pricing-order-form">
+							<div class="pricing-order-form__half">
+								<div class="form__group">
+									<div class="cstm-select" data-flag="true">
+										<button class="cstm-select__trigger" type="button" aria-expanded="false">
+											<span class="cstm-select__trigger-text">
+												<span class="iti__flag iti__it"></span>Italy
+											</span>
+											<svg class="arrow" viewBox="0 0 32 32">
+												<use xlink:href="img/general/sprite.svg#arrow" />
+											</svg>
+										</button>
+										<input type="hidden" name="country" value="it">
+
+										<div class="cstm-select__dropdown">
+											<div class="cstm-select__option" data-value="it" aria-selected="true"><span class="iti__flag iti__it"></span><span>Italy</span></div>
+											<div class="cstm-select__option" data-value="us"><span class="iti__flag iti__us"></span><span>United States</span></div>
+											<div class="cstm-select__option" data-value="gb"><span class="iti__flag iti__gb"></span><span>United Kingdom</span></div>
+											<div class="cstm-select__option" data-value="de"><span class="iti__flag iti__de"></span><span>Germany</span></div>
+											<div class="cstm-select__option" data-value="fr"><span class="iti__flag iti__fr"></span><span>France</span></div>
+											<div class="cstm-select__option" data-value="es"><span class="iti__flag iti__es"></span><span>Spain</span></div>
+											<div class="cstm-select__option" data-value="nl"><span class="iti__flag iti__nl"></span><span>Netherlands</span></div>
+											<div class="cstm-select__option" data-value="be"><span class="iti__flag iti__be"></span><span>Belgium</span></div>
+											<div class="cstm-select__option" data-value="ch"><span class="iti__flag iti__ch"></span><span>Switzerland</span></div>
+											<div class="cstm-select__option" data-value="at"><span class="iti__flag iti__at"></span><span>Austria</span></div>
+											<div class="cstm-select__option" data-value="se"><span class="iti__flag iti__se"></span><span>Sweden</span></div>
+											<div class="cstm-select__option" data-value="no"><span class="iti__flag iti__no"></span><span>Norway</span></div>
+											<div class="cstm-select__option" data-value="dk"><span class="iti__flag iti__dk"></span><span>Denmark</span></div>
+											<div class="cstm-select__option" data-value="fi"><span class="iti__flag iti__fi"></span><span>Finland</span></div>
+											<div class="cstm-select__option" data-value="pl"><span class="iti__flag iti__pl"></span><span>Poland</span></div>
+											<div class="cstm-select__option" data-value="cz"><span class="iti__flag iti__cz"></span><span>Czech Republic</span></div>
+											<div class="cstm-select__option" data-value="hu"><span class="iti__flag iti__hu"></span><span>Hungary</span></div>
+											<div class="cstm-select__option" data-value="ro"><span class="iti__flag iti__ro"></span><span>Romania</span></div>
+											<div class="cstm-select__option" data-value="pt"><span class="iti__flag iti__pt"></span><span>Portugal</span></div>
+											<div class="cstm-select__option" data-value="gr"><span class="iti__flag iti__gr"></span><span>Greece</span></div>
+											<div class="cstm-select__option" data-value="tr"><span class="iti__flag iti__tr"></span><span>Turkey</span></div>
+											<div class="cstm-select__option" data-value="ua"><span class="iti__flag iti__ua"></span><span>Ukraine</span></div>
+											<div class="cstm-select__option" data-value="ae"><span class="iti__flag iti__ae"></span><span>UAE</span></div>
+											<div class="cstm-select__option" data-value="sa"><span class="iti__flag iti__sa"></span><span>Saudi Arabia</span></div>
+											<div class="cstm-select__option" data-value="in"><span class="iti__flag iti__in"></span><span>India</span></div>
+											<div class="cstm-select__option" data-value="cn"><span class="iti__flag iti__cn"></span><span>China</span></div>
+											<div class="cstm-select__option" data-value="jp"><span class="iti__flag iti__jp"></span><span>Japan</span></div>
+											<div class="cstm-select__option" data-value="sg"><span class="iti__flag iti__sg"></span><span>Singapore</span></div>
+											<div class="cstm-select__option" data-value="au"><span class="iti__flag iti__au"></span><span>Australia</span></div>
+											<div class="cstm-select__option" data-value="ca"><span class="iti__flag iti__ca"></span><span>Canada</span></div>
+											<div class="cstm-select__option" data-value="br"><span class="iti__flag iti__br"></span><span>Brazil</span></div>
+											<div class="cstm-select__option" data-value="mx"><span class="iti__flag iti__mx"></span><span>Mexico</span></div>
+											<div class="cstm-select__option" data-value="za"><span class="iti__flag iti__za"></span><span>South Africa</span></div>
+										</div>
+									</div>
+								</div>
+								<div class="pricing-order-form__currency" data-value="eur">EUR</div>
+							</div>
+							<div class="pricing-order-form__tiles">
+								<div class="pricing-order-form__tiles">
+									<div class="pricing-order-form__tile">
+										<div>
+											<div class="pricing-order-form__mark">Infrastructure</div>
+											<div class="pricing-order-form__title">VPS — Self-Managed</div>
+										</div>
+										<div class="price price--sm">€29,00</div>
+									</div>
+								</div>
+								<div class="pricing-order-form__tiles">
+									<div class="pricing-order-form__tile">
+										<div>
+											<div class="pricing-order-form__mark">Managed Cloud VPS</div>
+											<div class="pricing-order-form__title">Advanced Managed VPS</div>
+										</div>
+										<div class="price price--sm">€850,00</div>
+									</div>
+								</div>
+							</div>
+							<div class="pricing-order-form__third">
+								<div class="form__group">
+									<label class="form__label" for="f_name">Apply a code</label>
+									<input class="form__input" type="text" id="f_name" name="f_name" placeholder="...">
+								</div>
+								<button class="btn btn--lg btn--filled">
+									<span>Apply</span>
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+								</button>
+							</div>
+							<button class="btn btn--lg btn--filled is-fullwidth">
+								<span>Buy Now</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</button>
+						</form>
 					</div>
 				</div>
 			</dialog>

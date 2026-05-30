@@ -861,7 +861,6 @@
 										</a>
 									</div>
 								</div>
-
 							</div>
 						</form>
 
@@ -894,10 +893,8 @@
 							fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
 						else
 							fileName = e.target.value.split('\\').pop();
-						if (fileName)
-							label.querySelector('span').innerHTML = fileName;
-						else
-							label.innerHTML = labelVal;
+
+						fileName ? label.querySelector('span').innerHTML = fileName : label.innerHTML = labelVal;
 					});
 				});
 			}());
