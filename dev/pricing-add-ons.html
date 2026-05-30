@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost</title>
+	@@include('./includes/head.html')
+	<body class="dark">
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="about.html">About</a>
+				<span class="breadcrumbs__item">Add-Ons</span>
+			</div>
+
+			<!-- intro -->
+			<section class="section with-divider mini-intro">
+				<div class="container">
+					<i class="icon icon--gradient icon--lg">
+						<svg viewBox="0 0 32 32"><use xlink:href="img/compare/high-perfom/sprite.svg#logo-const"/></svg>
+					</i>
+					<h1 class="h1 text-center mb-05">Managed Infrastructure Add-Ons.</h1>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container text-columns text-columns--uneven-2">
+					<h2 class="h2">High-Performance Dedicated vs Standard Dedicated Servers.</h2>
+					<div>
+						<p class="text-accent text-big mb-1">Why “dedicated” does not automatically mean resilient, predictable, or production-ready.</p>
+						<p>Dedicated servers are often presented as a single category.In practice, there is a fundamental architectural divide between standard dedicated servers and high-performance dedicated infrastructure.</p>
+						<p>Both may use physical hardware.Only one is engineered to withstand sustained load, failure scenarios, and operational pressure.</p>
+						<p>This page explains the difference — not in marketing terms, but in architectural consequences.</p>
+					</div>
+				</div>
+			</section>
+
+			@@include('./includes/footer.html', { "decor": false })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
