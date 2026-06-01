@@ -63,7 +63,7 @@
 	&__box {
 		display: grid;
 		grid-template-columns: minmax(660px, 1fr) auto;
-		gap: calc(5em + 3vw);
+		gap: calc(2em + 2vw);
 		align-items: center;
 		&--narrow {
 			@media (min-width: 1301px){
