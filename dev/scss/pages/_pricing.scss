@@ -93,6 +93,19 @@
 		}
 	}
 }
+.price-row {
+	width: 100%;
+	display: grid;
+	gap: 0.3em;
+	@media (min-width: 768px){
+		gap: 1.1em;
+		align-items: center;
+		grid-template-columns: 1.1fr auto;
+		& >:nth-child(2n) {
+			text-align: right;
+		}
+	}
+}
 .price-map {
 	display: flex;
 	justify-content: center;

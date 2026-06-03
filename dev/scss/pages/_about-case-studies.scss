@@ -21,6 +21,11 @@
 			font-size: em(38);
 		}
 	}
+	.subtitle {
+		@media (max-width: 991px){
+			text-wrap: balance;
+		}
+	}
 }
 .badge {
 	padding: 8px 12px;

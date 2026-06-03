@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				renderFraction: (cur, tot) => `<span class="${cur}"></span> / <span class="${tot}"></span>`,
 			},
 			breakpoints: {
-				320: { slidesPerView: 1.06, spaceBetween: 13 },
+				320: { slidesPerView: 1.05, spaceBetween: 13 },
 				700: { slidesPerView: 1.3 },
 				900: { slidesPerView: 2 },
 			},
@@ -352,13 +352,17 @@ document.addEventListener("DOMContentLoaded", () => {
 	// ── Modals ───────────────────────────────────────────────────────────────
 
 	document.querySelectorAll("[data-modal-open]").forEach((btn) => {
-		btn.addEventListener("click", () => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
 			document.getElementById(btn.getAttribute("data-modal-open"))?.showModal();
 		});
 	});
 
 	document.querySelectorAll("[data-modal-close]").forEach((btn) => {
-		btn.addEventListener("click", () => btn.closest("dialog")?.close());
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+			btn.closest("dialog")?.close();
+		});
 	});
 
 	document.querySelectorAll("dialog").forEach((modal) => {

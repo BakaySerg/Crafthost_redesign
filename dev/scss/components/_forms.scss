@@ -81,6 +81,9 @@
 	& + .opt__row {
 		margin-top: .2em;
 	}
+	@media (max-width: 1299px){
+		gap: .8em;
+	}
 }
 .checkbox {
 	width: 26px;
@@ -124,6 +127,10 @@
 		overflow: hidden;
 		&:has(.checkbox:checked) {
 			border-color: var(--blue);
+		}
+		@media (max-width: 1299px){
+			width: 21px;
+			height: 21px;
 		}
 	}
 	&__descr {
@@ -181,6 +188,10 @@
 		overflow: hidden;
 		&:has(.radio:checked) {
 			border-width: 0;
+		}
+		@media (max-width: 1299px){
+			width: 21px;
+			height: 21px;
 		}
 	}
 	&__descr {

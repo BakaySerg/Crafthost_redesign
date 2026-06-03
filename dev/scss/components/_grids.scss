@@ -4,7 +4,7 @@
 
 .grid-md-2 {
 	grid-template-columns: repeat(2, 1fr);
-	gap: 32px;
+	gap: 30px 32px;
 	@media (max-width: 1400px){
 		gap: 24px;
 	}
