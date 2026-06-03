@@ -32,8 +32,22 @@
 		counter-increment: sidebar-counter;
 		display: flex;
 		gap: 0.5rem;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			left: -1.2em;
+			top: -.5em;
+			bottom: -.5em;
+			border-left: 2px solid var(--blue);
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
 		&.is-active {
         font-weight: 700;
+		  &::after {
+			 opacity: 1;
+		  }
 		}
 		&::before {
 			content: counter(sidebar-counter, decimal-leading-zero) ".";
