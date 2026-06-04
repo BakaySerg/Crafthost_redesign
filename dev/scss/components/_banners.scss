@@ -67,7 +67,7 @@
 		align-items: center;
 		&--narrow {
 			@media (min-width: 1301px){
-				grid-template-columns: 816px auto;
+				grid-template-columns: 820px auto;
 				justify-content: space-between;
 			}
 			.banner__action {

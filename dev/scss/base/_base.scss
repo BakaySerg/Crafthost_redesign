@@ -1,5 +1,9 @@
 @use "utils" as *;
 
+@view-transition {
+	navigation: auto
+}
+
 html {
 	scroll-behavior: smooth;
 	scrollbar-gutter: stable;
