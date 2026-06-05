@@ -102,6 +102,17 @@
 		gap: .8em .6em;
 		justify-content: start;
 	}
+	&--vertical {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.8em;
+		.icon--sm {
+			rotate: 90deg;
+		}
+		@media (max-width: 991px){
+			gap: 0.6em;
+		}
+	}
 }
 .step {
 	background-color: var(--light-blue);
@@ -136,12 +147,14 @@
 	@media (min-width: 1024px){
 		.text-badge {
 			position: absolute;
-			right: 10px;
+			right: 12px;
 			bottom: -5.8em;
 			&--down {
-				@media (min-width: 1024px){
-					bottom: -8em;
-				}
+				bottom: -8em;
+			}
+			&--baseline {
+				bottom: 0;
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -150,6 +163,10 @@
 			&--down {
 				margin-top: 1.6em;
 				margin-bottom: 0;
+			}
+			&--baseline {
+				display: block;
+				width: fit-content;
 			}
 		}
 	}
