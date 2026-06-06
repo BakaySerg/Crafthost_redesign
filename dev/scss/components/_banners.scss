@@ -72,6 +72,9 @@
 			}
 			.banner__action {
 				gap: 20px;
+				@media (min-width: 1700px){
+					margin-right: -30px;
+				}
 				@media (max-width: 600px){
 					gap: 16px;
 				}

@@ -110,7 +110,7 @@
 			rotate: 90deg;
 		}
 		@media (max-width: 991px){
-			gap: 0.6em;
+			gap: 0.5em;
 		}
 	}
 }
@@ -125,8 +125,8 @@
 	@media (max-width: 600px){
 		font-size: em(18);
 		padding: 3px 13px;
-		width: min-content;
-		white-space: nowrap;
+		width: fit-content;
+		text-align: center;
 	}
 	&--secondary {
 		background-color: var(--light-blue-2);
