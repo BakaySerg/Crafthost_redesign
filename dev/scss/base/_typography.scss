@@ -22,6 +22,11 @@
 	font-size: em(52);
 	line-height: 1.21;
 	margin-bottom: 0.44em;
+	&--xs {
+		@media (min-width: 1024px){
+			max-width: 15ch;
+		}
+	}
 	&--sm {
 		max-width: 650px;
 	}
