@@ -93,7 +93,9 @@
 		@media (min-width: 1600px){
 			.h2 {
 				margin-bottom: .6em;
-				max-width: 25ch;
+				&:not(.h2--sm) {
+					max-width: 25ch;
+				}
 			}
 		}
 	}
