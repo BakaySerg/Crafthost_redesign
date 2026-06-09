@@ -367,6 +367,28 @@
 				color: var(--white);
 			}
 		}
+		&.sheet__link {
+			cursor: pointer;
+			transition: all .25s ease;
+			.icon:not(.icon--white) {
+				color: var(--blue);
+				transition: all .25s ease;
+			}
+			&:hover {
+				background-color: var(--blue);
+				color: var(--white);
+				.link,.icon  {
+					color: var(--white);
+					transition: all .25s ease;
+				}
+				.h4 {
+					color: var(--white);
+					background-image: none;
+					-webkit-text-fill-color: initial;
+					transition: all .25s ease .02s;
+				}
+			}
+		}
 		.h4 {
 			margin-bottom: .2em;
 			@media (min-width: 1200px){

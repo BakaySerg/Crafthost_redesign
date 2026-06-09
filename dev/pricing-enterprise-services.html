@@ -425,7 +425,7 @@
 						<h2 class="h2 text-gradient">Start with an Enterprise Assessment.</h2>
 						<p>If infrastructure reliability, security posture, or operational clarity are strategic priorities, the next step is assessment.</p>
 						<div class="banner__action">
-							<button class="btn btn--lg btn--filled mt-1" data-modal-open="request-assessment">
+							<button class="btn btn--lg btn--filled" data-modal-open="request-assessment">
 								<span>Request an Enterprise Infrastructure Assessment</span>
 								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
 							</button>
@@ -861,7 +861,6 @@
 										</a>
 									</div>
 								</div>
-
 							</div>
 						</form>
 
@@ -894,10 +893,8 @@
 							fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
 						else
 							fileName = e.target.value.split('\\').pop();
-						if (fileName)
-							label.querySelector('span').innerHTML = fileName;
-						else
-							label.innerHTML = labelVal;
+
+						fileName ? label.querySelector('span').innerHTML = fileName : label.innerHTML = labelVal;
 					});
 				});
 			}());
@@ -931,6 +928,5 @@
 				}
 			});
 		</script>
-
 	</body>
 </html>

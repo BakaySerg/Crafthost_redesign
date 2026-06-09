@@ -32,7 +32,6 @@
 	align-items: stretch;
 	transition-property: transform;
 	box-sizing: content-box;
-	align-items: stretch;
 }
 .swiper-grid {
 	.swiper-wrapper {
@@ -133,11 +132,12 @@ button.swiper-pagination-bullet {
 	justify-content: center;
 	align-items: center;
 	gap: 0.5em;
+	padding: 4px;
 	&--right {
 		justify-content: flex-end;
 	}
 	@media (min-width: 700px){
-		padding-top: 10px;
+		padding-top: 20px;
 	}
 }
 .swiper-button-next,

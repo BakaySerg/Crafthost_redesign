@@ -15,10 +15,15 @@
 		margin: 0 auto 1.3em;
 	}
 	.h1 {
-		max-width: 34ch;
+		max-width: 28ch;
 		margin-inline: auto;
 		@media (max-width: 600px){
 			font-size: em(38);
+		}
+	}
+	.subtitle {
+		@media (max-width: 991px){
+			text-wrap: balance;
 		}
 	}
 }

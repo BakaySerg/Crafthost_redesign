@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost | Infrastructure</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4">
+	<meta name="description" content="site descr">
+	<meta name="keywords" content="site,keywords,separated,by,commas">
+	<meta name="MS.LOCALE" content="EN-US">
+	<meta name="rating" content="General">
+	<meta name="robots" content="index,follow">
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Playfair:opsz,wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--[if lt IE 11]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.0.1/dist/css/intlTelInput.css">
+	<body>
+		<div class="wrapper">
+			<header class="header" id="header">
+				<div class="container">
+					<div class="logo">
+						<a class="logo__link" href="index.html">
+							<img class="logo-light" src="img/logos/logo-light.svg" alt="logo" width="68" height="68">
+							<img class="logo-dark" src="img/logos/logo-dark.svg" alt="logo" width="68" height="68">
+						</a>
+					</div>
+					<!-- nav -->
+					<nav class="menu" aria-label="primary navigation">
+						<ul>
+							<li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+							<li class="menu__item">
+								<div class="sub-menu">
+									<span class="menu__link" data-href="solutions.html">Solutions</span>
+									<svg class="arrow" viewBox="0 0 32 32">
+										<use xlink:href="img/general/sprite.svg#arrow" />
+									</svg>
+									<div class="sub-menu__dialog">
+										<div class="container">
+											<div class="sub-menu__headline">
+												<span class="sub-menu__trigger">
+													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+													Solutions
+												</span>
+												<a href="solutions.html" class="link link--icon">
+													Solutions
+													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+												</a>
+											</div>
+											<div class="sub-menu__list">
+												<a href="solutions-regulated-cloud.html">Regulated Cloud</a>
+												<a href="solutions-sovereign-cloud.html">Sovereign Cloud</a>
+												<a href="solutions-iot.html">IoT</a>
+												<a href="solutions-private-cloud.html">Private Cloud</a>
+												<a href="solutions-migration-services.html">Migration Services</a>
+												<a href="solutions-managed-dedicated-servers.html">Managed Dedicated Servers</a>
+												<a href="solutions-managed-cloud-vps.html">Managed Cloud VPS</a>
+												<a href="solutions-ai-ml.html">AI-ML</a>
+												<a href="solutions-enterprise-hosting.html">Enterprise Hosting</a>
+												<a href="solutions-gpu-ai-servers.html">GPU & AI Servers</a>
+												<a href="solutions-hybrid-cloud.html">Hybrid Cloud</a>
+												<a href="solutions-kubernetes.html">Kubernetes & Container Services</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="menu__item">
+								<div class="sub-menu">
+									<span class="menu__link" data-href="industries.html">Industries</span>
+									<svg class="arrow" viewBox="0 0 32 32">
+										<use xlink:href="img/general/sprite.svg#arrow" />
+									</svg>
+									<div class="sub-menu__dialog">
+										<div class="container">
+											<div class="sub-menu__headline">
+												<span class="sub-menu__trigger">
+													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+													Industries
+												</span>
+												<a href="industries.html" class="link link--icon">
+													Industries
+													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+												</a>
+											</div>
+											<div class="sub-menu__list">
+												<a href="industries-finance.html">Finance</a>
+												<a href="industries-government.html">Government</a>
+												<a href="industries-healthcare.html">Healthcare</a>
+												<a href="industries-energy.html">Energy</a>
+												<a href="industries-manufacturing.html">Manufacturing</a>
+												<a href="industries-telecom.html">Telecom</a>
+												<a href="industries-ai.html">AI</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="menu__item">
+								<div class="sub-menu">
+									<span class="menu__link" data-href="pricing.html">Pricing</span>
+									<svg class="arrow" viewBox="0 0 32 32">
+										<use xlink:href="img/general/sprite.svg#arrow" />
+									</svg>
+									<div class="sub-menu__dialog">
+										<div class="container">
+											<div class="sub-menu__headline">
+												<span class="sub-menu__trigger">
+													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+													Pricing
+												</span>
+												<a href="pricing.html" class="link link--icon">
+													Pricing
+													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+												</a>
+											</div>
+											<div class="sub-menu__list">
+												<a href="pricing-request-a-quote.html">Request a Quote</a>
+												<a href="pricing-managed-vps.html">Managed VPS Pricing</a>
+												<a href="pricing-managed-dedicated-servers.html">Managed Dedicated Servers Pricing</a>
+												<a href="pricing-gpu-servers.html">GPU Servers Pricing</a>
+												<a href="pricing-calculator.html">Calculator</a>
+												<a href="pricing-add-ons.html">Add-ons</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="menu__item">
+								<div class="sub-menu">
+									<span class="menu__link" data-href="resources.html">Resources</span>
+									<svg class="arrow" viewBox="0 0 32 32">
+										<use xlink:href="img/general/sprite.svg#arrow" />
+									</svg>
+									<div class="sub-menu__dialog">
+										<div class="container">
+											<div class="sub-menu__headline">
+												<span class="sub-menu__trigger">
+													<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+													Resources
+												</span>
+											</div>
+											<div class="sub-menu__list">
+												<a href="oooooo.html">Link oeertertertertert</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+						</ul>
+						<div class="menu__search">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#search"/></svg>
+						</div>
+					</nav>
+					<a href="order-service.html" class="btn btn--md btn--outline">Client Portal</a>
+					<button type="button" class="btn btn--menu" aria-label="burger menu">
+						<svg class="icon icon--menu" viewBox="0 0 32 32">
+							<use xlink:href="img/general/sprite.svg#menu-burger" />
+						</svg>
+						<svg class="icon icon--close" viewBox="0 0 32 32">
+							<use xlink:href="img/general/sprite.svg#close" />
+						</svg>
+					</button>
+				</div>
+			</header>
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="pricing.html">Pricing</a>
+				<span class="breadcrumbs__item">Infrastructure</span>
+			</div>
+
+			<main class="intro-with-img intro-with-img--center">
+				<div class="container">
+					<div class="intro-with-img__content">
+						<h1 class="h1"><span class="text-accent">Infrastructure</span> <br class="md-visible">Pricing.</h1>
+						<p>Self-Managed Infrastructure — Order, Deploy, Operate.</p>
+					</div>
+					<div class="intro-with-img__pict">
+						<img srcset="img/pricing/infrastructure/intro-infra.png, img/pricing/infrastructure/intro-infra-2x.png 2x" src="img/pricing/infrastructure/intro-infra.png" width="690" height="500" alt="servers">
+					</div>
+				</div>
+			</main>
+
+			<section class="section pt-0">
+				<div class="container">
+					<h2 class="h2 pb-05">Platform Capabilities.</h2>
+					<div class="bricks__grid">
+						<div class="bricks__item">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/pricing/general/sprite.svg#lg-3"/></svg>
+							</i>
+							<div class="h5">Instant provisioning</div>
+							<p>Deploy environments in minutes.</p>
+						</div>
+						<div class="bricks__item">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/pricing/general/sprite.svg#lg-4"/></svg>
+							</i>
+							<div class="h5">Multi-region availability</div>
+							<p>EU and North America regions available.</p>
+						</div>
+						<div class="bricks__item">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/pricing/general/sprite.svg#lg-5"/></svg>
+							</i>
+							<div class="h5">Network isolation & baseline protection</div>
+							<p>Secure-by-default network segmentation options.</p>
+						</div>
+						<div class="bricks__item">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/pricing/general/sprite.svg#lg-6"/></svg>
+							</i>
+							<div class="h5">Performance-tiered infrastructure</div>
+							<p>Select tiers by workload characteristics.</p>
+						</div>
+						<div class="bricks__item">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/pricing/general/sprite.svg#lg-7"/></svg>
+							</i>
+							<div class="h5">Optional support add-ons</div>
+							<p>Add paid support without switching to fully managed.</p>
+						</div>
+						<div class="bricks__item">
+							<i class="icon icon--lg icon--gradient">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/pricing/general/sprite.svg#lg-8"/></svg>
+							</i>
+							<div class="h5">Clear responsibility boundaries</div>
+							<p>No ambiguity about what is included.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- price-cards -->
+			<section class="section pt-1 with-divider">
+				<div class="container">
+					<h2 class="h2 h2--md pb-05">Choose Your Infrastructure Type.</h2>
+					<div class="price-card__slider swiper pb-25">
+						<div class="swiper-wrapper">
+							<div class="price-card price-card--detailed cell swiper-slide">
+								<div class="price-card__header">
+									<div class="card__img">
+										<img loading="lazy" src="img/pricing/enterprise-services/illu-1.png" width="180" height="180" alt="illustration">
+									</div>
+									<div class="card__text">
+										<span class="price-card__number">01</span>
+										<h3 class="h4">VPS — Self-Managed</h3>
+									</div>
+								</div>
+								<div class="price-card__info">
+									<div>Starting from:</div>
+									<div class="price-card__descr">
+										<span class="price">€29</span> / month <i>(monthly billing)</i>
+									</div>
+									<p class="mb-05">Virtual servers for applications, environments, and smaller production workloads.</p>
+									<div class="text-semibold mb-05">Includes:</div>
+									<ul class="list--checked list--no-border list--no-padding">
+										<li>Full OS control (root access)</li>
+										<li>SSD / NVMe options</li>
+										<li>Suitable for web apps, services, dev/stage, small production</li>
+									</ul>
+									<div class="price-card__action">
+										<button class="btn btn--lg btn--filled" data-modal-open="pricing-order">
+											<span>Order VPS</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</button>
+										<a href="#" class="btn btn--lg btn--outline">
+											<span>Prefer Engineer-led Operations</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</a>
+										<a href="#" class="link link--icon">
+											<span>See exact price in configurator</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="price-card price-card--detailed cell swiper-slide">
+								<div class="price-card__header">
+									<div class="card__img">
+										<img loading="lazy" src="img/pricing/enterprise-services/illu-2.png" width="180" height="180" alt="illustration">
+									</div>
+									<div class="card__text">
+										<span class="price-card__number">02</span>
+										<h3 class="h4">Cloud Nodes — Self-Managed</h3>
+									</div>
+								</div>
+								<div class="price-card__info">
+									<div>Starting from:</div>
+									<div class="price-card__descr">
+										<span class="price">€99</span> / month <i>(monthly billing)</i>
+									</div>
+									<p class="mb-05">Scalable compute nodes for distributed systems and horizontally scaled workloads.</p>
+									<div class="text-semibold mb-05">Includes:</div>
+									<ul class="list--checked list--no-border list--no-padding">
+										<li>Flexible resources</li>
+										<li>Designed for clustered architectures</li>
+										<li>Suitable for microservices and scaling layers</li>
+									</ul>
+									<div class="price-card__action">
+										<button class="btn btn--lg btn--filled" data-modal-open="pricing-order">
+											<span>Order Cloud Node</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</button>
+										<a href="#" class="btn btn--lg btn--outline">
+											<span>Compare Managed Cloud</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</a>
+										<a href="#" class="link link--icon" data-modal-open="pricing-configurator">
+											<span>See exact price in configurator</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="price-card price-card--detailed cell swiper-slide">
+								<div class="price-card__header">
+									<div class="card__img">
+										<img loading="lazy" src="img/pricing/enterprise-services/illu-3.png" width="180" height="180" alt="illustration">
+									</div>
+									<div class="card__text">
+										<span class="price-card__number">03</span>
+										<h3 class="h4">Dedicated Servers — Self-Managed</h3>
+									</div>
+								</div>
+								<div class="price-card__info">
+									<div>Starting from:</div>
+									<div class="price-card__descr">
+										<span class="price">€199</span> / month <i>(monthly billing)</i>
+									</div>
+									<p class="mb-05">Single-tenant physical servers for performance-critical or compliance-sensitive workloads.</p>
+									<div class="text-semibold mb-05">Includes:</div>
+									<ul class="list--checked list--no-border list--no-padding">
+										<li>Full hardware isolation</li>
+										<li>Predictable performance</li>
+										<li>Suitable for databases, stateful workloads, and custom stacks</li>
+									</ul>
+									<div class="price-card__action">
+										<button class="btn btn--lg btn--filled" data-modal-open="pricing-order">
+											<span>Order Dedicated Server</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</button>
+										<a href="#" class="btn btn--lg btn--outline">
+											<span>Managed Dedicated Servers</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</a>
+										<a href="#" class="link link--icon">
+											<span>See exact price in configurator</span>
+											<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-scrollbar mb-15">
+						</div>
+					</div>
+					<button class="btn btn--lg btn--filled md-half mt-1" data-modal-open="indicative-examples">
+						<span>Indicative Examples (Non-Binding)</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
+					</button>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container text-columns text-columns--even mb-15">
+					<h2 class="h2">Regions & Latency.</h2>
+					<p class="subtitle">For low-latency routing preferences in Northern Italy (including Lombardy), request regional guidance during configuration.</p>
+				</div>
+				<div class="container">
+					<figure class="price-map mb-15">
+						<img loading="lazy" src="img/pricing/infrastructure/world-map.svg" width="800" height="406" alt="Price map">
+					</figure>
+					<a href="#" class="btn btn--lg btn--filled">
+						<span>Request Region Guidance</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+					</a>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container mb-25">
+					<h2 class="h2 h2--md">Platform Availability (Scope).</h2>
+				</div>
+				<div class="container tiles tiles--sm-gutters tiles--two">
+					<div class="tile tile--col">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p><b>Platform availability target: 99.9%</b><br>(control panel, API, provisioning systems)</p>
+					</div>
+					<div class="tile tile--col">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p><b>Workload uptime depends</b><br>on your architecture, configuration, and operations.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container mb-25">
+					<h2 class="h2 h2--md">Responsibility Boundary (Important).</h2>
+				</div>
+				<div class="container tiles tiles--two">
+					<div class="tile tile--text tile--hight">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<div>
+							<p class="text-semibold mb-05">This is self-managed infrastructure. <br>Crafthost provides:</p>
+							<ul class="list--simple">
+								<li>Hardware, virtualization, networking, and platform availability</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tile tile--text tile--hight">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<div>
+							<p class="text-semibold mb-05">You operate:</p>
+							<ul class="list--simple">
+								<li>OS hardening, patching, monitoring, backups</li>
+								<li>Application uptime, security posture, incident response</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="container pt-05">
+					<div class="action mb-25">
+						<a href="#" class="btn btn--lg btn--filled">
+							<span>Managed Cloud VPS</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+						</a>
+						<a href="#" class="btn btn--lg btn--outline">
+							<span>Enterprise Services</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+						</a>
+					</div>
+					<button class="btn btn--lg btn--filled md-half mt-1" data-modal-open="ordering-flow">
+						<span>Ordering Flow</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
+					</button>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<h2 class="h2 h2--md mb-1">Optional Support Add-Ons.</h2>
+					<p class="subtitle mb-25">For teams that want support without fully managed operations:</p>
+					<a href="#" class="link link--icon">
+						<span>View add-ons</span>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+					</a>
+				</div>
+			</section>
+
+			<!-- FAQ -->
+			<section class="section pt-1">
+				<div class="container md-line md-line--1_2">
+					<h2 class="h2 pb-05">FAQ</h2>
+					<div class="faq">
+						<div class="faq__item" data-collapser="all">
+							<div class="faq__question" data-collapse-trigger>
+								<div class="faq__title">Is this managed hosting?</div>
+								<i class="faq__icon">
+									<svg class="faq__icon-plus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
+									<svg class="faq__icon-minus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#minus"/></svg>
+								</i>
+							</div>
+							<div class="faq__answer">
+								<p>No—this page is self-managed infrastructure only.</p>
+							</div>
+						</div>
+						<div class="faq__item" data-collapser="all">
+							<div class="faq__question" data-collapse-trigger>
+								<div class="faq__title">How fast is provisioning?</div>
+								<i class="faq__icon">
+									<svg class="faq__icon-plus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
+									<svg class="faq__icon-minus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#minus"/></svg>
+								</i>
+							</div>
+							<div class="faq__answer">
+								<p>Most environments deploy in minutes after checkout.</p>
+							</div>
+						</div>
+						<div class="faq__item" data-collapser="all">
+							<div class="faq__question" data-collapse-trigger>
+								<div class="faq__title">Can I upgrade to managed services later?</div>
+								<i class="faq__icon">
+									<svg class="faq__icon-plus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
+									<svg class="faq__icon-minus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#minus"/></svg>
+								</i>
+							</div>
+							<div class="faq__answer">
+								<p>Yes—your infrastructure can transition to managed operations when needed.</p>
+							</div>
+						</div>
+						<div class="faq__item" data-collapser="all">
+							<div class="faq__question" data-collapse-trigger>
+								<div class="faq__title">What billing cycles are available?</div>
+								<i class="faq__icon">
+									<svg class="faq__icon-plus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
+									<svg class="faq__icon-minus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#minus"/></svg>
+								</i>
+							</div>
+							<div class="faq__answer">
+								<p>Monthly and longer-term cycles depending on resource type.</p>
+							</div>
+						</div>
+						<div class="faq__item" data-collapser="all">
+							<div class="faq__question" data-collapse-trigger>
+								<div class="faq__title">What payment methods are supported?</div>
+								<i class="faq__icon">
+									<svg class="faq__icon-plus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
+									<svg class="faq__icon-minus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#minus"/></svg>
+								</i>
+							</div>
+							<div class="faq__answer">
+								<p>Credit card and SEPA (EU) where available.</p>
+							</div>
+						</div>
+						<div class="faq__item" data-collapser="all">
+							<div class="faq__question" data-collapse-trigger>
+								<div class="faq__title">Is workload uptime guaranteed?</div>
+								<i class="faq__icon">
+									<svg class="faq__icon-plus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#plus"/></svg>
+									<svg class="faq__icon-minus" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#minus"/></svg>
+								</i>
+							</div>
+							<div class="faq__answer">
+								<p>No—platform availability is covered; workload uptime depends on your design and operations.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- banner light -->
+			<section class="banner banner--light" role="banner">
+				<div class="container banner__box banner__box--narrow">
+					<div class="banner__content">
+						<h2 class="h2 text-gradient">Ready to Deploy?</h2>
+						<p>If GPU infrastructure reliability, performance governance, and accountability are business-critical, the next step is structured assessment.</p>
+						<div class="banner__action">
+							<a href="#" class="btn btn--filled btn--lg">
+								<span>Open Configurator</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+							<a href="#" class="btn btn--outline btn--lg">
+								<span>Request Infrastructure Assessment</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+					</div>
+					<figure class="banner__image">
+						<img loading="lazy" srcset="img/banners/modular.png, img/banners/modular-2x.png 2x" src="img/banners/modular.png" width="360" height="360" alt="modular server">
+					</figure>
+				</div>
+			</section>
+
+
+			<dialog id="indicative-examples" class="modal modal--md">
+				<div class="modal__wrapper">
+					<div class="container modal__container modal__container--lg">
+						<button class="btn modal__close" data-modal-close>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#close"/></svg>
+						</button>
+						<h3 class="h3 text-center">Indicative Examples <br>(Non-Binding).</h3>
+						<p class="subtitle mb-2">These examples illustrate entry configurations. Final pricing is calculated in the configurator by region, resources, and billing cycle.</p>
+						<div class="pseudo-table mb-25">
+							<div class="pseudo-table__item">
+								<div>VPS example (EU)</div>
+								<div>2 vCPU / 4 GB RAM / 80 GB SSD</div>
+								<div class="price-card__descr mb-05">from <span class="price">€29</span> / month</div>
+							</div>
+							<div class="pseudo-table__item">
+								<div>Cloud example (EU)</div>
+								<div>4 vCPU / 16 GB RAM / NVMe</div>
+								<div class="price-card__descr mb-05">from <span class="price">€99</span> / month</div>
+							</div>
+							<div class="pseudo-table__item">
+								<div>Dedicated example (EU)</div>
+								<div>Entry single-tenant server</div>
+								<div class="price-card__descr mb-05">from <span class="price">€199</span> / month</div>
+							</div>
+						</div>
+						<p class="text-remark text-remark--important">* Taxes/VAT may apply (including for Italy-based customers, depending on billing profile).</p>
+					</div>
+				</div>
+			</dialog>
+
+			<dialog id="ordering-flow" class="modal modal--md">
+				<div class="modal__wrapper">
+					<div class="container modal__container modal__container--lg">
+						<button class="btn modal__close" data-modal-close>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#close"/></svg>
+						</button>
+						<h3 class="h3 text-center">Ordering Flow.</h3>
+						<div class="pt-1 steps steps--lg">
+							<div class="step">Select</div>
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</i>
+							<div class="step step--secondary">Configure</div>
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</i>
+							<div class="step step--secondary">Checkout</div>
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</i>
+							<div class="step step--final">Deploy</div>
+						</div>
+					</div>
+				</div>
+			</dialog>
+
+			<dialog id="pricing-order" class="modal modal--sm modal--right">
+				<div class="modal__wrapper">
+					<div class="container modal__container">
+						<button class="btn modal__close" data-modal-close>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#close"/></svg>
+						</button>
+						<h4 class="h4 text-center">Summary</h4>
+						<form action="#" class="pricing-order-form">
+							<div class="pricing-order-form__half">
+								<div class="form__group">
+									<div class="cstm-select" data-flag="true">
+										<button class="cstm-select__trigger" type="button" aria-expanded="false">
+											<span class="cstm-select__trigger-text">
+												<span class="iti__flag iti__it"></span>Italy
+											</span>
+											<svg class="arrow" viewBox="0 0 32 32">
+												<use xlink:href="img/general/sprite.svg#arrow" />
+											</svg>
+										</button>
+										<input type="hidden" name="country" value="it">
+
+										<div class="cstm-select__dropdown">
+											<div class="cstm-select__option" data-value="it" aria-selected="true"><span class="iti__flag iti__it"></span><span>Italy</span></div>
+											<div class="cstm-select__option" data-value="us"><span class="iti__flag iti__us"></span><span>United States</span></div>
+											<div class="cstm-select__option" data-value="gb"><span class="iti__flag iti__gb"></span><span>United Kingdom</span></div>
+											<div class="cstm-select__option" data-value="de"><span class="iti__flag iti__de"></span><span>Germany</span></div>
+											<div class="cstm-select__option" data-value="fr"><span class="iti__flag iti__fr"></span><span>France</span></div>
+											<div class="cstm-select__option" data-value="es"><span class="iti__flag iti__es"></span><span>Spain</span></div>
+											<div class="cstm-select__option" data-value="nl"><span class="iti__flag iti__nl"></span><span>Netherlands</span></div>
+											<div class="cstm-select__option" data-value="be"><span class="iti__flag iti__be"></span><span>Belgium</span></div>
+											<div class="cstm-select__option" data-value="ch"><span class="iti__flag iti__ch"></span><span>Switzerland</span></div>
+											<div class="cstm-select__option" data-value="at"><span class="iti__flag iti__at"></span><span>Austria</span></div>
+											<div class="cstm-select__option" data-value="se"><span class="iti__flag iti__se"></span><span>Sweden</span></div>
+											<div class="cstm-select__option" data-value="no"><span class="iti__flag iti__no"></span><span>Norway</span></div>
+											<div class="cstm-select__option" data-value="dk"><span class="iti__flag iti__dk"></span><span>Denmark</span></div>
+											<div class="cstm-select__option" data-value="fi"><span class="iti__flag iti__fi"></span><span>Finland</span></div>
+											<div class="cstm-select__option" data-value="pl"><span class="iti__flag iti__pl"></span><span>Poland</span></div>
+											<div class="cstm-select__option" data-value="cz"><span class="iti__flag iti__cz"></span><span>Czech Republic</span></div>
+											<div class="cstm-select__option" data-value="hu"><span class="iti__flag iti__hu"></span><span>Hungary</span></div>
+											<div class="cstm-select__option" data-value="ro"><span class="iti__flag iti__ro"></span><span>Romania</span></div>
+											<div class="cstm-select__option" data-value="pt"><span class="iti__flag iti__pt"></span><span>Portugal</span></div>
+											<div class="cstm-select__option" data-value="gr"><span class="iti__flag iti__gr"></span><span>Greece</span></div>
+											<div class="cstm-select__option" data-value="tr"><span class="iti__flag iti__tr"></span><span>Turkey</span></div>
+											<div class="cstm-select__option" data-value="ua"><span class="iti__flag iti__ua"></span><span>Ukraine</span></div>
+											<div class="cstm-select__option" data-value="ae"><span class="iti__flag iti__ae"></span><span>UAE</span></div>
+											<div class="cstm-select__option" data-value="sa"><span class="iti__flag iti__sa"></span><span>Saudi Arabia</span></div>
+											<div class="cstm-select__option" data-value="in"><span class="iti__flag iti__in"></span><span>India</span></div>
+											<div class="cstm-select__option" data-value="cn"><span class="iti__flag iti__cn"></span><span>China</span></div>
+											<div class="cstm-select__option" data-value="jp"><span class="iti__flag iti__jp"></span><span>Japan</span></div>
+											<div class="cstm-select__option" data-value="sg"><span class="iti__flag iti__sg"></span><span>Singapore</span></div>
+											<div class="cstm-select__option" data-value="au"><span class="iti__flag iti__au"></span><span>Australia</span></div>
+											<div class="cstm-select__option" data-value="ca"><span class="iti__flag iti__ca"></span><span>Canada</span></div>
+											<div class="cstm-select__option" data-value="br"><span class="iti__flag iti__br"></span><span>Brazil</span></div>
+											<div class="cstm-select__option" data-value="mx"><span class="iti__flag iti__mx"></span><span>Mexico</span></div>
+											<div class="cstm-select__option" data-value="za"><span class="iti__flag iti__za"></span><span>South Africa</span></div>
+										</div>
+									</div>
+								</div>
+								<div class="pricing-order-form__currency" data-value="eur">EUR</div>
+							</div>
+							<div class="pricing-order-form__tiles">
+								<div class="pricing-order-form__tiles">
+									<div class="pricing-order-form__tile">
+										<div>
+											<div class="pricing-order-form__mark">Infrastructure</div>
+											<div class="pricing-order-form__title">VPS — Self-Managed</div>
+										</div>
+										<div class="price price--sm">€29,00</div>
+									</div>
+								</div>
+								<div class="pricing-order-form__tiles">
+									<div class="pricing-order-form__tile">
+										<div>
+											<div class="pricing-order-form__mark">Managed Cloud VPS</div>
+											<div class="pricing-order-form__title">Advanced Managed VPS</div>
+										</div>
+										<div class="price price--sm">€850,00</div>
+									</div>
+								</div>
+							</div>
+							<div class="pricing-order-form__third">
+								<div class="form__group">
+									<label class="form__label" for="f_name">Apply a code</label>
+									<input class="form__input" type="text" id="f_name" name="f_name" placeholder="...">
+								</div>
+								<button class="btn btn--lg btn--filled">
+									<span>Apply</span>
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+								</button>
+							</div>
+							<button class="btn btn--lg btn--filled is-fullwidth">
+								<span>Buy Now</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
+
+
+			<footer class="footer" data-decorated="false">
+				<div class="container footer__top">
+					<div class="footer__logo">
+						<a class="logo__link" href="index.html">
+							<img class="logo-light" src="img/logos/logo-light.svg" alt="logo" width="68" height="68">
+						</a>
+					</div>
+					<p class="footer__remark footer__remark--desktop">Crafthost provides managed cloud, dedicated, and intelligent IaaS services operated by experienced engineers, designed for organizations running production-critical workloads.</p>
+				</div>
+				<div class="container footer__middle">
+					<div class="footer__grid">
+						<div class="footer__nav" data-collapser>
+							<div class="footer__nav-title" data-collapse-trigger>Hosting Solutions</div>
+							<div class="footer__nav-list">
+								<a href="solutions-managed-cloud-vps.html">Managed Cloud VPS</a>
+								<a href="solutions-managed-dedicated-servers.html">Managed Dedicated Servers</a>
+								<a href="solutions-gpu-ai-servers.html">GPU AI Servers</a>
+								<a href="solutions-private-cloud.html">Private Cloud</a>
+								<a href="solutions-hybrid-cloud.html">Hybrid Cloud</a>
+								<a href="solutions-migration-services.html">Migration Services</a>
+								<a href="solutions-ai-ml.html">AI/ML Infrastructure</a>
+								<!-- <a href="solutions-disaster-recovery.html">Disaster Recovery</a> -->
+								<a href="solutions-kubernetes.html">Managed Kubernetes</a>
+								<a href="solutions-gpu-ai-servers.html">AI Integration</a>
+								<a href="solutions-iot.html">IoT Solutions</a>
+							</div>
+						</div>
+						<div class="footer__nav" data-collapser>
+							<div class="footer__nav-title" data-collapse-trigger>About Crafthost</div>
+							<div class="footer__nav-list">
+								<a href="about.html">About Company</a>
+								<a href="about-contact.html">Contact</a>
+								<a href="about-careers.html">Careers</a>
+								<a href="about-case-studies.html">Case Studies</a>
+							</div>
+						</div>
+						<div class="footer__nav" data-collapser>
+							<div class="footer__nav-title" data-collapse-trigger>Global Infrastructure</div>
+							<div class="footer__nav-list">
+								<a href="#">Network</a>
+								<a href="#">Tier V Uptime</a>
+								<a href="#">Data Centers</a>
+								<a href="#">Sustainability Metrics</a>
+							</div>
+						</div>
+						<div class="footer__nav footer__soc">
+							<div class="footer__nav-title">Follow</div>
+							<div class="footer__nav-list">
+								<a href="#">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#linkedin"/></svg>
+									<span>LinkedIn</span>
+								</a>
+								<a href="#">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#facebook"/></svg>
+									<span>Facebook</span>
+								</a>
+								<a href="#">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#x"/></svg>
+									<span>X</span>
+								</a>
+							</div>
+						</div>
+						<div class="footer__nav" data-collapser>
+							<div class="footer__nav-title" data-collapse-trigger>Industries We Serve</div>
+							<div class="footer__nav-list">
+								<a href="industries-finance.html">Finance</a>
+								<a href="industries-government.html">Government</a>
+								<a href="industries-healthcare.html">Healthcare</a>
+								<a href="industries-energy.html">Energy</a>
+								<a href="industries-manufacturing.html">Manufacturing</a>
+								<a href="industries-telecom.html">Telecom</a>
+								<a href="industries-ai.html">AI</a>
+							</div>
+						</div>
+						<div class="footer__nav" data-collapser>
+							<div class="footer__nav-title" data-collapse-trigger>Compare</div>
+							<div class="footer__nav-list">
+								<a href="compare-aws-alternative.html">Crafthost vs AWS</a>
+								<a href="compare-azure-alternative.html">Crafthost vs Azure</a>
+								<a href="compare-google-cloud-alternative.html">Crafthost vs Google Cloud</a>
+								<a href="compare-high-perfomance-vs-standard-dedicated.html">High Performance vs Standard Dedicated</a>
+							</div>
+						</div>
+						<div class="footer__nav" data-collapser>
+							<div class="footer__nav-title" data-collapse-trigger>Pricing</div>
+							<div class="footer__nav-list">
+								<a href="pricing-request-a-quote.html">Request a Quote</a>
+								<a href="pricing-managed-vps.html">Managed VPS Pricing</a>
+								<a href="pricing-managed-dedicated-servers.html">Managed Dedicated Servers Pricing</a>
+								<a href="pricing-gpu-servers.html">GPU Servers Pricing</a>
+								<a href="pricing-calculator.html">Calculator</a>
+								<a href="pricing-add-ons.html">Add-ons</a>
+							</div>
+						</div>
+						<div class="footer__nav" data-collapser>
+							<div class="footer__nav-title" data-collapse-trigger>Legal</div>
+							<div class="footer__nav-list">
+								<a href="#">Privacy Policy</a>
+								<a href="#">Terms of Service</a>
+								<a href="#">Cookie Policy</a>
+								<a href="#">SLA</a>
+							</div>
+						</div>
+						<div class="footer__nav" data-collapser>
+							<div class="footer__nav-title" data-collapse-trigger>Resources</div>
+							<div class="footer__nav-list">
+								<a href="#">Blog</a>
+								<a href="#">Guides</a>
+								<a href="#">Technical Guides</a>
+								<a href="#">Webinars</a>
+								<a href="#">Benchmarks</a>
+								<a href="#">White Papers</a>
+								<a href="#">Insights</a>
+								<a href="#">Calculators</a>
+							</div>
+						</div>
+						<div class="footer__nav" data-collapser>
+							<div class="footer__nav-title" data-collapse-trigger>Support</div>
+							<div class="footer__nav-list">
+								<a href="#">Knowledge Base</a>
+								<a href="#">Support Center</a>
+								<a href="#">System Status</a>
+								<a href="#">Search</a>
+							</div>
+						</div>
+					</div>
+					<p class="footer__remark footer__remark--mobile">Crafthost provides managed cloud, dedicated, and intelligent IaaS services operated by experienced engineers, designed for organizations running production-critical workloads.</p>
+				</div>
+				<div class="container footer__bottom">
+					<div class="select select--md">
+						<div class="select__header">
+							<span class="select__current">ENG</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+						</div>
+						<input type="hidden" name="lang">
+						<div class="select__body">
+							<div class="select__item" data-value="en">ENG</div>
+							<div class="select__item" data-value="fr">FR</div>
+							<div class="select__item" data-value="de">DE</div>
+						</div>
+					</div>
+					<p class="footer__copy">&copy; <span id="year">2025</span> Crafthost SRL | ISO 27001 • SOC 2 • GDPR&nbsp;Compliant</p>
+					<a href="#header" class="footer__to-top" aria-label="back to top">
+						<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#up"/></svg>
+					</a>
+				</div>
+			</footer>
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

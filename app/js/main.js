@@ -159,10 +159,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		const hidden = select.querySelector('input[type="hidden"]');
 		const text = select.querySelector(".cstm-select__trigger-text");
 		const options = select.querySelectorAll(".cstm-select__option");
+		const isFlag = !!select.dataset.flag;
 
 		if (!trigger || !dropdown || !hidden || !text) return;
-
-		// open / close
 
 		trigger.addEventListener("click", (e) => {
 			e.stopPropagation();
@@ -173,41 +172,38 @@ document.addEventListener("DOMContentLoaded", () => {
 				s.classList.remove("is-open");
 			});
 
-			if (!isOpen) { select.classList.add("is-open"); }
+			if (!isOpen) select.classList.add("is-open");
 
 			trigger.setAttribute("aria-expanded", !isOpen);
 		});
 
-		// Select option
 		options.forEach((option) => {
 			option.addEventListener("click", () => {
 				const value = option.dataset.value;
-				const label = option.textContent.trim();
-				hidden.value = value;
-				text.textContent = label;
+
+				if (isFlag) {
+					const flag = option.querySelector(".iti__flag")?.outerHTML ?? "";
+					text.innerHTML = flag + option.textContent.trim();
+				} else {
+					text.textContent = option.textContent.trim();
+				}
+
 				text.classList.remove("placeholder");
-				options.forEach((o) => {
-					o.setAttribute("aria-selected", String(o === option));
-				});
+				hidden.value = value;
+
+				options.forEach((o) => o.setAttribute("aria-selected", String(o === option)));
 
 				select.classList.remove("is-open");
-
 				trigger.setAttribute("aria-expanded", "false");
-
-				hidden.dispatchEvent(
-					new Event("change", {
-						bubbles: true,
-					}),
-				);
+				hidden.dispatchEvent(new Event("change", { bubbles: true }));
 			});
 		});
 	});
-	// outside click
+
 	document.addEventListener("click", () => {
 		document.querySelectorAll(".cstm-select.is-open").forEach((select) => {
 			select.classList.remove("is-open");
-			const trigger = select.querySelector(".cstm-select__trigger");
-			trigger?.setAttribute("aria-expanded", "false");
+			select.querySelector(".cstm-select__trigger")?.setAttribute("aria-expanded", "false");
 		});
 	});
 
@@ -249,7 +245,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		new Swiper(el, {
 			...baseSwiperConfig,
 			breakpoints: {
-				320: { slidesPerView: 1.16, spaceBetween: 16 },
+				320: { slidesPerView: 1.068, spaceBetween: 16 },
 				768: { slidesPerView: 2.1, spaceBetween: 20 },
 				900: { slidesPerView: 3, spaceBetween: 22 },
 				1100: {
@@ -267,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		new Swiper(el, {
 			...baseSwiperConfig,
 			breakpoints: {
-				320: { slidesPerView: 1.16 },
+				320: { slidesPerView: 1.08 },
 				660: { slidesPerView: 2.3 },
 				760: { slidesPerView: 2.7 },
 				1200: { slidesPerView: 3, spaceBetween: 16, grid: { rows: 2, fill: "row" } },
@@ -287,9 +283,9 @@ document.addEventListener("DOMContentLoaded", () => {
 				renderFraction: (cur, tot) => `<span class="${cur}"></span> / <span class="${tot}"></span>`,
 			},
 			breakpoints: {
-				320: { slidesPerView: 1.06, spaceBetween: 13},
-				700: { slidesPerView: 1.3},
-				900: { slidesPerView: 2},
+				320: { slidesPerView: 1.05, spaceBetween: 13 },
+				700: { slidesPerView: 1.3 },
+				900: { slidesPerView: 2 },
 			},
 		});
 	}
@@ -356,13 +352,17 @@ document.addEventListener("DOMContentLoaded", () => {
 	// ── Modals ───────────────────────────────────────────────────────────────
 
 	document.querySelectorAll("[data-modal-open]").forEach((btn) => {
-		btn.addEventListener("click", () => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
 			document.getElementById(btn.getAttribute("data-modal-open"))?.showModal();
 		});
 	});
 
 	document.querySelectorAll("[data-modal-close]").forEach((btn) => {
-		btn.addEventListener("click", () => btn.closest("dialog")?.close());
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+			btn.closest("dialog")?.close();
+		});
 	});
 
 	document.querySelectorAll("dialog").forEach((modal) => {
@@ -370,6 +370,18 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (e.target === modal) modal.close();
 		});
 	});
+
+	// ── data-link ────────────────────────────────────────────────────────
+
+	const tempLink = function () {
+		document.querySelectorAll("[data-link]").forEach((el) => {
+			el.addEventListener("click", function (e) {
+				e.preventDefault();
+				window.location.href = this.getAttribute("data-link");
+			});
+		});
+	};
+	tempLink();
 
 	// ── Copyright year ───────────────────────────────────────────────────────
 

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost | Pricing Calculator</title>
+	@@include('./includes/head.html')
+	<body>
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="pricing.html">Pricing</a>
+				<span class="breadcrumbs__item">Pricing Calculator</span>
+			</div>
+
+			<!-- intro -->
+			<section class="section with-divider mini-intro">
+				<div class="container">
+					<i class="icon icon--gradient icon--lg">
+						<svg viewBox="0 0 32 32"><use xlink:href="img/pricing/general/sprite.svg#lg-calculator"/></svg>
+					</i>
+					<h1 class="h1 text-center mb-05">Pricing Calculator.</h1>
+					<p class="subtitle text-center text-semibold">Estimate Operational Scope — Not Final Pricing.</p>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container mb-15">
+					<h2 class="h2 mb-1">What This Request Is For.</h2>
+					<p class="subtitle subtitle--limited">This request is designed for organizations that require engineer-led infrastructure operations, not unmanaged resources. </p>
+					<p class="subtitle text-semibold">Typical use cases include:</p>
+				</div>
+				<div class="container contextual contextual--vcenter">
+					<div class="contextual__image">
+						<img loading="lazy" srcset="img/pricing/calculator/context-1.jpg, img/pricing/calculator/context-1-2x.jpg 2x" src="img/pricing/calculator/context-1.jpg" width="640" height="370" alt="img">
+					</div>
+					<div class="contextual__content">
+						<ul class="list--checked mb-2">
+							<li>Understand order-of-magnitude expectations</li>
+							<li>Align internal stakeholders before assessment</li>
+							<li>Decide whether a formal infrastructure assessment is appropriate</li>
+						</ul>
+						<p><span class="text-accent">This calculator does not generate a binding quote.</span> Final pricing is defined only after technical scoping.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container text-columns text-columns--reverse-uneven mb-1">
+					<h2 class="h2">What This Calculator Covers.</h2>
+					<p class="subtitle">This calculator estimates managed operations fees only.</p>
+				</div>
+				<div class="container tiles mb-25">
+					<div class="tile tile--col tile--hight">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Managed Cloud VPS</p>
+					</div>
+					<div class="tile tile--col tile--hight">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Managed Dedicated Servers</p>
+					</div>
+					<div class="tile tile--col tile--hight">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>GPU & AI Infrastructure</p>
+					</div>
+					<div class="tile tile--col tile--hight">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Multi-environment or hybrid operations</p>
+					</div>
+				</div>
+				<div class="container">
+					<p class="limited">Infrastructure resources (servers, cloud instances, GPUs, bandwidth, storage, licenses) are&nbsp;billed separately and are not included in this estimate.</p>
+				</div>
+			</section>
+
+			<!-- Calculator Form -->
+			<section class="section with-divider">
+				<div class="container sticky__grid">
+					<aside class="sticky__sidebar">
+						<a href="#a-1" class="sticky__link">Select Service Type</a>
+						<a href="#a-2" class="sticky__link">Environment Scale</a>
+						<a href="#a-3" class="sticky__link">Operational Responsibility Scope</a>
+						<a href="#a-4" class="sticky__link">Workload Criticality</a>
+						<a href="#a-5" class="sticky__link">Compliance & Governance Requirements</a>
+						<a href="#a-6" class="sticky__link">Monthly Operations Budget Expectation</a>
+					</aside>
+					<form class="sticky__content">
+						<!-- 1 -->
+						<div class="sticky__content-item" id="a-1">
+							<h4 class="h4">Select Service Type</h4>
+							<div class="grid-md-2">
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-1-1" class="radio" type="radio" checked name="service-type" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-1-1">Managed Cloud VPS</label>
+								</div>
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-1-2" class="radio" type="radio" name="service-type" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-1-2">Managed Dedicated Servers</label>
+								</div>
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-1-3" class="radio" type="radio" name="service-type" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-1-3">GPU & AI Infrastructure</label>
+								</div>
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-1-4" class="radio" type="radio" name="service-type" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-1-4">Unsure / Mixed Environment</label>
+								</div>
+							</div>
+						</div>
+						<!-- 2 -->
+						<div class="sticky__content-item" id="a-2">
+							<h4 class="h4">Environment Scale</h4>
+							<div class="grid-md-2">
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-2-1" class="radio" type="radio" checked name="env-scale" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-2-1">Single production environment</label>
+								</div>
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-2-2" class="radio" type="radio" name="env-scale" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-2-2">Multiple production environments</label>
+								</div>
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-2-3" class="radio" type="radio" name="env-scale" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-2-3">Production + staging/testing</label>
+								</div>
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-2-4" class="radio" type="radio" name="env-scale" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-2-4">Multi-region or hybrid setup</label>
+								</div>
+							</div>
+						</div>
+						<!-- 3 -->
+						<div class="sticky__content-item" id="a-3">
+							<h4 class="h4">Operational Responsibility Scope</h4>
+							<div class="grid-md-2">
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-3-1" class="checkbox" type="checkbox" name="opt-3-1" value="---" checked>
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-3-1">24/7 monitoring and alert handling</label>
+								</div>
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-3-2" class="checkbox" type="checkbox" name="opt-3-2" value="---">
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-3-2">Incident response and escalation ownership</label>
+								</div>
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-3-3" class="checkbox" type="checkbox" name="opt-3-3" value="---">
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-3-3">OS and system-level maintenance</label>
+								</div>
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-3-4" class="checkbox" type="checkbox" name="opt-3-4" value="---">
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-3-4">Change coordination and release support</label>
+								</div>
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-3-5" class="checkbox" type="checkbox" name="opt-3-5" value="---">
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-3-5">Performance optimization and tuning</label>
+								</div>
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-3-6" class="checkbox" type="checkbox" name="opt-3-6" value="---">
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-3-6">Security hardening and patch management</label>
+								</div>
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-3-7" class="checkbox" type="checkbox" name="opt-3-7" value="---">
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-3-7">Backup and recovery oversight</label>
+								</div>
+							</div>
+						</div>
+						<!-- 4 -->
+						<div class="sticky__content-item" id="a-4">
+							<h4 class="h4">Workload Criticality</h4>
+							<div class="opt__row mb-15">
+								<label class="checkbox__trigger">
+									<input id="opt-4-1" class="checkbox" type="checkbox" name="opt-4-1" value="---" checked>
+									<i class="checkbox__switch"></i>
+								</label>
+								<label class="checkbox__descr" for="opt-4-1">Business-critical (downtime impacts revenue or customers)</label>
+							</div>
+							<div class="opt__row mb-15">
+								<label class="checkbox__trigger">
+									<input id="opt-4-2" class="checkbox" type="checkbox" name="opt-4-2" value="---">
+									<i class="checkbox__switch"></i>
+								</label>
+								<label class="checkbox__descr" for="opt-4-2">High importance (downtime disrupts operations)</label>
+							</div>
+							<div class="opt__row">
+								<label class="checkbox__trigger">
+									<input id="opt-4-3" class="checkbox" type="checkbox" name="opt-4-3" value="---">
+									<i class="checkbox__switch"></i>
+								</label>
+								<label class="checkbox__descr" for="opt-4-3">Moderate importance (short interruptions acceptable)</label>
+							</div>
+						</div>
+						<!-- 5 -->
+						<div class="sticky__content-item" id="a-5">
+							<h4 class="h4">Compliance & Governance Requirements</h4>
+							<div class="grid-md-2">
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-5-1" class="checkbox" type="checkbox" name="opt-5-1" value="---" checked>
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-5-1">ISO 27001 / SOC 2 aligned operations</label>
+								</div>
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-5-2" class="checkbox" type="checkbox" name="opt-5-2" value="---">
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-5-2">GDPR or regional data protection requirements</label>
+								</div>
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-5-3" class="checkbox" type="checkbox" name="opt-5-3" value="---">
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-5-3">Industry-specific regulation (finance, healthcare, energy, etc.)</label>
+								</div>
+								<div class="opt__row">
+									<label class="checkbox__trigger">
+										<input id="opt-5-4" class="checkbox" type="checkbox" name="opt-5-4" value="---">
+										<i class="checkbox__switch"></i>
+									</label>
+									<label class="checkbox__descr" for="opt-5-4">Audit-ready documentation and reporting</label>
+								</div>
+							</div>
+						</div>
+						<!-- 6 -->
+						<div class="sticky__content-item" id="a-6">
+							<h4 class="h4">Monthly Operations Budget Expectation</h4>
+							<p class="text-remark text-remark--important mb-15">Budget selection is used only to scope feasibility and avoid misalignment.</p>
+							<p class="mb-25">This question helps align expectations and does not lock pricing.</p>
+							<div class="grid-md-2 mb-25">
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-6-1" class="radio" type="radio" checked name="budjet-range" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-6-1">Up to €2,000 / month</label>
+								</div>
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-6-2" class="radio" type="radio" name="budjet-range" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-6-2">€2,000–€5,000 / month</label>
+								</div>
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-6-3" class="radio" type="radio" name="budjet-range" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-6-3">€5,000–€10,000 / month</label>
+								</div>
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-6-4" class="radio" type="radio" name="budjet-range" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-6-4">€10,000–€20,000 / month</label>
+								</div>
+								<div class="opt__row">
+									<label class="radio__trigger">
+										<input id="radio-6-5" class="radio" type="radio" name="budjet-range" value="---">
+										<i class="radio__switch"></i>
+									</label>
+									<label class="radio__descr" for="radio-6-5">€20,000+ / month</label>
+								</div>
+							</div>
+							<div class="grid-md-2">
+								<button class="btn btn--lg btn--filled" data-modal-open="indicative-estimate">
+									<span>Calculate pricing</span>
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container mb-25">
+					<h2 class="h2">What This Estimate Represents.</h2>
+				</div>
+				<div class="container tiles tiles--two">
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<div>
+							<div class="h6">This indicative range reflects:</div>
+							<ul class="list--simple mb-15">
+								<li>Operational responsibility depth</li>
+								<li>Response expectations</li>
+								<li>Engineering involvement level</li>
+								<li>Governance and compliance overhead</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tile tile--text">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-light-const"/></svg>
+						</i>
+						<div>
+							<div class="h6">It does not represent:</div>
+							<ul class="list--simple">
+								<li>Infrastructure costs</li>
+								<li>Hardware or cloud resource fees</li>
+								<li>Licensing or third-party services</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container grid-md-2">
+					<div class="dark-box dark-box--tall">
+						<h3 class="h2">When to Proceed to Assessment.</h3>
+						<div>
+							<p class="text-semibold mb-1">You should proceed to a formal assessment if:</p>
+							<ul class="list list--checked list--no-border mb-1">
+								<li>Your environment supports production workloads</li>
+								<li>Downtime, security incidents, or performance degradation represent business risk</li>
+								<li>You require a single accountable operator for infrastructure operations</li>
+							</ul>
+						</div>
+					</div>
+					<div class="dark-box dark-box--tall">
+						<h3 class="h2">Next Step — Begin Infrastructure Assessment.</h3>
+						<div>
+							<p class="mb-1">A formal assessment converts this estimate into a precise, contract-ready scope. </p>
+							<p class="text-semibold mb-1">What happens next:</p>
+							<ul class="list list--checked list--no-border mb-1">
+								<li>Initial review within 1–2 business days (Italy & EU priority)</li>
+								<li>Technical scoping conducted by infrastructure engineers</li>
+								<li>Clear responsibility boundaries and SLA alignment</li>
+								<li>Final commercial proposal based on actual operational needs</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-05">
+				<div class="container">
+					<h2 class="h2 mb-05">Important Notes.</h2>
+					<ul class="contextual__list list--grid mb-25">
+						<li>This calculator is non-binding</li>
+						<li>Submitting an assessment request does not obligate you to proceed</li>
+						<li>No payment or commitment is required</li>
+						<li>The goal is clarity before cost</li>
+					</ul>
+					<p class="limited">When infrastructure operations affect revenue, compliance, or customer trust, the right decision is not guessing costs — it is defining responsibility. <br><b>This calculator exists to help you decide whether that step is warranted.</b></p>
+				</div>
+			</section>
+
+			<dialog id="indicative-estimate" class="modal modal--md">
+				<div class="modal__wrapper">
+					<div class="container modal__container modal__container--lg">
+						<button class="btn modal__close" data-modal-close>
+							<svg viewBox="0 0 32 32">
+								<use xlink:href="img/general/sprite.svg#close" />
+							</svg>
+						</button>
+						<h3 class="h3 text-center">Indicative Estimate.<span class="text-badge">(Informational Only)</span></h3>
+
+						<div class="cell mb-25">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-down"/></svg>
+							</i>
+							<div class="price-row">
+								<p class="mb-0">Estimated Managed Operations Range:</p>
+								<div class="price-card__descr mb-0">
+									<span class="price">€X,XXX – €X,XXX</span> / month
+								</div>
+							</div>
+						</div>
+						<p class="text-remark text-remark--important mb-15">* This estimate assumes standard operational complexity. <br>Highly regulated, multi-region, or GPU-intensive environments may require expanded scope.</p>
+					</div>
+				</div>
+			</dialog>
+
+			@@include('./includes/footer.html', { "decor": false })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			// ── Sticky sidebar active link ────────────────────────────────
+
+				const sidebarLinks = document.querySelectorAll(".sticky__link");
+
+				if (sidebarLinks.length) {
+					const sections = [...sidebarLinks].map((link) =>
+						document.querySelector(link.getAttribute("href"))
+					).filter(Boolean);
+
+					const observer = new IntersectionObserver((entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								sidebarLinks.forEach((link) => link.classList.remove("is-active"));
+								const active = document.querySelector(`.sticky__link[href="#${entry.target.id}"]`);
+								active?.classList.add("is-active");
+							}
+						});
+					}, {
+						rootMargin: "-20% 0px -80% 0px",
+						threshold: 0,
+					});
+
+					sections.forEach((section) => observer.observe(section));
+				}
+		</script>
+	</body>
+</html>

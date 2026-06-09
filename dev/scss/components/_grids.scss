@@ -4,7 +4,7 @@
 
 .grid-md-2 {
 	grid-template-columns: repeat(2, 1fr);
-	gap: 32px;
+	gap: 30px 32px;
 	@media (max-width: 1400px){
 		gap: 24px;
 	}
@@ -17,6 +17,11 @@
 			>div:nth-child(2) {
 				order: -1;
 			}
+		}
+	}
+	&--md-gap {
+		@media (min-width: 900px){
+			gap: 28px;
 		}
 	}
 	&--sm-gap {

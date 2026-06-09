@@ -53,6 +53,12 @@
 			padding: 0.45em 0;
 		}
 	}
+	&--no-padding {
+		li {
+			padding: .16em 0 !important;
+			gap: 0.9em;
+		}
+	}
 	&-cta {
 		@media (max-width: 600px){
 			.btn, .link {
