@@ -34,7 +34,7 @@ li {
 	list-style: none;
 }
 
-p:not([class]) {
+p:not([class]):not(:last-child) {
 	margin-bottom: 1.3em;
 	@media (max-width: 700px){
 		margin-bottom: .8em;
