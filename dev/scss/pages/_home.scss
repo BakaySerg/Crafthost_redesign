@@ -156,6 +156,7 @@
 		}
 		@media (max-width: 600px){
 			grid-template-columns: 1fr 1fr;
+			gap: 13px;
 		}
 	}
 	&--large {
@@ -221,8 +222,8 @@
 			grid-template-columns: repeat(3, 1fr);
 		}
 		@media (max-width: 600px){
+			grid-template-columns: 1fr;
 			&:has(.tile--middle) {
-				grid-template-columns: 1fr;
 				gap: 12px;
 			}
 		}
