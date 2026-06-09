@@ -14,8 +14,14 @@
 		font-size: em(50);
 	}
 	@media (max-width: 600px){
-		font-size: em(41);
+		font-size: em(40);
 		line-height: 1.23;
+	}
+	@media (max-width: 500px){
+		font-size: em(38);
+	}
+	@media (max-width: 330px){
+		font-size: 1.8em;
 	}
 }
 .h2 {
@@ -53,9 +59,13 @@
 		font-size: em(42);
 	}
 	@media (max-width: 600px){
-		font-size: em(35);
+		font-size: em(34);
 		letter-spacing: -.04em;
 		word-spacing: -.2em;
+		margin-bottom: 0.7em;
+	}
+	@media (max-width: 330px){
+		font-size: 1.7em;
 	}
 }
 .h3 {
@@ -234,7 +244,6 @@
 		}
 		.subtitle {
 			padding-top: 0.4em;
-			// max-width: 611px;
 		}
 		&--even {
 			grid-template-columns: 1fr 1.015fr;
