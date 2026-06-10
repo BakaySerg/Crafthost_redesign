@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost | Data Centers</title>
+	@@include('./includes/head.html')
+	<body class="dark">
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="infrastructure.html">Infrastructure</a>
+				<span class="breadcrumbs__item">Data Centers</span>
+			</div>
+			<!-- main -->
+
+			<section class="entrs-intro">
+				<div class="container entrs__grid">
+					<div class="entrs__text">
+						<h1 class="h1 mb-05">Global <span class="text-accent">Data Center</span> Architecture.</h1>
+						<p class="text-light">Location Is Not Geography. It Is Risk, Latency, Compliance, and Continuity.</p>
+					</div>
+					<div class="entrs__image entrs__image--narrow">
+						<img srcset="img/infrastructure/data-center/intro.jpg, img/infrastructure/data-center/intro-2x.jpg 2x" src="img/infrastructure/data-center/intro.jpg" width="680" height="453" alt="data centers">
+					</div>
+				</div>
+			</section>
+
+			@@include('./includes/footer.html', { "decor": true })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

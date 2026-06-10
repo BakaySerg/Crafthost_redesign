@@ -20,12 +20,22 @@
 			}
 		}
 	}
+	&__text {
+		@media (min-width: 1024px){
+			grid-column: 1 / 8;
+			grid-row: 1;
+		}
+	}
 	&__image {
 		@media (min-width: 1024px){
 			grid-column: 7 / 16;
 			grid-row: 1;
 			position: relative;
 			left: 40px;
+			&--narrow {
+				grid-column: 8 / 16;
+				left: 84px;
+			}
 		}
 		@media (max-width: 991px){
 			max-width: 580px;

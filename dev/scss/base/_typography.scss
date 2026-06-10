@@ -10,6 +10,11 @@
 	font-size: em(53);
 	line-height: 1.225;
 	text-wrap: balance;
+	@media (min-width: 1024px){
+		&--sm {
+			max-width: 20ch !important;
+		}
+	}
 	@media (max-width: 1390px){
 		font-size: em(50);
 	}
@@ -155,6 +160,11 @@
 }
 .text-semibold {
 	font-weight: 600;
+}
+.dark {
+	.text-semibold {
+		font-weight: 500;
+	}
 }
 .text-bold {
 	font-weight: 700;

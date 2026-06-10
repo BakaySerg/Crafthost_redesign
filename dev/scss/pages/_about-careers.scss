@@ -94,7 +94,7 @@
 .dark {
 	.cell {
 		border-color: var(--dark-2);
-		p:not([class]) {
+		p:not([class]),.list--simple,.list--checked {
 			color: var(--light-3);
 			font-weight: 300;
 		}
