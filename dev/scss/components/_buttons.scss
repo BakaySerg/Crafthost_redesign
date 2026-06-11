@@ -43,6 +43,15 @@
 			background-color: var(--blue);
 			color: var(--white);
 		}
+		&-white {
+			background-color: transparent;
+			color: var(--white);
+			border-color: var(--white);
+			&:hover {
+				background-color: var(--white);
+				color: var(--blue);
+			}
+		}
 	}
 	&--filled {
 		background-color: var(--blue);
@@ -157,6 +166,9 @@
 		&:not(.link--sm) svg {
 			transform: translateX(6px);
 		}
+	}
+	@media (max-width: 600px){
+		font-weight: 400;
 	}
 	@media (max-width: 330px){
 		font-size: 14px;

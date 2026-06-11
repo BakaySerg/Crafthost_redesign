@@ -733,6 +733,9 @@
 			border: 1px solid var(--dark-2);
 		}
 	}
+	.bricks__item {
+		border-color: var(--dark-2);
+	}
 }
 .grid-icons {
 	gap: 16px;
