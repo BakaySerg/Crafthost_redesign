@@ -19,6 +19,12 @@
 			}
 		}
 	}
+	&--special {
+		@media (min-width: 1024px){
+			gap: 16px 32px;
+		}
+
+	}
 	&--md-gap {
 		@media (min-width: 900px){
 			gap: 28px;
