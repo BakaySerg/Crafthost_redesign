@@ -24,6 +24,10 @@
 		@media (min-width: 1024px){
 			grid-column: 1 / 8;
 			grid-row: 1;
+			&--wide {
+				grid-column: 1 / 9;
+				padding-right: 2ch;
+			}
 		}
 	}
 	&__image {

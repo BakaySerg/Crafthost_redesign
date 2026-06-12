@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost | Network Architecture</title>
+	@@include('./includes/head.html')
+	<body class="dark">
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="infrastructure.html">Infrastructure</a>
+				<span class="breadcrumbs__item">Network Architecture</span>
+			</div>
+			<!-- main -->
+
+			<section class="entrs-intro">
+				<div class="container entrs__grid">
+					<div class="entrs__text entrs__text--wide">
+						<h1 class="h1 mb-05"><span class="text-accent">Network Architecture</span> Built for Deterministic Performance.</h1>
+						<p class="text-light">Low latency, fault isolation, and predictable traffic behavior at scale.</p>
+					</div>
+					<div class="entrs__image entrs__image--narrow">
+						<img srcset="img/infrastructure/data-center/intro.jpg, img/infrastructure/data-center/intro-2x.jpg 2x" src="img/infrastructure/data-center/intro.jpg" width="680" height="453" alt="data centers">
+					</div>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container text-columns text-columns--uneven">
+					<h2 class="h2">Network Architecture.</h2>
+					<div class="text-light">
+						<p>At enterprise scale, network instability is one of the most common—and most underestimated—causes of downtime, performance degradation, and cascading system failure.</p>
+						<p>Packet loss, noisy neighbors, oversubscribed links, asymmetric routing, or uncontrolled east-west traffic can undermine even the most powerful compute infrastructure.</p>
+						<p>Crafthost network architecture is engineered to behave predictably under pressure, isolate failures by design, and maintain consistent performance during peak demand, partial outages, or maintenance events.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container text-columns text-columns--bit-reverse-uneven">
+					<h2 class="h2">Network Design Philosophy.</h2>
+					<p class="subtitle">Crafthost networks are built around determinism, segmentation, and redundancy, not best-effort throughput.</p>
+				</div>
+				<div class="container contextual">
+					<div class="contextual__image">
+						<img loading="lazy" srcset="img/infrastructure/network/context-1.jpg, img/infrastructure/network/context-1-2x.jpg 2x" src="img/infrastructure/network/context-1.jpg" width="640" height="370" alt="img">
+					</div>
+					<div class="contextual__content">
+						<p class="subtitle text-semibold mb-1">Core principles:</p>
+						<ul class="list--checked">
+							<li>No single point of failure at any network layer</li>
+							<li>Strict fault domain isolation to prevent blast radius expansion</li>
+							<li>Predictable routing paths for east-west and north-south traffic</li>
+							<li>Capacity reserved, not oversubscribed</li>
+							<li>Operational visibility and control at all times</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container pt-25">
+					<p class="text-light bit-limited">Network architecture here is treated as critical infrastructure, not a shared commodity.</p>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container pb-25">
+					<h2 class="h2 h2--sd mb-1">Layered Network Architecture.</h2>
+				</div>
+				<div class="container pt-2">
+					<div class="faq__item faq__item--with-decor" data-collapser>
+						<div class="faq__question" data-collapse-trigger>
+							<div class="h4 text-gradient">North America</div>
+							<i class="faq__arrow">
+								<i class="icon">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+								</i>
+							</i>
+						</div>
+						<div class="faq__answer">
+							<div>
+								<div class="h5 mb-05">United States</div>
+								<p class="text-light mb-05">Multi-region presence supporting production workloads, global SaaS platforms, and cross-Atlantic architectures.</p>
+								<ul class="list--simple">
+									<li>East Coast: Financial services, latency-sensitive applications</li>
+									<li>West Coast: Media, AI, and Pacific routing</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="faq__item faq__item--with-decor" data-collapser>
+						<div class="faq__question" data-collapse-trigger>
+							<div class="h4 text-gradient">Asia-Pacific</div>
+							<i class="faq__arrow">
+								<i class="icon">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+								</i>
+							</i>
+						</div>
+						<div class="faq__answer">
+							<div>
+								<div class="h5 mb-05">Singapore</div>
+								<p class="text-light">Primary Asia-Pacific hub supporting low-latency access to Southeast Asia, enterprise AI workloads, and global routing symmetry.</p>
+							</div>
+						</div>
+					</div>
+					<div class="faq__item faq__item--with-decor" data-collapser>
+						<div class="faq__question" data-collapse-trigger>
+							<div class="h4 text-gradient">Middle East</div>
+							<i class="faq__arrow">
+								<i class="icon">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+								</i>
+							</i>
+						</div>
+						<div class="faq__answer">
+							<div>
+								<div class="h5 mb-05">United Arab Emirates</div>
+								<p class="text-light">Regional hub supporting sovereignty-sensitive workloads, government platforms, and cross-regional architectures.</p>
+							</div>
+							<div>
+								<div class="h5 mb-05">Morocco</div>
+								<p class="text-light">Strategic gateway between Europe and Africa, enabling geographic diversity and regional resilience.</p>
+							</div>
+						</div>
+					</div>
+					<div class="faq__item faq__item--with-decor" data-collapser>
+						<div class="faq__question" data-collapse-trigger>
+							<div class="h4 text-gradient">Africa</div>
+							<i class="faq__arrow">
+								<i class="icon">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+								</i>
+							</i>
+						</div>
+						<div class="faq__answer">
+							<div>
+								<div class="h5 mb-05">South Africa</div>
+								<p class="text-light">Southern African anchor location supporting continental redundancy and regional digital infrastructure.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<div class="institution__slider swiper swiper--lg">
+						<div class="swiper-wrapper pb-15">
+							<!-- 1 -->
+							<div class="swiper-slide institution__slide">
+								<div class="institution__text">
+									<p>Crafthost data center locations are deliberately selected to avoid correlated risk, including:</p>
+									<ul class="list list--simple mb-1">
+									</ul>
+									<p>Regional independence ensures that a failure in one geography does not propagate across the platform.</p>
+								</div>
+							</div>
+							<!-- 2 -->
+							<div class="swiper-slide institution__slide">
+								<div class="institution__text">
+									<ul class="list list--simple mb-1">
+									</ul>
+									<p>Latency is treated as an engineering constraint, not a marketing claim.</p>
+								</div>
+							</div>
+							<!-- 3 -->
+							<div class="swiper-slide institution__slide">
+								<div class="institution__text">
+									<p>Crafthost data centers enable:</p>
+									<ul class="list list--simple mb-1">
+									</ul>
+									<p>Workloads are placed intentionally, not opportunistically.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-controls swiper-controls--right">
+						<div class="swiper-button-prev"><i class="icon"></i></div>
+						<div class="swiper-pagination-fraction"></div>
+						<div class="swiper-button-next"><i class="icon"></i></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--dark">
+				<div class="container">
+					<h2 class="h2 text-gradient mb-05">Next Steps.</h2>
+					<p class="subtitle">Explore how this network architecture integrates with the broader <br class="md-visible"> infrastructure stack:</p>
+					<ul class="contextual__list contextual__list--sm contextual__list--no-markers">
+						<li>
+							<a href="#" class="link link--icon">
+								<span>Tier IV & Tier V Uptime Design</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="infrastructure-data-centers.html" class="link link--icon">
+								<span>Global Data Centers & Regions</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="link link--icon">
+								<span>Managed Cloud & VPS Platforms</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+						<li class="mt-1">
+							<a href="#" class="btn btn--filled btn--lg mb-05">
+								<span>Request an Infrastructure Assessment</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			@@include('./includes/footer.html', { "decor": true })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
