@@ -178,6 +178,11 @@
 .text-light p , p.text-light {
 	font-weight: 300;
 }
+.dark {
+	.text-light p , p.text-light {
+		color: var(--light-3);
+	}
+}
 .text-remark {
 	font-style: italic;
 	font-weight: 300;
