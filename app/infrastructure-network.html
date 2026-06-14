@@ -374,7 +374,51 @@
 				</div>
 			</section>
 
+
+			<section class="section section--dark">
+				<div class="container text-columns text-columns--even mb-15">
+					<h2 class="h2 h2--sd">Fault Isolation & Blast Radius Control.</h2>
+					<p class="subtitle">Failures are expected. Cascades are not.</p>
+				</div>
+				<div class="container contextual contextual--reversed">
+					<div class="contextual__image">
+						<img loading="lazy" srcset="img/infrastructure/network/context-2.jpg, img/infrastructure/network/context-2-2x.jpg 2x" src="img/infrastructure/network/context-2.jpg" width="640" height="370" alt="img">
+					</div>
+					<div class="contextual__content">
+						<p class="subtitle text-semibold mb-1">Network segmentation ensures that:</p>
+						<ul class="contextual__list mb-15">
+							<li>A failure in one tenant, cluster, or zone does not propagate</li>
+							<li>Maintenance operations do not impact unrelated workloads</li>
+							<li>Congestion is contained within defined boundaries</li>
+						</ul>
+						<p class="text-light">This architecture dramatically reduces systemic risk during peak load or partial outages.</p>
+					</div>
+				</div>
+			</section>
+
 			<section class="section">
+				<div class="container text-columns text-columns--even mb-15">
+					<h2 class="h2 h2--sd">Latency & Performance Optimization.</h2>
+					<p class="subtitle">Network paths are optimized for real-world workload behavior, not theoretical benchmarks.</p>
+				</div>
+				<div class="container contextual mb-25">
+					<div class="contextual__image">
+						<img loading="lazy" srcset="img/infrastructure/network/context-3.jpg, img/infrastructure/network/context-3-2x.jpg 2x" src="img/infrastructure/network/context-3.jpg" width="640" height="370" alt="img">
+					</div>
+					<div class="contextual__content">
+						<p class="subtitle text-semibold mb-1">Key characteristics:</p>
+						<ul class="contextual__list mb-15">
+							<li>Short, predictable routing paths</li>
+							<li>Low intra-region latency</li>
+							<li>Stable jitter profiles for latency-sensitive applications</li>
+							<li>Capacity planning based on sustained load, not burst assumptions</li>
+						</ul>
+						<p class="text-light">This is especially critical for databases, AI workloads, transactional systems, and real-time services.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
 				<div class="container">
 					<div class="institution__slider swiper swiper--lg">
 						<div class="swiper-wrapper pb-15">
@@ -441,13 +485,99 @@
 				</div>
 			</section>
 
+			<section class="section pt-1">
+				<div class="container text-columns text-columns--reverse-uneven mb-15">
+					<h2 class="h2">Who This Network Architecture Is Designed For.</h2>
+					<p class="subtitle">It is intentionally over-engineered for casual or non-critical use cases. <b>This network architecture is built for:</b></p>
+				</div>
+				<div class="container tiles tiles--three tiles--gutters">
+					<div class="tile tile--col tile--tall">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Production and mission-critical workloads.</p>
+					</div>
+					<div class="tile tile--col tile--tall">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Regulated environments.</p>
+					</div>
+					<div class="tile tile--col tile--tall">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Latency-sensitive applications.</p>
+					</div>
+					<div class="tile tile--col tile--tall">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Distributed and hybrid systems.</p>
+					</div>
+					<div class="tile tile--col tile--tall">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Organizations that require predictable performance.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container text-columns text-columns--bit-reverse-uneven mb-15">
+					<h2 class="h2">What This Network Architecture Avoids.</h2>
+					<p class="subtitle">Performance degradation is treated as an architectural failure— not an acceptable trade-off. <br><b>By design, Crafthost avoids:</b></p>
+				</div>
+				<div class="container tiles tiles--three tiles--gutters">
+					<div class="tile tile--col tile--tall">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Flat, shared network topologies.</p>
+					</div>
+					<div class="tile tile--col tile--tall">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Aggressive oversubscription.</p>
+					</div>
+					<div class="tile tile--col tile--tall">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>Uncontrolled east-west traffic.</p>
+					</div>
+					<div class="tile tile--col tile--tall">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>“Best-effort” routing models.</p>
+					</div>
+					<div class="tile tile--col tile--tall">
+						<i class="icon icon--sm">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+						</i>
+						<p>“Best-effort” routing model.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container mb-15">
+					<h2 class="h2 h2--sd mb-1">Network as a Foundation, Not a Feature.</h2>
+					<p class="bit-limited mb-1 text-light">Reliable systems are built on networks that behave consistently—even when conditions are not ideal.</p>
+					<p class="bit-limited text-light">Crafthost network architecture ensures that compute, storage, security, and orchestration layers can operate without unexpected interference or instability.</p>
+				</div>
+			</section>
+
 			<section class="section section--dark">
 				<div class="container">
 					<h2 class="h2 text-gradient mb-05">Next Steps.</h2>
 					<p class="subtitle">Explore how this network architecture integrates with the broader <br class="md-visible"> infrastructure stack:</p>
 					<ul class="contextual__list contextual__list--sm contextual__list--no-markers">
 						<li>
-							<a href="#" class="link link--icon">
+							<a href="infrastructure-tier-IV-uptime.html" class="link link--icon">
 								<span>Tier IV & Tier V Uptime Design</span>
 								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 							</a>
@@ -459,7 +589,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" class="link link--icon">
+							<a href="solutions-managed-cloud-vps.html" class="link link--icon">
 								<span>Managed Cloud & VPS Platforms</span>
 								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 							</a>

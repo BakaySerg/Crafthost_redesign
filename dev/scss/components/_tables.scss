@@ -89,9 +89,7 @@
 	&__item {
 		.h4 {
 			position: relative;
-			padding-bottom: .8em;
 			margin-bottom: .8em;
-			min-height: 80px;
 			&::after {
 				content: '';
 				position: absolute;
@@ -101,12 +99,15 @@
 				border-bottom: 1px solid var(--light-3);
 			}
 			@media (min-width: 1100px){
-				max-width: 13ch;
-				padding-bottom: 1.3em;
+				min-height: 98px;
+				max-width: 14ch;
 				margin-bottom: 1.2em;
 				&::after {
 					width: 160%;
 				}
+			}
+			@media (max-width: 1099px){
+				padding-bottom: 0.9em;
 			}
 		}
 		&:last-child .h4::after {

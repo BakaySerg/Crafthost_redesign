@@ -94,6 +94,9 @@
 	@media (max-width: 991px){
 		font-size: em(26);
 	}
+	@media (max-width: 600px){
+		font-size: em(24);
+	}
 }
 .h5 {
 	font-size: em(22);
@@ -283,6 +286,6 @@
 		}
 	}
 	@media (min-width: 1300px){
-		gap: 27px 50px;
+		gap: 27px 44px;
 	}
 }
