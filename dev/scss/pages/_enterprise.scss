@@ -19,6 +19,9 @@
 				grid-row: 1;
 			}
 		}
+		@media (max-width: 600px){
+			overflow: hidden;
+		}
 	}
 	&__text {
 		@media (min-width: 1024px){
@@ -40,10 +43,24 @@
 				grid-column: 8 / 16;
 				left: 84px;
 			}
+			&--wide {
+				grid-column: 8 / 17;
+			}
 		}
-		@media (max-width: 991px){
+		@media (max-width: 1023px){
+			margin: 30px auto 0;
 			max-width: 580px;
-			margin: 15px auto 0;
+		}
+		@media (max-width: 600px){
+			overflow: hidden;
+			margin: 25px auto 0;
+			max-width: 100%;
+			&--wide {
+				width: calc(100% + 52px);
+				max-width: none;
+				margin-left: -26px;
+				margin-right: -26px;
+			}
 		}
 	}
 }
