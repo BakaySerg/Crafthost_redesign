@@ -99,6 +99,10 @@
 				width: 100%;
 				padding: 0;
 				border-bottom: 1px solid var(--light-3);
+				display: flex;
+				.arrow {
+					margin-left: auto;
+				}
 			}
 		}
 
@@ -178,7 +182,6 @@
 
 			&__link {
 				display: block;
-				min-width: 100%;
 				width: fit-content;
 				padding: 1em .1em;
 				font-size: 1em;
@@ -191,6 +194,7 @@
 			.sub-menu {
 				padding: 1.2em .1em;
 				display: flex;
+				width: 100%;
 				justify-content: space-between;
 
 				& > span {

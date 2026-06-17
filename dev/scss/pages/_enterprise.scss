@@ -3,8 +3,19 @@
 .entrs {
 	&-intro {
 		padding: 35px 0;
+		&.with-divider {
+			padding-bottom: 68px;
+		}
+		@media (max-width: 1400px){
+			&.with-divider {
+				padding-bottom: 50px;
+			}
+		}
 		@media (max-width: 600px){
 			padding: 20px 0;
+			&.with-divider {
+				padding-bottom: 32px;
+			}
 		}
 	}
 	&__grid {

@@ -24,6 +24,9 @@ body {
 	@media (max-width: 1299px){
 		font-size: 16px;
 	}
+	@media (max-width: 330px){
+		font-size: 15px;
+	}
 	&:has(dialog:modal) {
 	overflow: hidden;
 	}

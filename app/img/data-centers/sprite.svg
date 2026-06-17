@@ -72,4 +72,16 @@
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-7" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#agclip0_2587_6394)">
+<path d="M4.91018 20.8437H18.1562C19.1912 20.8437 20.0302 20.0047 20.0302 18.9697V5.72268C20.0302 4.05168 18.0102 3.21568 16.8292 4.39668L3.58418 17.6427C2.40318 18.8237 3.23918 20.8437 4.91018 20.8437V20.8437Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.28125 13.9414V20.8414" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.5312 9.69141V20.8414" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.7812 5.45117V20.8412" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="agclip0_2587_6394">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
 </symbol></svg>
