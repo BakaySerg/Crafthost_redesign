@@ -19,6 +19,7 @@
 		}
 	}
 	&__grid {
+		overflow: hidden;
 		@media (min-width: 1024px){
 			display: grid;
 			grid-template-columns: repeat(16, 1fr);
@@ -43,6 +44,9 @@
 				padding-right: 2ch;
 			}
 		}
+		@media (max-width: 1023px){
+			text-align: center;
+		}
 	}
 	&__image {
 		@media (min-width: 1024px){
@@ -55,12 +59,20 @@
 				left: 84px;
 			}
 			&--wide {
+				grid-column: 6 / 17;
+			}
+		}
+		@media (min-width: 1400px){
+			&--wide {
 				grid-column: 8 / 17;
 			}
 		}
 		@media (max-width: 1023px){
 			margin: 30px auto 0;
 			max-width: 580px;
+			&--wide {
+				max-width: 620px;
+			}
 		}
 		@media (max-width: 600px){
 			overflow: hidden;
