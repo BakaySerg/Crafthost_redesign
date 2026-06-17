@@ -76,6 +76,9 @@
 		&--2 {
 			left: 58%;
 			top: 10%;
+			@media (max-width: 600px){
+				left: 59%;
+			}
 		}
 		// canada
 		&--3 {
@@ -116,7 +119,7 @@
 			left: 51%;
 			top: 38%;
 			@media (max-width: 600px){
-				left: 52%;
+				left: 53%;
 			}
 		}
 		// marocco
@@ -140,6 +143,7 @@
 			}
 			@media (max-width: 600px){
 				right: 7%;
+				bottom: 43%;
 			}
 		}
 		// Singapore

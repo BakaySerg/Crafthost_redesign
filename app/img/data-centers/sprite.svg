@@ -84,4 +84,25 @@
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="sm-8" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#ahclip0_2587_23363)">
+<path d="M17 2C14.239 2 12 4.239 12 7C12 9.761 14.239 12 17 12C19.762 12 22 9.761 22 7C22 4.239 19.762 2 17 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17 9.22252V8.47852" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17 5.52134V4.77734" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.0781 8.11114L15.7221 7.74414" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.2891 6.25567L18.9221 5.88867" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.0781 5.88867L15.7221 6.25567" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.2891 7.74414L18.9221 8.11114" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.0459 8.04783C18.6249 7.46883 18.6249 6.53083 18.0459 5.95183C17.4669 5.37283 16.5289 5.37283 15.9499 5.95183C15.3709 6.53083 15.3709 7.46883 15.9499 8.04783C16.5289 8.62683 17.4669 8.62683 18.0459 8.04783Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.4198 5H5.84881C4.80381 5 3.93581 5.804 3.85481 6.845L3.00781 17.757" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.9875 17.7611L20.4375 10.6211" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 15H6C4.343 15 3 16.343 3 18C3 19.657 4.343 21 6 21H18C19.657 21 21 19.657 21 18C21 16.343 19.657 15 18 15Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 18H11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.03912 17.9642C6.05912 17.9842 6.05912 18.0152 6.03912 18.0352C6.01912 18.0552 5.98812 18.0552 5.96812 18.0352C5.94813 18.0152 5.94813 17.9842 5.96812 17.9642C5.98812 17.9442 6.02012 17.9442 6.03912 17.9642Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="ahclip0_2587_23363">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
 </symbol></svg>
