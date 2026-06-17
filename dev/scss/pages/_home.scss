@@ -753,6 +753,10 @@
 		&__item {
 			background-color: var(--dark-3);
 			border: 1px solid var(--dark-2);
+			p {
+				font-weight: 300;
+				color: var(--light-3);
+			}
 		}
 	}
 	.bricks__item {
