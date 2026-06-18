@@ -60,7 +60,7 @@
 			}
 		}
 		&--middle {
-			min-height: 200px;
+			min-height: 230px;
 			.icon {
 				margin-bottom: 1em;
 			}
@@ -99,7 +99,7 @@
 			font-weight: 300;
 		}
 		&--bordered {
-			border-color: var(--light-3);
+			border-color: var(--light-4);
 		}
 	}
 
@@ -121,7 +121,7 @@
 			}
 		}
 		@media (max-width: 1100px){
-			p:last-child {
+			p:last-child:not(.text-accent) {
 				margin-top: auto;
 			}
 		}
