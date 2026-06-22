@@ -247,7 +247,7 @@
 			<section class="section with-divider">
 				<div class="container sticky__grid">
 					<aside class="sticky__sidebar">
-						<a href="#a-1" class="sticky__link">Select Service Type</a>
+						<a href="#a-1" class="sticky__link is-active">Select Service Type</a>
 						<a href="#a-2" class="sticky__link">Environment Scale</a>
 						<a href="#a-3" class="sticky__link">Operational Responsibility Scope</a>
 						<a href="#a-4" class="sticky__link">Workload Criticality</a>
@@ -743,31 +743,5 @@
 		</div>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/main.js"></script>
-		<script>
-			// ── Sticky sidebar active link ────────────────────────────────
-
-				const sidebarLinks = document.querySelectorAll(".sticky__link");
-
-				if (sidebarLinks.length) {
-					const sections = [...sidebarLinks].map((link) =>
-						document.querySelector(link.getAttribute("href"))
-					).filter(Boolean);
-
-					const observer = new IntersectionObserver((entries) => {
-						entries.forEach((entry) => {
-							if (entry.isIntersecting) {
-								sidebarLinks.forEach((link) => link.classList.remove("is-active"));
-								const active = document.querySelector(`.sticky__link[href="#${entry.target.id}"]`);
-								active?.classList.add("is-active");
-							}
-						});
-					}, {
-						rootMargin: "-20% 0px -80% 0px",
-						threshold: 0,
-					});
-
-					sections.forEach((section) => observer.observe(section));
-				}
-		</script>
 	</body>
 </html>

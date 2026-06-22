@@ -377,6 +377,31 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 	tempLink();
 
+				// ── Sticky sidebar active link ────────────────────────────────
+
+				const sidebarLinks = document.querySelectorAll(".sticky__link");
+
+				if (sidebarLinks.length) {
+					const sections = [...sidebarLinks].map((link) =>
+						document.querySelector(link.getAttribute("href"))
+					).filter(Boolean);
+
+					const observer = new IntersectionObserver((entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								sidebarLinks.forEach((link) => link.classList.remove("is-active"));
+								const active = document.querySelector(`.sticky__link[href="#${entry.target.id}"]`);
+								active?.classList.add("is-active");
+							}
+						});
+					}, {
+						rootMargin: "-20% 0px -80% 0px",
+						threshold: 0,
+					});
+
+					sections.forEach((section) => observer.observe(section));
+				}
+
 
 	// ── Copyright year ───────────────────────────────────────────────────────
 

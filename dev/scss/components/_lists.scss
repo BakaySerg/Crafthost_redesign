@@ -160,6 +160,13 @@
 			}
 		}
 	}
+	&.list--not {
+		li:before {
+			width: .9em !important;
+			max-width: .9em !important;
+			height: .9em;
+		}
+	}
 	&-filled {
 		li {
 			gap: 0.9em;

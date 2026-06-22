@@ -102,9 +102,9 @@
 	}
 }
 .mb-25 {
-	margin-bottom: 2.5em;
+	margin-bottom: 2.5em !important;
 	@media (max-width: 1400px){
-		margin-bottom: 2.3em;
+		margin-bottom: 2.3em !important;
 	}
 	@media (max-width: 600px){
 		margin-bottom: 1.8em;

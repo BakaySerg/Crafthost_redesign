@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<title>Crafthost | Infrastructure Guides</title>
+	<title>Crafthost | Technical Guides</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4">
@@ -172,211 +172,54 @@
 			<div class="breadcrumbs container">
 				<a class="breadcrumbs__item" href="index.html">Home</a>
 				<span class="breadcrumbs__item">Resources</span>
-				<span class="breadcrumbs__item">Guides</span>
+				<span class="breadcrumbs__item">Technical Guides.</span>
 			</div>
 
 			<!-- intro -->
 			<section class="section with-divider mini-intro">
 				<div class="container">
 					<i class="icon icon--gradient icon--lg">
-						<svg viewBox="0 0 32 32"><use xlink:href="img/resources/sprite.svg#lg-1"/></svg>
+						<svg viewBox="0 0 32 32"><use xlink:href="img/resources/sprite.svg#lg-2"/></svg>
 					</i>
-					<h1 class="h1 text-center mb-05">Infrastructure Guides.</h1>
+					<h1 class="h1 text-center mb-05">Technical Guides.</h1>
 				</div>
 			</section>
 
 			<section class="section with-divider">
 				<div class="container sticky__grid">
 					<aside class="sticky__sidebar">
-						<a href="#a-1" class="sticky__link sticky__link--no-wrap is-active"><span>Strategic Frameworks for High-Stakes Technology Decisions</span></a>
-						<a href="#a-2" class="sticky__link sticky__link--no-wrap"><span>What Makes These Guides Different</span></a>
-						<a href="#a-3" class="sticky__link sticky__link--no-wrap"><span>Core Guide Themes</span></a>
-						<a href="#a-4" class="sticky__link sticky__link--no-wrap"><span>How These Guides Are Structured</span></a>
-						<a href="#a-5" class="sticky__link sticky__link--no-wrap"><span>Who Should Read These Guides & Who These Guides Are Not For.</span></a>
-						<a href="#a-6" class="sticky__link sticky__link--no-wrap"><span>How to Use These Guides Internally</span></a>
-						<a href="#a-7" class="sticky__link sticky__link--no-wrap"><span>Related Resources</span></a>
+						<a href="#a-1" class="sticky__link sticky__link--no-wrap is-active"><span>Engineering-Level Documentation for Real-World Infrastructure Operations</span></a>
+						<a href="#a-2" class="sticky__link sticky__link--no-wrap"><span>What These Guides Are — and Are Not</span></a>
+						<a href="#a-3" class="sticky__link sticky__link--no-wrap"><span>Core Areas Covered</span></a>
+						<a href="#a-4" class="sticky__link sticky__link--no-wrap"><span>How These Guides Are Written</span></a>
+						<a href="#a-5" class="sticky__link sticky__link--no-wrap"><span>Who These Guides Are For & Who Who Should Not Use These Guides.</span></a>
+						<a href="#a-6" class="sticky__link sticky__link--no-wrap"><span>How Teams Use These Guides</span></a>
+						<a href="#a-7" class="sticky__link sticky__link--no-wrap"><span>Relationship to Other Resources</span></a>
 					</aside>
 					<div class="sticky__content">
 						<!-- 1 -->
 						<div class="sticky__content-item with-divider" id="a-1">
-							<h2 class="h2">Strategic Frameworks for High-Stakes Technology Decisions.</h2>
-							<p>The Crafthost Infrastructure Guides are designed for organizations making irreversible or high-impact infrastructure decisions — decisions that affect uptime, compliance, security posture, and long-term operating cost. <br> These are decision guides, not tutorials.</p>
-							<p class="text-semibold">They are written to help executives and senior technical leaders understand:</p>
-							<ul class="list--simple">
-								<li>Why systems fail</li>
-								<li>Where responsibility actually lies</li>
-								<li>Which trade-offs are real — and which are illusions</li>
-								<li>How architecture choices shape operational risk over years, not months</li>
-							</ul>
+							<h2 class="h2">Engineering-Level Documentation for Real-World Infrastructure Operations.</h2>
+							<p>Crafthost Technical Guides are deep, implementation-focused documents written for engineers and architects who are responsible for designing, operating, and stabilizing production systems.</p>
+							<p class="text-semibold">These are not marketing assets. <br>They are operational references.</p>
+							<p>Each guide is designed to help teams build, validate, and maintain infrastructure that must perform correctly under load, failure, and regulatory pressure.</p>
 						</div>
 						<!-- 2 -->
 						<div class="sticky__content-item with-divider" id="a-2">
-							<h2 class="h2">What Makes These Guides Different.</h2>
-							<h3 class="h4-5 text-gradient text-with-icon">
-								<i class="icon icon--sm icon--accent">
-									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
-								</i>
-								<span>Built for Accountability, Not Convenience</span>
-							</h3>
-							<p>Most infrastructure content optimizes for ease of adoption. <br>These guides optimize for correctness under pressure.</p>
-							<p class="text-semibold">They explicitly address:</p>
-							<ul class="list--simple">
-								<li>Hidden failure paths</li>
-								<li>Oversubscription risk</li>
-								<li>SLA misconceptions</li>
-								<li>Responsibility gaps between provider and customer</li>
-								<li>Long-term operational debt</li>
-							</ul>
-							<h3 class="h4-5 text-gradient text-with-icon">
-								<i class="icon icon--sm icon--accent">
-									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
-								</i>
-								<span>Written for Decision-Makers</span>
-							</h3>
-							<p class="text-semibold">These guides are intended for:</p>
-							<ul class="list--simple">
-								<li>CEOs and founders accountable for uptime and reputation</li>
-								<li>CIOs and CTOs managing regulatory and operational risk</li>
-								<li>Heads of Infrastructure, Platform, and Security</li>
-								<li>Boards and auditors requiring defensible technical rationale</li>
-							</ul>
-							<p>They assume readers are responsible for outcomes, not just tooling.</p>
-						</div>
-						<!-- 3 -->
-						<div class="sticky__content-item with-divider" id="a-3">
-							<h2 class="h2">Core Guide Themes.</h2>
-							<h3 class="h4-5 text-gradient">
-								<i class="icon icon--sm icon--accent">
-									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
-								</i>
-								<span>Managed vs Self-Managed Infrastructure</span>
-							</h3>
-							<p class="text-semibold">Understanding when management reduces risk — and when it merely adds cost. <br> <b>Covers:</b></p>
-							<ul class="list--simple">
-								<li>Responsibility boundaries</li>
-								<li>Failure ownership</li>
-								<li>Operational maturity requirements</li>
-								<li>Cost predictability vs control</li>
-							</ul>
-							<h3 class="h4-5 text-gradient">
-								<i class="icon icon--sm icon--accent">
-									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
-								</i>
-								<span>Deterministic Performance vs Elastic Variability</span>
-							</h3>
-							<p>Why elasticity is not always an advantage. <br> <b>Explains:</b></p>
-							<ul class="list--simple">
-								<li>Performance variance under load</li>
-								<li>Capacity reservation vs burst models</li>
-								<li>Latency predictability</li>
-								<li>When elasticity becomes fragility</li>
-							</ul>
-							<h3 class="h4-5 text-gradient">
-								<i class="icon icon--sm icon--accent">
-									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
-								</i>
-								<span>Availability Beyond SLAs</span>
-							</h3>
-							<p>Why uptime promises do not equal uptime reality. <br> <b>Explores:</b></p>
-							<ul class="list--simple">
-								<li>SLA math vs architectural enforcement</li>
-								<li>Failure domains and blast radius</li>
-								<li>Concurrent maintainability</li>
-								<li>Tier IV vs Tier V thinking</li>
-							</ul>
-							<h3 class="h4-5 text-gradient">
-								<i class="icon icon--sm icon--accent">
-									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
-								</i>
-								<span>Regulatory & Sovereignty-Driven Architecture</span>
-							</h3>
-							<p>Designing infrastructure that survives audits, not just outages. <br> <b>Includes:</b></p>
-							<ul class="list--simple">
-								<li>Data residency enforcement</li>
-								<li>Jurisdictional isolation</li>
-								<li>Compliance-first topology</li>
-								<li>Regulated industry considerations</li>
-							</ul>
-							<h3 class="h4-5 text-gradient">
-								<i class="icon icon--sm icon--accent">
-									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
-								</i>
-								<span>Cost Predictability & Infrastructure Economics</span>
-							</h3>
-							<p>Why “pay-as-you-go” often becomes “pay-without-control”. <br> <b>Analyzes:</b></p>
-							<ul class="list--simple">
-								<li>Cost volatility drivers</li>
-								<li>Operational cost vs infrastructure cost</li>
-								<li>Forecasting accuracy</li>
-								<li>Long-term TCO modeling</li>
-							</ul>
-							<h3 class="h4-5 text-gradient">
-								<i class="icon icon--sm icon--accent">
-									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
-								</i>
-								<span>Cloud Exit & Re-Platforming Strategy</span>
-							</h3>
-							<p>Moving away from hyperscale without replacing one risk with another. <br> <b>Covers:</b></p>
-							<ul class="list--simple">
-								<li>When cloud exit is justified</li>
-								<li>Migration risk modeling</li>
-								<li>Hybrid and staged transitions</li>
-								<li>Avoiding platform lock-in reversal traps</li>
-							</ul>
-						</div>
-						<!-- 4 -->
-						<div class="sticky__content-item with-divider" id="a-4">
-							<h2 class="h2">How These Guides Are Structured.</h2>
-							<p class="text-semibold mb-2">Each guide follows a consistent framework:</p>
-							<div class="tiles tiles--three tiles--sm-one mb-2">
-								<div class="cell cell--shrink cell--higher">
-									<b class="text-huge text-gradient">1.</b>
-									<h4 class="h4-5 text-gradient mb-05">Problem Definition</h4>
-									<p class="text-light">What fails and why.</p>
-								</div>
-								<div class="cell cell--shrink cell--higher">
-									<b class="text-huge text-gradient">2.</b>
-									<h4 class="h4-5 text-gradient mb-05">Common Misconceptions</h4>
-									<p class="text-light">Why popular advice breaks down.</p>
-								</div>
-								<div class="cell cell--shrink cell--higher">
-									<b class="text-huge text-gradient">3.</b>
-									<h4 class="h4-5 text-gradient mb-05">Architectural Reality</h4>
-									<p class="text-light">What actually matters in production.</p>
-								</div>
-								<div class="cell cell--shrink cell--higher">
-									<b class="text-huge text-gradient">4.</b>
-									<h4 class="h4-5 text-gradient mb-05">Decision Framework</h4>
-									<p class="text-light">How to evaluate options rationally.</p>
-								</div>
-								<div class="cell cell--shrink cell--higher">
-									<b class="text-huge text-gradient">5.</b>
-									<h4 class="h4-5 text-gradient mb-05">Risk & Trade-Off Analysis</h4>
-									<p class="text-light">What you gain and what you accept.</p>
-								</div>
-								<div class="cell cell--shrink cell--higher">
-									<b class="text-huge text-gradient">6.</b>
-									<h4 class="h4-5 text-gradient mb-05">Who This Is (and Is Not) For</h4>
-									<p class="text-light">Clear disqualification.</p>
-								</div>
-							</div>
-							<p>No guide ends with “it depends” without defining what it depends on. </p>
-						</div>
-						<!-- 5 -->
-						<div class="sticky__content-item with-divider" id="a-5">
-							<h2 class="h2">Who Should Read These Guides & Who These Guides Are Not For.</h2>
-							<div class="tiles tiles--two tiles--sm-one">
+							<h2 class="h2">What These Guides Are — and Are Not.</h2>
+							<div class="tiles tiles--two tiles--sm-one mb-2">
 								<div class="tile tile--text">
 									<i class="icon icon--sm">
 										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
 									</i>
 									<div>
-										<div class="h6">Who Should Read These Guides:</div>
+										<div class="h6">What They Are:</div>
 										<ul class="list--simple">
-											<li>Organizations operating production systems</li>
-											<li>Teams accountable for uptime, compliance, or financial impact</li>
-											<li>Enterprises in regulated or mission-critical environments</li>
-											<li>Leaders making multi-year infrastructure commitments</li>
+											<li>Practical engineering documentation</li>
+											<li>Architecture-aware operational guidance</li>
+											<li>Failure-mode–driven explanations</li>
+											<li>Production-first assumptions</li>
+											<li>Written by and for infrastructure professionals</li>
 										</ul>
 									</div>
 								</div>
@@ -385,37 +228,232 @@
 										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-light-const"/></svg>
 									</i>
 									<div>
-										<div class="h6">Who These Guides Are Not For:</div>
+										<div class="h6">What They Are Not:</div>
 										<ul class="list--simple list--not">
-											<li>Hobby or experimental workloads</li>
-											<li>Early learning or basic cloud onboarding</li>
-											<li>Feature comparisons without context</li>
-											<li>Organizations optimizing only for lowest upfront cost</li>
+											<li>Introductory tutorials</li>
+											<li>Vendor feature walkthroughs</li>
+											<li>Generic “how-to” articles</li>
+											<li>Simplified cloud onboarding content</li>
+											<li>Opinion pieces without operational grounding</li>
 										</ul>
+									</div>
+								</div>
+							</div>
+							<p>These guides assume you already understand the basics — and need answers that hold up in production.</p>
+						</div>
+						<!-- 3 -->
+						<div class="sticky__content-item with-divider" id="a-3">
+							<h2 class="h2">Core Areas Covered.</h2>
+							<h3 class="h4-5 text-gradient">
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<span>Infrastructure Architecture & Design</span>
+							</h3>
+							<p>How to design systems that remain stable during change and failure. <br> <b>Topics include:</b></p>
+							<ul class="list--simple">
+								<li>Fault domain isolation</li>
+								<li>Blast radius containment</li>
+								<li>Capacity reservation models</li>
+								<li>Tier IV and Tier V engineering principles</li>
+								<li>Multi-region and multi-zone design trade-offs</li>
+							</ul>
+							<h3 class="h4-5 text-gradient">
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<span>Network Engineering & Traffic Control</span>
+							</h3>
+							<p>Ensuring deterministic performance and predictable latency. <br> <b>Covers:</b></p>
+							<ul class="list--simple">
+								<li>East–west vs north–south traffic isolation</li>
+								<li>Oversubscription avoidance</li>
+								<li>Deterministic routing paths</li>
+								<li>Multi-carrier resilience</li>
+								<li>Convergence behavior during link failure</li>
+							</ul>
+							<h3 class="h4-5 text-gradient">
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<span>Availability, Uptime & Failure Handling</span>
+							</h3>
+							<p>Designing systems that fail gracefully — or not at all. <br><b>Includes:</b></p>
+							<ul class="list--simple">
+								<li>SLA vs architectural availability</li>
+								<li>Concurrent maintainability</li>
+								<li>Planned maintenance without impact</li>
+								<li>Elimination of hidden single points of failure</li>
+								<li>Failure injection and validation practices</li>
+							</ul>
+							<h3 class="h4-5 text-gradient">
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<span>Security Architecture & Enforcement</span>
+							</h3>
+							<p>Security as an architectural constraint, not an add-on. <br><b>Topics:</b></p>
+							<ul class="list--simple">
+								<li>Infrastructure-level security controls</li>
+								<li>Network segmentation and isolation</li>
+								<li>DDoS mitigation foundations</li>
+								<li>Zero-trust networking considerations</li>
+								<li>Security boundaries between infrastructure and workloads</li>
+							</ul>
+							<h3 class="h4-5 text-gradient">
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<span>Compliance & Regulated Environments</span>
+							</h3>
+							<p>Operating infrastructure that survives audits, not just incidents. <br><b>Covers:</b></p>
+							<ul class="list--simple">
+								<li>Data residency enforcement</li>
+								<li>Jurisdictional isolation</li>
+								<li>Infrastructure evidence and documentation</li>
+								<li>Compliance-aware architecture design</li>
+								<li>Supporting finance, healthcare, government, and telecom workloads</li>
+							</ul>
+							<h3 class="h4-5 text-gradient">
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<span>Performance Engineering & Capacity Planning</span>
+							</h3>
+							<p>Avoiding degradation before it happens. <br><b>Includes:</b></p>
+							<ul class="list--simple">
+								<li>Deterministic performance models</li>
+								<li>Load behavior under sustained demand</li>
+								<li>Capacity forecasting</li>
+								<li>Avoiding burst-induced instability</li>
+								<li>Performance testing that reflects production reality</li>
+							</ul>
+							<h3 class="h4-5 text-gradient">
+								<i class="icon icon--sm icon--accent">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+								</i>
+								<span>Operations, Monitoring & Incident Response</span>
+							</h3>
+							<p>How real operations differ from dashboards. <br><b>Explains:</b></p>
+							<ul class="list--simple">
+								<li>Signal vs noise in monitoring</li>
+								<li>Alert fatigue prevention</li>
+								<li>Root cause isolation</li>
+								<li>Incident ownership boundaries</li>
+								<li>Post-incident validation and remediation</li>
+							</ul>
+						</div>
+						<!-- 4 -->
+						<div class="sticky__content-item with-divider" id="a-4">
+							<h2 class="h2">How These Guides Are Written.</h2>
+							<p class="text-semibold mb-25">Each guide follows a consistent framework:</p>
+							<div class="tiles tiles--three tiles--sm-one mb-25">
+								<div class="tile tile--col tile--tall">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<p class="text-semibold">Context & Problem Statement</p>
+								</div>
+								<div class="tile tile--col tile--tall">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<p class="text-semibold">Architectural Assumptions</p>
+								</div>
+								<div class="tile tile--col tile--tall">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<p class="text-semibold">Common Failure Patterns</p>
+								</div>
+								<div class="tile tile--col tile--tall">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<p class="text-semibold">Correct Design & Configuration</p>
+								</div>
+								<div class="tile tile--col tile--tall">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<p class="text-semibold">Operational Considerations</p>
+								</div>
+								<div class="tile tile--col tile--tall">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<p class="text-semibold">Validation & Testing Methods</p>
+								</div>
+								<div class="tile tile--col tile--tall">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<p class="text-semibold">What This Approach Avoids</p>
+								</div>
+							</div>
+							<p>No guide ends with “it depends” without defining what it depends on. </p>
+						</div>
+						<!-- 5 -->
+						<div class="sticky__content-item with-divider" id="a-5">
+							<h2 class="h2">Who These Guides Are For & Who Who Should Not Use These Guides.</h2>
+							<div class="tiles tiles--two tiles--sm-one mb-2">
+								<div class="tile tile--text">
+									<i class="icon icon--sm">
+										<svg viewBox="0 0 32 32">
+											<use xlink:href="img/general/sprite.svg#check-filled" />
+										</svg>
+									</i>
+									<div>
+										<div class="h6">Who These Guides Are For:</div>
+										<ul class="list--simple">
+											<li>Infrastructure engineers</li>
+											<li>Platform and SRE teams</li>
+											<li>Network and security architects</li>
+											<li>Senior DevOps professionals</li>
+											<li>Technical leaders accountable for uptime</li>
+										</ul>
+									</div>
+								</div>
+								<div class="tile tile--text">
+									<i class="icon icon--sm">
+										<svg viewBox="0 0 32 32">
+											<use xlink:href="img/general/sprite.svg#check-light-const" />
+										</svg>
+									</i>
+									<div>
+										<div class="h6">Who Should Not Use These Guides:</div>
+										<ul class="list--simple list--not">
+											<li>Beginners learning basic cloud concepts</li>
+											<li>Non-production environments</li>
+											<li>Teams without operational ownership</li>
+											<li>Feature comparison readers</li>
+										</ul>
+										<p>These documents are intentionally dense and precise.</p>
 									</div>
 								</div>
 							</div>
 						</div>
 						<!-- 6 -->
 						<div class="sticky__content-item with-divider" id="a-6">
-							<h2 class="h2">How to Use These Guides Internally.</h2>
-							<p class="text-semibold">These guides are often used to:</p>
+							<h2 class="h2">How Teams Use These Guides.</h2>
+							<p class="text-semibold">Organizations use these technical guides to:</p>
 							<ul class="list--simple">
-								<li>Support internal architecture decisions</li>
-								<li>Educate non-technical stakeholders</li>
-								<li>Justify infrastructure investments</li>
-								<li>Prepare for audits or board review</li>
-								<li>Align engineering and executive teams</li>
+								<li>Validate architecture designs</li>
+								<li>Train senior engineers</li>
+								<li>Standardize operational practices</li>
+								<li>Prepare for audits and compliance reviews</li>
+								<li>Reduce mean time to recovery (MTTR)</li>
+								<li>Prevent recurring failure patterns</li>
 							</ul>
-							<p>They are intentionally written to be shareable inside organizations.</p>
+							<p>They are often referenced during incidents, not just during planning.</p>
 						</div>
 						<!-- 7 -->
-						<div class="sticky__content-item" id="a-7">
+						<div class="sticky__content-item with-divider" id="a-7">
 							<h2 class="h2">Related Resources.</h2>
 							<ul class="contextual__list contextual__list--sm contextual__list--no-markers mb-2">
 								<li>
 									<a href="#" class="link link--icon">
-										<span>Deep technical implementation</span>
+										<span>Strategic decision frameworks</span>
 										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 									</a>
 								</li>
@@ -432,8 +470,8 @@
 									</a>
 								</li>
 							</ul>
-							<p class="text-semibold">Most infrastructure mistakes are not technical failures. They are decision failures made without full visibility into consequences.</p>
-							<p class="text-semibold">These guides exist to make those consequences explicit — before systems are deployed, budgets committed, or risks accepted.</p>
+							<p class="text-semibold">Most production failures are not caused by missing tools. They are caused by incorrect assumptions carried into production.</p>
+							<p class="text-semibold">These technical guides exist to surface those assumptions — before they turn into outages, incidents, or regulatory failures.</p>
 						</div>
 					</div>
 				</div>
