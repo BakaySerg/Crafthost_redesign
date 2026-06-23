@@ -289,6 +289,9 @@
 			order: 8;
 		}
 	}
+	&--mini-col {
+		flex-direction: column;
+	}
 	&--col {
 		flex-direction: column;
 		gap: em(52);
@@ -384,6 +387,9 @@
 .dark {
 	.tile {
 		border-color: var(--dark-2);
+		&--muted {
+			background-color: rgba(244,244,244,.03);
+		}
 	}
 }
 .modal {

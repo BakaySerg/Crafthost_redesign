@@ -96,7 +96,7 @@ body {
 	}
 	@media (max-width: 500px){
 		padding: 28px 0;
-		& + & {
+		&:not(.with-divider) + & {
 			padding-top: 22px;
 		}
 	}
