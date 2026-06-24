@@ -138,6 +138,13 @@
 	cursor: pointer;
 	outline: none;
 
+	&--inline {
+		display: inline-flex;
+		font-weight: 500;
+		margin-inline: .2em;
+		font-size: inherit;
+	}
+
 	&--icon {
 		gap: 2.2em;
 		svg {
