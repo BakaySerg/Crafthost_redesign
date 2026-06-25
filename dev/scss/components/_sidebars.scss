@@ -23,6 +23,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: .6em;
+		@media (max-width: 1400px){
+			gap: .3em;
+		}
 		@media (max-width: 767px){
 			display: none;
 		}
@@ -68,8 +71,8 @@
 			content: counter(sidebar-counter, decimal-leading-zero) ".";
 			flex-shrink: 0;
 		}
-		@media (max-width: 1200px){
-			font-size: em(18px);
+		@media (max-width: 1400px){
+			font-size: em(17px);
 		}
 	}
 	&__content {
@@ -81,13 +84,13 @@
 			counter-increment: content-counter;
 			& + & {
 				padding-top: 3.6em;
-				@media (max-width: 767px){
+				@media (max-width: 1100px){
 					padding-top: 2.4em;
 				}
 			}
 			&.with-divider {
 				padding-bottom: 3.5em;
-				@media (max-width: 991px){
+				@media (max-width: 1100px){
 					padding-bottom: 2.4em;
 				}
 				&::after {

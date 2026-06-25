@@ -140,6 +140,12 @@
 		margin-top: 1.4em;
 	}
 }
+.mr-2	{
+	margin-right: 1.9em;
+	@media (max-width: 600px){
+		margin-right: 1.4em;
+	}
+}
 
 .action {
 	display: flex;
