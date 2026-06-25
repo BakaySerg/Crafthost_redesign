@@ -167,3 +167,18 @@
 		padding: 15px;
 	}
 }
+.divided {
+	display: flex;
+	gap: 1.6em;
+	flex-wrap: wrap;
+	align-items: center;
+	&>:not(:last-child) {
+		@media (min-width: 1024px){
+			padding-right: 1.6em;
+			border-right: 1px solid var(--dark-1);
+		}
+	}
+	@media (max-width: 600px){
+		gap: 1em;
+	}
+}
