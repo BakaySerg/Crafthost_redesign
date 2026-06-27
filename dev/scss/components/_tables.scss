@@ -198,3 +198,27 @@
 		gap: 1.7em;
 	}
 }
+
+.mini-table {
+	padding: 0.8em 0;
+	border: 1px solid var(--blue);
+	box-shadow: 0 3px 13px rgba(8, 105, 236, 0.2);
+	&__row {
+		display: grid;
+		grid-template-columns: .88fr 1.26fr;
+		gap: 14px;
+	}
+	&__col {
+		padding: 0.9em 1.1em;
+		font-weight: 300;
+		&--definition {
+			font-weight: 400;
+			color: var(--blue)
+		}
+	}
+	&--2 {
+		.mini-table__row {
+			grid-template-columns: .95fr 1.05fr;
+		}
+	}
+}

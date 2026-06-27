@@ -151,10 +151,13 @@
 		padding: 0;
 	}
 	&--with-icon {
-		gap: .4em;
+		gap: .5em;
 		svg {
 			color: var(--blue);
 			flex-shrink: 0;
+		}
+		&:hover svg {
+			transform: none !important;
 		}
 	}
 	&--icon {
