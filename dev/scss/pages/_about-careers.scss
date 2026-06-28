@@ -96,6 +96,23 @@
 			color: var(--white);
 		}
 	}
+	&--link {
+		cursor: pointer;
+		transition: background-color .3s, color .3s;
+		.icon--rotated {
+			transition: transform .3s;
+		}
+		&:hover {
+			background-color: var(--blue);
+			color: var(--white);
+			.link,.price {
+				color: var(--white);
+			}
+			.icon--rotated {
+				transform: rotate(-90deg);
+			}
+		}
+	}
 }
 
 .dark {
