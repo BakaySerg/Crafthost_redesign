@@ -115,7 +115,7 @@
 			.h2 {
 				margin-bottom: 0.8em;
 			}
-			.h4 {
+			& > .h4 {
 				margin-bottom: 1.16em;
 				@media (min-width: 1400px){
 					font-size: em(32px);

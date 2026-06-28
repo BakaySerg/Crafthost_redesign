@@ -188,6 +188,12 @@
 	&--wrap {
 		flex-wrap: wrap;
 	}
+	&--text {
+		gap: 1.1em;
+		@media (max-width: 600px){
+			gap: 0.85em;
+		}
+	}
 }
 .is-fullwidth {
 	width: 100%;
