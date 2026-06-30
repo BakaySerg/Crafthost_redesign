@@ -28,13 +28,16 @@
 		position: absolute;
 		transform: translate(-50%, -50%);
 		cursor: pointer;
-		transition: .25s;
-		background-color: var(--light-blue);
-		color: var(--dark-2);
-		padding: 1px 8px;
-		font-size: em(16);
-		text-align: center;
-		z-index: 1;
+		span {
+			background-color: var(--light-blue);
+			color: var(--dark-2);
+			padding: 1px 8px;
+			font-size: em(16);
+			text-align: center;
+			z-index: 1;
+			transition: .25s;
+			opacity: 0;
+		}
 		&:not(.map__pin--active):after {
 			content: "";
 			position: absolute;
@@ -48,8 +51,8 @@
 			border-radius: 50%;
 			transition: opacity .3s;
 			z-index: -1;
-			animation: pulse 1s infinite;
-			opacity: 0;
+			animation: pulse 1.2s infinite;
+			// opacity: 0;
 		}
 		@media (max-width: 600px){
 			font-size: em(15);
@@ -58,9 +61,9 @@
 		}
 		&:hover,
 		&--active {
-			background-color: var(--blue);
-			color: var(--white);
-			&:after {
+			// background-color: var(--blue);
+			// color: var(--white);
+			span {
 				opacity: 1;
 			}
 		}
