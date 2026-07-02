@@ -170,13 +170,21 @@
 .divided {
 	display: flex;
 	gap: 1.6em;
-	flex-wrap: wrap;
-	align-items: center;
+	align-items: flex-start;
+	padding-top: 0.3em;
 	&>:not(:last-child) {
+		flex-shrink: 0;
 		@media (min-width: 1024px){
 			padding-right: 1.6em;
 			border-right: 1px solid var(--dark-1);
 		}
+	}
+	@media (min-width: 1024px){
+		padding-top: .6em;
+	}
+	@media (max-width: 1023px){
+		flex-wrap: wrap;
+		gap: 1.4em;
 	}
 	@media (max-width: 600px){
 		gap: 1em;
