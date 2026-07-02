@@ -145,10 +145,12 @@
 	&--inline {
 		display: inline-flex;
 		font-weight: 500;
-		margin-inline: .2em;
 		margin-block: 0;
 		font-size: inherit;
 		padding: 0;
+		&:not(:first-child) {
+			margin-inline: .2em;
+		}
 	}
 	&--with-icon {
 		gap: .6em;
