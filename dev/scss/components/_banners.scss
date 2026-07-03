@@ -173,10 +173,19 @@
 	align-items: flex-start;
 	padding-top: 0.3em;
 	&>:not(:last-child) {
-		flex-shrink: 0;
 		@media (min-width: 1024px){
+			flex-shrink: .03;
 			padding-right: 1.6em;
-			border-right: 1px solid var(--dark-1);
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				border-right: 1px solid var(--dark-1);
+				height: 1.7em;
+			}
 		}
 	}
 	@media (min-width: 1024px){
