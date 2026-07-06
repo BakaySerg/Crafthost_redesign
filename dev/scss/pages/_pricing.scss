@@ -87,12 +87,23 @@
 		font-family: inherit;
 		letter-spacing: normal;
 	}
+	&--xs {
+		font-size: 18px;
+		font-family: inherit;
+		letter-spacing: normal;
+	}
 	@media (max-width: 1200px){
 		font-size: 26px;
 		&--sm {
 			font-size: 19px;
 		}
+		&--xs {
+			font-size: 16px;
+		}
 	}
+}
+li > .price {
+	margin-inline: 0;
 }
 .price-row {
 	width: 100%;

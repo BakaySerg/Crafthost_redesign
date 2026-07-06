@@ -153,6 +153,8 @@
 			height: .7em;
 			margin-top: .33em;
 			flex-shrink: 0;
+			align-self: center;
+			margin-bottom: 0.2em;
 		}
 		@media (max-width: 600px){
 			gap: 1em;
