@@ -262,6 +262,11 @@
 			grid-template-columns: 1fr;
 		}
 	}
+	&--sm-two {
+		@media (max-width: 600px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 }
 .tile {
 	display: flex;
