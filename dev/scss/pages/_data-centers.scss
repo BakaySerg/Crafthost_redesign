@@ -63,73 +63,75 @@
 		&--active {
 			// background-color: var(--blue);
 			// color: var(--white);
+			z-index: 1;
 			span {
 				opacity: 1;
 			}
 		}
-		// uk
+		/*uk*/
 		&--1 {
-			left: 40%;
+			left: 46%;
 			top: 16%;
 			@media (max-width: 600px){
 				top: 12%;
 			}
 		}
-		// finland
+		/*finland*/
 		&--2 {
-			left: 58%;
-			top: 10%;
-			@media (max-width: 600px){
-				left: 59%;
-			}
+			left: 54%;
+			top: 13%;
 		}
-		// canada
+		/*canada*/
 		&--3 {
 			left: 25%;
 			top: 19%;
 			@media (max-width: 600px){
-				top: 20%;
-				left: 28%;
+				top: 15%;
+				left: 30%;
 			}
 		}
-		// germany
+		/*germany*/
 		&--4 {
-			left: 43%;
+			left: 48%;
 			top: 26%;
 			&::after {
 				left: 70%;
 			}
 			@media (max-width: 600px){
-				left: 41%;
+				left: 49%;
 			}
 		}
-		// poland
+		/*poland*/
 		&--5 {
-			left: 55%;
+			left: 53%;
 			top: 27%;
 		}
-		// usa
+		/*usa*/
 		&--6 {
 			left: 25%;
 			top: 36%;
+			@media (max-width: 600px){
+				left: 28%;
+				top: 29%;
+			}
 		}
-		// france
+		/*france*/
 		&--7 {
-			left: 42%;
-			top: 36%;
+			left: 45%;
+			top: 34%;
 			&::after {
 				left: 70%;
 			}
 		}
-		// italy
+		/*italy*/
 		&--8 {
 			left: 51%;
-			top: 38%;
+			top: 36%;
 			@media (max-width: 600px){
 				left: 53%;
 			}
 		}
-		// Morocco
+		/*Morocco*/
 		&--9 {
 			left: 40%;
 			top: 49%;
@@ -137,10 +139,10 @@
 				left: 70%;
 			}
 			@media (max-width: 600px){
-				left: 38%;
+				left: 43%;
 			}
 		}
-		// UAE
+		/*UAE*/
 		&--10 {
 			right: 15%;
 			bottom: 45%;
@@ -153,17 +155,17 @@
 				bottom: 43%;
 			}
 		}
-		// Singapore
+		/*Singapore*/
 		&--11 {
 			right: 10%;
 			bottom: 28%;
 		}
-		// S.Africa
+		/*S.Africa*/
 		&--12 {
 			left: 54%;
 			bottom: 13%;
 		}
-		// Australia
+		/*Australia*/
 		&--13{
 			right: -7%;
 			bottom: 10%;

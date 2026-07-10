@@ -151,52 +151,59 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	// ── Custom form select (popover) ─────────────────────────────────────────
+	// ── Custom form select ─────────────────────────────────────────
 
-	document.querySelectorAll(".cstm-select__popover").forEach((popover) => {
-		const trigger = document.querySelector(`[popovertarget="${popover.id}"]`);
-		const hidden = trigger?.nextElementSibling;
-		const textEl = trigger?.querySelector(".cstm-select__trigger-text");
+	document.querySelectorAll(".cstm-select").forEach((select) => {
+		const trigger = select.querySelector(".cstm-select__trigger");
+		const dropdown = select.querySelector(".cstm-select__dropdown");
+		const hidden = select.querySelector('input[type="hidden"]');
+		const text = select.querySelector(".cstm-select__trigger-text");
+		const options = select.querySelectorAll(".cstm-select__option");
+		const isFlag = !!select.dataset.flag;
 
-		if (!trigger || !hidden || !textEl) return;
+		if (!trigger || !dropdown || !hidden || !text) return;
 
-		const inDialog = !!popover.closest("dialog");
+		trigger.addEventListener("click", (e) => {
+			e.stopPropagation();
 
-		if (inDialog) {
-			// popovertarget is blocked inside showModal() — open manually
-			trigger.removeAttribute("popovertarget");
-			trigger.addEventListener("click", () => popover.togglePopover());
-			document.body.appendChild(popover);
-		}
+			const isOpen = select.classList.contains("is-open");
 
-		popover.addEventListener("toggle", (e) => {
-			const isOpen = e.newState === "open";
-			trigger.setAttribute("aria-expanded", isOpen);
-
-			if (inDialog && isOpen) {
-				const rect = trigger.getBoundingClientRect();
-				popover.style.top = rect.bottom + "px";
-				popover.style.left = rect.left + "px";
-				popover.style.minWidth = rect.width + "px";
-			}
-		});
-
-		document.addEventListener("pointerdown", (e) => {
-			const option = e.target.closest(".cstm-select__option");
-			if (!option || !popover.contains(option)) return;
-
-			e.preventDefault();
-
-			hidden.value = option.dataset.value;
-			textEl.textContent = option.textContent.trim();
-			textEl.classList.remove("placeholder");
-
-			popover.querySelectorAll(".cstm-select__option").forEach((o) => {
-				o.setAttribute("aria-selected", String(o === option));
+			document.querySelectorAll(".cstm-select.is-open").forEach((s) => {
+				s.classList.remove("is-open");
 			});
 
-			popover.hidePopover();
-			hidden.dispatchEvent(new Event("change", { bubbles: true }));
+			if (!isOpen) select.classList.add("is-open");
+
+			trigger.setAttribute("aria-expanded", !isOpen);
+		});
+
+		options.forEach((option) => {
+			option.addEventListener("click", () => {
+				const value = option.dataset.value;
+
+				if (isFlag) {
+					const flag = option.querySelector(".iti__flag")?.outerHTML ?? "";
+					text.innerHTML = flag + option.textContent.trim();
+				} else {
+					text.textContent = option.textContent.trim();
+				}
+
+				text.classList.remove("placeholder");
+				hidden.value = value;
+
+				options.forEach((o) => o.setAttribute("aria-selected", String(o === option)));
+
+				select.classList.remove("is-open");
+				trigger.setAttribute("aria-expanded", "false");
+				hidden.dispatchEvent(new Event("change", { bubbles: true }));
+			});
+		});
+	});
+
+	document.addEventListener("click", () => {
+		document.querySelectorAll(".cstm-select.is-open").forEach((select) => {
+			select.classList.remove("is-open");
+			select.querySelector(".cstm-select__trigger")?.setAttribute("aria-expanded", "false");
 		});
 	});
 
@@ -365,7 +372,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-		// ── data-link ────────────────────────────────────────────────────────
+	// ── data-link ────────────────────────────────────────────────────────
 
 	const tempLink = function () {
 		document.querySelectorAll("[data-link]").forEach((el) => {
@@ -377,31 +384,31 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 	tempLink();
 
-				// ── Sticky sidebar active link ────────────────────────────────
+	// ── Sticky sidebar active link ────────────────────────────────
 
-				const sidebarLinks = document.querySelectorAll(".sticky__link");
+	const sidebarLinks = document.querySelectorAll(".sticky__link");
 
-				if (sidebarLinks.length) {
-					const sections = [...sidebarLinks].map((link) =>
-						document.querySelector(link.getAttribute("href"))
-					).filter(Boolean);
+	if (sidebarLinks.length) {
+		const sections = [...sidebarLinks].map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
 
-					const observer = new IntersectionObserver((entries) => {
-						entries.forEach((entry) => {
-							if (entry.isIntersecting) {
-								sidebarLinks.forEach((link) => link.classList.remove("is-active"));
-								const active = document.querySelector(`.sticky__link[href="#${entry.target.id}"]`);
-								active?.classList.add("is-active");
-							}
-						});
-					}, {
-						rootMargin: "-20% 0px -80% 0px",
-						threshold: 0,
-					});
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						sidebarLinks.forEach((link) => link.classList.remove("is-active"));
+						const active = document.querySelector(`.sticky__link[href="#${entry.target.id}"]`);
+						active?.classList.add("is-active");
+					}
+				});
+			},
+			{
+				rootMargin: "-20% 0px -80% 0px",
+				threshold: 0,
+			},
+		);
 
-					sections.forEach((section) => observer.observe(section));
-				}
-
+		sections.forEach((section) => observer.observe(section));
+	}
 
 	// ── Copyright year ───────────────────────────────────────────────────────
 
