@@ -357,7 +357,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	// ── Modals ───────────────────────────────────────────────────────────────
 
 	document.querySelectorAll("[data-modal-open]").forEach((btn) => {
-		btn.addEventListener("click", () => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
 			document.getElementById(btn.getAttribute("data-modal-open"))?.showModal();
 		});
 	});
