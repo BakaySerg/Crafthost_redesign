@@ -4,7 +4,7 @@
 	position: relative;
 	user-select: none;
 	&--sm {
-		width: 40px;
+		width: 50px;
 	}
 	&--full {
 		width: 100%;
@@ -28,17 +28,18 @@
 }
 .select__current {
 	font-size: 15px;
-  min-width: 3ch;
+	min-width: 3ch;
+	padding: 0.3em 0;
 }
 .select__body {
 	border-top: 0;
 	position: absolute;
-	left: 0;
+	left: -.6em;
 	right: 0;
 	bottom: 100%;
 	display: none;
 	overflow: hidden;
-	min-width: 5ch;
+	min-width: 5.5ch;
 }
 .select.is-active .select__body {
 	display: flex;

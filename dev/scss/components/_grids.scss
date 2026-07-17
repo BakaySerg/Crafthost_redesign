@@ -19,6 +19,9 @@
 			}
 		}
 	}
+	&--to-top {
+		align-items: start;
+	}
 	&--special {
 		@media (min-width: 1024px){
 			gap: 16px 32px;

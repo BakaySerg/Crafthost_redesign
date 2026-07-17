@@ -56,8 +56,12 @@
 	&--filled {
 		background-color: var(--blue);
 		color: var(--white);
+		// &:hover {
+		// 	background-color: color-mix(in srgb, var(--blue), var(--white) 10%);
+		// }
 		&:hover {
-			background-color: color-mix(in srgb, var(--blue), var(--white) 10%);
+			background-color: var(--white);
+			color: var(--blue);
 		}
 		&:active {
 			color: var(--white);

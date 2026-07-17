@@ -207,3 +207,9 @@
 		display: block;
 	}
 }
+.sm-visible {
+	display: none;
+	@media (max-width: 1023px){
+		display: block;
+	}
+}
