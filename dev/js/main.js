@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			breakpoints: {
 				320: { slidesPerView: 1.16, spaceBetween: sp },
 				700: { slidesPerView: 2.3, spaceBetween: sp },
-				1100: { slidesPerView: 3.5, spaceBetween: sp },
+				1100: { slidesPerView: 4, spaceBetween: sp },
 				1300: {
 					slidesPerView: 4,
 					...(rowsMd > 1 && { autoHeight: false, grid: { rows: rowsMd, fill: "row" } }),
