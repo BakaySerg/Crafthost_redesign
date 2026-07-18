@@ -161,6 +161,9 @@
 	flex-wrap: wrap;
 	gap: 20px;
 	padding-top: 2.9em;
+	&.pt-1 {
+		padding-top: 1.2em;
+	}
 	@media (max-width: 991px){
 		padding-top: 2.7em;
 	}
