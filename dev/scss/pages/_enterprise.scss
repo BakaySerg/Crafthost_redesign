@@ -167,6 +167,21 @@
 			gap: 0.5em;
 		}
 	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.8em;
+		.icon--sm {
+			margin-left: 0.15em;
+		}
+		p:not([class]) {
+			margin-bottom: 0 !important;
+		}
+		.is-flex {
+			gap: 1em;
+		}
+	}
 }
 .step {
 	background-color: var(--light-blue);
