@@ -141,6 +141,7 @@
 	transition: .3s;
 	cursor: pointer;
 	outline: none;
+	user-select: none;
 
 	&--white {
 		color: var(--white);

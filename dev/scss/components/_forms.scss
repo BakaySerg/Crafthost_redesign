@@ -262,7 +262,7 @@
 }
 .iti__selected-dial-code {
 	margin-left: .7em !important;
-	font-size: .95em;
+	font-size: em(16);
 }
 .iti__arrow {
 	opacity: 0.5;
@@ -270,6 +270,9 @@
 }
 .iti__search-icon {
 	opacity: 0.5;
+}
+.iti__tel-input {
+	padding-top: 13px;
 }
 .iti__search-input {
 	color: var(--blue);

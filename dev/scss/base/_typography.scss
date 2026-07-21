@@ -167,6 +167,9 @@
 .text-center {
 	text-align: center;
 }
+.text-right {
+	text-align: right;
+}
 .text-gradient {
 	background-image: var(--gradient-blue);
 	background-clip: text;
@@ -216,7 +219,7 @@
 	}
 }
 .text-remark {
-	font-style: italic;
+	font-style: oblique;
 	font-weight: 300;
 	font-size: em(14);
 	opacity: 0.75;
@@ -337,4 +340,16 @@
 	@media (min-width: 1300px){
 		gap: 27px 44px;
 	}
+}
+.text-error {
+	flex-grow: 1;
+	font-size: 14px;
+	color: var(--red);
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	padding: 8px 24px;
+	line-height: 1.2;
+	border: 1px solid;
+	border-left-width: 3px;
 }

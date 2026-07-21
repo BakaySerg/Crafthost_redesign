@@ -88,7 +88,6 @@
 	&__text{
 		margin-right: auto;
 		@media (max-width: 1023px){
-			max-width: calc(100% - 130px);
 			margin-right: 0;
 			font-size: em(17);
 		}
@@ -97,7 +96,7 @@
 		}
 	}
 	&:not(:has(.cta__pict)) {
-		.cta__text {
+		.cta__text:not(.limited) {
 			max-width: 100%;
 		}
 	}
@@ -107,6 +106,9 @@
 		flex-shrink: 0;
 		@media (max-width: 1023px){
 			padding: 19px 16px;
+			& + .cta__text {
+				max-width: calc(100% - 130px);
+			}
 		}
 	}
 }

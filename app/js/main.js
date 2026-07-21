@@ -337,19 +337,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	document.querySelectorAll("[data-trigger-tab]").forEach((trigger) => {
 		trigger.addEventListener("click", function () {
-			const comingTab = document.getElementById(this.getAttribute("data-trigger-tab"));
+			const tabId = this.getAttribute("data-trigger-tab");
+			const comingTab = document.getElementById(tabId);
 			if (!comingTab) return;
 
+			// Switch tab content
 			comingTab.closest(".tabs-content")?.querySelector('[data-tab="active"]')?.setAttribute("data-tab", "hidden");
-
 			comingTab.setAttribute("data-tab", "active");
 
-			const tabsBlock = this.closest(".tabs");
+			// Switch active tab in .tabs nav — find by matching data-trigger-tab value
+			const tabsBlock = document.querySelector(`.tabs:has([data-trigger-tab="${tabId}"])`);
 			if (tabsBlock) {
 				tabsBlock.querySelectorAll("[data-trigger-tab]").forEach((t) => {
 					t.closest(".tab")?.classList.remove("active");
 				});
-				this.closest(".tab")?.classList.add("active");
+				tabsBlock.querySelector(`[data-trigger-tab="${tabId}"]`)?.closest(".tab")?.classList.add("active");
 			}
 		});
 	});
