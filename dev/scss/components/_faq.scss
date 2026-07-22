@@ -149,6 +149,11 @@
 			}
 		}
 	}
+	.link--sm {
+		svg {
+			transform: scaleY(-1)!important;
+		}
+	}
 }
 .dark {
 	.faq {

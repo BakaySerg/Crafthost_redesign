@@ -419,6 +419,7 @@
 				</div>
 			</section>
 
+			<!-- 1 (modal-contact-crafthost) -->
 			<dialog id="modal-1" class="modal modal--md">
 				<div class="modal__wrapper">
 					<div class="container modal__container modal__container--lg">
@@ -457,7 +458,7 @@
 								</div>
 								<div class="form__group">
 									<label class="form__label" for="email_1">Business Email *</label>
-									<input class="form__input" type="email" id="email_1" name="email" placeholder="name@company.com">
+									<input class="form__input" type="email" id="email_1" name="email_1" placeholder="name@company.com">
 								</div>
 								<!-- phone-input -->
 								<div class="form__group">
@@ -466,7 +467,7 @@
 								</div>
 								<div class="form__group">
 									<label class="form__label" for="company_1">Company *</label>
-									<input class="form__input" type="text" id="company_1" name="f_name" placeholder="Your Company">
+									<input class="form__input" type="text" id="company_1" name="company_1" placeholder="Your Company">
 								</div>
 							</div>
 							<div class="form__group mb-15">
@@ -500,7 +501,7 @@
 				</div>
 			</dialog>
 
-			<!-- 2 -->
+			<!-- 2 (quote request)-->
 			<dialog id="modal-2" class="modal modal--md">
 				<div class="modal__wrapper">
 					<div class="container modal__container modal__container--lg">
@@ -519,7 +520,7 @@
 											<span class="cstm-select__trigger-text placeholder">Architecture review</span>
 											<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
 										</button>
-										<input type="hidden" name="type_request">
+										<input type="hidden" name="type_request_2">
 
 										<div class="cstm-select__dropdown">
 											<div class="cstm-select__option" data-value="first">Sales</div>
@@ -537,7 +538,7 @@
 											<span class="cstm-select__trigger-text placeholder">Standard Dedicated Servers</span>
 											<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
 										</button>
-										<input type="hidden" name="type_request">
+										<input type="hidden" name="service_request">
 
 										<div class="cstm-select__dropdown">
 											<div class="cstm-select__option" data-value="1">Standard Cloud</div>
@@ -567,7 +568,7 @@
 											<span class="cstm-select__trigger-text placeholder">Within 7 days</span>
 											<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
 										</button>
-										<input type="hidden" name="type_request">
+										<input type="hidden" name="timeline">
 
 										<div class="cstm-select__dropdown">
 											<div class="cstm-select__option" data-value="first">Urgent: within 24 hours</div>
@@ -586,7 +587,7 @@
 											<span class="cstm-select__trigger-text placeholder">North America</span>
 											<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
 										</button>
-										<input type="hidden" name="type_request">
+										<input type="hidden" name="region">
 
 										<div class="cstm-select__dropdown">
 											<div class="cstm-select__option" data-value="first">Europe</div>
@@ -609,7 +610,7 @@
 											<span class="cstm-select__trigger-text placeholder">€2,000–€5,000 / month</span>
 											<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
 										</button>
-										<input type="hidden" name="type_request">
+										<input type="hidden" name="estimated_budget">
 
 										<div class="cstm-select__dropdown">
 											<div class="cstm-select__option" data-value="first">Up to €2,000 / month</div>
@@ -660,7 +661,6 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="opt__row pt-1 mb-25">
 								<label class="checkbox__trigger">
 									<input id="opt-agree_2" class="checkbox" type="checkbox" name="opt-agree_2" value="---">
@@ -671,8 +671,99 @@
 								</div>
 							</div>
 							<div class="is-flex ai-center">
-								<button class="btn btn--lg btn--filled" data-link="thanks-contact.html">
+								<button class="btn btn--lg btn--filled" data-link="thanks-quote-request.html">
 									<span>Submit Quote Request</span>
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+								</button>
+								<div class="text-error">
+									<i class="icon icon--xs">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#warning"/></svg>
+									</i>
+									<p>We could not submit your request. Please check your connection and try again.</p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</dialog>
+
+			<!-- 3 (security) -->
+			<dialog id="modal-3" class="modal modal--md">
+				<div class="modal__wrapper">
+					<div class="container modal__container modal__container--lg">
+						<button class="btn modal__close" data-modal-close>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#close"/></svg>
+						</button>
+						<h3 class="h3 text-center mb-03">Security, Compliance & Partnerships.</h3>
+						<p class="subtitle text-center mb-15">Use this form for security, compliance, privacy, due diligence, partnership, integration, or strategic business enquiries.</p>
+						<form action="#">
+							<div class="grid-md-2 mb-2">
+								<div class="form__group">
+									<div class="form__label">Request Type *</div>
+									<div class="cstm-select">
+										<button class="cstm-select__trigger" type="button" aria-expanded="false">
+											<span class="cstm-select__trigger-text placeholder">Compliance request</span>
+											<svg class="arrow" viewBox="0 0 32 32">
+												<use xlink:href="img/general/sprite.svg#arrow" />
+											</svg>
+										</button>
+										<input type="hidden" name="type_request_3">
+
+										<div class="cstm-select__dropdown">
+											<div class="cstm-select__option" data-value="1">Security enquiry</div>
+											<div class="cstm-select__option" data-value="2">Compliance request</div>
+											<div class="cstm-select__option" data-value="3">GDPR or privacy request</div>
+											<div class="cstm-select__option" data-value="4">Data Processing Agreement</div>
+											<div class="cstm-select__option" data-value="5">Vendor due diligence</div>
+											<div class="cstm-select__option" data-value="6">Audit documentation</div>
+											<div class="cstm-select__option" data-value="7">Security questionnaire</div>
+											<div class="cstm-select__option" data-value="8">Responsible disclosure</div>
+											<div class="cstm-select__option" data-value="9">Technology partnership</div>
+											<div class="cstm-select__option" data-value="10">Infrastructure partnership</div>
+											<div class="cstm-select__option" data-value="11">Software integration</div>
+											<div class="cstm-select__option" data-value="12">Strategic alliance</div>
+											<div class="cstm-select__option" data-value="13">Agency cooperation</div>
+											<div class="cstm-select__option" data-value="14">Consultant cooperation</div>
+											<div class="cstm-select__option" data-value="15">Referral cooperation</div>
+											<div class="cstm-select__option" data-value="16">Corporate or media enquiry</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__group">
+									<label class="form__label" for="f_name_3">Full Name *</label>
+									<input class="form__input" type="text" id="f_name_3" name="f_name_3" placeholder="Full Name">
+								</div>
+								<div class="form__group">
+									<label class="form__label" for="email_3">Business Email *</label>
+									<input class="form__input" type="email" id="email_3" name="email_3" placeholder="name@company.com">
+								</div>
+								<!-- phone-input -->
+								<div class="form__group">
+									<label class="form__label" for="phone_3">Phone Number *</label>
+									<input class="form__input" type="tel" id="phone_3" name="phone_3">
+								</div>
+								<div class="form__group">
+									<label class="form__label" for="company_3">Company / Organization *</label>
+									<input class="form__input" type="text" id="company_3" name="company_3" placeholder="Your Company">
+								</div>
+							</div>
+							<div class="form__group mb-15">
+								<div class="form__label">Short Requirements Summary *</div>
+								<textarea class="form__textarea" name="short_description" placeholder="Briefly describe what you need, current issue, workload, migration need, compliance requirement, or expected outcome."></textarea>
+								<div class="text-remark text-remark--important text-right text-small mt--05">0 / 800 characters</div>
+							</div>
+							<div class="opt__row pt-1 mb-25">
+								<label class="checkbox__trigger">
+									<input id="opt-agree_3" class="checkbox" type="checkbox" name="opt-agree_3" value="---">
+									<i class="checkbox__switch"></i>
+								</label>
+								<div>
+									<label class="checkbox__descr" for="opt-agree_3">I confirm that I am authorized to submit this request and agree that Crafthost may process my information in accordance with the <a class="link link--inline" target="_blank" href="legal-and-policy-privacy-policy.html">Privacy Policy</a>.</label>
+								</div>
+							</div>
+							<div class="is-flex ai-center">
+								<button class="btn btn--lg btn--filled" data-link="thanks-security.html">
+									<span>Submit Security Request</span>
 									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 								</button>
 								<div class="text-error">
