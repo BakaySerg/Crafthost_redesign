@@ -33,9 +33,7 @@
 							<li class="menu__item">
 								<div class="sub-menu">
 									<span class="menu__link" data-href="solutions.html">Solutions</span>
-									<svg class="arrow" viewBox="0 0 32 32">
-										<use xlink:href="img/general/sprite.svg#arrow" />
-									</svg>
+									<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
 									<div class="sub-menu__dialog">
 										<div class="container">
 											<div class="sub-menu__headline">
@@ -66,9 +64,7 @@
 							<li class="menu__item">
 								<div class="sub-menu">
 									<span class="menu__link" data-href="industries.html">Industries</span>
-									<svg class="arrow" viewBox="0 0 32 32">
-										<use xlink:href="img/general/sprite.svg#arrow" />
-									</svg>
+									<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
 									<div class="sub-menu__dialog">
 										<div class="container">
 											<div class="sub-menu__headline">
@@ -97,9 +93,7 @@
 							<li class="menu__item">
 								<div class="sub-menu">
 									<span class="menu__link" data-href="pricing.html">Pricing</span>
-									<svg class="arrow" viewBox="0 0 32 32">
-										<use xlink:href="img/general/sprite.svg#arrow" />
-									</svg>
+									<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
 									<div class="sub-menu__dialog">
 										<div class="container">
 											<div class="sub-menu__headline">
@@ -113,7 +107,7 @@
 												</a>
 											</div>
 											<div class="sub-menu__list">
-												<a href="pricing-managed-vps.html">Managed VPS Pricing</a>
+												<a href="pricing-managed-cloud.html">Managed VPS Pricing</a>
 												<a href="pricing-managed-dedicated-servers.html">Managed Dedicated Servers Pricing</a>
 												<a href="pricing-gpu-servers.html">GPU Servers Pricing</a>
 												<a href="pricing-calculator.html">Calculator</a>
@@ -127,9 +121,7 @@
 							<li class="menu__item">
 								<div class="sub-menu">
 									<span class="menu__link" data-href="resources.html">Resources</span>
-									<svg class="arrow" viewBox="0 0 32 32">
-										<use xlink:href="img/general/sprite.svg#arrow" />
-									</svg>
+									<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
 									<div class="sub-menu__dialog">
 										<div class="container">
 											<div class="sub-menu__headline">
@@ -150,18 +142,25 @@
 							</li>
 							<li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
 						</ul>
-						<div class="menu__search">
-							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#search"/></svg>
-						</div>
+						<form class="menu__search">
+							<button class="menu__search-trigger" type="button" aria-label="Open search">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#search"/></svg>
+							</button>
+							<div class="menu__search-box">
+								<input class="menu__search-input" type="search" placeholder="Search resources & products..." required/>
+								<button class="menu__search-submit" type="submit">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#search"/></svg>
+								</button>
+								<button class="menu__search-close">
+									<svg class="icon icon--close" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#close"/></svg>
+								</button>
+							</div>
+						</form>
 					</nav>
 					<a href="order-service.html" class="btn btn--md btn--outline">Client Portal</a>
 					<button type="button" class="btn btn--menu" aria-label="burger menu">
-						<svg class="icon icon--menu" viewBox="0 0 32 32">
-							<use xlink:href="img/general/sprite.svg#menu-burger" />
-						</svg>
-						<svg class="icon icon--close" viewBox="0 0 32 32">
-							<use xlink:href="img/general/sprite.svg#close" />
-						</svg>
+						<svg class="icon icon--menu" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#menu-burger"/></svg>
+						<svg class="icon icon--close" viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#close"/></svg>
 					</button>
 				</div>
 			</header>
@@ -658,7 +657,7 @@
 							<div class="footer__nav-title" data-collapse-trigger>Pricing</div>
 							<div class="footer__nav-list">
 								<a href="pricing-request-a-quote.html">Request a Quote</a>
-								<a href="pricing-managed-vps.html">Managed VPS Pricing</a>
+								<a href="pricing-managed-cloud.html">Managed VPS Pricing</a>
 								<a href="pricing-managed-dedicated-servers.html">Managed Dedicated Servers Pricing</a>
 								<a href="pricing-gpu-servers.html">GPU Servers Pricing</a>
 								<a href="pricing-calculator.html">Calculator</a>

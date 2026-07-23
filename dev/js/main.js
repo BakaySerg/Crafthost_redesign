@@ -41,19 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const header = document.getElementById("header");
 	const menu = header?.querySelector(".menu");
+	const search = document.querySelector(".menu__search");
+	const searchBox = search.querySelector(".menu__search-box");
 	const subMenus = [...(header?.querySelectorAll(".sub-menu") ?? [])];
 
 	menuTrigger.addEventListener("click", (e) => {
 		e.preventDefault();
-		console.log("before", window.scrollY);
 		header.classList.toggle("header--open");
 		menu?.classList.toggle("menu--open");
 		subMenus.forEach((el) => el.classList.remove("open"));
-		console.log("after toggle", window.scrollY);
-
-		setTimeout(() => {
-			console.log("100ms", window.scrollY);
-		}, 100);
 	});
 
 	subMenus.forEach((el) => {
@@ -84,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				header.classList.remove("is-hidden");
 			} else if (currentScroll > lastScroll) {
 				header.classList.add("is-hidden");
+				searchBox.classList.remove("open");
 			} else {
 				header.classList.remove("is-hidden");
 			}
@@ -102,6 +99,52 @@ document.addEventListener("DOMContentLoaded", () => {
 		el.addEventListener("mouseleave", () => el.closest(".header")?.classList.remove("header--hovered"));
 	});
 
+	// ── Header Search logic───────────────────────────────────────────────────────────
+
+	if (search) {
+		const searchBox = search.querySelector(".menu__search-box");
+		const trigger = search.querySelector(".menu__search-trigger");
+		const close = search.querySelector(".menu__search-close");
+		const input = search.querySelector(".menu__search-input");
+
+		const openSearch = () => {
+			searchBox.classList.add("open");
+			requestAnimationFrame(() => input?.focus());
+		};
+
+		const closeSearch = () => {
+			searchBox.classList.remove("open");
+			input?.blur();
+		};
+
+		trigger?.addEventListener("click", (e) => {
+			e.stopPropagation();
+
+			if (searchBox.classList.contains("open")) {
+				closeSearch();
+			} else {
+				openSearch();
+			}
+		});
+
+		close?.addEventListener("click", (e) => {
+			e.stopPropagation();
+			e.preventDefault();
+			closeSearch();
+		});
+
+		document.addEventListener("click", (e) => {
+			if (!search.contains(e.target)) {
+				closeSearch();
+			}
+		});
+
+		document.addEventListener("keydown", (e) => {
+			if (e.key === "Escape") {
+				closeSearch();
+			}
+		});
+	}
 	// ── Accordions ───────────────────────────────────────────────────────────
 
 	document.querySelectorAll("[data-collapse-trigger]").forEach((trigger) => {
