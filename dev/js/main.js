@@ -34,19 +34,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	setActiveMenuItem();
 
-	// ── Mobile menu ──────────────────────────────────────────────────────────
+	// ── Mobile menu + header-sticky ──────────────────────────────────────────────────────────
 
 	const menuTrigger = document.querySelector(".btn--menu");
 	if (!menuTrigger) return;
 
-	const header = menuTrigger.closest(".header");
+	const header = document.getElementById("header");
 	const menu = header?.querySelector(".menu");
 	const subMenus = [...(header?.querySelectorAll(".sub-menu") ?? [])];
 
-	menuTrigger.addEventListener("click", () => {
+	menuTrigger.addEventListener("click", (e) => {
+		e.preventDefault();
+		console.log("before", window.scrollY);
 		header.classList.toggle("header--open");
 		menu?.classList.toggle("menu--open");
 		subMenus.forEach((el) => el.classList.remove("open"));
+		console.log("after toggle", window.scrollY);
+
+		setTimeout(() => {
+			console.log("100ms", window.scrollY);
+		}, 100);
 	});
 
 	subMenus.forEach((el) => {
@@ -63,6 +70,32 @@ document.addEventListener("DOMContentLoaded", () => {
 			menu?.classList.remove("menu--open");
 		}
 	});
+	let lastScroll = window.scrollY;
+	const delta = 8;
+
+	window.addEventListener(
+		"scroll",
+		() => {
+			const currentScroll = window.scrollY;
+
+			if (Math.abs(currentScroll - lastScroll) < delta) return;
+
+			if (currentScroll <= 0) {
+				header.classList.remove("is-hidden");
+			} else if (currentScroll > lastScroll) {
+				header.classList.add("is-hidden");
+			} else {
+				header.classList.remove("is-hidden");
+			}
+			if (document.querySelector(".sub-menu:hover")) {
+				lastScroll = currentScroll;
+				return;
+			}
+
+			lastScroll = currentScroll;
+		},
+		{ passive: true },
+	);
 
 	document.querySelectorAll(".sub-menu").forEach((el) => {
 		el.addEventListener("mouseenter", () => el.closest(".header")?.classList.add("header--hovered"));

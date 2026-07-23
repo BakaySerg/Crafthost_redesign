@@ -352,4 +352,9 @@
 	line-height: 1.2;
 	border: 1px solid;
 	border-left-width: 3px;
+	@media (max-width: 800px){
+		font-size: 13px;
+		padding: 6px 15px;
+		gap: 0.8em;
+	}
 }

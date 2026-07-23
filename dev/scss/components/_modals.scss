@@ -101,6 +101,9 @@ dialog[open] {
 				}
 				font-size: em(50);
 			}
+			@media (max-width: 600px){
+				font-size: 1.8em;
+			}
 		}
 	}
 	&--sm {

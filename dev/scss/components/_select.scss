@@ -113,6 +113,8 @@
 		}
 		@media (max-width: 600px){
 			height: 48px;
+			font-size: 1em;
+			padding: 10px 14px;
 		}
 	}
 
@@ -157,7 +159,7 @@
 		transform .18s ease,
 		visibility .18s ease;
 		&::-webkit-scrollbar {
-		width: 5px;
+			width: 5px;
 			@media (max-width: 991px){
 				width: 4px;
 			}
@@ -207,6 +209,9 @@
 				background-position: 5% center;
 				background-size: .7em;
 			}
+		}
+		@media (max-width: 600px){
+			font-size: 1em;
 		}
 	}
 }

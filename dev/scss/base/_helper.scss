@@ -193,7 +193,8 @@
 	display: flex;
 	gap: 1.77em;
 	@media (max-width: 600px){
-		gap: 1.2em;
+		gap: 1.1em;
+		flex-wrap: wrap;
 	}
 	&--wrap {
 		flex-wrap: wrap;
@@ -206,6 +207,11 @@
 	}
 	&.ai-center {
 		align-items: center;
+	}
+}
+.sm-order-first {
+	@media (max-width: 600px){
+		order: -1;
 	}
 }
 .is-fullwidth {
