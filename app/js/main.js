@@ -60,8 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	document.body.style.cursor = "pointer";
-
 	window.addEventListener("click", (e) => {
 		if (!e.target.closest(".header")) {
 			header.classList.remove("header--open");
