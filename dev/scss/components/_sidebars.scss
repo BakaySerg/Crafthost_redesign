@@ -23,6 +23,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: .6em;
+		@media (min-width: 1200px){
+			top: 70px;
+		}
 		@media (max-width: 1400px){
 			gap: .3em;
 		}
