@@ -42,11 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	const header = document.getElementById("header");
 	const menu = header?.querySelector(".menu");
 	const search = document.querySelector(".menu__search");
-	const searchBox = search.querySelector(".menu__search-box");
+	const searchBox = search?.querySelector(".menu__search-box");
 	const subMenus = [...(header?.querySelectorAll(".sub-menu") ?? [])];
 
 	menuTrigger.addEventListener("click", (e) => {
-		e.preventDefault();
+		e.stopPropagation();
 		header.classList.toggle("header--open");
 		menu?.classList.toggle("menu--open");
 		subMenus.forEach((el) => el.classList.remove("open"));
@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			el.classList.remove("open");
 		});
 	});
+
+	document.body.style.cursor = "pointer";
 
 	window.addEventListener("click", (e) => {
 		if (!e.target.closest(".header")) {
