@@ -5,12 +5,12 @@
 	z-index: 111;
 	border-bottom: 1px solid var(--light-3);
 	background-color: var(--white);
-	overflow-x: hidden;
 	position: sticky;
 	top: 0;
 	transition: .24s;
-	&.is-hidden {
-		@media (min-width: 1024px) {
+	@media (min-width: 1024px) {
+		overflow-x: clip;
+			&.is-hidden {
 			top: -60px;
 		}
 	}
