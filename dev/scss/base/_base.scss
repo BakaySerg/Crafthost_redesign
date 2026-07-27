@@ -24,8 +24,11 @@ body {
 	@media (max-width: 1299px){
 		font-size: 16px;
 	}
-	&:has(dialog:modal) {
-	overflow: hidden;
+	@media (max-width: 330px){
+		font-size: 15px;
+	}
+	&:has(dialog:modal), &:has(.header--hovered), &:has(.header--open) {
+		overflow-y: hidden;
 	}
 }
 .wrapper {
@@ -33,10 +36,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100svh;
-	&:has(.header--open) {
-		max-height: 100dvh;
-		overflow: hidden;
-	}
 }
 .container {
 	width: 100%;
@@ -93,7 +92,7 @@ body {
 	}
 	@media (max-width: 500px){
 		padding: 28px 0;
-		& + & {
+		&:not(.with-divider) + & {
 			padding-top: 22px;
 		}
 	}

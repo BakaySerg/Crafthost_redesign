@@ -34,16 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	setActiveMenuItem();
 
-	// ── Mobile menu ──────────────────────────────────────────────────────────
+	// ── Mobile menu + header-sticky ──────────────────────────────────────────────────────────
 
 	const menuTrigger = document.querySelector(".btn--menu");
 	if (!menuTrigger) return;
 
-	const header = menuTrigger.closest(".header");
+	const header = document.getElementById("header");
 	const menu = header?.querySelector(".menu");
+	const search = document.querySelector(".menu__search");
+	const searchBox = search?.querySelector(".menu__search-box");
 	const subMenus = [...(header?.querySelectorAll(".sub-menu") ?? [])];
 
-	menuTrigger.addEventListener("click", () => {
+	menuTrigger.addEventListener("click", (e) => {
+		e.stopPropagation();
 		header.classList.toggle("header--open");
 		menu?.classList.toggle("menu--open");
 		subMenus.forEach((el) => el.classList.remove("open"));
@@ -63,12 +66,85 @@ document.addEventListener("DOMContentLoaded", () => {
 			menu?.classList.remove("menu--open");
 		}
 	});
+	let lastScroll = window.scrollY;
+	const delta = 8;
+
+	window.addEventListener(
+		"scroll",
+		() => {
+			const currentScroll = window.scrollY;
+
+			if (Math.abs(currentScroll - lastScroll) < delta) return;
+
+			if (currentScroll <= 0) {
+				header.classList.remove("is-hidden");
+			} else if (currentScroll > lastScroll) {
+				header.classList.add("is-hidden");
+				searchBox.classList.remove("open");
+			} else {
+				header.classList.remove("is-hidden");
+			}
+			if (document.querySelector(".sub-menu:hover")) {
+				lastScroll = currentScroll;
+				return;
+			}
+
+			lastScroll = currentScroll;
+		},
+		{ passive: true },
+	);
 
 	document.querySelectorAll(".sub-menu").forEach((el) => {
 		el.addEventListener("mouseenter", () => el.closest(".header")?.classList.add("header--hovered"));
 		el.addEventListener("mouseleave", () => el.closest(".header")?.classList.remove("header--hovered"));
 	});
 
+	// ── Header Search logic───────────────────────────────────────────────────────────
+
+	if (search) {
+		const searchBox = search.querySelector(".menu__search-box");
+		const trigger = search.querySelector(".menu__search-trigger");
+		const close = search.querySelector(".menu__search-close");
+		const input = search.querySelector(".menu__search-input");
+
+		const openSearch = () => {
+			searchBox.classList.add("open");
+			requestAnimationFrame(() => input?.focus());
+		};
+
+		const closeSearch = () => {
+			searchBox.classList.remove("open");
+			input?.blur();
+		};
+
+		trigger?.addEventListener("click", (e) => {
+			e.stopPropagation();
+
+			if (searchBox.classList.contains("open")) {
+				closeSearch();
+			} else {
+				openSearch();
+			}
+		});
+
+		close?.addEventListener("click", (e) => {
+			e.stopPropagation();
+			e.preventDefault();
+			closeSearch();
+		});
+
+		document.addEventListener("click", (e) => {
+			if (!search.contains(e.target)) {
+				closeSearch();
+			}
+		});
+
+		document.addEventListener("keydown", (e) => {
+			if (e.key === "Escape") {
+				closeSearch();
+			}
+		});
+	}
 	// ── Accordions ───────────────────────────────────────────────────────────
 
 	document.querySelectorAll("[data-collapse-trigger]").forEach((trigger) => {
@@ -209,33 +285,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// ── Sliders ──────────────────────────────────────────────────────────────
 
-	const baseSwiperConfig = {
+	const swiperConfig = (el) => ({
 		draggable: true,
 		grabCursor: true,
 		centeredSlides: false,
 		loop: false,
 		autoHeight: false,
-		scrollbar: {
-			el: ".swiper-scrollbar",
-			draggable: true,
-			hide: false,
-			snapOnRelease: true,
-		},
-	};
+		...(el.querySelector(".swiper-scrollbar") && {
+			scrollbar: {
+				el: el.querySelector(".swiper-scrollbar"),
+				draggable: true,
+				hide: false,
+				snapOnRelease: true,
+			},
+		}),
+	});
 
-	const mobileSliderEl = document.querySelector("[data-slider]");
-	if (mobileSliderEl) {
-		const sp = Number(mobileSliderEl.dataset.spaceBetween) || 0;
-		new Swiper(mobileSliderEl, {
-			...baseSwiperConfig,
+	document.querySelectorAll("[data-slider]").forEach((el) => {
+		const sp = Number(el.dataset.spaceBetween) || 0;
+		const rowsMd = Number(el.dataset.rowMd) || 1;
+
+		new Swiper(el, {
+			...swiperConfig(el),
 			breakpoints: {
 				320: { slidesPerView: 1.16, spaceBetween: sp },
 				700: { slidesPerView: 2.3, spaceBetween: sp },
-				1100: { slidesPerView: 3.5, spaceBetween: sp },
-				1300: { slidesPerView: 4 },
+				1100: { slidesPerView: 4, spaceBetween: sp },
+				1300: {
+					slidesPerView: 4,
+					...(rowsMd > 1 && { autoHeight: false, grid: { rows: rowsMd, fill: "row" } }),
+				},
 			},
 		});
-	}
+	});
 
 	const createSlider = (el) => {
 		const sp = Number(el.dataset.spaceBetween) || 0;
@@ -243,15 +325,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		const autoCustomHeight = el.hasAttribute("data-auto-height");
 
 		new Swiper(el, {
-			...baseSwiperConfig,
+			...swiperConfig(el),
 			breakpoints: {
 				320: { slidesPerView: 1.068, spaceBetween: 16 },
 				768: { slidesPerView: 2.1, spaceBetween: 20 },
-				900: { slidesPerView: 3, spaceBetween: 22 },
+				900: { slidesPerView: 2.4, spaceBetween: 22 },
 				1100: {
 					slidesPerView: 3,
 					spaceBetween: sp,
-					...(rowsMd > 1 ? { autoHeight: false, grid: { rows: rowsMd, fill: "row" } } : { autoHeight: autoCustomHeight }),
+					...(rowsMd > 1 ? { autoHeight: false, grid: { rows: rowsMd, fill: "row" } } : autoCustomHeight ? { autoHeight: true } : {}),
 				},
 			},
 		});
@@ -261,9 +343,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	document.querySelectorAll(".sheet__slider").forEach((el) => {
 		new Swiper(el, {
-			...baseSwiperConfig,
+			...swiperConfig(el),
 			breakpoints: {
-				320: { slidesPerView: 1.08 },
+				320: { slidesPerView: 1.16 },
 				660: { slidesPerView: 2.3 },
 				760: { slidesPerView: 2.7 },
 				1200: { slidesPerView: 3, spaceBetween: 16, grid: { rows: 2, fill: "row" } },
@@ -271,14 +353,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	const institutionSliderEl = document.querySelector(".institution__slider");
-	if (institutionSliderEl) {
-		new Swiper(institutionSliderEl, {
-			...baseSwiperConfig,
+	document.querySelectorAll(".institution__slider").forEach((el) => {
+		const container = el.closest(".container");
+		new Swiper(el, {
+			...swiperConfig(el),
 			spaceBetween: 16,
-			navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+			navigation: {
+				nextEl: container?.querySelector(".swiper-button-next"),
+				prevEl: container?.querySelector(".swiper-button-prev"),
+			},
 			pagination: {
-				el: ".swiper-pagination-fraction",
+				el: container?.querySelector(".swiper-pagination-fraction"),
 				type: "fraction",
 				renderFraction: (cur, tot) => `<span class="${cur}"></span> / <span class="${tot}"></span>`,
 			},
@@ -288,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				900: { slidesPerView: 2 },
 			},
 		});
-	}
+	});
 
 	const sliderOrGridEl = document.querySelector(".slider-or-grid__box");
 	if (sliderOrGridEl) {
@@ -326,27 +411,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// ── Tabs ─────────────────────────────────────────────────────────────────
 
-	document.addEventListener("click", (e) => {
-		const trigger = e.target.closest("[data-trigger-tab]");
-		if (!trigger) return;
+	document.querySelectorAll("[data-trigger-tab]").forEach((trigger) => {
+		trigger.addEventListener("click", function () {
+			const tabId = this.getAttribute("data-trigger-tab");
+			const comingTab = document.getElementById(tabId);
+			if (!comingTab) return;
 
-		const tabId = trigger.dataset.triggerTab;
-		const comingTab = document.getElementById(tabId);
+			// Switch tab content
+			comingTab.closest(".tabs-content")?.querySelector('[data-tab="active"]')?.setAttribute("data-tab", "hidden");
+			comingTab.setAttribute("data-tab", "active");
 
-		if (!comingTab) return;
-
-		const tabsContent = comingTab.closest(".tabs-content");
-		tabsContent?.querySelector('[data-tab="active"]')?.setAttribute("data-tab", "hidden");
-		comingTab.setAttribute("data-tab", "active");
-		const tabsBlock = document.querySelector(`.tabs [data-trigger-tab="${tabId}"]`)?.closest(".tabs");
-
-		if (!tabsBlock) return;
-
-		tabsBlock.querySelectorAll(".tab").forEach((tab) => {
-			tab.classList.remove("active");
+			// Switch active tab in .tabs nav — find by matching data-trigger-tab value
+			const tabsBlock = document.querySelector(`.tabs:has([data-trigger-tab="${tabId}"])`);
+			if (tabsBlock) {
+				tabsBlock.querySelectorAll("[data-trigger-tab]").forEach((t) => {
+					t.closest(".tab")?.classList.remove("active");
+				});
+				tabsBlock.querySelector(`[data-trigger-tab="${tabId}"]`)?.closest(".tab")?.classList.add("active");
+			}
 		});
-
-		tabsBlock.querySelector(`[data-trigger-tab="${tabId}"]`)?.closest(".tab")?.classList.add("active");
 	});
 
 	// ── Modals ───────────────────────────────────────────────────────────────
@@ -359,10 +442,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	document.querySelectorAll("[data-modal-close]").forEach((btn) => {
-		btn.addEventListener("click", (e) => {
-			e.preventDefault();
-			btn.closest("dialog")?.close();
-		});
+		btn.addEventListener("click", () => btn.closest("dialog")?.close());
 	});
 
 	document.querySelectorAll("dialog").forEach((modal) => {
@@ -382,6 +462,32 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	};
 	tempLink();
+
+	// ── Sticky sidebar active link ────────────────────────────────
+
+	const sidebarLinks = document.querySelectorAll(".sticky__link");
+
+	if (sidebarLinks.length) {
+		const sections = [...sidebarLinks].map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						sidebarLinks.forEach((link) => link.classList.remove("is-active"));
+						const active = document.querySelector(`.sticky__link[href="#${entry.target.id}"]`);
+						active?.classList.add("is-active");
+					}
+				});
+			},
+			{
+				rootMargin: "-20% 0px -80% 0px",
+				threshold: 0,
+			},
+		);
+
+		sections.forEach((section) => observer.observe(section));
+	}
 
 	// ── Copyright year ───────────────────────────────────────────────────────
 

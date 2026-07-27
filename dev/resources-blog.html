@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost | Blog</title>
+	@@include('./includes/head.html')
+	<body class="dark">
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<span class="breadcrumbs__item">Resources</span>
+				<span class="breadcrumbs__item">Blog</span>
+			</div>
+			<!-- main -->
+			<main class="intro-with-img">
+				<div class="container">
+					<div class="intro-with-img__content">
+						<h1 class="h1">Crafthost <span class="text-accent">Blog.</span></h1>
+						<p class="text-light">Infrastructure Thinking for Production Systems.</p>
+					</div>
+					<div class="intro-with-img__pict">
+						<img srcset="img/resources/blog/intro-blog.jpg, img/resources/blog/intro-blog-2x.jpg 2x" src="img/resources/blog/intro-blog.jpg" width="640" height="370" alt="servers">
+					</div>
+				</div>
+			</main>
+
+			<section class="section with-divider">
+				<div class="container text-columns text-columns--even">
+					<h2 class="h2">Infrastructure Thinking for Production Systems.</h2>
+					<div class="text-light">
+						<p>The Crafthost Blog is not a news feed, product update channel, or opinion outlet.</p>
+						<p>It is a technical and strategic publication focused on how modern infrastructure behaves under real pressure — operationally, architecturally, and organizationally.</p>
+						<p>Every article exists to help engineering leaders, architects, and decision-makers design, operate, and govern systems that must not fail.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container">
+					<h2 class="h2 h2--md mb-1">What This Blog Covers.</h2>
+					<div class="grid-md-2 grid-md-2--sm-gap">
+						<div class="cell cell--high cell--bordered">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/resources/sprite.svg#sm-1"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Infrastructure Architecture</h3>
+							<p class="mb-05">Deep analysis of:</p>
+							<ul class="list--simple mb-05">
+								<li>Deterministic vs elastic systems</li>
+								<li>Fault domain design and blast-radius control</li>
+								<li>Tier IV and Tier V engineering principles</li>
+								<li>Network topology, capacity planning, and isolation models</li>
+							</ul>
+						</div>
+						<div class="cell cell--high cell--bordered">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/resources/sprite.svg#sm-2"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Availability & Reliability Engineering</h3>
+							<p class="mb-05">Content focused on:</p>
+							<ul class="list--simple mb-05">
+								<li>Why uptime is an architectural outcome, not an SLA</li>
+								<li>Designing for zero-impact maintenance</li>
+								<li>Failure modes rarely discussed in cloud marketing</li>
+								<li>Lessons learned from real production incidents</li>
+							</ul>
+						</div>
+						<div class="cell cell--high cell--bordered">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/resources/sprite.svg#sm-3"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Performance Under Load</h3>
+							<p class="mb-05">Explores:</p>
+							<ul class="list--simple mb-05">
+								<li>Latency consistency vs burst performance</li>
+								<li>Resource contention and oversubscription risks</li>
+								<li>AI, GPU, and data-intensive workload behavior</li>
+								<li>Predictability at scale</li>
+							</ul>
+						</div>
+						<div class="cell cell--high cell--bordered">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/resources/sprite.svg#sm-4"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Security, Compliance & Governance</h3>
+							<p class="mb-05">Practical perspectives on:</p>
+							<ul class="list--simple mb-05">
+								<li>Security enforced by design, not tooling</li>
+								<li>Operational compliance vs checkbox compliance</li>
+								<li>Data residency and sovereignty realities</li>
+								<li>Audit readiness for regulated industries</li>
+							</ul>
+						</div>
+						<div class="cell cell--high cell--bordered">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/resources/sprite.svg#sm-5"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Cloud & Hyperscaler Trade-offs</h3>
+							<p class="mb-05">Balanced, engineering-first analysis of:</p>
+							<ul class="list--simple mb-05">
+								<li>Hyperscale cloud strengths and limitations</li>
+								<li>When elasticity becomes fragility</li>
+								<li>Shared responsibility myths</li>
+								<li>Why some workloads should not run on best-effort platforms</li>
+							</ul>
+						</div>
+						<div class="cell cell--high cell--bordered">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/resources/sprite.svg#sm-6"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Operational Leadership</h3>
+							<p class="mb-05">For CTOs, Heads of Infrastructure, and SRE leads:</p>
+							<ul class="list--simple mb-05">
+								<li>Responsibility demarcation models</li>
+								<li>Vendor accountability vs internal ownership</li>
+								<li>Operating production systems across regions</li>
+								<li>Scaling teams without scaling risk</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container">
+					<h2 class="h2 h2--md mb-1">What This Blog Intentionally Avoids.</h2>
+				</div>
+				<div class="container contextual contextual--vcenter">
+					<div class="contextual__image">
+						<img loading="lazy" srcset="img/resources/blog/context-1.jpg, img/resources/blog/context-1-2x.jpg 2x" src="img/resources/blog/context-1.jpg" width="640" height="370" alt="img">
+					</div>
+					<div class="contextual__content">
+						<ul class="list--checked list--not mb-15">
+							<li>Product announcements</li>
+							<li>Press releases</li>
+							<li>Shallow “top 10” lists</li>
+							<li>Beginner tutorials</li>
+							<li>Trend-chasing content</li>
+						</ul>
+						<p>This blog assumes the reader already understands the basics — and wants clarity where complexity actually matters.</p>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="section pt-1 with-divider">
+				<div class="container">
+					<h2 class="h2 pb-05">How Articles Are Written.</h2>
+					<div class="tiles tiles--gutters mb-25">
+						<div class="tile tile--col tile--tall">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+							</i>
+							<p class="text-semibold">Authored or reviewed by senior infrastructure engineers.</p>
+						</div>
+						<div class="tile tile--col tile--tall">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+							</i>
+							<p class="text-semibold">Grounded in real operational experience.</p>
+						</div>
+						<div class="tile tile--col tile--tall">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+							</i>
+							<p class="text-semibold">Focused on why systems fail, not just how they are built.</p>
+						</div>
+						<div class="tile tile--col tile--tall">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+							</i>
+							<p class="text-semibold">Designed to remain relevant beyond short-term trends.</p>
+						</div>
+					</div>
+				</div>
+				<div class="container pt-25">
+					<div class="cta">
+						<div class="cta__pict">
+							<img srcset="img/home/small-cloud.png, img/home/small-cloud-2x.png 2x" src="img/home/small-cloud.png" width="77" height="64" alt="cloud">
+						</div>
+						<p class="cta__text"><b>No filler. No hype.</b> No artificial urgency.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container text-columns text-columns--bit-reverse-uneven mb-2">
+					<h2 class="h2">Example Topics You’ll Find Here.</h2>
+					<p class="subtitle">Each article is written to stand on its own as a reference, not a marketing asset. </p>
+				</div>
+				<div class="container">
+					<div class="testimonials__slider swiper" data-space-between="20" data-row-md="2">
+						<div class="swiper-wrapper">
+							<div class="testimonials__item cell cell--middle swiper-slide">
+								<p class="h4 text-accent">“Why Elastic Infrastructure Breaks Predictability at Scale.”</p>
+							</div>
+							<div class="testimonials__item cell cell--middle swiper-slide">
+								<p class="h4 text-accent">“Tier IV Certification vs Tier V Engineering: What Actually Matters.”</p>
+							</div>
+							<div class="testimonials__item cell cell--middle swiper-slide">
+								<p class="h4 text-accent">“The Hidden Cost of Oversubscription in Cloud Networks.”</p>
+							</div>
+							<div class="testimonials__item cell cell--middle swiper-slide">
+								<p class="h4 text-accent">“Why “Five Nines” Is a Design Discipline, Not a Promise.”</p>
+							</div>
+							<div class="testimonials__item cell cell--middle swiper-slide">
+								<p class="h4 text-accent">“AI Workloads Do Not Fail Like Traditional Applications.”</p>
+							</div>
+						</div>
+						<div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container grid-md-2">
+					<div class="dark-box dark-box--tall">
+						<h3 class="h2">Who This Blog Is For.</h3>
+						<div>
+							<ul class="list list--checked list--no-border">
+								<li>CTOs and infrastructure leaders</li>
+								<li>Platform and SRE engineers</li>
+								<li>Security and compliance stakeholders</li>
+								<li>Architects designing mission-critical systems</li>
+								<li>Organizations evaluating long-term infrastructure decisions</li>
+							</ul>
+						</div>
+					</div>
+					<div class="dark-box dark-box--tall">
+						<h3 class="h2">Who It Is Not For.</h3>
+						<div>
+							<ul class="list list--checked list--not list--no-border mb-1">
+								<li>Entry-level learners</li>
+								<li>Hobby projects</li>
+								<li>Price-only comparisons</li>
+								<li>“Quick win” seekers</li>
+							</ul>
+							<p>If infrastructure failure is unacceptable, this content is written for you.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section pt-1">
+				<div class="container">
+					<h2 class="h2 mb-1">How to Use This Blog.</h2>
+					<p class="subtitle text-semibold">Most readers use the blog to:</p>
+				</div>
+				<div class="container pt-1">
+					<div class="tiles tiles--three tiles--gutters">
+						<div class="tile tile--col tile--tall">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+							</i>
+							<p class="text-semibold">Validate architectural decisions.</p>
+						</div>
+						<div class="tile tile--col tile--tall">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+							</i>
+							<p class="text-semibold">Educate internal stakeholders.</p>
+						</div>
+						<div class="tile tile--col tile--tall">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+							</i>
+							<p class="text-semibold">Support risk-based infrastructure planning.</p>
+						</div>
+						<div class="tile tile--col tile--tall">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+							</i>
+							<p class="text-semibold">Prepare for audits, migrations, or redesigns.</p>
+						</div>
+						<div class="tile tile--col tile--tall">
+							<i class="icon icon--sm">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+							</i>
+							<p class="text-semibold">Challenge assumptions inherited from hyperscale models.</p>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="action">
+						<a href="#" class="btn btn--lg btn--filled">
+							<span>Browse All Articles</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+						</a>
+						<a href="#" class="btn btn--lg btn--outline">
+							<span>Browse by Topic</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--dark">
+				<div class="container">
+					<h2 class="h2 text-gradient mb-05">Relationship to Other Resources.</h2>
+					<ul class="contextual__list contextual__list--sm contextual__list--no-markers">
+						<li>
+							<a href="#" class="link link--icon">
+								<span>Foundational knowledge</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="link link--icon">
+								<span>Structured learning</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="link link--icon">
+								<span>Deep technical analysis</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="link link--icon">
+								<span>Live discussions</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="link link--icon">
+								<span>Architectural decisions</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			@@include('./includes/footer.html', { "decor": true })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

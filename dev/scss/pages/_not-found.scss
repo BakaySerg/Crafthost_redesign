@@ -50,9 +50,14 @@
 			margin-bottom: 0.4em;
 			text-align: center;
 		}
+		.text-badge {
+			font-weight: 500;
+			padding-left: 2.2em;
+			padding-right: 2.2em;
+		}
 		p {
-			font-size: em(22);
-			margin-bottom: 2.1em;
+			font-size: em(20);
+			margin-bottom: 2.2em;
 				@media (max-width: 600px){
 				font-size: em(18);
 				margin-bottom: 1.5em;

@@ -1,0 +1,184 @@
+@use "../base/utils" as *;
+
+.map {
+	&__container {
+		position: relative;
+		margin-inline: auto;
+		width: 100%;
+		max-width: 800px;
+		@media (max-width: 600px){
+			margin-left: -25px;
+			margin-right: -20px;
+			overflow: hidden;
+			width: calc(100% + 50px);
+		}
+	}
+	&__pins {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		@media (max-width: 600px){
+			left: -40px;
+			right: -40px;
+		}
+	}
+	&__pin {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+		span {
+			background-color: var(--light-blue);
+			color: var(--dark-2);
+			padding: 1px 8px;
+			font-size: em(16);
+			text-align: center;
+			z-index: 1;
+			transition: .25s;
+			opacity: 0;
+		}
+		&:not(.map__pin--active):after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 18px;
+			height: 18px;
+			border: 6px solid var(--light-blue-2);
+			background-color: var(--blue);
+			border-radius: 50%;
+			transition: opacity .3s;
+			z-index: -1;
+			animation: pulse 1.2s infinite;
+			// opacity: 0;
+		}
+		@media (max-width: 600px){
+			font-size: em(15);
+			padding: 0 6px;
+			line-height: 1.3;
+		}
+		&:hover,
+		&--active {
+			// background-color: var(--blue);
+			// color: var(--white);
+			z-index: 1;
+			span {
+				opacity: 1;
+			}
+		}
+		/*uk*/
+		&--1 {
+			left: 46%;
+			top: 16%;
+			@media (max-width: 600px){
+				top: 12%;
+			}
+		}
+		/*finland*/
+		&--2 {
+			left: 54%;
+			top: 13%;
+		}
+		/*canada*/
+		&--3 {
+			left: 25%;
+			top: 19%;
+			@media (max-width: 600px){
+				top: 15%;
+				left: 30%;
+			}
+		}
+		/*germany*/
+		&--4 {
+			left: 48%;
+			top: 26%;
+			&::after {
+				left: 70%;
+			}
+			@media (max-width: 600px){
+				left: 49%;
+			}
+		}
+		/*poland*/
+		&--5 {
+			left: 53%;
+			top: 27%;
+		}
+		/*usa*/
+		&--6 {
+			left: 25%;
+			top: 36%;
+			@media (max-width: 600px){
+				left: 28%;
+				top: 29%;
+			}
+		}
+		/*france*/
+		&--7 {
+			left: 45%;
+			top: 34%;
+			&::after {
+				left: 70%;
+			}
+		}
+		/*italy*/
+		&--8 {
+			left: 51%;
+			top: 36%;
+			@media (max-width: 600px){
+				left: 53%;
+			}
+		}
+		/*Morocco*/
+		&--9 {
+			left: 40%;
+			top: 49%;
+			&::after {
+				left: 70%;
+			}
+			@media (max-width: 600px){
+				left: 43%;
+			}
+		}
+		/*UAE*/
+		&--10 {
+			right: 15%;
+			bottom: 45%;
+			&::after {
+				top: -18px;
+				left: 40%;
+			}
+			@media (max-width: 600px){
+				right: 7%;
+				bottom: 43%;
+			}
+		}
+		/*Singapore*/
+		&--11 {
+			right: 10%;
+			bottom: 28%;
+		}
+		/*S.Africa*/
+		&--12 {
+			left: 54%;
+			bottom: 13%;
+		}
+		/*Australia*/
+		&--13{
+			right: -7%;
+			bottom: 10%;
+			@media (max-width: 600px){
+				min-width: 9ch;
+				width: min-content;
+				right: 7%;
+				bottom: 4%;
+			}
+		}
+	}
+}
+@keyframes pulse {
+	0% {box-shadow: 0 0 0 0 var(--light-blue)}
+	100% {box-shadow: 0 0 0 13px transparent}
+}

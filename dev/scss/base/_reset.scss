@@ -40,7 +40,7 @@ p:not([class]):not(:last-child) {
 		margin-bottom: .8em;
 	}
 }
-p > b {
+p > b, span > b {
 	font-weight: 600;
 }
 

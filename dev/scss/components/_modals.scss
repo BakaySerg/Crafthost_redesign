@@ -96,8 +96,13 @@ dialog[open] {
 			margin-bottom: .9em;
 			text-wrap: balance;
 			@media (min-width: 1400px){
-				margin-bottom: 1.1em;
+				&:not([class^=mb-]) {
+					margin-bottom: 1.1em;
+				}
 				font-size: em(50);
+			}
+			@media (max-width: 600px){
+				font-size: 1.8em;
 			}
 		}
 	}

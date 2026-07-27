@@ -15,6 +15,9 @@
 		background: var(--gradient-light);
 	}
 	&--dark {
+		@media (max-width: 400px){
+			padding: 16px 0;
+		}
 		.banner__container {
 			background-image: var(--gradient-blue-dark);
 			border: 1px solid var(--blue-muted);
@@ -28,9 +31,6 @@
 				.h2 {
 					max-width: 100%;
 				}
-			}
-			 @media (min-width: 1100px){
-				padding: 36px;
 			}
 			@media (min-width: 1100px){
 				padding: 36px;
@@ -57,6 +57,8 @@
 			@media (max-width: 760px){
 				grid-template-columns: 1fr;
 				gap: 20px;
+				max-width: calc(100% - 16px);
+				padding: 14px 15px 18px;
 			}
 		}
 	}
@@ -110,11 +112,19 @@
 		flex-wrap: wrap;
 		align-items: flex-end;
 		gap: 3.3em;
+		&--column {
+			flex-direction: column;
+			gap: 0.5em;
+			align-items: flex-start;
+		}
 		div > div {
 			padding-bottom: 1em;
 		}
 		@media (max-width: 1023px){
 			gap: 2em;
+			&--column {
+				gap: .5em;
+			}
 		}
 		@media (max-width: 600px){
 			div,.btn {
@@ -140,5 +150,52 @@
 			max-width: 280px;
 			padding: 5px;
 		}
+	}
+}
+.mini-banner {
+	background-image: var(--gradient-blue-dark);
+	border: 1px solid var(--blue-muted);
+	padding: 33px;
+	display: flex;
+	flex-direction: column;
+	gap: .4em;
+	@media (max-width: 991px){
+		padding: 20px;
+		gap: 0.2em;
+	}
+	@media (max-width: 600px){
+		padding: 15px;
+	}
+}
+.divided {
+	display: flex;
+	gap: 1.6em;
+	align-items: flex-start;
+	padding-top: 0.3em;
+	&>:not(:last-child) {
+		@media (min-width: 1024px){
+			flex-shrink: .03;
+			padding-right: 1.6em;
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				border-right: 1px solid var(--dark-1);
+				height: 1.7em;
+			}
+		}
+	}
+	@media (min-width: 1024px){
+		padding-top: .6em;
+	}
+	@media (max-width: 1023px){
+		flex-wrap: wrap;
+		gap: 1.4em;
+	}
+	@media (max-width: 600px){
+		gap: 1em;
 	}
 }

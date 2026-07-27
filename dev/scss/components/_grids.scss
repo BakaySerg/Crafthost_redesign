@@ -12,12 +12,24 @@
 		gap: 20px;
 		grid-template-columns: 1fr;
 	}
+	@media (max-width: 600px){
+		gap: 16px;
+	}
 	&--reverse {
 		@media (min-width: 1024px){
 			>div:nth-child(2) {
 				order: -1;
 			}
 		}
+	}
+	&--to-top {
+		align-items: start;
+	}
+	&--special {
+		@media (min-width: 1024px){
+			gap: 16px 32px;
+		}
+
 	}
 	&--md-gap {
 		@media (min-width: 900px){

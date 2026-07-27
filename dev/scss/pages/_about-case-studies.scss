@@ -7,7 +7,7 @@
 		background-image: var(--gradient-blue-dark);
 	}
 	@media (min-width: 1400px){
-		padding: 78px 0 110px;
+		padding: 77px 0 94px;
 	}
 
 	.icon {
@@ -15,7 +15,9 @@
 		margin: 0 auto 1.3em;
 	}
 	.h1 {
-		max-width: 28ch;
+		&:not(.h1--lg) {
+			max-width: 28ch;
+		}
 		margin-inline: auto;
 		@media (max-width: 600px){
 			font-size: em(38);

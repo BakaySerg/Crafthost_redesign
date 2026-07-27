@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost | Tier V Uptime Architecture</title>
+	@@include('./includes/head.html')
+	<body class="dark">
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="infrastructure.html">Infrastructure</a>
+				<span class="breadcrumbs__item">Tier V Uptime Architecture</span>
+			</div>
+
+			<section class="entrs-intro">
+				<div class="container entrs__grid">
+					<div class="entrs__text">
+						<h1 class="h1 mb-05"><span class="text-accent">Tier V Uptime</span> Engineering.</h1>
+						<p class="text-light">Beyond Certification. Beyond Redundancy. Beyond Downtime.</p>
+					</div>
+					<div class="entrs__image entrs__image--narrow">
+						<img srcset="img/infrastructure/tier-v/intro.jpg, img/infrastructure/tier-v/intro-2x.jpg 2x" src="img/infrastructure/tier-v/intro.jpg" width="680" height="453" alt="data centers">
+					</div>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container text-columns text-columns--uneven">
+					<h2 class="h2">Tier V Uptime.</h2>
+					<div class="text-light">
+						<p>Tier IV defines the highest certified level of data-center availability.Tier V defines something else entirely: the elimination of failure as a business event.</p>
+						<p>Crafthost engineers and operates infrastructure using Tier IV facilities combined with Tier V engineering principles to achieve continuous availability without interruption, even during maintenance, component failure, human error, or unexpected external events.</p>
+						<p class="text-semibold">This is not an SLA promise. <br>This is uptime as an architectural outcome.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container text-columns text-columns--even">
+					<h2 class="h2 h2--sd mb-1">Why Tier IV Alone Is Not Enough.</h2>
+					<p class="subtitle bit-limited">Tier IV certification guarantees concurrent maintainability and fault tolerance within a single facility.</p>
+				</div>
+				<div class="container contextual">
+					<div class="contextual__image">
+						<img loading="lazy" srcset="img/infrastructure/tier-v/context-1.jpg, img/infrastructure/tier-v/context-1-2x.jpg 2x" src="img/infrastructure/tier-v/context-1.jpg" width="640" height="370" alt="img">
+					</div>
+					<div class="contextual__content">
+						<p class="subtitle text-semibold mb-1">It does not guarantee:</p>
+						<ul class="list--checked list--not">
+							<li>Immunity from cascading failures</li>
+							<li>Protection against human or operational error</li>
+							<li>Continuity during multi-system maintenance windows</li>
+							<li>Business continuity across regional, network, or control-plane incidents</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container pt-25">
+					<p class="text-light bit-limited">Most “Tier IV” platforms still experience downtime because Tier IV is a facility standard — not a system design philosophy. Tier V exists to close this gap.</p>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container text-columns text-columns--bit-reverse-uneven pb-1">
+					<h2 class="h2">What Tier V Means at Crafthost.</h2>
+					<p class="subtitle">Tier V is not a marketing label.It is a multi-layer engineering methodology applied across facilities, regions, control planes, and operational processes.</p>
+				</div>
+				<div class="container pt-1 pb-1">
+					<p class="subtitle text-semibold">Tier V uptime is achieved by designing systems that:</p>
+					<ul class="list--checked list--grid">
+						<li>Continue operating during failure, not merely recover from it</li>
+						<li>Eliminate maintenance as a downtime event</li>
+						<li>Isolate faults before they propagate</li>
+						<li>Assume failure is inevitable and neutralize its impact</li>
+					</ul>
+				</div>
+				<div class="container pt-25">
+					<div class="cta">
+						<div class="cta__pict">
+							<img srcset="img/home/small-cloud.png, img/home/small-cloud-2x.png 2x" src="img/home/small-cloud.png" width="77" height="64" alt="cloud">
+						</div>
+						<p class="cta__text">Tier IV prevents downtime within a site. <b>Tier V prevents downtime across the system.</b></p>
+					</div>
+				</div>
+			</section>
+
+
+			<!--  -->
+			<section class="section section--dark">
+				<div class="container pb-1">
+					<h2 class="h2 h2--sd">Tier V Design Principles.</h2>
+				</div>
+
+				<div class="container managed__slider" data-slider data-row-md="2">
+					<div class="swiper-wrapper">
+						<div class="managed__slide swiper-slide managed__link">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/infrastructure/general/sprite.svg#sm-11"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Multi-Layer Fault Isolation</h3>
+							<p>Failures are contained at the smallest possible domain: component, rack, cluster, zone, or region — never system-wide.</p>
+						</div>
+						<div class="managed__slide swiper-slide managed__link">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/infrastructure/general/sprite.svg#sm-12"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Active-Active Architecture</h3>
+							<p>Workloads operate across parallel environments, not standby replicas waiting for failure.</p>
+						</div>
+						<div class="managed__slide swiper-slide managed__link">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/infrastructure/general/sprite.svg#sm-13"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Zero-Impact Maintenance</h3>
+							<p>Hardware, network, power, and software maintenance occurs without service interruption.</p>
+						</div>
+						<div class="managed__slide swiper-slide managed__link">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/infrastructure/general/sprite.svg#sm-14"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Geographic Resilience</h3>
+							<p>Tier V assumes regional failure is possible and designs for uninterrupted operation across locations.</p>
+						</div>
+						<div class="managed__slide swiper-slide managed__link">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/infrastructure/general/sprite.svg#sm-15"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Operational Error Containment</h3>
+							<p>Human actions are treated as a risk vector and isolated through change control, automation, and blast-radius limitation.</p>
+						</div>
+						<div class="managed__slide swiper-slide managed__link">
+							<i class="icon icon--sm icon--accent">
+								<svg viewBox="0 0 32 32"><use xlink:href="img/infrastructure/general/sprite.svg#sm-16"/></svg>
+							</i>
+							<h3 class="h4 text-gradient">Continuous Verification</h3>
+							<p>Availability is continuously validated through testing, simulation, and live-environment resilience checks.</p>
+						</div>
+					</div>
+					<div class="swiper-scrollbar"></div>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container">
+					<h2 class="h2 h2--md mb-1">How Tier IV and Tier V Work Together at Crafthost.</h2>
+					<div class="md-line md-line--1_21">
+						<div class="mb-15">
+							<p>Together, they form a platform engineered to deliver 100% operational uptime for mission-critical workloads — not by avoiding failure, but by making failure irrelevant.</p>
+							<p class="text-semibold">Crafthost does not replace Tier IV — it extends it.</p>
+						</div>
+						<div>
+							<div class="tiles tiles--two tiles--gutters">
+								<div class="tile tile--col tile--hight">
+									<i class="icon icon--sm">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<span><b>Tier IV provides certified facility resilience:</b> power, cooling, physical redundancy</span>
+								</div>
+								<div class="tile tile--col tile--hight">
+									<i class="icon icon--sm">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<span><b>Tier V provides system-level continuity:</b> architecture, orchestration, operations</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- hybrid table -->
+			<section class="section with-divider">
+				<div class="container">
+					<h2 class="h2 h2--md mb-1">Tier V vs Traditional High-Availability Models.</h2>
+					<p class="subtitle pb-1">Use a visual HTML table or CSS cards on the live page.
+						<i class="icon icon--accent icon--sm icon--info" data-hover-info="Commission structure table showing first-invoice, recurring, and enterprise bonus levels.">
+							<svg viewBox="0 0 32 32">
+								<use xlink:href="img/general/sprite.svg#question" />
+							</svg>
+						</i>
+					</p>
+					<div class="hybrid-table swiper" data-slider data-space-between="16">
+						<div class="swiper-wrapper">
+							<div class="hybrid-table__item swiper-slide">
+								<h3 class="h4 text-gradient">Capability</h3>
+								<ul class="hybrid-table__list">
+									<li>Single-component failure</li>
+									<li>Maintenance windows</li>
+									<li>Human error</li>
+									<li>Regional outage</li>
+									<li>Control-plane failure</li>
+									<li>Business continuity</li>
+								</ul>
+							</div>
+							<div class="hybrid-table__item swiper-slide">
+								<h3 class="h4 text-gradient">Traditional HA</h3>
+								<ul class="hybrid-table__list">
+									<li>Partial impact</li>
+									<li>Downtime required</li>
+									<li>Service disruption</li>
+									<li>Major incident</li>
+									<li>Service outage</li>
+									<li>Best effort</li>
+								</ul>
+							</div>
+							<div class="hybrid-table__item swiper-slide">
+								<h3 class="h4 text-gradient">Tier IV Only</h3>
+								<ul class="hybrid-table__list">
+									<li>No downtime</li>
+									<li>Limited</li>
+									<li>Possible</li>
+									<li>Major incident</li>
+									<li>Service outage</li>
+									<li>Facility-bound</li>
+								</ul>
+							</div>
+							<div class="hybrid-table__item swiper-slide">
+								<h3 class="h4 text-gradient">Tier IV + Tier V (Crafthost)</h3>
+								<ul class="hybrid-table__list">
+									<li>No downtime</li>
+									<li>Zero impact</li>
+									<li>Contained</li>
+									<li>No interruption</li>
+									<li>No interruption</li>
+									<li>System-wide</li>
+								</ul>
+							</div>
+						</div>
+						<div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="section">
+				<div class="container pt-1">
+					<div class="institution__slider swiper swiper--lg">
+						<div class="swiper-wrapper pb-15">
+							<!-- 1 -->
+							<div class="swiper-slide institution__slide">
+								<img loading="lazy" srcset="img/infrastructure/tier-v/slide-1.jpg, img/infrastructure/tier-v/slide-1-2x.jpg 2x" src="img/infrastructure/tier-v/slide-1.jpg" width="647" height="335" alt="img">
+								<div class="institution__text">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<span class="institution__num">01</span>
+									<h3 class="h4 text-gradient mb-15">What Tier V Architecture Deliberately Avoids.</h3>
+									<p>Tier V engineering explicitly rejects:</p>
+									<ul class="list list--simple mb-1">
+										<li>SLA-only uptime guarantees without architectural enforcement</li>
+										<li>Passive standby systems waiting for failure</li>
+										<li>Oversubscribed infrastructure masked by redundancy claims</li>
+										<li>Maintenance windows disguised as “planned downtime”</li>
+										<li>Regional single points of failure</li>
+										<li>“Five nines” marketing without operational accountability</li>
+									</ul>
+									<p>If downtime is acceptable, Tier V is unnecessary.</p>
+								</div>
+							</div>
+							<!-- 2 -->
+							<div class="swiper-slide institution__slide">
+								<img loading="lazy" srcset="img/infrastructure/tier-v/slide-2.jpg, img/infrastructure/tier-v/slide-2-2x.jpg 2x" src="img/infrastructure/tier-v/slide-2.jpg" width="647" height="335" alt="img">
+								<div class="institution__text">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<span class="institution__num">02</span>
+									<h3 class="h4 text-gradient mb-15">Who Tier V Uptime Is Designed For.</h3>
+									<p>Tier V architecture is built for organizations where downtime is not a tolerable risk, including:</p>
+									<ul class="list list--simple mb-1">
+										<li>Financial services and payment platforms</li>
+										<li>Healthcare systems and life-critical applications</li>
+										<li>Government and sovereign digital infrastructure</li>
+										<li>Telecom and national-scale networks</li>
+										<li>Mission-critical SaaS platforms</li>
+										<li>AI, data, and real-time decision systems</li>
+									</ul>
+									<p>If availability is merely a KPI, Tier IV may be enough.If availability is a business survival requirement, Tier V is mandatory.</p>
+								</div>
+							</div>
+							<!-- 3 -->
+							<div class="swiper-slide institution__slide">
+								<img loading="lazy" srcset="img/infrastructure/tier-v/slide-3.jpg, img/infrastructure/tier-v/slide-3-2x.jpg 2x" src="img/infrastructure/tier-v/slide-3.jpg" width="647" height="335" alt="img">
+								<div class="institution__text">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<span class="institution__num">03</span>
+									<h3 class="h4 text-gradient mb-15">Tier V Is an Engineering Discipline — Not a Product.</h3>
+									<p>Tier V uptime cannot be “turned on”. <br>It must be designed, implemented, operated, and continuously enforced. <b>At Crafthost, Tier V is delivered through:</b></p>
+									<ul class="list list--simple mb-1">
+										<li>Infrastructure architecture</li>
+										<li>Network design</li>
+										<li>Orchestration and control-plane strategy</li>
+										<li>Operational governance</li>
+										<li>Change-management discipline</li>
+										<li>Engineer-led responsibility</li>
+									</ul>
+									<p>This is why Tier V is inseparable from managed enterprise services.</p>
+								</div>
+							</div>
+							<!-- 4 -->
+							<div class="swiper-slide institution__slide">
+								<img loading="lazy" srcset="img/infrastructure/tier-v/slide-4.jpg, img/infrastructure/tier-v/slide-4-2x.jpg 2x" src="img/infrastructure/tier-v/slide-4.jpg" width="647" height="335" alt="img">
+								<div class="institution__text">
+									<i class="icon icon--sm icon--accent">
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
+									</i>
+									<span class="institution__num">04</span>
+									<h3 class="h4 text-gradient mb-15">Relationship to Managed Services.</h3>
+									<p>Tier V uptime is the foundation for:</p>
+									<ul class="list list--simple mb-1">
+										<li>Enterprise Managed Infrastructure</li>
+										<li>Managed Dedicated Servers</li>
+										<li>Private and Hybrid Cloud</li>
+										<li>GPU & AI Production Platforms</li>
+										<li>Disaster Recovery and Business Continuity</li>
+									</ul>
+									<p>Without Tier V principles, managed services degrade into reactive support.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-controls swiper-controls--right">
+						<div class="swiper-button-prev"><i class="icon"></i></div>
+						<div class="swiper-pagination-fraction"></div>
+						<div class="swiper-button-next"><i class="icon"></i></div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="section section--dark">
+				<div class="container">
+					<h2 class="h2 text-gradient mb-05">Explore Related Architecture.</h2>
+					<ul class="contextual__list contextual__list--sm contextual__list--no-markers">
+						<li>
+							<a href="infrastructure-network.html" class="link link--icon">
+								<span>Network Architecture</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="infrastructure-tier-iv-uptime.html" class="link link--icon">
+								<span>Tier IV Uptime Design</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="infrastructure-data-centers.html" class="link link--icon">
+								<span>Data Center Footprint</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="link link--icon">
+								<span>Disaster Recovery</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- banner dark -->
+			<section class="banner banner--dark" role="banner">
+				<div class="container banner__container">
+					<figure class="banner__image">
+						<img loading="lazy" srcset="img/banners/banner-dark-3.png, img/banners/banner-dark-3-2x.png 2x" src="img/banners/banner-dark-3.png" width="360" height="360" alt="modular server">
+					</figure>
+					<div class="banner__content">
+						<h2 class="h2 text-gradient">Request a Tier V Infrastructure Assessment.</h2>
+						<p class="subtitle text-semibold">Tier V is not a template.</p>
+						<p class="mb-05 text-light">It is a bespoke engineering outcome based on workload criticality, risk tolerance, and operational requirements.</p>
+						<div class="banner__action banner__action--column">
+							<a href="#" class="btn btn--filled btn--lg mb-05">
+								<span>Request Infrastructure Assessment</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+							<a href="#" class="btn btn--outline btn--outline-white btn--lg mb-05">
+								<span>Speak with an Infrastructure Architect</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			@@include('./includes/footer.html', { "decor": true })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

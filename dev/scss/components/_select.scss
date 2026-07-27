@@ -4,7 +4,7 @@
 	position: relative;
 	user-select: none;
 	&--sm {
-		width: 40px;
+		width: 50px;
 	}
 	&--full {
 		width: 100%;
@@ -28,17 +28,18 @@
 }
 .select__current {
 	font-size: 15px;
-  min-width: 3ch;
+	min-width: 3ch;
+	padding: 0.3em 0;
 }
 .select__body {
 	border-top: 0;
 	position: absolute;
-	left: 0;
+	left: -.6em;
 	right: 0;
 	bottom: 100%;
 	display: none;
 	overflow: hidden;
-	min-width: 5ch;
+	min-width: 5.5ch;
 }
 .select.is-active .select__body {
 	display: flex;
@@ -112,6 +113,8 @@
 		}
 		@media (max-width: 600px){
 			height: 48px;
+			font-size: 1em;
+			padding: 10px 14px;
 		}
 	}
 
@@ -122,6 +125,7 @@
 		white-space: nowrap;
 		flex-shrink: 1;
 		max-width: 45ch;
+		user-select: none;
 		.iti__flag {
 			display: inline-block;
 			vertical-align: middle;
@@ -154,12 +158,19 @@
 		opacity .18s ease,
 		transform .18s ease,
 		visibility .18s ease;
-
 		&::-webkit-scrollbar {
-			width: 4px;
+			width: 5px;
+			@media (max-width: 991px){
+				width: 4px;
+			}
 		}
+
 		&::-webkit-scrollbar-track {
-			background: transparent;
+			background-color: var(--light-3);
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--light-4);
+			border-radius: 2px;
 		}
 	}
 	&__option {
@@ -198,6 +209,9 @@
 				background-position: 5% center;
 				background-size: .7em;
 			}
+		}
+		@media (max-width: 600px){
+			font-size: 1em;
 		}
 	}
 }

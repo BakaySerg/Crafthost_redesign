@@ -43,12 +43,25 @@
 			background-color: var(--blue);
 			color: var(--white);
 		}
+		&-white {
+			background-color: transparent;
+			color: var(--white);
+			border-color: var(--white);
+			&:hover {
+				background-color: var(--white);
+				color: var(--blue);
+			}
+		}
 	}
 	&--filled {
 		background-color: var(--blue);
 		color: var(--white);
+		// &:hover {
+		// 	background-color: color-mix(in srgb, var(--blue), var(--white) 10%);
+		// }
 		&:hover {
-			background-color: color-mix(in srgb, var(--blue), var(--white) 10%);
+			background-color: var(--white);
+			color: var(--blue);
 		}
 		&:active {
 			color: var(--white);
@@ -117,7 +130,8 @@
 	background: none;
 	color: inherit;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 500;
+	letter-spacing: .01em;
 	color: var(--blue);
 	text-align: left;
 	position: relative;
@@ -127,7 +141,32 @@
 	transition: .3s;
 	cursor: pointer;
 	outline: none;
+	user-select: none;
 
+	&--white {
+		color: var(--white);
+	}
+
+	&--inline {
+		display: inline-flex;
+		font-weight: 500;
+		margin-block: 0;
+		font-size: inherit;
+		padding: 0;
+		&:not(:first-child) {
+			margin-inline: .2em;
+		}
+	}
+	&--with-icon {
+		gap: .6em;
+		svg {
+			color: var(--blue);
+			flex-shrink: 0;
+		}
+		&:hover svg {
+			transform: none !important;
+		}
+	}
 	&--icon {
 		gap: 2.2em;
 		svg {
@@ -156,6 +195,9 @@
 		&:not(.link--sm) svg {
 			transform: translateX(6px);
 		}
+	}
+	@media (max-width: 600px){
+		font-weight: 400;
 	}
 	@media (max-width: 330px){
 		font-size: 14px;
