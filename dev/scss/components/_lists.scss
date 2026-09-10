@@ -83,10 +83,18 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
 		column-gap: 60px;
+		align-items: center;
 		&-sm {
 			@media (min-width: 991px){
 				column-gap: 30px;
 				grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+			}
+		}
+		&-xs {
+			width: 100%;
+			@media (min-width: 991px){
+				column-gap: 20px;
+				grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 			}
 		}
 		@media (max-width: 991px){

@@ -48,7 +48,7 @@
 	}
 	&--md {
 		@media (min-width: 1024px){
-			max-width: 33ch;
+			max-width: 31ch;
 			text-wrap: balance;
 		}
 	}
@@ -63,7 +63,7 @@
 		font-size: em(42);
 	}
 	@media (max-width: 600px){
-		font-size: em(34);
+		font-size: em(30.6);
 		letter-spacing: -.04em;
 		word-spacing: -.2em;
 		margin-bottom: 0.7em;
@@ -144,6 +144,7 @@
 	}
 	@media (max-width: 600px){
 		margin-bottom: 0.7em;
+		font-size: em(19);
 	}
 }
 .bit-limited {
@@ -153,7 +154,7 @@
 	}
 }
 .limited {
-	max-width: 70ch;
+	max-width: 71ch;
 	@media (max-width: 1100px){
 		max-width: 78ch;
 	}

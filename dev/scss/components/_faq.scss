@@ -74,8 +74,9 @@
 			}
 		}
 		@media (max-width: 600px){
-			width: 32px;
-			height: 32px;
+			width: 28px;
+			height: 28px;
+			padding: 7px;
 			&-plus,
 			&-minus {
 				width: 18px;
@@ -99,7 +100,7 @@
 	&__answer {
 		overflow: hidden;
 		height: 0;
-		padding: 0;
+		padding: 0 0 0 0.2em;
 		transition: padding .3s, opacity .2s;
 		p:last-child {
 			margin-bottom: 0;
@@ -111,12 +112,10 @@
 		gap: 1.4em;
 		padding-left: 0.2em;
 		@media (min-width: 1400px){
-			padding-left: 0.6em;
 			padding-top: 0.3em;
 			padding-bottom: 0.3em;
 		}
 		@media (max-width: 991px){
-			padding-left: 0;
 			gap: 1.1em;
 		}
 	}
@@ -131,7 +130,7 @@
 		}
 		&__answer {
 			height: auto;
-			padding: .9em 0;
+			padding: .9em 0 .9em 0.2em;
 			opacity: 1;
 			transition: padding .3s, opacity .3s;
 		}

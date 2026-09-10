@@ -264,12 +264,14 @@
 		align-items: center;
 		padding: .46em 0;
 		cursor: pointer;
+		font-weight: 500;
+		transition: .25s;
 		.icon {
 			margin-left: auto;
 			width: 17px;
 			height: 17px;
 			transition: .2s;
-			opacity: 0.6;
+			opacity: 0.5;
 		}
 	}
 	&__img[data-tab] {
@@ -312,6 +314,9 @@
 		}
 	}
 	&.active {
+		.indu__title {
+			font-weight: 600;
+		}
 		.indu__inner {
 			visibility: visible;
 			height: auto;

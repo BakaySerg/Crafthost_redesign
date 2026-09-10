@@ -489,6 +489,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		sections.forEach((section) => observer.observe(section));
 	}
 
+	// ── Scroll to top ────────────────────────────────────────────────────────
+	document.querySelectorAll("[data-scroll-top]").forEach((btn) => {
+		btn.addEventListener("click", () => {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		});
+	});
+
 	// ── Copyright year ───────────────────────────────────────────────────────
 
 	const yearEl = document.getElementById("year");

@@ -176,6 +176,9 @@
 			grid-template-columns: 1fr;
 		}
 	}
+	&--vstart {
+		align-items: start;
+	}
 	&--large {
 		@media (min-width: 1400px){
 			.tile {
@@ -642,12 +645,27 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
 		gap: 15px 0;
+		@media (max-width: 900px){
+			grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+		}
 		@media (max-width: 600px){
 			grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 		}
 		&:has(.bricks__item--tall) {
 			@media (max-width: 600px){
 				grid-template-columns: repeat(auto-fill, minmax(170px, auto));
+			}
+		}
+		&--mobil-one {
+			@media (min-width: 651px){
+				.span-2 {
+					padding-left: 1.1em;
+					padding-bottom: 1.1em;
+					align-self: end;
+				}
+			}
+			@media (max-width: 650px){
+				grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)) !important;
 			}
 		}
 		&--big {
