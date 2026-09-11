@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost | Webinar Details</title>
+	@@include('./includes/head.html')
+	<body class="dark">
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<a class="breadcrumbs__item" href="resources.html">Resources</a>
+				<a class="breadcrumbs__item" href="resources-webinars.html">Webinars</a>
+				<span class="breadcrumbs__item">Webinar Details</span>
+			</div>
+
+			<!-- intro -->
+			<section class="section with-divider mini-intro">
+				<div class="container">
+					<div class="events__header">
+						<i class="icon icon--gradient icon--lg">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/resources/sprite.svg#lg-3"/></svg>
+						</i>
+					</div>
+					<div class="events__tags">
+						<span class="events__tag">Architecture</span>
+						<span class="events__tag">Security</span>
+						<span class="events__tag">GPU & AI</span>
+					</div>
+					<h1 class="h1 text-center mb-05">Webinars.</h1>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container sticky__grid">
+					<aside class="sticky__sidebar">
+						<a href="#a-1" class="sticky__link sticky__link--no-wrap is-active"><span>Webinar Overview</span></a>
+						<a href="#a-2" class="sticky__link sticky__link--no-wrap"><span>Session Structure</span></a>
+						<a href="#a-3" class="sticky__link sticky__link--no-wrap"><span>Who Should Attend</span></a>
+						<a href="#a-4" class="sticky__link sticky__link--no-wrap"><span>Speakers</span></a>
+						<a href="#a-5" class="sticky__link sticky__link--no-wrap"><span>Register for the Webinar</span></a>
+						<a href="#a-6" class="sticky__link sticky__link--no-wrap"><span>Practical Decision Framework</span></a>
+						<a href="#a-7" class="sticky__link sticky__link--no-wrap"><span>How Crafthost Approaches {Topic}</span></a>
+						<a href="#a-8" class="sticky__link sticky__link--no-wrap"><span>FAQ</span></a>
+						<a href="#a-9" class="sticky__link sticky__link--no-wrap"><span>Related Resources</span></a>
+					</aside>
+					<div class="sticky__content">
+						<!-- 1 -->
+						<div class="sticky__content-item with-divider" id="a-1">
+							<h2 class="h2">Webinar Overview</h2>
+						</div>
+						<!-- 2 -->
+						<div class="sticky__content-item with-divider" id="a-2">
+							<h2 class="h2">Session Structure</h2>
+						</div>
+						<!-- 3 -->
+						<div class="sticky__content-item with-divider" id="a-3">
+							<h2 class="h2">Who Should Attend</h2>
+						</div>
+						<!-- 4 -->
+						<div class="sticky__content-item with-divider" id="a-4">
+							<h2 class="h2">Speakers</h2>
+						</div>
+						<!-- 5 -->
+						<div class="sticky__content-item with-divider" id="a-5">
+							<h2 class="h2">Register for the Webinar</h2>
+						</div>
+						<!-- 6 -->
+						<div class="sticky__content-item with-divider" id="a-6">
+							<h2 class="h2">Practical Decision Framework</h2>
+						</div>
+						<!-- 7 -->
+						<div class="sticky__content-item with-divider" id="a-7">
+							<h2 class="h2">How Crafthost Approaches {Topic}</h2>
+						</div>
+						<!-- 8 -->
+						<div class="sticky__content-item with-divider" id="a-8">
+							<h2 class="h2">FAQ</h2>
+						</div>
+						<!-- 9 -->
+						<div class="sticky__content-item with-divider" id="a-9">
+							<h2 class="h2">Related Resources</h2>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			@@include('./includes/footer.html', { "decor": true })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

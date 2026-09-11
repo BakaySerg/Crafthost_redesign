@@ -65,9 +65,9 @@
 	}
 
 	&__middle {
-		padding: 42px 0 25px 17px;
+		padding: em(42) 0 em(33) em(17);
 		@media (max-width: 900px){
-			padding: 20px 15px 20px;
+			padding: em(20) em(15) em(20);
 		}
 	}
 	&__grid {

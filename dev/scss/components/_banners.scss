@@ -120,6 +120,9 @@
 		div > div {
 			padding-bottom: 1em;
 		}
+		@media (min-width: 760px){
+			margin-right: -3ch;
+		}
 		@media (max-width: 1023px){
 			gap: 2em;
 			&--column {

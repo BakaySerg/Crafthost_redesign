@@ -3,6 +3,7 @@
 @function em($pixels, $context: 18) {
   $v1: math.div($pixels, ($pixels * 0 + 1));
   $v2: math.div($context, ($context * 0 + 1));
+  $result: math.div($v1, $v2);
 
-  @return #{(math.div($v1, $v2))}em;
+  @return #{math.round($result * 100) * 0.01}em;
 }

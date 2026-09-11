@@ -1,0 +1,13 @@
+@use "../base/utils" as *;
+
+.events {
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+	}
+	&__divider {
+		height: 3em;
+		border-left: 1px solid var(--blue);
+	}
+}

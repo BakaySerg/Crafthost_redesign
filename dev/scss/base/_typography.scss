@@ -106,6 +106,10 @@
 	letter-spacing: -.045em;
 	word-spacing: -.04em;
 	margin-bottom: 1em;
+	.icon--sm{
+		position: relative;
+		top: 0.06em;
+	}
 	@media (max-width: 991px){
 		font-size: em(25);
 	}
