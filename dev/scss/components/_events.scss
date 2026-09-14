@@ -1,13 +1,116 @@
 @use "../base/utils" as *;
 
 .events {
+	&__headline {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 2em;
+		.h1 {
+			margin: 0;
+		}
+		@media (max-width: 1100px) {
+			gap: .5em;
+		}
+	}
 	&__header {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: 1em;
+		width: 100%;
+		@media (max-width: 991px) {
+			gap: calc(2dvw + 2em);
+			&::after {
+				content: "";
+				display: block;
+				height: 4em;
+				order: -1;
+				border-right: 1px solid var(--blue);
+			}
+		}
+		@media (max-width: 768px){
+			max-width: 690px;
+			margin-inline: auto;
+		}
+		@media (max-width: 600px) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.72em;
+			&::after {
+				content: none;
+			}
+		}
+		&-pair {
+			display: flex;
+			gap: 2em;
+			position: relative;
+			&:first-child {
+				order: -2;
+			}
+			div {
+				&:first-child {
+					order: -2;
+				}
+				display: flex;
+				align-items: center;
+				gap: 0.7em;
+				font-weight: 300;
+				.icon {
+					margin-bottom: .15em;
+					color: var(--blue);
+				}
+			}
+			.muted {
+				opacity: 0.8;
+				font-size: 0.85em;
+			}
+			@media (min-width: 992px) {
+				&::after {
+					content: "";
+					display: block;
+					order: -1;
+					height: 1.3em;
+					border-right: 1px solid var(--blue);
+				}
+			}
+			@media (max-width: 991px) {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0.6em;
+			}
+		}
+	}
+	&__badge {
+		background-image: var(--gradient-blue);
+		font-family: "Raptor", monospace;
+		font-weight: 400;
+		font-size: em(20);
+		border-radius: 50%;
+		padding: 1.5em 2.3em;
+		@media (max-width: 1100px) {
+			font-size: em(18);
+			padding: 1em 1.8em;
+		}
+		@media (max-width: 600px) {
+			font-size: em(17);
+			padding: .6em 1.5em;
+		}
 	}
 	&__divider {
 		height: 3em;
 		border-left: 1px solid var(--blue);
+	}
+	&__tags {
+		display: flex;
+		gap: 0.6em;
+	}
+	&__tag {
+		background-color: var(--light-blue-2);
+		border-radius: 1em;
+		padding: 5px 12px;
+		font-size: em(14);
+		color: var(--dark-4);
 	}
 }

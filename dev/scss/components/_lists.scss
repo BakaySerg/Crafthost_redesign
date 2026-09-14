@@ -42,23 +42,6 @@
 			height: 1.14em;
 		}
 	}
-	&--all-border {
-		li:first-child {
-			border-top: 1px solid var(--light-2);
-		}
-	}
-	&--no-border {
-		li {
-			border: none !important;
-			padding: 0.45em 0;
-		}
-	}
-	&--no-padding {
-		li {
-			padding: .16em 0 !important;
-			gap: 0.9em;
-		}
-	}
 	&-cta {
 		@media (max-width: 600px){
 			.btn, .link {
@@ -77,6 +60,23 @@
 					padding-bottom: .8em !important;
 				}
 			}
+		}
+	}
+	&--all-border {
+		li:first-child {
+			border-top: 1px solid var(--light-2);
+		}
+	}
+	&--no-border {
+		li {
+			border: none !important;
+			padding: 0.45em 0;
+		}
+	}
+	&--no-padding {
+		li {
+			padding: .2em 0 !important;
+			gap: 0.9em;
 		}
 	}
 	&--grid {

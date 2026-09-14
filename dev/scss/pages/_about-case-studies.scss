@@ -7,14 +7,14 @@
 		background-image: var(--gradient-blue-dark);
 	}
 	@media (min-width: 1400px){
-		padding: 77px 0 94px;
+		padding: 77px 0 85px;
 	}
 
 	.icon {
 		display: block;
 		margin: 0 auto 1.3em;
 	}
-	.h1 {
+	:where(.h1) {
 		&:not(.h1--lg) {
 			max-width: 28ch;
 		}
