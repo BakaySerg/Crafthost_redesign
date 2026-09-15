@@ -217,9 +217,10 @@
 	}
 }
 .dark {
-	.list--ordered {
+	.list--ordered,.list--plused {
 		li {
 			font-weight: 300;
+			color: var(--light-3);
 		}
 	}
 }

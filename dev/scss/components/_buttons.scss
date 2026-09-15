@@ -116,6 +116,11 @@
 			gap: 0.5em;
 		}
 	}
+	&--xl {
+		@media (min-width: 992px){
+			min-width: 260px;
+		}
+	}
 	&--grow {
 		width: 100%;
 	}
