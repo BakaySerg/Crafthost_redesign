@@ -64,7 +64,7 @@
 		}
 		&-pair {
 			display: flex;
-			gap: 2em;
+			gap: 1.9em;
 			position: relative;
 			&:first-child {
 				order: -2;
@@ -87,12 +87,18 @@
 				font-size: 0.85em;
 			}
 			@media (min-width: 992px) {
-				&::after {
+				&::before, &--trio::after {
 					content: "";
 					display: block;
 					order: -1;
 					height: 1.3em;
 					border-right: 1px solid var(--blue);
+				}
+				&--trio > :last-child {
+					order: 4;
+				}
+				&--trio::after {
+					order: 3;
 				}
 			}
 			@media (max-width: 991px) {

@@ -80,6 +80,19 @@
 	}
 }
 
+.lg-line {
+	display: flex;
+	gap: 1.5em;
+	flex-wrap: wrap;
+	@media (min-width: 768px){
+		gap: 32px;
+		justify-content: space-between;
+		align-items: flex-start;
+		&--reverse {
+			flex-direction: row-reverse;
+		}
+	}
+}
 .md-line {
 	@media (min-width: 992px){
 		display: grid;

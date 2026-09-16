@@ -13,6 +13,10 @@
 			grid-template-columns: 220px 1fr;
 			gap: 30px;
 		}
+		@media (max-width: 991px){
+			grid-template-columns: 190px 1fr;
+			gap: 21px;
+		}
 		@media (max-width: 767px){
 			display: block;
 		}
@@ -67,6 +71,7 @@
 		}
 		&.is-active {
         font-weight: 600;
+		  letter-spacing: -0.02em;
 		  &::after {
 			 opacity: 1;
 		  }

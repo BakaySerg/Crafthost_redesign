@@ -137,6 +137,9 @@
 				}
 			}
 		}
+		@media (max-width: 820px){
+			padding: 13px;
+		}
 		&--big-head {
 			@media (min-width: 768px){
 				.h4 {
@@ -174,6 +177,11 @@
 			}
 		}
 		@media (min-width: 1101px){
+			&--short {
+				justify-content: space-evenly;
+				flex-grow: 0.1;
+				margin-block: auto;
+			}
 			&--p-right {
 				padding-right: 1em;
 			}
