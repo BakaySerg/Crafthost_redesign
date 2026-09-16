@@ -111,7 +111,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-end;
-		gap: 3.3em;
+		gap: 1.6em;
 		&--column {
 			flex-direction: column;
 			gap: 0.5em;
@@ -124,7 +124,7 @@
 			margin-right: -3ch;
 		}
 		@media (max-width: 1023px){
-			gap: 2em;
+			gap: 1.4em;
 			&--column {
 				gap: .5em;
 			}

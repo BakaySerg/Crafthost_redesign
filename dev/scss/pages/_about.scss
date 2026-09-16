@@ -264,7 +264,7 @@
 		align-items: center;
 		padding: .46em 0;
 		cursor: pointer;
-		font-weight: 500;
+		font-weight: 400;
 		transition: .25s;
 		.icon {
 			margin-left: auto;
@@ -316,6 +316,7 @@
 	&.active {
 		.indu__title {
 			font-weight: 600;
+			letter-spacing: -0.01em;
 		}
 		.indu__inner {
 			visibility: visible;
@@ -329,6 +330,12 @@
 	.indu {
 		&__item {
 			border-bottom-color: var(--dark-2);
+		}
+		&__title:not(.tab.active .indu__title) {
+			color: var(--light-2);
+		}
+		.tab.active .indu__title {
+			color: var(--white);
 		}
 	}
 	.tab {

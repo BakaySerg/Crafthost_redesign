@@ -134,9 +134,18 @@
 .title-row {
 	display: flex;
 	align-items: center;
+	margin-bottom: 2.5em;
 	gap: 1.4em;
 	.h2 {
 		margin-bottom: 0;
+	}
+	@media (max-width: 1200px){
+		margin-bottom: 2em;
+		gap: 1.2em;
+	}
+	@media (max-width: 600px){
+		margin-bottom: 1.7em;
+		gap: .8em;
 	}
 }
 .subtitle {
@@ -236,6 +245,9 @@
 .dark {
 	.text-light p , p.text-light {
 		color: var(--light-3);
+		b {
+			color: var(--light-1);
+		}
 	}
 }
 .text-remark {

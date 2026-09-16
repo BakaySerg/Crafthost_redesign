@@ -103,6 +103,9 @@
 		&--1_2 {
 			grid-template-columns: auto min(65%, 65ch);
 		}
+		&--vcenter {
+			align-items: center;
+		}
 	}
 	@media (min-width: 1100px){
 		gap: 32px;
