@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Crafthost | Resources</title>
+	@@include('./includes/head.html')
+	<body class="dark">
+		<div class="wrapper">
+			@@include('./includes/header.html')
+
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs__item" href="index.html">Home</a>
+				<span class="breadcrumbs__item">Resources</span>
+			</div>
+			<!-- main -->
+			<main class="intro-with-img">
+				<div class="container">
+					<div class="intro-with-img__content">
+						<h1 class="h1">Resources.</h1>
+						<p class="text-light">Infrastructure Thinking for Production Systems.</p>
+					</div>
+					<div class="intro-with-img__pict">
+						<img srcset="img/resources/main/context-1.jpg, img/resources/main/context-1-2x.jpg 2x" src="img/resources/main/context-1.jpg" width="640" height="370" alt="Infrastructure Thinking for Production Systems.">
+					</div>
+				</div>
+			</main>
+
+			<section class="section section--dark">
+				<div class="container text-columns text-columns--even">
+					<h2 class="h2">Infrastructure Knowledge for Better Decisions.</h2>
+					<div class="text-light">
+						<p>Infrastructure decisions affect performance, security, availability, scalability and operational responsibility.</p>
+						<p>Crafthost Resources provides practical technical and strategic guidance for organizations designing, operating, securing and evolving production-critical infrastructure.</p>
+						<p>Our perspective is grounded in infrastructure engineering, managed operations and operational accountability. The objective is not simply to explain technologies, but to help organizations understand how infrastructure choices affect architecture, risk, day-to-day operations and long-term responsibility.</p>
+						<p>Explore technical implementation guidance, infrastructure planning resources, engineering perspectives and focused sessions designed to support better infrastructure decisions.</p>
+						<div class="action pt-1">
+							<a href="resources-technical-guides.html" class="btn btn--lg btn--filled">
+								<span>Explore Technical Guides</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+							<a href="resources-guides.html" class="btn btn--lg btn--outline">
+								<span>Browse Guides</span>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<p class="subtitle mb-2">Explore Crafthost Resources:</p>
+					<div class="title-row">
+						<i class="icon icon--lg icon--gradient">
+							<svg viewBox="0 0 32 32"><use xlink:href="img/resources/sprite.svg#lg-5"/></svg>
+						</i>
+						<h2 class="h2">Technical Guides.</h2>
+					</div>
+					<p class="subtitle">Practical Technical Guidance for Infrastructure Teams.</p>
+					<p class="mb-25">Detailed technical resources for engineers, administrators and technical decision-makers working with production infrastructure.</p>
+					<p class="subtitle text-semibold"></p>
+				</div>
+			</section>
+
+			@@include('./includes/footer.html', { "decor": true })
+		</div>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

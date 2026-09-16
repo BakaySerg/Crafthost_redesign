@@ -131,6 +131,14 @@
 	font-weight: 600;
 	margin-bottom: 0.65em;
 }
+.title-row {
+	display: flex;
+	align-items: center;
+	gap: 1.4em;
+	.h2 {
+		margin-bottom: 0;
+	}
+}
 .subtitle {
 	font-size: em(22);
 	font-weight: normal;
@@ -350,7 +358,7 @@
 		}
 	}
 	@media (min-width: 1300px){
-		gap: 27px 44px;
+		gap: 27px 39px;
 	}
 }
 .text-error {
