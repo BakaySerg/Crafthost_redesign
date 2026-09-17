@@ -38,7 +38,7 @@
 								<span>Open a Support Ticket</span>
 								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 							</a>
-							<a href="#" class="btn btn--lg btn--outline">
+							<a href="support-knowledge-base.html" class="btn btn--lg btn--outline">
 								<span>Visit Knowledge Base</span>
 								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 							</a>
@@ -148,18 +148,27 @@
 
 			<section class="section section--dark">
 				<div class="container">
-					<div class="text-columns text-columns--even">
+					<div class="text-columns text-columns--even mb-15">
 						<h2 class="h2">Open a Support Request.</h2>
-						<p class="sutitle"></p>
+						<p class="subtitle">When submitting a support request, provide enough information for the engineering or support team to understand the issue without unnecessary back-and-forth.</p>
 					</div>
-					<div class="tiles tiles--two tiles--sm-one mb-2">
+					<div class="tiles tiles--two tiles--sm-one mb-25">
 						<div class="tile tile--text">
 							<i class="icon icon--sm">
 								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-filled"/></svg>
 							</i>
 							<div>
-								<div class="h6">What It Is:</div>
+								<div class="h6">Include:</div>
 								<ul class="list--simple">
+									<li>Affected service</li>
+									<li>Clear description of the issue</li>
+									<li>When the issue began</li>
+									<li>Current symptoms</li>
+									<li>Error messages, where applicable</li>
+									<li>Recent infrastructure or application changes</li>
+									<li>Troubleshooting already performed</li>
+									<li>Operational or business impact</li>
+									<li>Appropriate contact for coordination</li>
 								</ul>
 							</div>
 						</div>
@@ -168,8 +177,13 @@
 								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#check-light-const"/></svg>
 							</i>
 							<div>
-								<div class="h6">What It Is Not:</div>
+								<div class="h6">Do not include:</div>
 								<ul class="list--simple list--not">
+									<li>Passwords</li>
+									<li>Private keys</li>
+									<li>Authentication tokens</li>
+									<li>API secrets</li>
+									<li>Unnecessary confidential data</li>
 								</ul>
 							</div>
 						</div>
@@ -183,68 +197,355 @@
 
 			<section class="section">
 				<div class="container">
-					<h2 class="h2 mb-1"></h2>
+					<div class="text-columns text-columns--even mb-15">
+						<h2 class="h2">Support Request Priorities.</h2>
+						<p class="subtitle">Communicate the Operational Impact Clearly. <br> Support priority should reflect the actual service impact.</p>
+					</div>
 					<div class="grid-md-2 grid-md-2--sm-gap">
-
 						<div class="cell cell--high cell--bordered">
 							<i class="icon icon--sm icon--accent">
 								<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#sm-1"/></svg>
 							</i>
-							<h3 class="h4 text-gradient mb-05"></h3>
-							<p class="text-light mb-05"></p>
-							<p class="text-semibold mb-03"></p>
+							<h3 class="h4 text-gradient mb-05">Critical</h3>
+							<p class="text-light mb-05">Use for severe production-impacting incidents where a critical service or infrastructure environment is unavailable or materially impaired.</p>
+							<p class="text-semibold mb-03">Examples may include:</p>
 							<ul class="list--simple">
+								<li>Major production outage</li>
+								<li>Critical infrastructure unavailable</li>
+								<li>Severe connectivity failure affecting production</li>
+								<li>Significant service disruption requiring urgent engineering attention</li>
 							</ul>
-							<a href="infrastructure-network.html" class="link link--icon mt-1">
-								<span></span>
-								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-							</a>
 						</div>
 
 						<div class="cell cell--high cell--bordered">
 							<i class="icon icon--sm icon--accent">
-								<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#sm-1"/></svg>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#sm-2"/></svg>
 							</i>
-							<h3 class="h4 text-gradient mb-05"></h3>
-							<p class="text-light mb-05"></p>
-							<p class="text-semibold mb-03"></p>
+							<h3 class="h4 text-gradient mb-05">High</h3>
+							<p class="text-light mb-05">Use for substantial degradation or operational problems affecting an important production service without complete loss of service.</p>
+							<p class="text-semibold mb-03">Examples may include:</p>
 							<ul class="list--simple">
+								<li>Major performance degradation</li>
+								<li>Partial infrastructure failure</li>
+								<li>Significant operational impact</li>
+								<li>Redundancy loss creating elevated production risk</li>
 							</ul>
-							<a href="infrastructure-network.html" class="link link--icon mt-1">
-								<span></span>
-								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-							</a>
 						</div>
 
 						<div class="cell cell--high cell--bordered">
 							<i class="icon icon--sm icon--accent">
-								<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#sm-1"/></svg>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#sm-3"/></svg>
 							</i>
-							<h3 class="h4 text-gradient mb-05"></h3>
-							<p class="text-light mb-05"></p>
-							<p class="text-semibold mb-03"></p>
+							<h3 class="h4 text-gradient mb-05">Normal</h3>
+							<p class="text-light mb-05">Use for non-critical technical issues that require investigation but do not materially disrupt production.</p>
+							<p class="text-semibold mb-03">Examples may include:</p>
 							<ul class="list--simple">
+								<li>Configuration questions</li>
+								<li>Minor service issues</li>
+								<li>Non-critical monitoring concerns</li>
+								<li>Routine troubleshooting</li>
 							</ul>
-							<a href="infrastructure-network.html" class="link link--icon mt-1">
-								<span></span>
-								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
-							</a>
 						</div>
 
 						<div class="cell cell--high cell--bordered">
 							<i class="icon icon--sm icon--accent">
-								<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#sm-1"/></svg>
+								<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#sm-4"/></svg>
 							</i>
-							<h3 class="h4 text-gradient mb-05"></h3>
-							<p class="text-light mb-05"></p>
-							<p class="text-semibold mb-03"></p>
+							<h3 class="h4 text-gradient mb-05">Service Request</h3>
+							<p class="text-light mb-05">Use for planned or administrative requests.</p>
+							<p class="text-semibold mb-03">Examples may include:</p>
 							<ul class="list--simple">
+								<li>Infrastructure changes</li>
+								<li>Capacity changes</li>
+								<li>Access changes</li>
+								<li>Configuration requests</li>
+								<li>Scheduled maintenance coordination</li>
+								<li>General service questions</li>
 							</ul>
-							<a href="infrastructure-network.html" class="link link--icon mt-1">
-								<span></span>
+							<a href="#" class="link link--icon mt-1">
+								<span>View SLA</span>
 								<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
 							</a>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<div class="text-columns text-columns--bit-reverse-uneven mb-1">
+						<h2 class="h2">Critical Infrastructure Incidents.</h2>
+						<p class="subtitle">Use the Defined Escalation Process.</p>
+					</div>
+					<p class="text-light bit-limited mb-15">For production-impacting incidents, customers should use the applicable Crafthost support and escalation channel rather than relying solely on informal communication. <br><b>Provide:</b></p>
+					<ul class="list--simple list--grid mb-15">
+						<li>Service affected</li>
+						<li>Known dependencies</li>
+						<li>Scope of the incident</li>
+						<li>Recent changes</li>
+						<li>Time the problem began</li>
+						<li>Operational impact</li>
+						<li>Current symptoms</li>
+						<li>Contact details for incident coordination</li>
+					</ul>
+					<p class="text-light bit-limited">Crafthost will handle incidents according to the responsibilities, coverage and escalation procedures defined for the applicable managed service. <br><b>Clear information supports faster technical coordination.</b></p>
+					<div class="action">
+						<a href="#" class="btn btn--lg btn--filled">
+							<span>Open Critical Support Request</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+						</a>
+						<a href="#" class="btn btn--lg btn--outline">
+							<span>View SLA</span>
+							<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--dark">
+				<div class="container">
+					<div class="text-columns text-columns--bit-reverse-uneven mb-15">
+						<h2 class="h2">What Crafthost Support Covers.</h2>
+						<p class="subtitle">Support Is Defined by the Managed Engagement.</p>
+					</div>
+					<p class="text-light bit-limited mb-15">Crafthost support can cover technical and operational responsibilities associated with the selected infrastructure service. <br><b>Depending on the agreed service scope, this may include:</b></p>
+					<ul class="list--simple list--grid mb-15">
+						<li>Infrastructure monitoring</li>
+						<li>Performance analysis</li>
+						<li>Operating-system management</li>
+						<li>Capacity coordination</li>
+						<li>Security controls</li>
+						<li>Backup and recovery operations</li>
+						<li>Patch coordination</li>
+						<li>Network troubleshooting</li>
+						<li>Vulnerability management</li>
+						<li>Change management</li>
+						<li>Incident investigation</li>
+						<li>Infrastructure lifecycle operations</li>
+						<li>Infrastructure troubleshooting</li>
+						<li>Technical escalation</li>
+					</ul>
+					<p class="text-light bit-limited">
+						Support scope is not identical across every service. <br> Operational responsibilities, escalation paths, service boundaries and applicable service levels are defined according to the selected service and contractual engagement.
+					</p>
+				</div>
+			</section>
+
+			<section class="section with-divider">
+				<div class="container">
+					<div class="faq__item faq__item--with-decor" data-collapser>
+						<div class="faq__question" data-collapse-trigger>
+							<div class="faq__title">
+								<i class="icon icon--gradient icon--md icon--bordered">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#md-1"/></svg>
+								</i>
+								<h3 class="h4 text-gradient">01 / Support & Operational Accountability</h3>
+							</div>
+							<i class="faq__arrow">
+								<i class="icon">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+								</i>
+							</i>
+						</div>
+						<div class="faq__answer">
+							<div>
+								<p class="text-light bit-limited mb-15">Infrastructure problems become harder to resolve when ownership is unclear. <br> Crafthost managed engagements are designed to establish clearer responsibility boundaries around the infrastructure layer.</p>
+								<p class="text-semibold mb-1">Depending on the selected service, Crafthost may assume defined responsibility for areas such as:</p>
+								<ul class="list--simple list--grid mb-15">
+									<li>Monitoring</li>
+									<li>Performance</li>
+									<li>Maintenance</li>
+									<li>Capacity</li>
+									<li>Security</li>
+									<li>Recovery</li>
+									<li>Operating systems</li>
+									<li>Change coordination</li>
+									<li>Incident escalation</li>
+									<li>Infrastructure lifecycle management</li>
+								</ul>
+								<p class="text-light bit-limited">Infrastructure problems become harder to resolve when ownership is unclear. <br>Where an issue involves systems outside the Crafthost-managed scope, the support process should identify the boundary and support technical coordination where applicable.</p>
+							</div>
+						</div>
+					</div>
+					<div class="faq__item faq__item--with-decor" data-collapser>
+						<div class="faq__question" data-collapse-trigger>
+							<div class="faq__title">
+								<i class="icon icon--gradient icon--md icon--bordered">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#md-2"/></svg>
+								</i>
+								<h3 class="h4 text-gradient">02 / Planned Changes & Maintenance</h3>
+							</div>
+							<i class="faq__arrow">
+								<i class="icon">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+								</i>
+							</i>
+						</div>
+						<div class="faq__answer">
+							<div>
+								<p class="text-light bit-limited mb-15">Changes to production infrastructure should be controlled and traceable.</p>
+								<div class="grid-md-2 mb-15">
+									<div>
+										<p class="text-semibold mb-1">Support may be used to coordinate:</p>
+										<ul class="list--simple">
+											<li>Planned maintenance</li>
+											<li>Resource upgrades</li>
+											<li>Operating-system changes</li>
+											<li>Security changes</li>
+											<li>Network changes</li>
+											<li>Capacity increases</li>
+											<li>Reboots</li>
+											<li>Infrastructure modifications</li>
+											<li>Migration activities</li>
+											<li>Recovery operations</li>
+										</ul>
+									</div>
+									<div>
+										<p class="text-semibold mb-1">Where applicable, change requests should include:</p>
+										<ul class="list--simple">
+											<li>Requested change</li>
+											<li>Affected services</li>
+											<li>Preferred timing</li>
+											<li>Expected impact</li>
+											<li>Dependencies</li>
+											<li>Required approvals</li>
+										</ul>
+									</div>
+								</div>
+								</ul>
+								<p class="bit-limited">Planned changes remain subject to the applicable service scope and operational process.</p>
+							</div>
+						</div>
+					</div>
+					<div class="faq__item faq__item--with-decor" data-collapser>
+						<div class="faq__question" data-collapse-trigger>
+							<div class="faq__title">
+								<i class="icon icon--gradient icon--md icon--bordered">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#md-3"/></svg>
+								</i>
+								<h3 class="h4 text-gradient">03 / Security-Related Support</h3>
+							</div>
+							<i class="faq__arrow">
+								<i class="icon">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+								</i>
+							</i>
+						</div>
+						<div class="faq__answer">
+							<div>
+								<p class="text-light bit-limited mb-15">Contact Crafthost Support promptly when you identify a potential infrastructure-security issue affecting a managed environment.</p>
+								<p class="text-semibold mb-1">Relevant situations may include:</p>
+								<ul class="list--simple list--grid mb-15">
+									<li>Unexpected administrative access</li>
+									<li>Suspected unauthorized changes</li>
+									<li>Suspected credential compromise</li>
+									<li>Infrastructure exposure</li>
+									<li>Unusual network activity</li>
+									<li>Vulnerability concerns</li>
+									<li>Security alerts</li>
+									<li>Firewall or access-control issues</li>
+								</ul>
+								<p class="text-light bit-limited">Do not publicly disclose sensitive infrastructure details while an incident is being investigated. <br> Where the issue is production-impacting or security-critical, use the appropriate incident escalation path.</p>
+								<div class="action pt-1">
+									<a href="compliance-security-and-compliance-contact.html" class="btn btn--lg btn--filled">
+										<span>Security & Compliance</span>
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+									</a>
+									<a href="about-contact.html" class="btn btn--lg btn--outline">
+										<span>Contact Support</span>
+										<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="faq__item faq__item--with-decor" data-collapser>
+						<div class="faq__question" data-collapse-trigger>
+							<div class="faq__title">
+								<i class="icon icon--gradient icon--md icon--bordered">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#md-4"/></svg>
+								</i>
+								<h3 class="h4 text-gradient">04 / Backup & Recovery Support</h3>
+							</div>
+							<i class="faq__arrow">
+								<i class="icon">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+								</i>
+							</i>
+						</div>
+						<div class="faq__answer">
+							<div>
+								<p class="text-light bit-limited mb-15">Backup and recovery capabilities vary according to the service and selected options.</p>
+								<p class="text-semibold mb-1">Support can help customers understand:</p>
+								<ul class="list--simple list--grid mb-15">
+									<li>Available backup coverage</li>
+									<li>Recovery procedures</li>
+									<li>Backup schedules</li>
+									<li>Recovery limitations</li>
+									<li>Retention</li>
+									<li>Relevant service responsibilities</li>
+									<li>Restoration requests</li>
+								</ul>
+								<p class="text-light bit-limited">Do not assume that every Crafthost service includes identical backup or recovery coverage. <br> For critical workloads, backup and recovery requirements should be established before an incident occurs.</p>
+							</div>
+						</div>
+					</div>
+					<div class="faq__item faq__item--with-decor faq__item--bordered" data-collapser>
+						<div class="faq__question" data-collapse-trigger>
+							<div class="faq__title">
+								<i class="icon icon--gradient icon--md icon--bordered">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/support/sprite.svg#md-5"/></svg>
+								</i>
+								<h3 class="h4 text-gradient">05 / Service Status & Maintenance Notices</h3>
+							</div>
+							<i class="faq__arrow">
+								<i class="icon">
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow"/></svg>
+								</i>
+							</i>
+						</div>
+						<div class="faq__answer">
+							<div>
+								<p class="text-light bit-limited mb-15">Before opening a ticket for a broad service issue, review the Crafthost Status page.</p>
+								<p class="text-semibold mb-1">It should provide information about:</p>
+								<ul class="list--simple list--grid mb-15">
+									<li>Current incidents</li>
+									<li>Planned maintenance</li>
+									<li>Service degradation</li>
+									<li>Resolution progress</li>
+									<li>Infrastructure availability</li>
+									<li>Restoration notices</li>
+									<li>Network events</li>
+								</ul>
+								<p class="text-light bit-limited mb-2">If the issue affecting your service is already identified, the Status page may provide the latest operational update.</p>
+								<a href="#" class="btn btn--lg btn--filled">
+									<span>View System Status</span>
+									<svg viewBox="0 0 32 32"><use xlink:href="img/general/sprite.svg#arrow-right"/></svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<h2 class="h2 mb-1 pt-15">Before Contacting Support.</h2>
+					<p class="text-semibold mb-1">Where practical and safe, confirm:</p>
+					<ul class="list--plused list--grid list--no-padding mb-15">
+						<li>Which service is affected</li>
+						<li>Whether the issue is continuous or intermittent</li>
+						<li>Whether the issue affects one system or multiple systems</li>
+						<li>The exact error message</li>
+						<li>When the problem began</li>
+						<li>Whether basic connectivity remains available</li>
+						<li>Whether configuration recently changed</li>
+						<li>Whether the issue is reflected on the Status page</li>
+					</ul>
+					<p class="text-light bit-limited">Do not make uncontrolled configuration changes to production-managed infrastructure solely for troubleshooting purposes. When uncertain, contact Crafthost Support.</p>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<div class="text-columns text-columns--bit-reverse-uneven mb-15">
+						<h2 class="h2">Support Resources.</h2>
+						<p class="subtitle">Use the Right Resource for the Right Requirement.</p>
 					</div>
 				</div>
 			</section>

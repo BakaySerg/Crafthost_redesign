@@ -4,7 +4,7 @@
 	&__item {
 		border-top: 1px solid var(--light-3);
 		padding: 0.4em 0;
-		&:last-child {
+		&:last-child, &--bordered {
 			border-bottom: 1px solid var(--light-3);
 		}
 		&--with-decor {
@@ -212,9 +212,17 @@
 .dark {
 	.faq__title {
 		font-weight: 500;
+		@media (min-width: 1101px){
+			.h4 {
+				font-size: 1.3em;
+			}
+		}
 	}
 	.faq__answer {
 		color: var(--light-3);
 		font-weight: 300;
+		.text-semibold {
+			color: var(--light-1);
+		}
 	}
 }
