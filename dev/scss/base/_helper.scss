@@ -32,6 +32,11 @@
 		padding-top: 1.9em;
 	}
 }
+.pt-sm-0 {
+	@media (max-width: 600px){
+		padding-top: 0 !important;
+	}
+}
 
 .pb-0 {
 	padding-bottom: 0 !important;

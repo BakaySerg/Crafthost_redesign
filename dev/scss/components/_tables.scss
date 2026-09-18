@@ -57,6 +57,9 @@
 		}
 		&--three {
 			grid-template-columns: 1fr 1fr 1fr;
+			&-custom-1 {
+				grid-template-columns: .6fr .9fr 1fr;
+			}
 		}
 	}
 	@media (min-width: 1100px){
