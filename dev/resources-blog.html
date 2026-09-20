@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-	<title>Crafthost | Blog</title>
-	@@include('./includes/head.html')
+<head>
+	@@include('./includes/head.html', {
+	"title": "Crafthost | Blog",
+	"description": "Engineer-managed cloud, dedicated and AI infrastructure for organizations requiring predictable performance, security, resilience and operational accountability.",
+	"canonical": "https://crafthost.com/"
+	})
+	@@include('./includes/schema/schema.html')
+</head>
 	<body class="dark">
 		<div class="wrapper">
 			@@include('./includes/header.html')
