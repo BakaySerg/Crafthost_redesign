@@ -90,6 +90,10 @@ gulp.task("layout", function () {
 			fileinclude({
 				prefix: "@@",
 				basepath: "@file",
+			}).on("error", function (err) {
+				console.error("fileinclude error:", err.message);
+				console.error("File:", err.fileName || err.file || "unknown");
+				this.emit("end");
 			}),
 		)
 		.pipe(changed("app", { hasChanged: changed.compareContents }))
