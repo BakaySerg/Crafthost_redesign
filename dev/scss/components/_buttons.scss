@@ -81,6 +81,12 @@
 		svg {
 			width: 24px;
 			height: 24px;
+			transition: transform .3s;
+		}
+		&:hover {
+			svg {
+				transform: translateX(6px);
+			}
 		}
 		@media (max-width: 1390px){
 			min-width: 210px;
@@ -196,7 +202,7 @@
 	svg {
 		transition: transform .3s;
 	}
-	&:hover {
+	&:not(.link--disabled):hover {
 		color: color-mix(in srgb, var(--blue), var(--white) 30%);
 		&:not(.link--sm) svg {
 			transform: translateX(6px);

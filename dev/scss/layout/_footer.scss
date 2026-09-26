@@ -77,7 +77,8 @@
 			margin-right: calc(11px - 1dvw);
 		}
 		@media (min-width: 1500px){
-			margin-right: calc(-12px - 4dvw);
+			margin-right: calc(-13px - 4dvw);
+			column-gap: 48px;
 		}
 		@media (max-width: 1200px){
 			column-count: 4;
